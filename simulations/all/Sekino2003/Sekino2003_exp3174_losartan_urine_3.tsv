@@ -1,0 +1,5 @@
+study	individual	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_sd	mean_se	min	max	comments	mean_unit
+Sekino2003		cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	0.0	hr	0.0						dimensionless
+Sekino2003		cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	2.0	hr	0.53	0.3		1.23	0.52	0-4 hr	dimensionless
+Sekino2003		cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	6.0	hr	1.95	0.92		1.02	2.87	4-8 hr	dimensionless
+Sekino2003		cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	10.0	hr	4.2	0.99		3.41	5.31	8-12 hr	dimensionless

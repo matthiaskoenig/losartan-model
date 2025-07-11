@@ -13,12 +13,8 @@ length: [m]
 ```
 F_los_abs = 0.6  # [-] fraction absorbed losartan  
 Ka_dis_los = 2.0  # [1/hr] Ka_dis [1/hr] dissolution losartan  
-LOSABS_k = 0.01  # [1/min] rate of losartan absorption  
-LOSEFL_Km_los = 0.01  # [mmol/l] Km for losartan efflux (PG)  
-LOSEFL_Vmax = 1.0  # [mmol/min/l] Vmax for losartan efflux (PG)  
-LOSEX_Km_los = 0.01  # [mmol/l] Km for losartan export in plasma  
-LOSEX_Vmax = 1.0  # [mmol/min/l] Vmax for losartan export in plasma  
-METEXC_k = 0.01  # [1/min] rate of metabolite feces excretion  
+LOSABS_k = 0.0361772268991116  # [1/min] rate of losartan absorption  
+METEXC_k = 2.69641608199351e-05  # [1/min] rate of metabolite feces excretion  
 Mr_los = 422.911  # [g/mol] Molecular weight losartan [g/mole]  
 Vapical = nan  # [m^2] apical membrane (intestinal membrane enterocytes)  
 Vbaso = nan  # [m^2] basolateral membrane (intestinal membrane enterocytes)  
@@ -28,6 +24,7 @@ Vfeces = 1.0  # [l] feces
 Vgu = 1.2825  # [l] intestine  
 Vlumen = 1.15425  # [l] intestinal lumen (inner part of intestine)  
 Vstomach = 1.0  # [l] stomach  
+f_LOSEFL_k = 1.02003554075262  # [-] Rate for losartan efflux (PG) relative to absorption.  
 f_OATP2B1 = 1.0  # [-] parameter for OATP2B1 activity  
 f_abcb1 = 1.0  # [-] parameter for P-glycoprotein activity  
 ```
@@ -51,11 +48,12 @@ los_stomach = 0.0  # [mmol] losartan (stomach) in Vstomach
 # y
 E3174EXC = METEXC_k * Vgu * e3174_lumen  # [mmol/min] excretion e3174 (feces)  
 L158EXC = METEXC_k * Vgu * l158_lumen  # [mmol/min] excretion l158 (feces)  
-LOSEFL = f_abcb1 * LOSEFL_Vmax * Vgu * los / (los + LOSEFL_Km_los)  # [mmol/min] efflux losartan (PG)  
-LOSEX = LOSEX_Vmax * Vgu * los / (los + LOSEX_Km_los)  # [mmol/min] losartan export plasma  
+LOSEFL_k = f_LOSEFL_k * LOSABS_k  # [1/min]   
+LOSEX = LOSABS_k * Vgu * los  # [mmol/min] losartan export plasma  
 absorption = LOSABS_k * Vgu * los_lumen  # [mmol/min] absorption losartan  
 dissolution_los = (Ka_dis_los / 60) * PODOSE_los / Mr_los  # [mmol/min] dissolution losartan  
 LOSABS = f_OATP2B1 * F_los_abs * absorption  # [mmol/min] absorption losartan  
+LOSEFL = f_abcb1 * LOSEFL_k * Vgu * los  # [mmol/min] efflux losartan (PG)  
 LOSEXC = (1 - F_los_abs) * absorption  # [mmol/min] excretion losartan (feces)  
 
 # odes

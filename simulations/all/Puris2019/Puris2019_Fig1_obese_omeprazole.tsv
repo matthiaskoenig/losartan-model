@@ -1,0 +1,5 @@
+study	count	intervention	group	label	measurement	substance	tissue	time	time_unit	mean	pm	mean_se	mean_sd	method	comments	mean_unit
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_omeprazole	concentration	omeprazole	plasma	1	hr	3.9784195	130.5558	126.5773805	334.892270408997	HPLC		ng/ml
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_omeprazole	concentration	omeprazole	plasma	2	hr	5.5456243	102.92967	97.3840457	257.653966587549	HPLC		ng/ml
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_omeprazole	concentration	omeprazole	plasma	3	hr	3.282728	64.0401	60.757372	160.748896625839	HPLC		ng/ml
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_omeprazole	concentration	omeprazole	plasma	4	hr	2.5779655	46.362595	43.7846295	115.843240904102	HPLC		ng/ml

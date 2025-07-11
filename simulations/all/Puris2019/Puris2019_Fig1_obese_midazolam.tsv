@@ -1,0 +1,5 @@
+study	count	intervention	group	label	measurement	substance	tissue	time	time_unit	mean	pm	mean_se	mean_sd	method	comments	mean_unit
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_midazolam	concentration	midazolam	plasma	1	hr	6.955033	7.629881	0.674848	1.78547998076932	HPLC		ng/ml
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_midazolam	concentration	midazolam	plasma	2	hr	4.1063805	3.9099672	0.1964133	0.519660745985523	HPLC		ng/ml
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_midazolam	concentration	midazolam	plasma	3	hr	2.8384213	3.2556188	0.4171975	1.10380083259787	HPLC		ng/ml
+Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_midazolam	concentration	midazolam	plasma	4	hr	2.098127	1.6809294	0.4171976	1.103801097173	HPLC		ng/ml

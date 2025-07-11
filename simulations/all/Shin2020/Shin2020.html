@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Shin2020</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+</head>
+
+<body>
+<div id="app">
+    <!-- Vue app-->
+    <v-app>
+        <v-content>
+
+            <a href="../index.html">Experiments</a>
+            <h1>Shin2020</h1>
+
+            <h2>Models</h2>
+            <p>
+            <ul>
+                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/losartan_body_flat.xml</a></li>
+            </ul>
+            </p>
+
+            <h2>Datasets</h2>
+            <p>
+            <ul>
+                <li><strong>exp3174_GG_CC</strong>: <a href="Shin2020_exp3174_GG_CC.tsv">Shin2020_exp3174_GG_CC.tsv</a></li>
+                <li><strong>exp3174_GT_CT</strong>: <a href="Shin2020_exp3174_GT_CT.tsv">Shin2020_exp3174_GT_CT.tsv</a></li>
+                <li><strong>exp3174_TT_TT</strong>: <a href="Shin2020_exp3174_TT_TT.tsv">Shin2020_exp3174_TT_TT.tsv</a></li>
+                <li><strong>losartan_GG_CC</strong>: <a href="Shin2020_losartan_GG_CC.tsv">Shin2020_losartan_GG_CC.tsv</a></li>
+                <li><strong>losartan_GT_CT</strong>: <a href="Shin2020_losartan_GT_CT.tsv">Shin2020_losartan_GT_CT.tsv</a></li>
+                <li><strong>losartan_TT_TT</strong>: <a href="Shin2020_losartan_TT_TT.tsv">Shin2020_losartan_TT_TT.tsv</a></li>
+                <li><strong>losartan_exp3174_GG_CC</strong>: <a href="Shin2020_losartan_exp3174_GG_CC.tsv">Shin2020_losartan_exp3174_GG_CC.tsv</a></li>
+                <li><strong>losartan_exp3174_GT_CT</strong>: <a href="Shin2020_losartan_exp3174_GT_CT.tsv">Shin2020_losartan_exp3174_GT_CT.tsv</a></li>
+                <li><strong>losartan_exp3174_TT_TT</strong>: <a href="Shin2020_losartan_exp3174_TT_TT.tsv">Shin2020_losartan_exp3174_TT_TT.tsv</a></li>
+                <li><strong>losartan_exp3174_urine_GG_CC</strong>: <a href="Shin2020_losartan_exp3174_urine_GG_CC.tsv">Shin2020_losartan_exp3174_urine_GG_CC.tsv</a></li>
+                <li><strong>losartan_exp3174_urine_GT_CT</strong>: <a href="Shin2020_losartan_exp3174_urine_GT_CT.tsv">Shin2020_losartan_exp3174_urine_GT_CT.tsv</a></li>
+                <li><strong>losartan_exp3174_urine_TT_TT</strong>: <a href="Shin2020_losartan_exp3174_urine_TT_TT.tsv">Shin2020_losartan_exp3174_urine_TT_TT.tsv</a></li>
+            </ul>
+            </p>
+
+            <h2>Figures</h2>
+            <p>
+            <ul>
+                <li><strong>Fig1_Tab4</strong>: <a href="Shin2020_Fig1_Tab4.svg">Shin2020_Fig1_Tab4.svg</a></li>
+            </ul>
+            </p>
+
+            <h3>Fig1_Tab4</h3>
+            <p>
+            <table>
+                <tr>
+                    <td>
+                        <!--<v-img src="Shin2020_Fig1_Tab4.svg" max-width="600" width="600"></v-img>-->
+                        <img src="Shin2020_Fig1_Tab4.svg" width="600">
+                    </td>
+                    <!--
+                    <td>
+                    </td>
+                    -->
+                </tr>
+            </table>
+            </p>
+
+            <h2>Code</h2>
+            <p>
+                <a href="../../../../experiments/studies/shin2020.py">../../../../experiments/studies/shin2020.py</a>
+            <pre>
+<code class="python">from typing import Dict
+
+from sbmlsim.data import DataSet, load_pkdb_dataframe
+from sbmlsim.fit import FitMapping, FitData
+from sbmlutils.console import console
+
+from pkdb_models.models.losartan.experiments.base_experiment import (
+    LosartanSimulationExperiment,
+)
+from pkdb_models.models.losartan.experiments.metadata import (
+    Tissue, Route, Dosing, ApplicationForm, Health, \
+    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
+)
+
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Timecourse, TimecourseSim
+
+from pkdb_models.models.losartan.helpers import run_experiments
+
+
+class Shin2020(LosartanSimulationExperiment):
+    """Simulation experiment of Shin2020."""
+
+    info = {
+        "[Cve_los]": "losartan",
+        "[Cve_e3174]": "exp3174",
+        "[Cve_los_e3174]": "losartan_exp3174",
+        "Aurine_los_e3174": "losartan_exp3174_urine"
+    }
+
+    genotypes = {
+        "GG_CC": "GG/CC",
+        "GT_CT": "GT/CT",
+        "TT_TT": "TT/TT"
+    }
+
+    bodyweight = 67.4  # kg
+
+    def datasets(self) -> Dict[str, DataSet]:
+        dsets = {}
+        for fig_id in ["Fig1", "Tab4"]:
+            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            for label, df_label in df.groupby("label"):
+                dset = DataSet.from_df(df_label, self.ureg)
+
+                dsets[f"{label}"] = dset
+
+        # console.print(dsets)
+        # console.print(dsets.keys())
+        return dsets
+
+    def simulations(self) -> Dict[str, TimecourseSim]:
+        Q_ = self.Q_
+        tcsims = {}
+        for number, genotype in self.genotypes.items():
+            tcsims[f"po_los50_{number}"] = TimecourseSim(
+                [Timecourse(
+                    start=0,
+                    end=20 * 60,  # [min]
+                    steps=500,
+                    changes={
+                        **self.default_changes(),
+                        "BW": Q_(self.bodyweight, "kg"),
+                        "GU__f_abcb1": Q_(self.abcb1_activity[genotype], "dimensionless"),
+                        "PODOSE_los": Q_(50, "mg") * self.Mr.los/self.Mr.losp,
+                    },
+                )]
+            )
+        # console.print(tcsims)
+        return tcsims
+
+    def fit_mappings(self) -> Dict[str, FitMapping]:
+        mappings = {}
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+            for number, genotype in self.genotypes.items():
+                mappings[f"fm_po_los50_{name}_{number}"] = FitMapping(
+                    self,
+                    reference=FitData(
+                        self,
+                        dataset=f"{name}_{number}",
+                        xid="time",
+                        yid="mean",
+                        yid_sd="mean_sd",
+                        count="count",
+                    ),
+                    observable=FitData(
+                        self, task=f"task_po_los50_{number}", xid="time", yid=sid,
+                    ),
+                    metadata=LosartanMappingMetaData(
+                        tissue=Tissue.URINE if sid == "Aurine_los_e3174" else Tissue.PLASMA,
+                        route=Route.PO,
+                        application_form=ApplicationForm.TABLET,
+                        dosing=Dosing.SINGLE,
+                        health=Health.HEALTHY,
+                        fasting=Fasting.FASTED,
+                        coadministration=Coadministration.NONE,
+                        genotype=Genotype(genotype),
+                    ),
+                )
+        # console.print(mappings)
+        return mappings
+
+    def figures(self) -> Dict[str, Figure]:
+        return {
+            **self.fig1_tab4(),
+        }
+
+    def fig1_tab4(self) -> Dict[str, Figure]:
+        fig = Figure(
+            experiment=self,
+            sid="Fig1_Tab4",
+            num_rows=2,
+            num_cols=2,
+            name=f"{self.__class__.__name__} (ABCB1)",
+        )
+        plots = fig.create_plots(
+            xaxis=Axis(self.label_time, unit=self.unit_time), legend=True
+        )
+        plots[0].set_yaxis(self.label_los, unit=self.unit_los)
+        plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
+        plots[2].set_yaxis(self.label_los_e3174, unit=self.unit_los_e3174)
+        plots[3].set_yaxis(self.label_los_e3174_urine, unit=self.unit_los_e3174_urine)
+
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+
+            for number, genotype in self.genotypes.items():
+                # simulation
+                plots[k].add_data(
+                    task=f"task_po_los50_{number}",
+                    xid="time",
+                    yid=sid,
+                    label=f"Sim {genotype} 50 mg",
+                    color=self.abcb1_colors[genotype],
+                )
+                # data
+                plots[k].add_data(
+                    dataset=f"{name}_{number}",
+                    xid="time",
+                    yid="mean",
+                    yid_sd="mean_sd",
+                    count="count",
+                    label=f"{genotype} 50 mg",
+                    color=self.abcb1_colors[genotype],
+                )
+
+        return {
+            fig.sid: fig,
+        }
+
+
+if __name__ == "__main__":
+    run_experiments(Shin2020, output_dir=Shin2020.__name__)
+</code>
+        </pre>
+            </p>
+
+        </v-content>
+    </v-app>
+</div>
+
+
+<!-- loading dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.6/dist/vuetify.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        delimiters: ['${', '}'],
+        data() {
+            return {}
+        }
+    })
+</script>
+
+
+</body>
+</html>

@@ -11,9 +11,9 @@ length: [m]
 
 ## Parameters `p`
 ```
-E3174EX_k = 0.2  # [1/min] rate urinary excretion of e3174  
-L158EX_k = 0.5  # [1/min] rate urinary excretion of l158  
-LOSEX_k = 0.1  # [1/min] rate urinary excretion of losartan  
+E3174EX_k = 0.0289271732633318  # [1/min] rate urinary excretion of e3174  
+L158EX_k = 0.28890834506773  # [1/min] rate urinary excretion of l158  
+LOSEX_k = 0.0773896174258953  # [1/min] rate urinary excretion of losartan  
 Vext = 1.5  # [l] plasma  
 Vki = 0.3  # [l] kidney  
 Vmem = nan  # [m^2] plasma membrane  

@@ -20,27 +20,23 @@
           <ul>
             <li>initial model</li>
           </ul>
+          <p>The content of this model has been carefully created in a manual research effort.</p>
           <h2>Terms of use</h2>
-          <p>The content of this model has been carefully created in a manual research effort.
-This file has been created by <a href="https://livermetabolism.com">Matthias König</a>
-using <a href="https://github.com/matthiaskoenig/sbmlutils">sbmlutils</a>.
-For questions contact <a href="mailto:koenigmx@hu-berlin.de">koenigmx@hu-berlin.de</a>. Copyright © 2025 Matthias König.</p>
+          <p>Copyright © 2025 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
           <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
             <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
           </a>
           <br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-<p>Redistribution and use of any part of this model, with or without modification,
-are permitted provided that the following conditions are met:</p>
-          <ol>
-            <li>Redistributions of this SBML file must retain the above copyright notice, this
-list of conditions and the following disclaimer.</li>
-            <li>Redistributions in a different form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.</li>
-          </ol>
-          <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.</p></body>
+<p>Redistribution and use of any part of this model, with or without modification, are permitted provided
+that the following conditions are met:</p>
+          <ul>
+            <li>Redistributions of this SBML file must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+            <li>Redistributions in a different form must reproduce the above copyright notice, this list of conditions
+and the following disclaimer in the documentation and/or other materials provided
+with the distribution.</li>
+          </ul>
+          <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></body>
         </notes>
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -49,19 +45,19 @@ FOR A PARTICULAR PURPOSE.</p></body>
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
                 <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Tensil</vCard4:family-name>
-                  <vCard4:given-name>Ennie</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
-                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
                   <vCard4:family-name>König</vCard4:family-name>
                   <vCard4:given-name>Matthias</vCard4:given-name>
                 </vCard4:hasName>
                 <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
                 <vCard4:organization-name>Humboldt-University Berlin, Institute for Theoretical Biology</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Tensil</vCard4:family-name>
+                  <vCard4:given-name>Ennie</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
+                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
               </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
@@ -243,7 +239,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -260,7 +256,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -345,7 +341,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSEX_k" sboTerm="SBO:0000009" id="LOSEX_k" name="rate urinary excretion of losartan" value="0.1" units="per_min" constant="true">
+      <parameter metaid="meta_LOSEX_k" sboTerm="SBO:0000009" id="LOSEX_k" name="rate urinary excretion of losartan" value="0.0773896174258953" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_LOSEX_k">
@@ -358,7 +354,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_E3174EX_k" sboTerm="SBO:0000009" id="E3174EX_k" name="rate urinary excretion of e3174" value="0.2" units="per_min" constant="true">
+      <parameter metaid="meta_E3174EX_k" sboTerm="SBO:0000009" id="E3174EX_k" name="rate urinary excretion of e3174" value="0.0289271732633318" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_E3174EX_k">
@@ -371,7 +367,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_L158EX_k" sboTerm="SBO:0000009" id="L158EX_k" name="rate urinary excretion of l158" value="0.5" units="per_min" constant="true">
+      <parameter metaid="meta_L158EX_k" sboTerm="SBO:0000009" id="L158EX_k" name="rate urinary excretion of l158" value="0.28890834506773" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_L158EX_k">

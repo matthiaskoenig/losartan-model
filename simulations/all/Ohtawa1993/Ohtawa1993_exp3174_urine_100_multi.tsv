@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	exp3174	urine	HPLC	exp3174_urine_100_multi	0.0	day	0.0								mole	mg
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	exp3174	urine	HPLC	exp3174_urine_100_multi	1.0	day	1.4877750667209897e-05	4.119992492458125e-06							mole	mg
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	exp3174	urine	HPLC	exp3174_urine_100_multi	7.0	day	1.3962196779996978e-05	3.891104020654896e-06							mole	mg

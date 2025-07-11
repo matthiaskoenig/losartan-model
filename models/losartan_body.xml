@@ -47,27 +47,23 @@
             <p>55% of infused EXP3174 is recovered in urine; probably metabolization of the metabolite (in liver?) [Lo1995]</p>
           </li>
         </ul>
+        <p>The content of this model has been carefully created in a manual research effort.</p>
         <h2>Terms of use</h2>
-        <p>The content of this model has been carefully created in a manual research effort.
-This file has been created by <a href="https://livermetabolism.com">Matthias König</a>
-using <a href="https://github.com/matthiaskoenig/sbmlutils">sbmlutils</a>.
-For questions contact <a href="mailto:koenigmx@hu-berlin.de">koenigmx@hu-berlin.de</a>. Copyright © 2025 Matthias König.</p>
+        <p>Copyright © 2025 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
         </a>
         <br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-<p>Redistribution and use of any part of this model, with or without modification,
-are permitted provided that the following conditions are met:</p>
-        <ol>
-          <li>Redistributions of this SBML file must retain the above copyright notice, this
-list of conditions and the following disclaimer.</li>
-          <li>Redistributions in a different form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.</li>
-        </ol>
-        <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.</p></body>
+<p>Redistribution and use of any part of this model, with or without modification, are permitted provided
+that the following conditions are met:</p>
+        <ul>
+          <li>Redistributions of this SBML file must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+          <li>Redistributions in a different form must reproduce the above copyright notice, this list of conditions
+and the following disclaimer in the documentation and/or other materials provided
+with the distribution.</li>
+        </ul>
+        <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></body>
       </notes>
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -76,19 +72,19 @@ FOR A PARTICULAR PURPOSE.</p></body>
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
                 <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Tensil</vCard4:family-name>
-                  <vCard4:given-name>Ennie</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
-                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
                   <vCard4:family-name>König</vCard4:family-name>
                   <vCard4:given-name>Matthias</vCard4:given-name>
                 </vCard4:hasName>
                 <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
                 <vCard4:organization-name>Humboldt-University Berlin, Institute for Theoretical Biology</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Tensil</vCard4:family-name>
+                  <vCard4:given-name>Ennie</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
+                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
               </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
@@ -346,6 +342,21 @@ FOR A PARTICULAR PURPOSE.</p></body>
       </unitDefinition>
     </listOfUnitDefinitions>
     <listOfCompartments>
+      <compartment metaid="meta_Vplasma" sboTerm="SBO:0000290" id="Vplasma" name="plasma" spatialDimensions="3" size="5" units="litre" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_Vplasma">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000290"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C13356"/>
+                  <rdf:li rdf:resource="http://identifiers.org/BTO:0000131"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
       <compartment metaid="meta_Vre" sboTerm="SBO:0000290" id="Vre" name="rest of body" spatialDimensions="3" size="1" units="litre" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -817,6 +828,97 @@ FOR A PARTICULAR PURPOSE.</p></body>
       </compartment>
     </listOfCompartments>
     <listOfSpecies>
+      <species metaid="meta_ald" sboTerm="SBO:0000247" id="ald" name="aldosterone" compartment="Vplasma" initialConcentration="2.5e-07" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ald">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:27584"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C219"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_ren" sboTerm="SBO:0000247" id="ren" name="renin" compartment="Vplasma" initialConcentration="1e-09" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ren">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00797"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C113591"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_anggen" sboTerm="SBO:0000247" id="anggen" name="angiotensinogen" compartment="Vplasma" initialConcentration="1e-08" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_anggen">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:2720"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C136723"/>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q3UTR7"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_ang1" sboTerm="SBO:0000247" id="ang1" name="angiotensin I" compartment="Vplasma" initialConcentration="1e-08" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:147350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C248"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_ang2" sboTerm="SBO:0000247" id="ang2" name="angiotensin II" compartment="Vplasma" initialConcentration="8e-09" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:58506"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C107562"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_e3174" sboTerm="SBO:0000247" id="e3174" name="e3174" compartment="Vplasma" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_e3174">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/108185"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:74125"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
       <species metaid="meta_Cki_plasma_los" sboTerm="SBO:0000247" id="Cki_plasma_los" name="losartan (kidney plasma)" compartment="Vki_plasma" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -826,7 +928,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -846,7 +948,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -866,7 +968,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -883,7 +985,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -903,7 +1005,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -920,7 +1022,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -937,7 +1039,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -954,7 +1056,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -971,7 +1073,41 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_Clu_los" sboTerm="SBO:0000247" id="Clu_los" name="losartan (lung)" compartment="Vlu_tissue" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_Clu_los">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_Cre_los" sboTerm="SBO:0000247" id="Cre_los" name="losartan (rest)" compartment="Vre_tissue" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_Cre_los">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                  <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -988,7 +1124,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1008,7 +1144,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1360,7 +1496,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -1408,8 +1544,370 @@ FOR A PARTICULAR PURPOSE.</p></body>
           <comp:replacedElement metaid="Cgu_l158_RE2" comp:portRef="l158_lumen_port" comp:submodelRef="LI"/>
         </comp:listOfReplacedElements>
       </species>
+      <species metaid="meta_Cve_total" sboTerm="SBO:0000247" id="Cve_total" name="Cve_total (ve)" compartment="Vve" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_Cve_total">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_Cve_los_e3174" sboTerm="SBO:0000247" id="Cve_los_e3174" name="Cve_los_e3174 (ve)" compartment="Vve" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_Cve_los_e3174">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
     </listOfSpecies>
     <listOfParameters>
+      <parameter metaid="meta_ald_change" id="ald_change" name="aldosterone change" value="NaN" units="mM" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Absolute change to baseline aldosterone</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ald_change">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:27584"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C219"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ald_ratio" id="ald_ratio" name="aldosterone ratio" value="NaN" units="dimensionless" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ratio relative to baseline aldosterone</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ald_ratio">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:27584"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C219"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ren_change" id="ren_change" name="renin change" value="NaN" units="mM" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Absolute change to baseline renin</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ren_change">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00797"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C113591"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ren_ratio" id="ren_ratio" name="renin ratio" value="NaN" units="dimensionless" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ratio relative to baseline renin</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ren_ratio">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P00797"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C113591"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ang1_change" id="ang1_change" name="angiotensin I change" value="NaN" units="mM" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Absolute change to baseline angiotensin I</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang1_change">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:147350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C248"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ang1_ratio" id="ang1_ratio" name="angiotensin I ratio" value="NaN" units="dimensionless" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ratio relative to baseline angiotensin I</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang1_ratio">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:147350"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C248"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ang2_change" id="ang2_change" name="angiotensin II change" value="NaN" units="mM" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Absolute change to baseline angiotensin II</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang2_change">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:58506"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C107562"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ang2_ratio" id="ang2_ratio" name="angiotensin II ratio" value="NaN" units="dimensionless" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ratio relative to baseline angiotensin II</p>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang2_ratio">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/CHEBI:58506"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ncit/C107562"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_anggen_ref" sboTerm="SBO:0000009" id="anggen_ref" name="reference concentration of angiotensinogen" value="1e-08" units="mM" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_anggen_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ang1_ref" sboTerm="SBO:0000009" id="ang1_ref" name="reference concentration of angiotensin I" value="1e-08" units="mM" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang1_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ang2_ref" sboTerm="SBO:0000009" id="ang2_ref" name="reference concentration of angiotensin II" value="8e-09" units="mM" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ang2_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ren_ref" sboTerm="SBO:0000009" id="ren_ref" name="reference concentration of renin" value="1e-09" units="mM" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ren_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ald_ref" sboTerm="SBO:0000009" id="ald_ref" name="reference concentration of aldosterone" value="2.5e-07" units="mM" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ald_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_E50_e3174" sboTerm="SBO:0000002" id="E50_e3174" name="half-maximum effect concentration exp3174" value="0.000291072740111984" units="mM" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_E50_e3174">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_SBP_ref" sboTerm="SBO:0000002" id="SBP_ref" name="reference systolic blood pressure [mmHg]" value="120" units="mmHg" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_SBP_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_DBP_ref" sboTerm="SBO:0000002" id="DBP_ref" name="reference diastolic blood pressure [mmHg]" value="80" units="mmHg" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_DBP_ref">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_SBP" sboTerm="SBO:0000002" id="SBP" name="systolic blood pressure [mmHg]" value="NaN" units="mmHg" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_SBP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_DBP" sboTerm="SBO:0000002" id="DBP" name="diastolic blood pressure [mmHg]" value="NaN" units="mmHg" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_DBP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_MAP" sboTerm="SBO:0000002" id="MAP" name="mean arterial pressure [mmHg]" value="NaN" units="mmHg" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_MAP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_BP_ald_fe" sboTerm="SBO:0000002" id="BP_ald_fe" name="effect of aldosterone on blood pressure [-]" value="0.311999262694736" units="dimensionless" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_BP_ald_fe">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter id="SBP_change" name="e3174 change" value="NaN" units="mmHg" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Absolute change to baseline e3174</p>
+          </body>
+        </notes>
+      </parameter>
+      <parameter id="SBP_ratio" name="e3174 ratio" value="NaN" units="dimensionless" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ratio relative to baseline e3174</p>
+          </body>
+        </notes>
+      </parameter>
+      <parameter id="DBP_change" name="e3174 change" value="NaN" units="mmHg" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Absolute change to baseline e3174</p>
+          </body>
+        </notes>
+      </parameter>
+      <parameter id="DBP_ratio" name="e3174 ratio" value="NaN" units="dimensionless" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Ratio relative to baseline e3174</p>
+          </body>
+        </notes>
+      </parameter>
       <parameter metaid="meta_BW" sboTerm="SBO:0000002" id="BW" name="body weight [kg]" value="75" units="kg" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -1453,19 +1951,6 @@ FOR A PARTICULAR PURPOSE.</p></body>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_HRrest">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_MAP" sboTerm="SBO:0000002" id="MAP" name="mean arterial pressure [mmHg]" value="100" units="mmHg" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_MAP">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
@@ -1866,6 +2351,32 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
+      <parameter metaid="meta_ftissue_los" sboTerm="SBO:0000002" id="ftissue_los" name="tissue distribution los" value="0.144942664253079" units="l_per_min" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ftissue_los">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_Kp_los" sboTerm="SBO:0000002" id="Kp_los" name="tissue/plasma partition coefficient los" value="3.26214895692923" units="dimensionless" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_Kp_los">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
       <parameter metaid="meta_IVDOSE_los" sboTerm="SBO:0000002" id="IVDOSE_los" name="IV bolus dose los [mg]" value="0" units="mg" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -2050,20 +2561,146 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </body>
         </notes>
       </parameter>
-      <parameter id="mr_los_e317s_urine" value="0" units="dimensionless" constant="true">
+      <parameter id="mr_los_e3174_urine" value="0" units="dimensionless" constant="false">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Metabolic ratio losartan/E3174</p>
           </body>
         </notes>
       </parameter>
-      <parameter id="mr_los_e317s_feces" value="0" units="dimensionless" constant="true">
+      <parameter id="mr_los_e3174_feces" value="0" units="dimensionless" constant="false">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Metabolic ratio losartan/E3174</p>
           </body>
         </notes>
       </parameter>
+      <parameter id="Aurine_los_e3174" value="0" units="mmole" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Sum losartan and E3174 urine</p>
+          </body>
+        </notes>
+      </parameter>
+      <parameter id="Aurine_total" value="0" units="mmole" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Sum losartan and E3174 and L158 urine</p>
+          </body>
+        </notes>
+      </parameter>
+      <parameter id="Afeces_total" value="0" units="mmole" constant="false">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Sum losartan and E3174 and L158 feces</p>
+          </body>
+        </notes>
+      </parameter>
+      <parameter metaid="meta_RENSEC_k" sboTerm="SBO:0000009" id="RENSEC_k" name="rate renin secretion" value="0.1" units="mmole_per_min" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_RENSEC_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_RENSEC_fa" sboTerm="SBO:0000009" id="RENSEC_fa" name="activation renin secretion via exp3174" value="5" units="dimensionless" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_RENSEC_fa">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_RENDEG_k" sboTerm="SBO:0000009" id="RENDEG_k" name="rate renin degradation" units="l_per_min" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_RENDEG_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ALDSEC_k" sboTerm="SBO:0000009" id="ALDSEC_k" name="rate aldosterone secretion" value="1.0105027952686e-06" units="mmole_per_min" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ALDSEC_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ALDDEG_k" sboTerm="SBO:0000009" id="ALDDEG_k" name="rate aldosterone degradation" units="l_per_min" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ALDDEG_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ANGGEN2ANG1_k" sboTerm="SBO:0000009" id="ANGGEN2ANG1_k" name="rate angen to ang1 conversion" value="0.100300143544081" units="l_per_min" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ANGGEN2ANG1_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ANG1ANG2_k" sboTerm="SBO:0000009" id="ANG1ANG2_k" name="rate ang1 to ang2 conversion" units="l_per_min" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ANG1ANG2_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter metaid="meta_ANG2DEG_k" sboTerm="SBO:0000009" id="ANG2DEG_k" name="rate aldosterone degradation" units="l_per_min" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ANG2DEG_k">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000009"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </parameter>
+      <parameter id="fe_e3174" name="effect via exp3174 in [0, 1]" value="NaN" units="dimensionless" constant="false"/>
       <parameter id="Qgu" name="gut blood flow" value="NaN" units="l_per_min" constant="false"/>
       <parameter id="Qki" name="kidney blood flow" value="NaN" units="l_per_min" constant="false"/>
       <parameter id="Qh" name="hepatic (venous side) blood flow" value="NaN" units="l_per_min" constant="false"/>
@@ -2071,97 +2708,261 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
       <parameter id="Qlu" name="lung blood flow" value="NaN" units="l_per_min" constant="false"/>
       <parameter id="Qre" name="rest of body blood flow" value="NaN" units="l_per_min" constant="false"/>
       <parameter id="Qpo" name="portal blood flow" value="NaN" units="l_per_min" constant="false"/>
-      <parameter id="Aki_plasma_los" name="losartan amount (kidney) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xki_plasma_los" name="losartan amount (kidney) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mki_plasma_los" name="losartan concentration (kidney) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ali_plasma_los" name="losartan amount (liver) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xli_plasma_los" name="losartan amount (liver) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mli_plasma_los" name="losartan concentration (liver) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Alu_plasma_los" name="losartan amount (lung) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xlu_plasma_los" name="losartan amount (lung) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mlu_plasma_los" name="losartan concentration (lung) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Agu_plasma_los" name="losartan amount (gut) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xgu_plasma_los" name="losartan amount (gut) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mgu_plasma_los" name="losartan concentration (gut) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Are_plasma_los" name="losartan amount (rest) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xre_plasma_los" name="losartan amount (rest) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mre_plasma_los" name="losartan concentration (rest) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Aar_los" name="losartan amount (arterial blood) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xar_los" name="losartan amount (arterial blood) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mar_los" name="losartan concentration (arterial blood) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ave_los" name="losartan amount (venous blood) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xve_los" name="losartan amount (venous blood) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mve_los" name="losartan concentration (venous blood) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Apo_los" name="losartan amount (portal vein) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xpo_los" name="losartan amount (portal vein) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mpo_los" name="losartan concentration (portal vein) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ahv_los" name="losartan amount (hepatic vein) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xhv_los" name="losartan amount (hepatic vein) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mhv_los" name="losartan concentration (hepatic vein) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Xurine_los" name="losartan amount (urine) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Xfeces_los" name="losartan amount (feces)" value="NaN" units="mg" constant="false"/>
-      <parameter id="Aki_plasma_e3174" name="E3174 amount (kidney) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xki_plasma_e3174" name="E3174 amount (kidney) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mki_plasma_e3174" name="E3174 concentration (kidney) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ali_plasma_e3174" name="E3174 amount (liver) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xli_plasma_e3174" name="E3174 amount (liver) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mli_plasma_e3174" name="E3174 concentration (liver) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Alu_plasma_e3174" name="E3174 amount (lung) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xlu_plasma_e3174" name="E3174 amount (lung) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mlu_plasma_e3174" name="E3174 concentration (lung) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Agu_plasma_e3174" name="E3174 amount (gut) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xgu_plasma_e3174" name="E3174 amount (gut) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mgu_plasma_e3174" name="E3174 concentration (gut) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Are_plasma_e3174" name="E3174 amount (rest) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xre_plasma_e3174" name="E3174 amount (rest) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mre_plasma_e3174" name="E3174 concentration (rest) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Aar_e3174" name="E3174 amount (arterial blood) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xar_e3174" name="E3174 amount (arterial blood) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mar_e3174" name="E3174 concentration (arterial blood) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ave_e3174" name="E3174 amount (venous blood) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xve_e3174" name="E3174 amount (venous blood) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mve_e3174" name="E3174 concentration (venous blood) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Apo_e3174" name="E3174 amount (portal vein) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xpo_e3174" name="E3174 amount (portal vein) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mpo_e3174" name="E3174 concentration (portal vein) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ahv_e3174" name="E3174 amount (hepatic vein) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xhv_e3174" name="E3174 amount (hepatic vein) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mhv_e3174" name="E3174 concentration (hepatic vein) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Xurine_e3174" name="E3174 amount (urine) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Xfeces_e3174" name="E3174 amount (feces)" value="NaN" units="mg" constant="false"/>
-      <parameter id="Aki_plasma_l158" name="L158 amount (kidney) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xki_plasma_l158" name="L158 amount (kidney) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mki_plasma_l158" name="L158 concentration (kidney) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ali_plasma_l158" name="L158 amount (liver) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xli_plasma_l158" name="L158 amount (liver) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mli_plasma_l158" name="L158 concentration (liver) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Alu_plasma_l158" name="L158 amount (lung) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xlu_plasma_l158" name="L158 amount (lung) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mlu_plasma_l158" name="L158 concentration (lung) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Agu_plasma_l158" name="L158 amount (gut) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xgu_plasma_l158" name="L158 amount (gut) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mgu_plasma_l158" name="L158 concentration (gut) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Are_plasma_l158" name="L158 amount (rest) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xre_plasma_l158" name="L158 amount (rest) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mre_plasma_l158" name="L158 concentration (rest) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Aar_l158" name="L158 amount (arterial blood) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xar_l158" name="L158 amount (arterial blood) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mar_l158" name="L158 concentration (arterial blood) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ave_l158" name="L158 amount (venous blood) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xve_l158" name="L158 amount (venous blood) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mve_l158" name="L158 concentration (venous blood) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Apo_l158" name="L158 amount (portal vein) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xpo_l158" name="L158 amount (portal vein) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mpo_l158" name="L158 concentration (portal vein) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Ahv_l158" name="L158 amount (hepatic vein) [mmole]" value="NaN" units="mmole" constant="false"/>
-      <parameter id="Xhv_l158" name="L158 amount (hepatic vein) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Mhv_l158" name="L158 concentration (hepatic vein) [mg/l]" value="NaN" units="mg_per_l" constant="false"/>
-      <parameter id="Xurine_l158" name="L158 amount (urine) [mg]" value="NaN" units="mg" constant="false"/>
-      <parameter id="Xfeces_l158" name="L158 amount (feces)" value="NaN" units="mg" constant="false"/>
-      <parameter id="mr_los_e3174_urine" value="NaN" units="dimensionless" constant="false"/>
-      <parameter id="mr_los_e3174_feces" value="NaN" units="dimensionless" constant="false"/>
     </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="ald">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> ald_ref </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ren">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> ren_ref </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="anggen">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> anggen_ref </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ang1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> ang1_ref </ci>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ang2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> ang2_ref </ci>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
     <listOfRules>
+      <assignmentRule variable="RENDEG_k">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> RENSEC_k </ci>
+            <ci> ren_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ALDDEG_k">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> ALDSEC_k </ci>
+            <ci> ald_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ANG1ANG2_k">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> ANGGEN2ANG1_k </ci>
+              <ci> anggen_ref </ci>
+            </apply>
+            <ci> ang1_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ANG2DEG_k">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> ANGGEN2ANG1_k </ci>
+              <ci> anggen_ref </ci>
+            </apply>
+            <ci> ang2_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ald_change">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> ald </ci>
+            <ci> ald_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ald_ratio">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> ald </ci>
+            <ci> ald_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ren_change">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> ren </ci>
+            <ci> ren_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ren_ratio">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> ren </ci>
+            <ci> ren_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ang1_change">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> ang1 </ci>
+            <ci> ang1_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ang1_ratio">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> ang1 </ci>
+            <ci> ang1_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ang2_change">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> ang2 </ci>
+            <ci> ang2_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ang2_ratio">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> ang2 </ci>
+            <ci> ang2_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule name="effect via exp3174 in [0, 1]" variable="fe_e3174">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> e3174 </ci>
+            <apply>
+              <plus/>
+              <ci> E50_e3174 </ci>
+              <ci> e3174 </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="SBP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> SBP_ref </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> BP_ald_fe </ci>
+                <ci> SBP_ref </ci>
+                <apply>
+                  <minus/>
+                  <ci> ald </ci>
+                  <ci> ald_ref </ci>
+                </apply>
+              </apply>
+              <ci> ald_ref </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="DBP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> DBP_ref </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> BP_ald_fe </ci>
+                <ci> DBP_ref </ci>
+                <apply>
+                  <minus/>
+                  <ci> ald </ci>
+                  <ci> ald_ref </ci>
+                </apply>
+              </apply>
+              <ci> ald_ref </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="MAP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+          <apply>
+            <plus/>
+            <ci> DBP </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <ci> SBP </ci>
+                <ci> DBP </ci>
+              </apply>
+              <cn sbml:units="dimensionless" type="integer"> 3 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="SBP_change">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> SBP </ci>
+            <ci> SBP_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="SBP_ratio">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> SBP </ci>
+            <ci> SBP_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="DBP_change">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <minus/>
+            <ci> DBP </ci>
+            <ci> DBP_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="DBP_ratio">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> DBP </ci>
+            <ci> DBP_ref </ci>
+          </apply>
+        </math>
+      </assignmentRule>
       <assignmentRule variable="f_shunts">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <ci> f_cirrhosis </ci>
@@ -2694,303 +3495,6 @@ injection rate.</p>
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule name="losartan amount (kidney) [mmole]" variable="Aki_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cki_plasma_los </ci>
-            <ci> Vki_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (kidney) [mg]" variable="Xki_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aki_plasma_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (kidney) [mg/l]" variable="Mki_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Aki_plasma_los </ci>
-              <ci> Vki_plasma </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (liver) [mmole]" variable="Ali_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cli_plasma_los </ci>
-            <ci> Vli_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (liver) [mg]" variable="Xli_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ali_plasma_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (liver) [mg/l]" variable="Mli_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ali_plasma_los </ci>
-              <ci> Vli_plasma </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (lung) [mmole]" variable="Alu_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Clu_plasma_los </ci>
-            <ci> Vlu_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (lung) [mg]" variable="Xlu_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Alu_plasma_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (lung) [mg/l]" variable="Mlu_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Alu_plasma_los </ci>
-              <ci> Vlu_plasma </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (gut) [mmole]" variable="Agu_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cgu_plasma_los </ci>
-            <ci> Vgu_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (gut) [mg]" variable="Xgu_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Agu_plasma_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (gut) [mg/l]" variable="Mgu_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Agu_plasma_los </ci>
-              <ci> Vgu_plasma </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (rest) [mmole]" variable="Are_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cre_plasma_los </ci>
-            <ci> Vre_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (rest) [mg]" variable="Xre_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Are_plasma_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (rest) [mg/l]" variable="Mre_plasma_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Are_plasma_los </ci>
-              <ci> Vre_plasma </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (arterial blood) [mmole]" variable="Aar_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Car_los </ci>
-            <ci> Var </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (arterial blood) [mg]" variable="Xar_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aar_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (arterial blood) [mg/l]" variable="Mar_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Aar_los </ci>
-              <ci> Var </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (venous blood) [mmole]" variable="Ave_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cve_los </ci>
-            <ci> Vve </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (venous blood) [mg]" variable="Xve_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ave_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (venous blood) [mg/l]" variable="Mve_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ave_los </ci>
-              <ci> Vve </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (portal vein) [mmole]" variable="Apo_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cpo_los </ci>
-            <ci> Vpo </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (portal vein) [mg]" variable="Xpo_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Apo_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (portal vein) [mg/l]" variable="Mpo_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Apo_los </ci>
-              <ci> Vpo </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (hepatic vein) [mmole]" variable="Ahv_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Chv_los </ci>
-            <ci> Vhv </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (hepatic vein) [mg]" variable="Xhv_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ahv_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan concentration (hepatic vein) [mg/l]" variable="Mhv_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ahv_los </ci>
-              <ci> Vhv </ci>
-            </apply>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (urine) [mg]" variable="Xurine_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aurine_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="losartan amount (feces)" variable="Xfeces_los">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Afeces_los </ci>
-            <ci> Mr_los </ci>
-          </apply>
-        </math>
-      </assignmentRule>
       <assignmentRule name="injection rate IV" variable="Ki_e3174">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
@@ -3007,600 +3511,6 @@ injection rate.</p>
               <ci> ti_e3174 </ci>
             </apply>
             <cn sbml:units="s_per_min" type="integer"> 60 </cn>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (kidney) [mmole]" variable="Aki_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cki_plasma_e3174 </ci>
-            <ci> Vki_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (kidney) [mg]" variable="Xki_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aki_plasma_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (kidney) [mg/l]" variable="Mki_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Aki_plasma_e3174 </ci>
-              <ci> Vki_plasma </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (liver) [mmole]" variable="Ali_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cli_plasma_e3174 </ci>
-            <ci> Vli_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (liver) [mg]" variable="Xli_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ali_plasma_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (liver) [mg/l]" variable="Mli_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ali_plasma_e3174 </ci>
-              <ci> Vli_plasma </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (lung) [mmole]" variable="Alu_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Clu_plasma_e3174 </ci>
-            <ci> Vlu_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (lung) [mg]" variable="Xlu_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Alu_plasma_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (lung) [mg/l]" variable="Mlu_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Alu_plasma_e3174 </ci>
-              <ci> Vlu_plasma </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (gut) [mmole]" variable="Agu_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cgu_plasma_e3174 </ci>
-            <ci> Vgu_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (gut) [mg]" variable="Xgu_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Agu_plasma_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (gut) [mg/l]" variable="Mgu_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Agu_plasma_e3174 </ci>
-              <ci> Vgu_plasma </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (rest) [mmole]" variable="Are_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cre_plasma_e3174 </ci>
-            <ci> Vre_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (rest) [mg]" variable="Xre_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Are_plasma_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (rest) [mg/l]" variable="Mre_plasma_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Are_plasma_e3174 </ci>
-              <ci> Vre_plasma </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (arterial blood) [mmole]" variable="Aar_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Car_e3174 </ci>
-            <ci> Var </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (arterial blood) [mg]" variable="Xar_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aar_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (arterial blood) [mg/l]" variable="Mar_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Aar_e3174 </ci>
-              <ci> Var </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (venous blood) [mmole]" variable="Ave_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cve_e3174 </ci>
-            <ci> Vve </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (venous blood) [mg]" variable="Xve_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ave_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (venous blood) [mg/l]" variable="Mve_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ave_e3174 </ci>
-              <ci> Vve </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (portal vein) [mmole]" variable="Apo_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cpo_e3174 </ci>
-            <ci> Vpo </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (portal vein) [mg]" variable="Xpo_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Apo_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (portal vein) [mg/l]" variable="Mpo_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Apo_e3174 </ci>
-              <ci> Vpo </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (hepatic vein) [mmole]" variable="Ahv_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Chv_e3174 </ci>
-            <ci> Vhv </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (hepatic vein) [mg]" variable="Xhv_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ahv_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 concentration (hepatic vein) [mg/l]" variable="Mhv_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ahv_e3174 </ci>
-              <ci> Vhv </ci>
-            </apply>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (urine) [mg]" variable="Xurine_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aurine_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="E3174 amount (feces)" variable="Xfeces_e3174">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Afeces_e3174 </ci>
-            <ci> Mr_e3174 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (kidney) [mmole]" variable="Aki_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cki_plasma_l158 </ci>
-            <ci> Vki_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (kidney) [mg]" variable="Xki_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aki_plasma_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (kidney) [mg/l]" variable="Mki_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Aki_plasma_l158 </ci>
-              <ci> Vki_plasma </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (liver) [mmole]" variable="Ali_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cli_plasma_l158 </ci>
-            <ci> Vli_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (liver) [mg]" variable="Xli_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ali_plasma_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (liver) [mg/l]" variable="Mli_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ali_plasma_l158 </ci>
-              <ci> Vli_plasma </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (lung) [mmole]" variable="Alu_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Clu_plasma_l158 </ci>
-            <ci> Vlu_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (lung) [mg]" variable="Xlu_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Alu_plasma_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (lung) [mg/l]" variable="Mlu_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Alu_plasma_l158 </ci>
-              <ci> Vlu_plasma </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (gut) [mmole]" variable="Agu_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cgu_plasma_l158 </ci>
-            <ci> Vgu_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (gut) [mg]" variable="Xgu_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Agu_plasma_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (gut) [mg/l]" variable="Mgu_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Agu_plasma_l158 </ci>
-              <ci> Vgu_plasma </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (rest) [mmole]" variable="Are_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cre_plasma_l158 </ci>
-            <ci> Vre_plasma </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (rest) [mg]" variable="Xre_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Are_plasma_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (rest) [mg/l]" variable="Mre_plasma_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Are_plasma_l158 </ci>
-              <ci> Vre_plasma </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (arterial blood) [mmole]" variable="Aar_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Car_l158 </ci>
-            <ci> Var </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (arterial blood) [mg]" variable="Xar_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aar_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (arterial blood) [mg/l]" variable="Mar_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Aar_l158 </ci>
-              <ci> Var </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (venous blood) [mmole]" variable="Ave_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cve_l158 </ci>
-            <ci> Vve </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (venous blood) [mg]" variable="Xve_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ave_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (venous blood) [mg/l]" variable="Mve_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ave_l158 </ci>
-              <ci> Vve </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (portal vein) [mmole]" variable="Apo_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Cpo_l158 </ci>
-            <ci> Vpo </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (portal vein) [mg]" variable="Xpo_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Apo_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (portal vein) [mg/l]" variable="Mpo_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Apo_l158 </ci>
-              <ci> Vpo </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (hepatic vein) [mmole]" variable="Ahv_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Chv_l158 </ci>
-            <ci> Vhv </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (hepatic vein) [mg]" variable="Xhv_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Ahv_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 concentration (hepatic vein) [mg/l]" variable="Mhv_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <apply>
-              <divide/>
-              <ci> Ahv_l158 </ci>
-              <ci> Vhv </ci>
-            </apply>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (urine) [mg]" variable="Xurine_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Aurine_l158 </ci>
-            <ci> Mr_l158 </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule name="L158 amount (feces)" variable="Xfeces_l158">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <times/>
-            <ci> Afeces_l158 </ci>
-            <ci> Mr_l158 </ci>
           </apply>
         </math>
       </assignmentRule>
@@ -3682,6 +3592,59 @@ injection rate.</p>
           </apply>
         </math>
       </assignmentRule>
+      <assignmentRule variable="Aurine_los_e3174">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> Aurine_los </ci>
+            <ci> Aurine_e3174 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Cve_los_e3174">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> Cve_los </ci>
+            <ci> Cve_e3174 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Cve_total">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> Cve_los </ci>
+            <ci> Cve_e3174 </ci>
+            <ci> Cve_l158 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Aurine_total">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> Aurine_los </ci>
+            <ci> Aurine_e3174 </ci>
+            <ci> Aurine_l158 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Afeces_total">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> Afeces_los </ci>
+            <ci> Afeces_e3174 </ci>
+            <ci> Afeces_l158 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="e3174">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> Cve_e3174 </ci>
+        </math>
+      </assignmentRule>
       <rateRule variable="IVDOSE_los">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
@@ -3726,6 +3689,295 @@ injection rate.</p>
       </rateRule>
     </listOfRules>
     <listOfReactions>
+      <reaction metaid="meta_RENSEC" sboTerm="SBO:0000655" id="RENSEC" name="renin secretion (RENSEC)" reversible="false" compartment="Vplasma">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_RENSEC">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000655"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="ren" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="e3174"/>
+          <modifierSpeciesReference species="ang2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+            <apply>
+              <times/>
+              <ci> RENSEC_k </ci>
+              <apply>
+                <plus/>
+                <cn sbml:units="dimensionless" type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <ci> RENSEC_fa </ci>
+                  <ci> fe_e3174 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_RENDEG" sboTerm="SBO:0000176" id="RENDEG" name="renin degradation (RENDEG)" reversible="false" compartment="Vplasma">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_RENDEG">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000176"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ren" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> RENDEG_k </ci>
+              <ci> ren </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_ALDSEC" sboTerm="SBO:0000655" id="ALDSEC" name="aldosterone secretion (ALDSEC)" reversible="false" compartment="Vplasma">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <ul>
+              <li>exp3174 inhibits aldosterone secretion; probably via the inhibition of AT1 receptors, resulting in
+reduced aldosterone secretion. This is modelled via the fi dependency.</li>
+              <li>angiotensin II activates aldosterone secretion by binding to AT1 receptors</li>
+            </ul>
+          </body>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ALDSEC">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000655"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfProducts>
+          <speciesReference species="ald" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="e3174"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+            <apply>
+              <times/>
+              <ci> ALDSEC_k </ci>
+              <apply>
+                <minus/>
+                <cn sbml:units="dimensionless" type="integer"> 1 </cn>
+                <ci> fe_e3174 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_ALDDEG" sboTerm="SBO:0000176" id="ALDDEG" name="aldosterone degradation (ALDDEG)" reversible="false" compartment="Vplasma">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ALDDEG">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000176"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ald" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ALDDEG_k </ci>
+              <ci> ald </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_ANGGEN2ANG1" sboTerm="SBO:0000176" id="ANGGEN2ANG1" name="angiotensinogen to angiotensin I (renin)" reversible="false" compartment="Vplasma">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ANGGEN2ANG1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000176"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="anggen" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ang1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ren"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> ANGGEN2ANG1_k </ci>
+                <ci> anggen </ci>
+                <ci> ren </ci>
+              </apply>
+              <ci> ren_ref </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_ANG1ANG2" sboTerm="SBO:0000176" id="ANG1ANG2" name="angiotensin I to angiotensin II (ACE)" reversible="false" compartment="Vplasma">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ANG1ANG2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000176"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ang1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ang2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ANG1ANG2_k </ci>
+              <ci> ang1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_ANG2DEG" sboTerm="SBO:0000176" id="ANG2DEG" name="angiotensin II degradation (ANG2DEG)" reversible="false" compartment="Vplasma">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_ANG2DEG">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000176"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ang2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ANG2DEG_k </ci>
+              <ci> ang2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_transport_lu_los" sboTerm="SBO:0000655" id="transport_lu_los" name="transport losartan" reversible="true" compartment="Vlu_tissue">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_transport_lu_los">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000655"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Clu_plasma_los" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Clu_los" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ftissue_los </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> Clu_plasma_los </ci>
+                  <ci> Kp_los </ci>
+                </apply>
+                <ci> Clu_los </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="meta_transport_re_los" sboTerm="SBO:0000655" id="transport_re_los" name="transport losartan" reversible="true" compartment="Vre_tissue">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_transport_re_los">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000655"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Cre_plasma_los" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Cre_los" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ftissue_los </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> Cre_plasma_los </ci>
+                  <ci> Kp_los </ci>
+                </apply>
+                <ci> Cre_los </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
       <reaction metaid="meta_iv_los" sboTerm="SBO:0000655" id="iv_los" name="iv losartan" reversible="false" compartment="Vve">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -5032,6 +5284,7 @@ injection rate.</p>
       <comp:submodel comp:id="GU" comp:name="gut submodel" comp:modelRef="gut"/>
     </comp:listOfSubmodels>
     <comp:listOfPorts>
+      <comp:port metaid="Vplasma_port" sboTerm="SBO:0000599" comp:idRef="Vplasma" comp:id="Vplasma_port" comp:name="Port of Vplasma"/>
       <comp:port metaid="Vki_tissue_port" sboTerm="SBO:0000599" comp:idRef="Vki_tissue" comp:id="Vki_tissue_port" comp:name="Port of Vki_tissue"/>
       <comp:port metaid="Vki_plasma_port" sboTerm="SBO:0000599" comp:idRef="Vki_plasma" comp:id="Vki_plasma_port" comp:name="Port of Vki_plasma"/>
       <comp:port metaid="Vli_tissue_port" sboTerm="SBO:0000599" comp:idRef="Vli_tissue" comp:id="Vli_tissue_port" comp:name="Port of Vli_tissue"/>
@@ -5042,6 +5295,7 @@ injection rate.</p>
       <comp:port metaid="Vgu_plasma_port" sboTerm="SBO:0000599" comp:idRef="Vgu_plasma" comp:id="Vgu_plasma_port" comp:name="Port of Vgu_plasma"/>
       <comp:port metaid="Vre_tissue_port" sboTerm="SBO:0000599" comp:idRef="Vre_tissue" comp:id="Vre_tissue_port" comp:name="Port of Vre_tissue"/>
       <comp:port metaid="Vre_plasma_port" sboTerm="SBO:0000599" comp:idRef="Vre_plasma" comp:id="Vre_plasma_port" comp:name="Port of Vre_plasma"/>
+      <comp:port metaid="e3174_port" sboTerm="SBO:0000599" comp:idRef="e3174" comp:id="e3174_port" comp:name="Port of e3174"/>
       <comp:port metaid="Cki_plasma_los_port" sboTerm="SBO:0000599" comp:idRef="Cki_plasma_los" comp:id="Cki_plasma_los_port" comp:name="Port of Cki_plasma_los"/>
       <comp:port metaid="Cli_plasma_los_port" sboTerm="SBO:0000599" comp:idRef="Cli_plasma_los" comp:id="Cli_plasma_los_port" comp:name="Port of Cli_plasma_los"/>
       <comp:port metaid="Clu_plasma_los_port" sboTerm="SBO:0000599" comp:idRef="Clu_plasma_los" comp:id="Clu_plasma_los_port" comp:name="Port of Clu_plasma_los"/>
@@ -5051,6 +5305,8 @@ injection rate.</p>
       <comp:port metaid="Cve_los_port" sboTerm="SBO:0000599" comp:idRef="Cve_los" comp:id="Cve_los_port" comp:name="Port of Cve_los"/>
       <comp:port metaid="Cpo_los_port" sboTerm="SBO:0000599" comp:idRef="Cpo_los" comp:id="Cpo_los_port" comp:name="Port of Cpo_los"/>
       <comp:port metaid="Chv_los_port" sboTerm="SBO:0000599" comp:idRef="Chv_los" comp:id="Chv_los_port" comp:name="Port of Chv_los"/>
+      <comp:port metaid="Clu_los_port" sboTerm="SBO:0000599" comp:idRef="Clu_los" comp:id="Clu_los_port" comp:name="Port of Clu_los"/>
+      <comp:port metaid="Cre_los_port" sboTerm="SBO:0000599" comp:idRef="Cre_los" comp:id="Cre_los_port" comp:name="Port of Cre_los"/>
       <comp:port metaid="Cki_plasma_e3174_port" sboTerm="SBO:0000599" comp:idRef="Cki_plasma_e3174" comp:id="Cki_plasma_e3174_port" comp:name="Port of Cki_plasma_e3174"/>
       <comp:port metaid="Cli_plasma_e3174_port" sboTerm="SBO:0000599" comp:idRef="Cli_plasma_e3174" comp:id="Cli_plasma_e3174_port" comp:name="Port of Cli_plasma_e3174"/>
       <comp:port metaid="Clu_plasma_e3174_port" sboTerm="SBO:0000599" comp:idRef="Clu_plasma_e3174" comp:id="Clu_plasma_e3174_port" comp:name="Port of Clu_plasma_e3174"/>

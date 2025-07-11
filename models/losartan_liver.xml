@@ -14,27 +14,23 @@
         <ul>
           <li>metabolism of losartan -&gt; exp3174 (liver CYP2C9)</li>
         </ul>
+        <p>The content of this model has been carefully created in a manual research effort.</p>
         <h2>Terms of use</h2>
-        <p>The content of this model has been carefully created in a manual research effort.
-This file has been created by <a href="https://livermetabolism.com">Matthias König</a>
-using <a href="https://github.com/matthiaskoenig/sbmlutils">sbmlutils</a>.
-For questions contact <a href="mailto:koenigmx@hu-berlin.de">koenigmx@hu-berlin.de</a>. Copyright © 2025 Matthias König.</p>
+        <p>Copyright © 2025 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
         </a>
         <br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-<p>Redistribution and use of any part of this model, with or without modification,
-are permitted provided that the following conditions are met:</p>
-        <ol>
-          <li>Redistributions of this SBML file must retain the above copyright notice, this
-list of conditions and the following disclaimer.</li>
-          <li>Redistributions in a different form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.</li>
-        </ol>
-        <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.</p></body>
+<p>Redistribution and use of any part of this model, with or without modification, are permitted provided
+that the following conditions are met:</p>
+        <ul>
+          <li>Redistributions of this SBML file must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+          <li>Redistributions in a different form must reproduce the above copyright notice, this list of conditions
+and the following disclaimer in the documentation and/or other materials provided
+with the distribution.</li>
+        </ul>
+        <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></body>
       </notes>
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -43,19 +39,19 @@ FOR A PARTICULAR PURPOSE.</p></body>
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
                 <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Tensil</vCard4:family-name>
-                  <vCard4:given-name>Ennie</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
-                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
                   <vCard4:family-name>König</vCard4:family-name>
                   <vCard4:given-name>Matthias</vCard4:given-name>
                 </vCard4:hasName>
                 <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
                 <vCard4:organization-name>Humboldt-University Berlin, Institute for Theoretical Biology</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Tensil</vCard4:family-name>
+                  <vCard4:given-name>Ennie</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
+                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
               </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
@@ -248,7 +244,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -265,7 +261,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -287,7 +283,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -304,7 +300,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -455,7 +451,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_MBIEX_k" sboTerm="SBO:0000009" id="MBIEX_k" name="rate for export in bile" value="0.0001" units="per_min" constant="true">
+      <parameter metaid="meta_MBIEX_k" sboTerm="SBO:0000009" id="MBIEX_k" name="rate for export in bile" value="0.066315021777011" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_MBIEX_k">
@@ -468,38 +464,20 @@ FOR A PARTICULAR PURPOSE.</p></body>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSIM_Vmax" sboTerm="SBO:0000186" id="LOSIM_Vmax" name="Vmax losartan import" value="0.01" units="mmole_per_min_l" constant="true">
+      <parameter metaid="meta_LOSIM_k" sboTerm="SBO:0000153" id="LOSIM_k" name="rate losartan import" value="1" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOSIM_Vmax">
+            <rdf:Description rdf:about="#meta_LOSIM_k">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000186"/>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000153"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSIM_Km_los" sboTerm="SBO:0000027" id="LOSIM_Km_los" name="Km losartan import" value="0.1" units="mM" constant="true">
-        <notes>
-          <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>in vitro data?</p>
-          </body>
-        </notes>
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOSIM_Km_los">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000027"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_LOS2E3174_Vmax" sboTerm="SBO:0000186" id="LOS2E3174_Vmax" name="Vmax losartan conversion" value="0.01" units="mmole_per_min_l" constant="true">
+      <parameter metaid="meta_LOS2E3174_Vmax" sboTerm="SBO:0000186" id="LOS2E3174_Vmax" name="Vmax losartan conversion" value="0.00072514631731673" units="mmole_per_min_l" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_LOS2E3174_Vmax">
@@ -536,78 +514,39 @@ FOR A PARTICULAR PURPOSE.</p></body>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOS2L158_Vmax" sboTerm="SBO:0000186" id="LOS2L158_Vmax" name="Vmax losartan conversion" value="0.02" units="mmole_per_min_l" constant="true">
+      <parameter metaid="meta_E3174L158_k" sboTerm="SBO:0000153" id="E3174L158_k" name="rate losartan conversion" value="0.00113400909936956" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOS2L158_Vmax">
+            <rdf:Description rdf:about="#meta_E3174L158_k">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000186"/>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000153"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOS2L158_Km_los" sboTerm="SBO:0000027" id="LOS2L158_Km_los" name="Km losartan conversion" value="0.1" units="mM" constant="true">
+      <parameter metaid="meta_E3174EX_k" sboTerm="SBO:0000153" id="E3174EX_k" name="rate E3174 export" value="0.0112001182272967" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOS2L158_Km_los">
+            <rdf:Description rdf:about="#meta_E3174EX_k">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000027"/>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000153"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_E3174EX_Vmax" sboTerm="SBO:0000186" id="E3174EX_Vmax" name="Vmax E3174 export" value="1" units="mmole_per_min_l" constant="true">
+      <parameter metaid="meta_L158EX_k" sboTerm="SBO:0000153" id="L158EX_k" name="rate L158 export" value="1" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_E3174EX_Vmax">
+            <rdf:Description rdf:about="#meta_L158EX_k">
               <bqbiol:is>
                 <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000186"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_E3174EX_Km_e3174" sboTerm="SBO:0000027" id="E3174EX_Km_e3174" name="Km E3174 export" value="0.01" units="mM" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_E3174EX_Km_e3174">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000027"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_L158EX_Vmax" sboTerm="SBO:0000186" id="L158EX_Vmax" name="Vmax L158 export" value="1" units="mmole_per_min_l" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_L158EX_Vmax">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000186"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_L158EX_Km_l158" sboTerm="SBO:0000027" id="L158EX_Km_l158" name="Km L158 export" value="0.01" units="mM" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_L158EX_Km_l158">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000027"/>
+                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000153"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -619,7 +558,8 @@ FOR A PARTICULAR PURPOSE.</p></body>
       <reaction metaid="meta_LOSIM" sboTerm="SBO:0000655" id="LOSIM" name="losartan import (LOSIM)" reversible="true" compartment="Vmem">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>Organic Anion Transporting Polypeptide 2B1 (OATP2B1): Recent findings suggest that losartan is also a substrate for OATP2B1, a transporter that plays a crucial role in the uptake of various drugs into hepatocytes. This transporter facilitates the entry of losartan into liver cells, where it can be metabolized by cytochrome P450 enzymes. [perplexity]</p>
+            <p>Organic Anion Transporting Polypeptide 2B1 (OATP2B1): Recent findings suggest that losartan is also a substrate for OATP2B1, a transporter that plays a crucial role in the uptake of various drugs into hepatocytes. This transporter facilitates the entry of losartan into liver cells, where it can be metabolized by cytochrome P450 enzymes. [perplexity]
+Assumption: fast transport.</p>
           </body>
         </notes>
         <annotation>
@@ -640,36 +580,15 @@ FOR A PARTICULAR PURPOSE.</p></body>
           <speciesReference species="los" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <divide/>
+              <times/>
+              <ci> LOSIM_k </ci>
+              <ci> Vli </ci>
               <apply>
-                <times/>
-                <apply>
-                  <divide/>
-                  <ci> LOSIM_Vmax </ci>
-                  <ci> LOSIM_Km_los </ci>
-                </apply>
-                <ci> Vli </ci>
-                <apply>
-                  <minus/>
-                  <ci> los_ext </ci>
-                  <ci> los </ci>
-                </apply>
-              </apply>
-              <apply>
-                <plus/>
-                <cn sbml:units="dimensionless" type="integer"> 1 </cn>
-                <apply>
-                  <divide/>
-                  <ci> los_ext </ci>
-                  <ci> LOSIM_Km_los </ci>
-                </apply>
-                <apply>
-                  <divide/>
-                  <ci> los </ci>
-                  <ci> LOSIM_Km_los </ci>
-                </apply>
+                <minus/>
+                <ci> los_ext </ci>
+                <ci> los </ci>
               </apply>
             </apply>
           </math>
@@ -719,15 +638,16 @@ Currently only modified via CYP2C9 factor.</p>
           </math>
         </kineticLaw>
       </reaction>
-      <reaction metaid="meta_LOS2L158" sboTerm="SBO:0000176" id="LOS2L158" name="L158 formation (UGT)" reversible="false" compartment="Vli">
+      <reaction metaid="meta_E3174L158" sboTerm="SBO:0000176" id="E3174L158" name="L158 formation (UGT)" reversible="false" compartment="Vli">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>Formation of losartan glucuronides, likely via UGT enzymes.</p>
+            <p>Formation of losartan glucuronides, likely via UGT enzymes.
+Assumption: e3174 metabolite is converted; not much information available on pathway.</p>
           </body>
         </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOS2L158">
+            <rdf:Description rdf:about="#meta_E3174L158">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000176"/>
@@ -737,7 +657,7 @@ Currently only modified via CYP2C9 factor.</p>
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="los" stoichiometry="1" constant="true"/>
+          <speciesReference species="e3174" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
           <speciesReference species="l158" stoichiometry="1" constant="true"/>
@@ -745,23 +665,20 @@ Currently only modified via CYP2C9 factor.</p>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <divide/>
-              <apply>
-                <times/>
-                <ci> LOS2L158_Vmax </ci>
-                <ci> Vli </ci>
-                <ci> los </ci>
-              </apply>
-              <apply>
-                <plus/>
-                <ci> los </ci>
-                <ci> LOS2L158_Km_los </ci>
-              </apply>
+              <times/>
+              <ci> E3174L158_k </ci>
+              <ci> Vli </ci>
+              <ci> e3174 </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction metaid="meta_E3174EX" sboTerm="SBO:0000655" id="E3174EX" name="E3174 export (E3174EX)" reversible="true" compartment="Vmem">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>assumption fast transport</p>
+          </body>
+        </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_E3174EX">
@@ -780,42 +697,26 @@ Currently only modified via CYP2C9 factor.</p>
           <speciesReference species="e3174_ext" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <divide/>
+              <times/>
+              <ci> E3174EX_k </ci>
+              <ci> Vli </ci>
               <apply>
-                <times/>
-                <apply>
-                  <divide/>
-                  <ci> E3174EX_Vmax </ci>
-                  <ci> E3174EX_Km_e3174 </ci>
-                </apply>
-                <ci> Vli </ci>
-                <apply>
-                  <minus/>
-                  <ci> e3174 </ci>
-                  <ci> e3174_ext </ci>
-                </apply>
-              </apply>
-              <apply>
-                <plus/>
-                <cn sbml:units="dimensionless" type="integer"> 1 </cn>
-                <apply>
-                  <divide/>
-                  <ci> e3174_ext </ci>
-                  <ci> E3174EX_Km_e3174 </ci>
-                </apply>
-                <apply>
-                  <divide/>
-                  <ci> e3174 </ci>
-                  <ci> E3174EX_Km_e3174 </ci>
-                </apply>
+                <minus/>
+                <ci> e3174 </ci>
+                <ci> e3174_ext </ci>
               </apply>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction metaid="meta_L158EX" sboTerm="SBO:0000655" id="L158EX" name="L158 export (L158EX)" reversible="true" compartment="Vmem">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>assumption fast transport</p>
+          </body>
+        </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_L158EX">
@@ -834,42 +735,26 @@ Currently only modified via CYP2C9 factor.</p>
           <speciesReference species="l158_ext" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <divide/>
+              <times/>
+              <ci> L158EX_k </ci>
+              <ci> Vli </ci>
               <apply>
-                <times/>
-                <apply>
-                  <divide/>
-                  <ci> L158EX_Vmax </ci>
-                  <ci> L158EX_Km_l158 </ci>
-                </apply>
-                <ci> Vli </ci>
-                <apply>
-                  <minus/>
-                  <ci> l158 </ci>
-                  <ci> l158_ext </ci>
-                </apply>
-              </apply>
-              <apply>
-                <plus/>
-                <cn sbml:units="dimensionless" type="integer"> 1 </cn>
-                <apply>
-                  <divide/>
-                  <ci> l158_ext </ci>
-                  <ci> L158EX_Km_l158 </ci>
-                </apply>
-                <apply>
-                  <divide/>
-                  <ci> l158 </ci>
-                  <ci> L158EX_Km_l158 </ci>
-                </apply>
+                <minus/>
+                <ci> l158 </ci>
+                <ci> l158_ext </ci>
               </apply>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction metaid="meta_LOSBIEX" sboTerm="SBO:0000655" id="LOSBIEX" name="Losartan bile export" reversible="false" compartment="Vapical">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Assumption: identical bile transport of los, e3174 and l158.</p>
+          </body>
+        </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_LOSBIEX">
@@ -923,6 +808,11 @@ Currently only modified via CYP2C9 factor.</p>
         </kineticLaw>
       </reaction>
       <reaction metaid="meta_E3174BIEX" sboTerm="SBO:0000655" id="E3174BIEX" name="E3174 bile export" reversible="false" compartment="Vapical">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Assumption: identical bile transport of los, e3174 and l158.</p>
+          </body>
+        </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_E3174BIEX">
@@ -976,6 +866,11 @@ Currently only modified via CYP2C9 factor.</p>
         </kineticLaw>
       </reaction>
       <reaction metaid="meta_L158BIEX" sboTerm="SBO:0000655" id="L158BIEX" name="L158 bile export" reversible="false" compartment="Vapical">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Assumption: identical bile transport of los, e3174 and l158.</p>
+          </body>
+        </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_L158BIEX">

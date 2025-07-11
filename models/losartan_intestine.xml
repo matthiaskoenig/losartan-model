@@ -16,27 +16,23 @@
           <li>enterohepatic circulation of los, e3174 and l158</li>
           <li>ABCB1 (P-glycoprotein) influences pharmacokinetics, possible role in intestinal uptake</li>
         </ul>
+        <p>The content of this model has been carefully created in a manual research effort.</p>
         <h2>Terms of use</h2>
-        <p>The content of this model has been carefully created in a manual research effort.
-This file has been created by <a href="https://livermetabolism.com">Matthias König</a>
-using <a href="https://github.com/matthiaskoenig/sbmlutils">sbmlutils</a>.
-For questions contact <a href="mailto:koenigmx@hu-berlin.de">koenigmx@hu-berlin.de</a>. Copyright © 2025 Matthias König.</p>
+        <p>Copyright © 2025 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
         </a>
         <br/>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-<p>Redistribution and use of any part of this model, with or without modification,
-are permitted provided that the following conditions are met:</p>
-        <ol>
-          <li>Redistributions of this SBML file must retain the above copyright notice, this
-list of conditions and the following disclaimer.</li>
-          <li>Redistributions in a different form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.</li>
-        </ol>
-        <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.</p></body>
+<p>Redistribution and use of any part of this model, with or without modification, are permitted provided
+that the following conditions are met:</p>
+        <ul>
+          <li>Redistributions of this SBML file must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+          <li>Redistributions in a different form must reproduce the above copyright notice, this list of conditions
+and the following disclaimer in the documentation and/or other materials provided
+with the distribution.</li>
+        </ul>
+        <p>This model is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></body>
       </notes>
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
@@ -45,19 +41,19 @@ FOR A PARTICULAR PURPOSE.</p></body>
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
                 <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>Tensil</vCard4:family-name>
-                  <vCard4:given-name>Ennie</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
-                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
                   <vCard4:family-name>König</vCard4:family-name>
                   <vCard4:given-name>Matthias</vCard4:given-name>
                 </vCard4:hasName>
                 <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
                 <vCard4:organization-name>Humboldt-University Berlin, Institute for Theoretical Biology</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Tensil</vCard4:family-name>
+                  <vCard4:given-name>Ennie</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
+                <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
               </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
@@ -293,7 +289,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -310,7 +306,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -327,7 +323,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -344,7 +340,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -361,7 +357,7 @@ FOR A PARTICULAR PURPOSE.</p></body>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000247"/>
                   <rdf:li rdf:resource="http://identifiers.org/pubchem.compound/11751549"/>
                   <rdf:li rdf:resource="http://identifiers.org/CHEBI:6541"/>
-                  <rdf:li rdf:resource="http://identifiers.org/snomed/108582002"/>
+                  <rdf:li rdf:resource="http://identifiers.org/snomedct/108582002"/>
                   <rdf:li rdf:resource="http://identifiers.org/ncit/C29165"/>
                 </rdf:Bag>
               </bqbiol:is>
@@ -448,7 +444,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSABS_k" sboTerm="SBO:0000009" id="LOSABS_k" name="rate of losartan absorption" value="0.01" units="per_min" constant="true">
+      <parameter metaid="meta_LOSABS_k" sboTerm="SBO:0000009" id="LOSABS_k" name="rate of losartan absorption" value="0.0361772268991116" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_LOSABS_k">
@@ -461,7 +457,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_METEXC_k" sboTerm="SBO:0000009" id="METEXC_k" name="rate of metabolite feces excretion" value="0.01" units="per_min" constant="true">
+      <parameter metaid="meta_METEXC_k" sboTerm="SBO:0000009" id="METEXC_k" name="rate of metabolite feces excretion" value="2.69641608199351e-05" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_METEXC_k">
@@ -551,10 +547,10 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSEFL_Vmax" sboTerm="SBO:0000186" id="LOSEFL_Vmax" name="Vmax for losartan efflux (PG)" value="1" units="mmole_per_min_l" constant="true">
+      <parameter metaid="meta_f_LOSEFL_k" sboTerm="SBO:0000186" id="f_LOSEFL_k" name="Rate for losartan efflux (PG) relative to absorption." value="1.02003554075262" units="dimensionless" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOSEFL_Vmax">
+            <rdf:Description rdf:about="#meta_f_LOSEFL_k">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/SBO:0000186"/>
@@ -564,48 +560,19 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSEFL_Km_los" sboTerm="SBO:0000027" id="LOSEFL_Km_los" name="Km for losartan efflux (PG)" value="0.01" units="mM" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOSEFL_Km_los">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000027"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_LOSEX_Vmax" sboTerm="SBO:0000186" id="LOSEX_Vmax" name="Vmax for losartan export in plasma" value="1" units="mmole_per_min_l" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOSEX_Vmax">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000186"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_LOSEX_Km_los" sboTerm="SBO:0000027" id="LOSEX_Km_los" name="Km for losartan export in plasma" value="0.01" units="mM" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_LOSEX_Km_los">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="http://identifiers.org/SBO:0000027"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
+      <parameter id="LOSEFL_k" value="NaN" units="per_min" constant="false"/>
       <parameter id="absorption" name="absorption losartan" value="NaN" units="mmole_per_min" constant="false"/>
     </listOfParameters>
     <listOfRules>
+      <assignmentRule variable="LOSEFL_k">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> f_LOSEFL_k </ci>
+            <ci> LOSABS_k </ci>
+          </apply>
+        </math>
+      </assignmentRule>
       <assignmentRule name="absorption losartan" variable="absorption">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
@@ -667,7 +634,8 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
       <reaction metaid="meta_LOSEFL" sboTerm="SBO:0000655" id="LOSEFL" name="efflux losartan (PG)" reversible="false" compartment="Vapical">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
-            <p>Efflux is catalyzed by P-glycoprotein.</p>
+            <p>Efflux is catalyzed by P-glycoprotein.
+This is calibrated relative to the absorption rate.</p>
           </body>
         </notes>
         <annotation>
@@ -690,24 +658,22 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <divide/>
-              <apply>
-                <times/>
-                <ci> f_abcb1 </ci>
-                <ci> LOSEFL_Vmax </ci>
-                <ci> Vgu </ci>
-                <ci> los </ci>
-              </apply>
-              <apply>
-                <plus/>
-                <ci> los </ci>
-                <ci> LOSEFL_Km_los </ci>
-              </apply>
+              <times/>
+              <ci> f_abcb1 </ci>
+              <ci> LOSEFL_k </ci>
+              <ci> Vgu </ci>
+              <ci> los </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction metaid="meta_LOSEX" sboTerm="SBO:0000655" id="LOSEX" name="losartan export plasma" reversible="false" compartment="Vbaso">
+        <notes>
+          <body xmlns="http://www.w3.org/1999/xhtml">
+            <p>Assumption: transport over basolateral membrane is similar to apical memmrane
+in the enterocytes; reusing rate constant for absorption.</p>
+          </body>
+        </notes>
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_LOSEX">
@@ -728,18 +694,10 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <divide/>
-              <apply>
-                <times/>
-                <ci> LOSEX_Vmax </ci>
-                <ci> Vgu </ci>
-                <ci> los </ci>
-              </apply>
-              <apply>
-                <plus/>
-                <ci> los </ci>
-                <ci> LOSEX_Km_los </ci>
-              </apply>
+              <times/>
+              <ci> LOSABS_k </ci>
+              <ci> Vgu </ci>
+              <ci> los </ci>
             </apply>
           </math>
         </kineticLaw>

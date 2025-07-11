@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Azizi1999</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+</head>
+
+<body>
+<div id="app">
+    <!-- Vue app-->
+    <v-app>
+        <v-content>
+
+            <a href="../index.html">Experiments</a>
+            <h1>Azizi1999</h1>
+
+            <h2>Models</h2>
+            <p>
+            <ul>
+                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/losartan_body_flat.xml</a></li>
+            </ul>
+            </p>
+
+            <h2>Datasets</h2>
+            <p>
+            <ul>
+                <li><strong>CAN16_map</strong>: <a href="Azizi1999_CAN16_map.tsv">Azizi1999_CAN16_map.tsv</a></li>
+                <li><strong>CAN16_renin</strong>: <a href="Azizi1999_CAN16_renin.tsv">Azizi1999_CAN16_renin.tsv</a></li>
+                <li><strong>CAN8_map</strong>: <a href="Azizi1999_CAN8_map.tsv">Azizi1999_CAN8_map.tsv</a></li>
+                <li><strong>CAN8_renin</strong>: <a href="Azizi1999_CAN8_renin.tsv">Azizi1999_CAN8_renin.tsv</a></li>
+                <li><strong>LOS50_map</strong>: <a href="Azizi1999_LOS50_map.tsv">Azizi1999_LOS50_map.tsv</a></li>
+                <li><strong>LOS50_renin</strong>: <a href="Azizi1999_LOS50_renin.tsv">Azizi1999_LOS50_renin.tsv</a></li>
+                <li><strong>placebo_map</strong>: <a href="Azizi1999_placebo_map.tsv">Azizi1999_placebo_map.tsv</a></li>
+                <li><strong>placebo_renin</strong>: <a href="Azizi1999_placebo_renin.tsv">Azizi1999_placebo_renin.tsv</a></li>
+                <li><strong>CAN16_ang1</strong>: <a href="Azizi1999_CAN16_ang1.tsv">Azizi1999_CAN16_ang1.tsv</a></li>
+                <li><strong>CAN16_ang2</strong>: <a href="Azizi1999_CAN16_ang2.tsv">Azizi1999_CAN16_ang2.tsv</a></li>
+                <li><strong>CAN8_ang1</strong>: <a href="Azizi1999_CAN8_ang1.tsv">Azizi1999_CAN8_ang1.tsv</a></li>
+                <li><strong>CAN8_ang2</strong>: <a href="Azizi1999_CAN8_ang2.tsv">Azizi1999_CAN8_ang2.tsv</a></li>
+                <li><strong>LOS50_ang1</strong>: <a href="Azizi1999_LOS50_ang1.tsv">Azizi1999_LOS50_ang1.tsv</a></li>
+                <li><strong>LOS50_ang2</strong>: <a href="Azizi1999_LOS50_ang2.tsv">Azizi1999_LOS50_ang2.tsv</a></li>
+                <li><strong>placebo_ang1</strong>: <a href="Azizi1999_placebo_ang1.tsv">Azizi1999_placebo_ang1.tsv</a></li>
+                <li><strong>placebo_ang2</strong>: <a href="Azizi1999_placebo_ang2.tsv">Azizi1999_placebo_ang2.tsv</a></li>
+                <li><strong>CAN16_candesartan</strong>: <a href="Azizi1999_CAN16_candesartan.tsv">Azizi1999_CAN16_candesartan.tsv</a></li>
+                <li><strong>CAN8_candesartan</strong>: <a href="Azizi1999_CAN8_candesartan.tsv">Azizi1999_CAN8_candesartan.tsv</a></li>
+                <li><strong>LOS50_exp3174</strong>: <a href="Azizi1999_LOS50_exp3174.tsv">Azizi1999_LOS50_exp3174.tsv</a></li>
+                <li><strong>LOS50_losartan</strong>: <a href="Azizi1999_LOS50_losartan.tsv">Azizi1999_LOS50_losartan.tsv</a></li>
+            </ul>
+            </p>
+
+            <h2>Figures</h2>
+            <p>
+            <ul>
+                <li><strong>Fig1_2_3</strong>: <a href="Azizi1999_Fig1_2_3.svg">Azizi1999_Fig1_2_3.svg</a></li>
+            </ul>
+            </p>
+
+            <h3>Fig1_2_3</h3>
+            <p>
+            <table>
+                <tr>
+                    <td>
+                        <!--<v-img src="Azizi1999_Fig1_2_3.svg" max-width="600" width="600"></v-img>-->
+                        <img src="Azizi1999_Fig1_2_3.svg" width="600">
+                    </td>
+                    <!--
+                    <td>
+                    </td>
+                    -->
+                </tr>
+            </table>
+            </p>
+
+            <h2>Code</h2>
+            <p>
+                <a href="../../../../experiments/studies/azizi1999.py">../../../../experiments/studies/azizi1999.py</a>
+            <pre>
+<code class="python">from typing import Dict
+
+from sbmlsim.data import DataSet, load_pkdb_dataframe
+from sbmlsim.fit import FitMapping, FitData
+from sbmlutils.console import console
+
+from pkdb_models.models.losartan.experiments.base_experiment import (
+    LosartanSimulationExperiment,
+)
+from pkdb_models.models.losartan.experiments.metadata import (
+    Tissue, Route, Dosing, ApplicationForm, Health, \
+    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
+)
+
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Timecourse, TimecourseSim
+
+from pkdb_models.models.losartan.helpers import run_experiments
+
+
+class Azizi1999(LosartanSimulationExperiment):
+    """Simulation experiment of Azizi1999."""
+
+    info = {
+        "[Cve_los]": "losartan",
+        "[Cve_e3174]": "exp3174",
+        "[ren]": "renin",
+        "[ang1]": "ang1",
+        "[ang2]": "ang2",
+        "MAP": "map",
+    }
+    colors = {
+        "placebo": "black",
+        "LOS50": "tab:blue",
+    }
+    losp_doses = {
+        "placebo": 0,  # [mg]
+        "LOS50": 50,  # [mg]
+    }
+    interventions = list(losp_doses.keys())
+
+
+    def datasets(self) -> Dict[str, DataSet]:
+        dsets = {}
+        for fig_id in ["Fig1", "Fig2", "Fig3"]:
+            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            for label, df_label in df.groupby("label"):
+                dset = DataSet.from_df(df_label, self.ureg)
+
+                # unit conversion to mole/l
+                if label.endswith("_renin"):
+                    dset.unit_conversion("mean", 1 / self.Mr.ren)
+                elif label.endswith("_ang1"):
+                    dset.unit_conversion("mean", 1 / self.Mr.ang1)
+                elif label.endswith("_ang2"):
+                    dset.unit_conversion("mean", 1 / self.Mr.ang2)
+                elif label.endswith("_losartan"):
+                    dset.unit_conversion("mean", 1 / self.Mr.los)
+                elif label.endswith("_exp3174"):
+                    dset.unit_conversion("mean", 1 / self.Mr.e3174)
+                dsets[label] = dset
+
+        # console.print(dsets)
+        # console.print(dsets.keys())
+        return dsets
+
+    def simulations(self) -> Dict[str, TimecourseSim]:
+        Q_ = self.Q_
+        tcsims = {}
+
+        map_value = 87  # mmHg
+        for intervention in self.interventions:
+            tcsims[f"po_{intervention}"] = TimecourseSim(
+                [Timecourse(
+                    start=0,
+                    end=25 * 60,  # [min]
+                    steps=500,
+                    changes={
+                        **self.default_changes(),
+                        "PODOSE_los": Q_(self.losp_doses[intervention], "mg") * self.Mr.los/self.Mr.losp,
+                        "ren_ref" : Q_(58.5, "pg/ml") / self.Mr.ren, # placebo
+                        "[ren]": Q_(58.5, "pg/ml") / self.Mr.ren,  # placebo
+                        "ang1_ref" : Q_(11.8, "pg/ml") / self.Mr.ang1,  # placebo
+                        "[ang1]": Q_(11.8, "pg/ml") / self.Mr.ang1,  # placebo
+                        "ang2_ref" : Q_(7.2, "pg/ml") / self.Mr.ang2,  # placebo
+                        "[ang2]": Q_(7.2, "pg/ml") / self.Mr.ang2,  # placebo
+                        # MAP 87  MAP = DBP + (SBP - DBP)/3  =>
+                        "SBP_ref" : Q_(120, "mmHg"),
+                        "DBP_ref" : Q_((3 * map_value - 120) / 2, "mmHg"),
+                    },
+                )]
+            )
+        # console.print(tcsims)
+        return tcsims
+
+    def fit_mappings(self) -> Dict[str, FitMapping]:
+        mappings = {}
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+            for intervention in self.interventions:
+                if intervention == "placebo" and sid in {"[Cve_los]", "[Cve_e3174]"}:
+                    continue
+
+                mappings[f"fm_po_{intervention}_{name}"] = FitMapping(
+                    self,
+                    reference=FitData(
+                        self,
+                        dataset=f"{intervention}_{name}",
+                        xid="time",
+                        yid="mean",
+                        yid_sd=None,
+                        count="count",
+                    ),
+                    observable=FitData(
+                        self, task=f"task_po_{intervention}", xid="time", yid=sid,
+                    ),
+                    metadata=LosartanMappingMetaData(
+                        tissue=Tissue.PLASMA,
+                        route=Route.PO,
+                        application_form=ApplicationForm.TABLET,
+                        dosing=Dosing.SINGLE,
+                        health=Health.HEALTHY,
+                        fasting=Fasting.FED,
+                        coadministration=Coadministration.NONE,
+                    ),
+                )
+        # console.print(mappings)
+        return mappings
+
+    def figures(self) -> Dict[str, Figure]:
+        return {
+            **self.fig1_2_3(),
+        }
+
+    def fig1_2_3(self) -> Dict[str, Figure]:
+        fig = Figure(
+            experiment=self,
+            sid="Fig1_2_3",
+            num_rows=3,
+            num_cols=2,
+            name=f"{self.__class__.__name__} (healthy)",
+        )
+        plots = fig.create_plots(
+            xaxis=Axis(self.label_time, unit=self.unit_time), legend=True
+        )
+        plots[0].set_yaxis(self.label_los, unit=self.unit_los)
+        plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
+        plots[2].set_yaxis(self.labels["[ren]"], unit=self.units["[ren]"], min=0)
+        plots[3].set_yaxis(self.labels["[ang1]"], unit=self.units["[ang1]"], min=0)
+        plots[4].set_yaxis(self.labels["[ang2]"], unit=self.units["[ang2]"], min=0)
+        plots[5].set_yaxis(self.labels["MAP"], unit=self.units["MAP"], min=60)
+
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+            for intervention in self.interventions:
+                # simulation
+                plots[k].add_data(
+                    task=f"task_po_{intervention}",
+                    xid="time",
+                    yid=sid,
+                    label=f"Sim {intervention}",
+                    color=self.colors[intervention],
+                )
+                # data
+                if intervention == "placebo" and sid in {"[Cve_los]", "[Cve_e3174]"}:
+                    continue
+                plots[k].add_data(
+                    dataset=f"{intervention}_{name}",
+                    xid="time",
+                    yid="mean",
+                    yid_sd=None,
+                    count="count",
+                    label=f"{intervention}",
+                    color=self.colors[intervention],
+                )
+
+        return {
+            fig.sid: fig,
+        }
+
+
+if __name__ == "__main__":
+    run_experiments(Azizi1999, output_dir=Azizi1999.__name__)
+</code>
+        </pre>
+            </p>
+
+        </v-content>
+    </v-app>
+</div>
+
+
+<!-- loading dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.6/dist/vuetify.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        delimiters: ['${', '}'],
+        data() {
+            return {}
+        }
+    })
+</script>
+
+
+</body>
+</html>

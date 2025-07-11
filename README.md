@@ -6,6 +6,11 @@ This repository provides the losartan physiologically based pharmacokinetics (PB
 The model is distributed as [SBML](http://sbml.org) available from [`losartan_body_flat.xml`](./models/losartan_body_flat.xml) with 
 corresponding SBML4humans model report at [https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_body_flat.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_body_flat.xml) and equations from [`losartan_body_flat.md`](./models/losartan_body_flat.md).
 
+The COMBINE archive is available from [`losartan_model.omex`](./losartan_model.omex).
+
+![PK model overview](./figures/losartan_model.png)
+![PD model overview](./figures/losartan_raas_model.png)
+
 ### Comp submodels
 The liver submodel is available from [`losartan_liver.xml`](./models/losartan_liver.xml) with corresponding SBML4humans report at
 [https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_liver.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_liver.xml) and equations from [`losartan_liver.md`](./models/losartan_liver.md).
@@ -23,7 +28,7 @@ The whole-body submodel is available from [`losartan_body.xml`](./models/losarta
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14761114.svg)](https://doi.org/10.5281/zenodo.14761114)
 
 > Tensil, E., & König, M. (2025).
-> *Physiologically based pharmacokinetic (PBPK) model of losartan.*   
+> *Physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) model of losartan.*   
 > Zenodo. [https://doi.org/10.5281/zenodo.14761114](https://doi.org/10.5281/zenodo.14761114)
 
 ## License
@@ -31,6 +36,10 @@ The whole-body submodel is available from [`losartan_body.xml`](./models/losarta
 * Source Code: [MIT](https://opensource.org/license/MIT)
 * Documentation: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 * Models: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
 
 Funding
 =======

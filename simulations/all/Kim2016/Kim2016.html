@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Kim2016</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+</head>
+
+<body>
+<div id="app">
+    <!-- Vue app-->
+    <v-app>
+        <v-content>
+
+            <a href="../index.html">Experiments</a>
+            <h1>Kim2016</h1>
+
+            <h2>Models</h2>
+            <p>
+            <ul>
+                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/losartan_body_flat.xml</a></li>
+            </ul>
+            </p>
+
+            <h2>Datasets</h2>
+            <p>
+            <ul>
+                <li><strong>caffeine_control</strong>: <a href="Kim2016_caffeine_control.tsv">Kim2016_caffeine_control.tsv</a></li>
+                <li><strong>caffeine_ginseng</strong>: <a href="Kim2016_caffeine_ginseng.tsv">Kim2016_caffeine_ginseng.tsv</a></li>
+                <li><strong>dextromethorphan_control</strong>: <a href="Kim2016_dextromethorphan_control.tsv">Kim2016_dextromethorphan_control.tsv</a></li>
+                <li><strong>dextromethorphan_ginseng</strong>: <a href="Kim2016_dextromethorphan_ginseng.tsv">Kim2016_dextromethorphan_ginseng.tsv</a></li>
+                <li><strong>dextrorphan_control</strong>: <a href="Kim2016_dextrorphan_control.tsv">Kim2016_dextrorphan_control.tsv</a></li>
+                <li><strong>dextrorphan_ginseng</strong>: <a href="Kim2016_dextrorphan_ginseng.tsv">Kim2016_dextrorphan_ginseng.tsv</a></li>
+                <li><strong>exp3174_control</strong>: <a href="Kim2016_exp3174_control.tsv">Kim2016_exp3174_control.tsv</a></li>
+                <li><strong>exp3174_ginseng</strong>: <a href="Kim2016_exp3174_ginseng.tsv">Kim2016_exp3174_ginseng.tsv</a></li>
+                <li><strong>fexofenadine_control</strong>: <a href="Kim2016_fexofenadine_control.tsv">Kim2016_fexofenadine_control.tsv</a></li>
+                <li><strong>fexofenadine_ginseng</strong>: <a href="Kim2016_fexofenadine_ginseng.tsv">Kim2016_fexofenadine_ginseng.tsv</a></li>
+                <li><strong>losartan_control</strong>: <a href="Kim2016_losartan_control.tsv">Kim2016_losartan_control.tsv</a></li>
+                <li><strong>losartan_ginseng</strong>: <a href="Kim2016_losartan_ginseng.tsv">Kim2016_losartan_ginseng.tsv</a></li>
+                <li><strong>midazolam_control</strong>: <a href="Kim2016_midazolam_control.tsv">Kim2016_midazolam_control.tsv</a></li>
+                <li><strong>midazolam_ginseng</strong>: <a href="Kim2016_midazolam_ginseng.tsv">Kim2016_midazolam_ginseng.tsv</a></li>
+                <li><strong>ohmid1_control</strong>: <a href="Kim2016_ohmid1_control.tsv">Kim2016_ohmid1_control.tsv</a></li>
+                <li><strong>ohmid1_ginseng</strong>: <a href="Kim2016_ohmid1_ginseng.tsv">Kim2016_ohmid1_ginseng.tsv</a></li>
+                <li><strong>ohome5_control</strong>: <a href="Kim2016_ohome5_control.tsv">Kim2016_ohome5_control.tsv</a></li>
+                <li><strong>ohome5_ginseng</strong>: <a href="Kim2016_ohome5_ginseng.tsv">Kim2016_ohome5_ginseng.tsv</a></li>
+                <li><strong>omeprazole_control</strong>: <a href="Kim2016_omeprazole_control.tsv">Kim2016_omeprazole_control.tsv</a></li>
+                <li><strong>omeprazole_ginseng</strong>: <a href="Kim2016_omeprazole_ginseng.tsv">Kim2016_omeprazole_ginseng.tsv</a></li>
+                <li><strong>paraxanthine_control</strong>: <a href="Kim2016_paraxanthine_control.tsv">Kim2016_paraxanthine_control.tsv</a></li>
+                <li><strong>paraxanthine_ginseng</strong>: <a href="Kim2016_paraxanthine_ginseng.tsv">Kim2016_paraxanthine_ginseng.tsv</a></li>
+            </ul>
+            </p>
+
+            <h2>Figures</h2>
+            <p>
+            <ul>
+                <li><strong>Fig1</strong>: <a href="Kim2016_Fig1.svg">Kim2016_Fig1.svg</a></li>
+            </ul>
+            </p>
+
+            <h3>Fig1</h3>
+            <p>
+            <table>
+                <tr>
+                    <td>
+                        <!--<v-img src="Kim2016_Fig1.svg" max-width="600" width="600"></v-img>-->
+                        <img src="Kim2016_Fig1.svg" width="600">
+                    </td>
+                    <!--
+                    <td>
+                    </td>
+                    -->
+                </tr>
+            </table>
+            </p>
+
+            <h2>Code</h2>
+            <p>
+                <a href="../../../../experiments/studies/kim2016.py">../../../../experiments/studies/kim2016.py</a>
+            <pre>
+<code class="python">from typing import Dict
+
+from sbmlsim.data import DataSet, load_pkdb_dataframe
+from sbmlsim.fit import FitMapping, FitData
+from sbmlutils.console import console
+
+from pkdb_models.models.losartan.experiments.base_experiment import (
+    LosartanSimulationExperiment,
+)
+from pkdb_models.models.losartan.experiments.metadata import (
+    Tissue, Route, Dosing, ApplicationForm, Health, \
+    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
+)
+
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Timecourse, TimecourseSim
+
+from pkdb_models.models.losartan.helpers import run_experiments
+
+
+class Kim2016(LosartanSimulationExperiment):
+    """Simulation experiment of Kim2016."""
+
+    info = {
+        "los": "losartan",
+        "e3174": "exp3174",
+    }
+    interventions = [
+        "control",
+        "ginseng"
+    ]
+    colors = {
+        "control": "black",
+        "ginseng": "tab:blue",
+    }
+
+    def datasets(self) -> Dict[str, DataSet]:
+        dsets = {}
+        for fig_id in ["Fig1"]:
+            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            for label, df_label in df.groupby("label"):
+                dset = DataSet.from_df(df_label, self.ureg)
+
+                # unit conversion to mole/l
+                if label.startswith("losartan_"):
+                    dset.unit_conversion("mean", 1 / self.Mr.los)
+                elif label.startswith("exp3174_"):
+                    dset.unit_conversion("mean", 1 / self.Mr.e3174)
+                dsets[f"{label}"] = dset
+
+        # console.print(dsets)
+        # console.print(dsets.keys())
+        return dsets
+
+    def simulations(self) -> Dict[str, TimecourseSim]:
+        Q_ = self.Q_
+        tcsims = {}
+        tcsims[f"po_los50"] = TimecourseSim(
+            [Timecourse(
+                start=0,
+                end=25 * 60,  # [min]
+                steps=500,
+                changes={
+                    **self.default_changes(),
+                    #"BW": Q_(self.bodyweight, "kg"),
+                    "PODOSE_los": Q_(50, "mg") * self.Mr.los/self.Mr.losp,
+                },
+            )]
+        )
+        # console.print(tcsims)
+        return tcsims
+
+    def fit_mappings(self) -> Dict[str, FitMapping]:
+        mappings = {}
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+            for intervention in self.interventions:
+                coadministration = Coadministration.NONE
+                if "ginseng" in intervention:
+                    coadministration = Coadministration.GINSENG
+
+                mappings[f"fm_po_los50_{sid}_{intervention}"] = FitMapping(
+                    self,
+                    reference=FitData(
+                        self,
+                        dataset=f"{name}_{intervention}",
+                        xid="time",
+                        yid="mean",
+                        yid_sd="mean_sd",
+                        count="count",
+                    ),
+                    observable=FitData(
+                        self, task=f"task_po_los50", xid="time", yid=f"[Cve_{sid}]",
+                    ),
+                    metadata=LosartanMappingMetaData(
+                        tissue=Tissue.PLASMA,
+                        route=Route.PO,
+                        application_form=ApplicationForm.TABLET,
+                        dosing=Dosing.SINGLE,
+                        health=Health.HEALTHY,
+                        fasting=Fasting.FASTED,
+                        coadministration=coadministration,
+                    ),
+                )
+        # console.print(mappings)
+        return mappings
+
+    def figures(self) -> Dict[str, Figure]:
+        fig = Figure(
+            experiment=self,
+            sid="Fig1",
+            num_rows=2,
+            name=f"{self.__class__.__name__} (healthy)",
+        )
+        plots = fig.create_plots(
+            xaxis=Axis(self.label_time, unit=self.unit_time), legend=True
+        )
+        plots[0].set_yaxis(self.label_los, unit=self.unit_los)
+        plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
+
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+
+            # simulation
+            plots[k].add_data(
+                task=f"task_po_los50",
+                xid="time",
+                yid=f"[Cve_{sid}]",
+                label=f"Sim 50 mg",
+                color="black",
+            )
+
+            for intervention in self.interventions:
+                # data
+                plots[k].add_data(
+                    dataset=f"{name}_{intervention}",
+                    xid="time",
+                    yid="mean",
+                    yid_sd="mean_sd",
+                    count="count",
+                    label=f"{intervention} 50 mg",
+                    color=self.colors[intervention],
+                )
+
+        return {
+            fig.sid: fig,
+        }
+
+
+if __name__ == "__main__":
+    run_experiments(Kim2016, output_dir=Kim2016.__name__)</code>
+        </pre>
+            </p>
+
+        </v-content>
+    </v-app>
+</div>
+
+
+<!-- loading dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.6/dist/vuetify.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        delimiters: ['${', '}'],
+        data() {
+            return {}
+        }
+    })
+</script>
+
+
+</body>
+</html>

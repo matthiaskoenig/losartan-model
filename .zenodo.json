@@ -1,6 +1,6 @@
 {
   "upload_type": "software",
-  "title": "Physiologically based pharmacokinetic (PBPK) model of losartan",
+  "title": "Physiologically based pharmacokinetic/ pharmacodynamic (PBPK/PD) model of losartan",
   "creators": [
     {
       "orcid": "0009-0001-1433-4293",
@@ -20,9 +20,11 @@
     "model",
     "losartan",
     "pharmacokinetics",
-    "PBPK",
-    "physiologically based pharamacokinetic model",
-    "SBML"
+    "pharmacodynamics",
+    "PBPK/PD",
+    "physiologically based pharmacokinetic model",
+    "SBML",
+    "digital twin"
   ],
   "contributors": [],
   "communities": [],
