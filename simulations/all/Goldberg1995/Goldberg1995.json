@@ -9,8 +9,8 @@
       "language": "SBML",
       "language_type": "SBML",
       "source": {
-        "source": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/losartan_body_flat.xml",
-        "path": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/losartan_body_flat.xml",
+        "source": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
+        "path": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
         "content": "None"
       },
       "changes": {}
@@ -43,11 +43,11 @@
               "_units": "milligram"
             },
             "ren_ref": {
-              "_magnitude": 2.330381516745456e-10,
+              "_magnitude": 2.3303815167454555e-10,
               "_units": "millimolar"
             },
             "[ren]": {
-              "_magnitude": 2.330381516745456e-10,
+              "_magnitude": 2.3303815167454555e-10,
               "_units": "millimole / liter"
             }
           },
@@ -73,11 +73,11 @@
               "_units": "milligram"
             },
             "ren_ref": {
-              "_magnitude": 2.330381516745456e-10,
+              "_magnitude": 2.3303815167454555e-10,
               "_units": "millimolar"
             },
             "[ren]": {
-              "_magnitude": 2.330381516745456e-10,
+              "_magnitude": 2.3303815167454555e-10,
               "_units": "millimole / liter"
             }
           },

@@ -8,8 +8,8 @@ corresponding SBML4humans model report at [https://sbml4humans.de/model_url?url=
 
 The COMBINE archive is available from [`losartan_model.omex`](./losartan_model.omex).
 
-![PK model overview](./figures/losartan_model.png)
-![PD model overview](./figures/losartan_raas_model.png)
+![PK/PD model overview](./figures/losartan_model.png)
+
 
 ### Comp submodels
 The liver submodel is available from [`losartan_liver.xml`](./models/losartan_liver.xml) with corresponding SBML4humans report at

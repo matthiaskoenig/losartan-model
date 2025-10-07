@@ -9,8 +9,8 @@
       "language": "SBML",
       "language_type": "SBML",
       "source": {
-        "source": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/losartan_body_flat.xml",
-        "path": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/losartan_body_flat.xml",
+        "source": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
+        "path": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
         "content": "None"
       },
       "changes": {}
@@ -43,27 +43,27 @@
               "_units": "milligram"
             },
             "ren_ref": {
-              "_magnitude": 1.2983554164724683e-09,
+              "_magnitude": 1.2983554164724681e-09,
               "_units": "millimolar"
             },
             "[ren]": {
-              "_magnitude": 1.2983554164724683e-09,
+              "_magnitude": 1.2983554164724681e-09,
               "_units": "millimole / liter"
             },
             "ang1_ref": {
-              "_magnitude": 9.101433938630113e-09,
+              "_magnitude": 9.101433938630111e-09,
               "_units": "millimolar"
             },
             "[ang1]": {
-              "_magnitude": 9.101433938630113e-09,
+              "_magnitude": 9.101433938630111e-09,
               "_units": "millimole / liter"
             },
             "ang2_ref": {
-              "_magnitude": 6.882187465051393e-09,
+              "_magnitude": 6.882187465051391e-09,
               "_units": "millimolar"
             },
             "[ang2]": {
-              "_magnitude": 6.882187465051393e-09,
+              "_magnitude": 6.882187465051391e-09,
               "_units": "millimole / liter"
             },
             "SBP_ref": {
@@ -97,27 +97,27 @@
               "_units": "milligram"
             },
             "ren_ref": {
-              "_magnitude": 1.2983554164724683e-09,
+              "_magnitude": 1.2983554164724681e-09,
               "_units": "millimolar"
             },
             "[ren]": {
-              "_magnitude": 1.2983554164724683e-09,
+              "_magnitude": 1.2983554164724681e-09,
               "_units": "millimole / liter"
             },
             "ang1_ref": {
-              "_magnitude": 9.101433938630113e-09,
+              "_magnitude": 9.101433938630111e-09,
               "_units": "millimolar"
             },
             "[ang1]": {
-              "_magnitude": 9.101433938630113e-09,
+              "_magnitude": 9.101433938630111e-09,
               "_units": "millimole / liter"
             },
             "ang2_ref": {
-              "_magnitude": 6.882187465051393e-09,
+              "_magnitude": 6.882187465051391e-09,
               "_units": "millimolar"
             },
             "[ang2]": {
-              "_magnitude": 6.882187465051393e-09,
+              "_magnitude": 6.882187465051391e-09,
               "_units": "millimole / liter"
             },
             "SBP_ref": {
