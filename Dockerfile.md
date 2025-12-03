@@ -1,4 +1,4 @@
-# Dockerfile for Glimepiride Model
+# Dockerfile for Losartan Model
 
 ## Build image
 To build the latest image use:
@@ -7,7 +7,7 @@ docker build -f Dockerfile -t matthiaskoenig/losartan:0.9.6 -t matthiaskoenig/lo
 ```
 
 ## Push images
-The image is pushed to dockerhub: [Docker Hub – Dapagliflozin](https://hub.docker.com/repository/docker/matthiaskoenig/losartan/general)
+The image is pushed to dockerhub: [Docker Hub – Losartan](https://hub.docker.com/repository/docker/matthiaskoenig/losartan/general)
 
 ```
 docker login
