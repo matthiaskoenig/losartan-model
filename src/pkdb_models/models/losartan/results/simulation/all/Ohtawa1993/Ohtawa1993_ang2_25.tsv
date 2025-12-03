@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_pm	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	angiotensin II	plasma	RIA	ang2_25	0.0	hr	5.378521705628749e-09	7.61804690195091	1.903259807812936e-09							mole/meter^3	pg/ml
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	angiotensin II	plasma	RIA	ang2_25	6.0	hr	3.082850203152758e-08	53.047711576235	1.9877650143420484e-08							mole/meter^3	pg/ml
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	angiotensin II	plasma	RIA	ang2_25	24.0	hr	7.008565396771641e-09	10.8720369470786	3.3835729916672384e-09							mole/meter^3	pg/ml

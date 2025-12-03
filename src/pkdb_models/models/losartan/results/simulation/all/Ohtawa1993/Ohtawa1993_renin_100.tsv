@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_pm	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	renin	plasma	RIA	renin_100	0.0	hr	1.4535000460045208e-10	10.7157018239492	9.247545701370841e-11							mole/meter^3	pg/ml
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	renin	plasma	RIA	renin_100	6.0	hr	3.2233673573200163e-09	226.901929685435	1.8125189574687016e-09							mole/meter^3	pg/ml
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	renin	plasma	RIA	renin_100	24.0	hr	1.1227591172719089e-09	96.421490880253	1.0172300271507778e-09							mole/meter^3	pg/ml

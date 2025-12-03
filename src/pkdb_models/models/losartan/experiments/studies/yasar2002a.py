@@ -4,6 +4,7 @@ from sbmlsim.data import DataSet, load_pkdb_dataframe
 from sbmlsim.fit import FitMapping, FitData
 from sbmlutils.console import console
 
+from pkdb_models.models import losartan
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
@@ -260,4 +261,6 @@ class Yasar2002a(LosartanSimulationExperiment):
         }
 
 if __name__ == "__main__":
+    out = losartan.RESULTS_PATH_SIMULATION / Yasar2002a.__name__
+    out.mkdir(parents=True, exist_ok=True)
     run_experiments(Yasar2002a, output_dir=Yasar2002a.__name__)

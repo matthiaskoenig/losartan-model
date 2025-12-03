@@ -1,0 +1,5 @@
+study	count	intervention	group	label	measurement	substance	tissue	time	time_unit	mean	pm	mean_se	mean_sd	method	comments	mean_unit
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_repaglinide	concentration	repaglinide	plasma	1	hr	1.4814528	1.8918084	0.4103556	1.00516183309364	HPLC		ng/ml
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_repaglinide	concentration	repaglinide	plasma	2	hr	0.7581144	0.9180835	0.1599691	0.391842669612256	HPLC		ng/ml
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_repaglinide	concentration	repaglinide	plasma	3	hr	0.84853166	1.1336939	0.28516224	0.698501981909075	HPLC		ng/ml
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_repaglinide	concentration	repaglinide	plasma	4	hr	0.29907265	0.38948995	0.0904173	0.221476248920149	HPLC		ng/ml

@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_pm	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	angiotensin II	plasma	RIA	ang2_50	0.0	hr	1.0116398723893234e-08	14.1233869094135	3.383572991667391e-09							mole/meter^3	pg/ml
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	angiotensin II	plasma	RIA	ang2_50	6.0	hr	5.079245751229521e-08	82.7840201068706	2.8337423805214113e-08							mole/meter^3	pg/ml
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	angiotensin II	plasma	RIA	ang2_50	24.0	hr	1.6607805042682274e-08	24.6756218275005	6.978619295313898e-09							mole/meter^3	pg/ml

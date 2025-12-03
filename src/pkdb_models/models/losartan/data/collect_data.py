@@ -9,7 +9,7 @@ def collect_losartan_data():
 
     collect_tsv_files(source_dir=source_dir, target_dir=target_dir)
 
-    # collect  (chlorzoxazone)
+    # collect  (dextromethorphan)
     def is_dextromethorphan(study_name) -> bool:
         return study_name in ["Kim2016"]
 

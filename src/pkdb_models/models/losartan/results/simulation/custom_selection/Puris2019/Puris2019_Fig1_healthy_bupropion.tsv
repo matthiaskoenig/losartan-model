@@ -1,0 +1,5 @@
+study	count	intervention	group	label	measurement	substance	tissue	time	time_unit	mean	pm	mean_se	mean_sd	method	comments	mean_unit
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_bupropion	concentration	bupropion	plasma	1	hr	4.5461726	5.986693	1.4405204	3.52853994406992	HPLC		ng/ml
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_bupropion	concentration	bupropion	plasma	2	hr	17.224232	13.78557	3.438662	8.42296729789829	HPLC		ng/ml
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_bupropion	concentration	bupropion	plasma	3	hr	14.327729	15.303566	0.975837	2.39030272212831	HPLC		ng/ml
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_bupropion	concentration	bupropion	plasma	4	hr	8.968317	9.897685	0.929367999999998	2.27647738327091	HPLC		ng/ml

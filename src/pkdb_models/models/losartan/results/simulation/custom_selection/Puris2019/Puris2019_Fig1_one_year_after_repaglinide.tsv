@@ -1,0 +1,5 @@
+study	count	intervention	group	label	measurement	substance	tissue	time	time_unit	mean	pm	mean_se	mean_sd	method	comments	mean_unit
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	1	hr	1.3979907	1.6344668	0.2364761	0.668855415594192	HPLC		ng/ml
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	2	hr	0.5285935	0.45208657	0.0765069299999999	0.216394276043058	HPLC		ng/ml
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	3	hr	0.13910356	0.20170015	0.06259659	0.177049893072616	HPLC		ng/ml
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	4	hr	0.083462134	0.13910356	0.055641426	0.157377718557958	HPLC		ng/ml

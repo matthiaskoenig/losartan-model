@@ -126,7 +126,7 @@ class LosartanParameterScan(LosartanSimulationExperiment):
         # calculate pharmacokinetic parameters
         self.pk_dfs = self.calculate_losartan_pk()
         self.pd_dfs = self.calculate_losartan_pd()
-        console.print(self.pd_dfs)
+        #console.print(self.pd_dfs)
 
         return {
             **self.figures_mpl_timecourses(),
@@ -289,7 +289,7 @@ class LosartanParameterScan(LosartanSimulationExperiment):
                 ticks.append(scan_data["default"])
                 ticks = sorted(ticks)
             cbar.set_ticks(ticks)
-            console.print(f"{ticks=}")
+            #console.print(f"{ticks=}")
 
             cbar.set_ticklabels(
                 ticks, **{"size": 15, "weight": "medium"}

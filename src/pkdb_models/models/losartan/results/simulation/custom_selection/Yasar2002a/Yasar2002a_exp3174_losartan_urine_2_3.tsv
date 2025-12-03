@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	median	min	max	mean_sd	mean_se	cv	comments	mean_unit	median_unit
+Yasar2002a	cyp2c9_2_3_swedish	4.0	LOS50	concentration	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_2_3	0.0	hr	0.0								dimensionless	nmol/l
+Yasar2002a	cyp2c9_2_3_swedish	4.0	LOS50	concentration	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_2_3	8.0	hr	0.2702702702702702		0.4	0.2	1.1			reciprocal sd as well?	dimensionless	nmol/l
+Yasar2002a	cyp2c9_2_3_swedish	4.0	LOS50	concentration	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_2_3	24.0	hr	0.4761904761904761		0.7692307692307692	0.3571428571428571	0.6			reciprocal sd as well?	dimensionless	nmol/l

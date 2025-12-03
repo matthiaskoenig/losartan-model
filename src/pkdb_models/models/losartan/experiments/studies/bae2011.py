@@ -2,8 +2,8 @@ from typing import Dict
 
 from sbmlsim.data import DataSet, load_pkdb_dataframe
 from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
 
+from pkdb_models.models import losartan
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
@@ -143,4 +143,6 @@ class Bae2011(LosartanSimulationExperiment):
 
 
 if __name__ == "__main__":
+    out = losartan.RESULTS_PATH_SIMULATION / Bae2011.__name__
+    out.mkdir(parents=True, exist_ok=True)
     run_experiments(Bae2011, output_dir=Bae2011.__name__)

@@ -115,7 +115,7 @@ def main() -> None:
              "Use '--action list_experiments' to see all available options.",
     )
 
-    console.rule("[bold cyan]DAPAGLIFLOZIN PBPK/PD MODEL[/bold cyan]", style="cyan")
+    console.rule("[bold cyan]LOSARTAN PBPK/PD MODEL[/bold cyan]", style="cyan")
 
     options, args = parser.parse_args()
 

@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	losartan	urine	HPLC	losartan_recovery_100_multi	0.0	day	0.0								count*mole/kilogram	percent
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	losartan	urine	HPLC	losartan_recovery_100_multi	1.0	day	0.1111344940188361	0.03546845553792642							count*mole/kilogram	percent
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	losartan	urine	HPLC	losartan_recovery_100_multi	7.0	day	0.09221798439860868	0.021281073322755854							count*mole/kilogram	percent

@@ -1,0 +1,5 @@
+study	count	intervention	group	label	measurement	substance	tissue	time	time_unit	mean	pm	mean_se	mean_sd	method	comments	mean_unit
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_repaglinide	concentration	repaglinide	plasma	1	hr	3.171561	2.5177743	0.6537867	1.8491880360783	HPLC		ng/ml
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_repaglinide	concentration	repaglinide	plasma	2	hr	1.3632149	1.7527047	0.3894898	1.10164351513197	HPLC		ng/ml
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_repaglinide	concentration	repaglinide	plasma	3	hr	0.5633694	0.42426583	0.13910357	0.39344431053703	HPLC		ng/ml
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	Fig1_obese_repaglinide	concentration	repaglinide	plasma	4	hr	0.2851623	0.18083462	0.10432768	0.295083239973841	HPLC		ng/ml
