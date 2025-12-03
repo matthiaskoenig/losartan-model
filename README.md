@@ -34,12 +34,59 @@ The whole-body submodel is available from [`losartan_body.xml`](./models/losarta
 ## License
 
 * Source Code: [MIT](https://opensource.org/license/MIT)
-* Documentation: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-* Models: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+* Documentation: [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+* Models: [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.
+
+## Run simulations
+### python
+Clone the repository 
+```bash
+git clone https://github.com/matthiaskoenig/losartan-model.git
+cd losartan-model
+```
+
+#### uv
+Setup environment with uv (https://docs.astral.sh/uv/getting-started/installation/)
+```bash
+uv venv
+uv sync
+```
+Run the complete analysis:
+```bash
+uv run run_losartan -a all -r results
+```
+
+#### pip
+If you use pip install the package via
+```bash
+pip install -e .
+```
+Run the complete analysis in the environment via:
+```bash
+run run_losartan -a all -r results
+```
+
+### docker
+Simulations can also be run within a docker container:
+
+```bash
+docker run -v "${PWD}/results:/results" -it matthiaskoenig/losartan:latest /bin/bash
+```
+
+Run the complete analysis:
+```bash
+uv run run_losartan -a all -r /results
+```
+The results are written into the mounted `/results` folder on the host.
+
+In case of permission issues with the mounted folder, adjust ownership and access rights with:
+```bash
+sudo chown $(id -u):$(id -g) -R "${PWD}/results"
+sudo chmod 775 "${PWD}/results"
 
 Funding
 =======
