@@ -1,0 +1,12 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+FDA1995S67	all	9	NA	species	9	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	healthy 	9	NA	N	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	overnight fast	9	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	sex	8	NA	M	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	sex	1	NA	F	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	ethnicity	9	NA	caucasian	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	disease	9	NA	alcoholic liver disease	NA	NA	NA	NA	NA	NA	NA	NA
+FDA1995S67	all	9	NA	age	9	NA	NA	55.3	NA	NA	NA	42.0	63.0	yr	NA
+FDA1995S67	all	9	NA	weight	9	NA	NA	82.3	NA	NA	NA	52.6	113.4	kg	NA
+FDA1995S67	all	9	NA	child-pugh score numeric	9	NA	NA	NA	NA	NA	NA	5.0	9.0	dimensionless	NA
+FDA1995S67	all	9	NA	clearance	9	creatinine	NA	108.09	NA	NA	NA	65.0	195.0	ml/min	NA

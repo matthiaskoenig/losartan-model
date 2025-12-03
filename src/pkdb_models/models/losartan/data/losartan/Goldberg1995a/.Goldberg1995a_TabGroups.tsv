@@ -1,0 +1,11 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+Goldberg1995a	all	48	NA	species	48	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Goldberg1995a	all	48	NA	healthy 	48	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Goldberg1995a	all	48	NA	sex	48	NA	MF	NA	NA	NA	NA	NA	NA	NA	NA
+Goldberg1995a	all	35	NA	sex	35	NA	M	NA	NA	NA	NA	NA	NA	NA	3 patient drop outs but sex not specified
+Goldberg1995a	all	13	NA	sex	13	NA	F	NA	NA	NA	NA	NA	NA	NA	3 patient drop outs but sex not specified
+Goldberg1995a	all	48	NA	overnight fast	48	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Goldberg1995a	all	48	NA	age	48	NA	NA	NA	53.0	NA	NA	22.0	69.0	yr	NA
+Goldberg1995a	all	48	NA	blood pressure diastolic	48	NA	NA	NA	NA	NA	NA	95.0	110.0	mmHg	NA
+Goldberg1995a	all	48	NA	disease	48	NA	hypertension	NA	NA	NA	NA	NA	NA	NA	NA
+Goldberg1995a	all	48	NA	ethnicity	48	NA	NR	NA	NA	NA	NA	NA	NA	NA	"""nonblack"""

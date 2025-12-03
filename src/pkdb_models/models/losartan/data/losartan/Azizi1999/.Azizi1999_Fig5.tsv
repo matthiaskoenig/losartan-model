@@ -1,0 +1,4 @@
+study	individual	group	count	intervention	time	time_unit	method	x_measurement_type	x_substance	x_tissue	x_label	x_value	x	x_pm	x_sd	x_unit	y_measurement_type	y_substance	y_tissue	y_label	y	y_pm	y_sd	y_value	y_unit	comments
+Azizi1999	NA	all	16.0	CAN16	24.0	hr	RIA	auc_end	renin	plasma	CAN16_auc_renin	NA	5222.64173624335	5811.79719618825	589.1554599449	pg/ml/hr	auc_end	NA	NA	CAN16_auc_bp_change	-185.154880187025	-163.588544710695	21.56633547633	NA	mmHg/hr	NA
+Azizi1999	NA	all	16.0	CAN8	24.0	hr	RIA	auc_end	renin	plasma	CAN8_auc_renin	NA	3519.47776713079	3899.74195765951	380.26419052872	pg/ml/hr	auc_end	NA	NA	CAN8_auc_bp_change	-146.931618936294	-168.84862653419	21.917007597896	NA	mmHg/hr	NA
+Azizi1999	NA	all	16.0	LOS50	24.0	hr	RIA	auc_end	renin	plasma	LOS50_auc_renin	NA	3810.89062016249	4185.79862429592	374.90800413343	pg/ml/hr	auc_end	NA	NA	LOS50_auc_bp_change	-131.677381648158	-114.494447691408	17.18293395675	NA	mmHg/hr	NA

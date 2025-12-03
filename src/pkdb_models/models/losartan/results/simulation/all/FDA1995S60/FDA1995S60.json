@@ -1,0 +1,4013 @@
+{
+  "experiment_id": "FDA1995S60",
+  "base_path": "C:\\Users\\myshk\\Work\\hu\\pkdb_models\\pkdb_models\\models\\losartan",
+  "data_path": "[WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/losartan'), WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/dextromethorphan'), WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/caffeine'), WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/chlorzoxazone')]",
+  "models": {
+    "model": {
+      "sid": null,
+      "name": null,
+      "language": "SBML",
+      "language_type": "SBML",
+      "source": {
+        "source": "C:\\Users\\myshk\\Work\\hu\\pkdb_models\\pkdb_models\\models\\losartan\\models\\results\\models\\losartan_body_flat.xml",
+        "path": "C:\\Users\\myshk\\Work\\hu\\pkdb_models\\pkdb_models\\models\\losartan\\models\\results\\models\\losartan_body_flat.xml",
+        "content": "None"
+      },
+      "changes": {}
+    }
+  },
+  "tasks": {
+    "task_LOS100PO": {
+      "model": "model",
+      "simulation": "LOS100PO"
+    },
+    "task_LOS30IV": {
+      "model": "model",
+      "simulation": "LOS30IV"
+    },
+    "task_E20IV": {
+      "model": "model",
+      "simulation": "E20IV"
+    }
+  },
+  "simulations": {
+    "LOS100PO": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 6000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 78.6,
+              "_units": "kilogram"
+            },
+            "PODOSE_los": {
+              "_magnitude": 100,
+              "_units": "milligram"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "LOS30IV": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 6000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 78.6,
+              "_units": "kilogram"
+            },
+            "IVDOSE_los": {
+              "_magnitude": 30,
+              "_units": "milligram"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "E20IV": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 6000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 78.6,
+              "_units": "kilogram"
+            },
+            "IVDOSE_e3174": {
+              "_magnitude": 20,
+              "_units": "milligram"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    }
+  },
+  "data": {
+    "task_LOS100PO__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS100PO__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_LOS100PO",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS30IV__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_LOS30IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E20IV__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_E20IV",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    }
+  },
+  "figures": {
+    "Fig1_LOS100PO": {
+      "sid": "Fig1_LOS100PO",
+      "name": "FDA1995S60 (healthy)",
+      "num_rows": 4,
+      "num_cols": 3,
+      "width": 21.0,
+      "height": 20.0,
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot0_yaxis",
+              "name": "Losartan [nM]",
+              "label": "Losartan",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot0_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Cve_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot0_curve1",
+                "name": "LOS100PO (n=6)",
+                "x": "losartan_LOS100PO__time",
+                "y": "losartan_LOS100PO__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot1_yaxis",
+              "name": "Losartan urine [\u00b5mole]",
+              "label": "Losartan urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot1_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot1_curve1",
+                "name": "LOS100PO\u00b1SD (n=6)",
+                "x": "losartan_urine_LOS100PO__time",
+                "y": "losartan_urine_LOS100PO__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_LOS100PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot2",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot2_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot2_yaxis",
+              "name": "Losartan feces [\u00b5mole]",
+              "label": "Losartan feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot2_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Afeces_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot3",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot3_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot3_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot3_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot3_curve1",
+                "name": "LOS100PO (n=6)",
+                "x": "exp3174_LOS100PO__time",
+                "y": "exp3174_LOS100PO__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot4",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot4_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot4_yaxis",
+              "name": "E3174 urine [\u00b5mole]",
+              "label": "E3174 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot4_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot4_curve1",
+                "name": "LOS100PO\u00b1SD (n=6)",
+                "x": "exp3174_urine_LOS100PO__time",
+                "y": "exp3174_urine_LOS100PO__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_LOS100PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot5",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot5_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot5_yaxis",
+              "name": "E3174 feces [\u00b5mole]",
+              "label": "E3174 feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot5_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Afeces_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot6",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot6_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot6_yaxis",
+              "name": "L158 [nM]",
+              "label": "L158",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot6_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Cve_l158",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 3,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot7",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot7_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot7_yaxis",
+              "name": "L158 urine [\u00b5mole]",
+              "label": "L158 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot7_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Aurine_l158",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot7_curve1",
+                "name": "LOS100PO\u00b1SD (n=6)",
+                "x": "l158_urine_LOS100PO__time",
+                "y": "l158_urine_LOS100PO__mean",
+                "xerr": null,
+                "yerr": "l158_urine_LOS100PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 3,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot8",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot8_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot8_yaxis",
+              "name": "L158 feces [\u00b5mole]",
+              "label": "L158 feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot8_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Afeces_l158",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 3,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot9",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot9_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot9_yaxis",
+              "name": "LOS+E3174+L158 [nM]",
+              "label": "LOS+E3174+L158",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot9_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Cve_total",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 4,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot10",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot10_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot10_yaxis",
+              "name": "LOS+E3174+L158 urine [\u00b5mole]",
+              "label": "LOS+E3174+L158 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot10_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Aurine_total",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot10_curve1",
+                "name": "LOS100PO\u00b1SD (n=6)",
+                "x": "losartan_total_urine_LOS100PO__time",
+                "y": "losartan_total_urine_LOS100PO__mean",
+                "xerr": null,
+                "yerr": "losartan_total_urine_LOS100PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 4,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS100PO__plot11",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS100PO__plot11_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS100PO__plot11_yaxis",
+              "name": "LOS+E3174+L158 feces [\u00b5mole]",
+              "label": "LOS+E3174+L158 feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS100PO__plot11_curve0",
+                "name": "Sim LOS100PO",
+                "x": "task_LOS100PO__time",
+                "y": "task_LOS100PO__Afeces_total",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS100PO__plot11_curve1",
+                "name": "LOS100PO\u00b1SD (n=6)",
+                "x": "losartan_total_feces_LOS100PO__time",
+                "y": "losartan_total_feces_LOS100PO__mean",
+                "xerr": null,
+                "yerr": "losartan_total_feces_LOS100PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 4,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    },
+    "Fig1_LOS30IV": {
+      "sid": "Fig1_LOS30IV",
+      "name": "FDA1995S60 (healthy)",
+      "num_rows": 4,
+      "num_cols": 3,
+      "width": 21.0,
+      "height": 20.0,
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot0_yaxis",
+              "name": "Losartan [nM]",
+              "label": "Losartan",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot0_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Cve_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot0_curve1",
+                "name": "LOS30IV (n=6)",
+                "x": "losartan_LOS30IV__time",
+                "y": "losartan_LOS30IV__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot1_yaxis",
+              "name": "Losartan urine [\u00b5mole]",
+              "label": "Losartan urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot1_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot1_curve1",
+                "name": "LOS30IV\u00b1SD (n=6)",
+                "x": "losartan_urine_LOS30IV__time",
+                "y": "losartan_urine_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot2",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot2_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot2_yaxis",
+              "name": "Losartan feces [\u00b5mole]",
+              "label": "Losartan feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot2_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Afeces_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot2_curve1",
+                "name": "LOS30IV\u00b1SD (n=2)",
+                "x": "losartan_feces_LOS30IV__time",
+                "y": "losartan_feces_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "losartan_feces_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot3",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot3_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot3_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot3_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot3_curve1",
+                "name": "LOS30IV (n=6)",
+                "x": "exp3174_LOS30IV__time",
+                "y": "exp3174_LOS30IV__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot4",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot4_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot4_yaxis",
+              "name": "E3174 urine [\u00b5mole]",
+              "label": "E3174 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot4_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot4_curve1",
+                "name": "LOS30IV\u00b1SD (n=6)",
+                "x": "exp3174_urine_LOS30IV__time",
+                "y": "exp3174_urine_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot5",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot5_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot5_yaxis",
+              "name": "E3174 feces [\u00b5mole]",
+              "label": "E3174 feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot5_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Afeces_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot5_curve1",
+                "name": "LOS30IV\u00b1SD (n=2)",
+                "x": "exp3174_feces_LOS30IV__time",
+                "y": "exp3174_feces_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "exp3174_feces_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot6",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot6_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot6_yaxis",
+              "name": "L158 [nM]",
+              "label": "L158",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot6_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Cve_l158",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 3,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot7",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot7_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot7_yaxis",
+              "name": "L158 urine [\u00b5mole]",
+              "label": "L158 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot7_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Aurine_l158",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot7_curve1",
+                "name": "LOS30IV\u00b1SD (n=6)",
+                "x": "l158_urine_LOS30IV__time",
+                "y": "l158_urine_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "l158_urine_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 3,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot8",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot8_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot8_yaxis",
+              "name": "L158 feces [\u00b5mole]",
+              "label": "L158 feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot8_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Afeces_l158",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot8_curve1",
+                "name": "LOS30IV\u00b1SD (n=2)",
+                "x": "l158_feces_LOS30IV__time",
+                "y": "l158_feces_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "l158_feces_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 3,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot9",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot9_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot9_yaxis",
+              "name": "LOS+E3174+L158 [nM]",
+              "label": "LOS+E3174+L158",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot9_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Cve_total",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              }
+            ],
+            "areas": []
+          },
+          "row": 4,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot10",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot10_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot10_yaxis",
+              "name": "LOS+E3174+L158 urine [\u00b5mole]",
+              "label": "LOS+E3174+L158 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot10_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Aurine_total",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot10_curve1",
+                "name": "LOS30IV\u00b1SD (n=6)",
+                "x": "losartan_total_urine_LOS30IV__time",
+                "y": "losartan_total_urine_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "losartan_total_urine_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 4,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_LOS30IV__plot11",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_LOS30IV__plot11_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_LOS30IV__plot11_yaxis",
+              "name": "LOS+E3174+L158 feces [\u00b5mole]",
+              "label": "LOS+E3174+L158 feces",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_LOS30IV__plot11_curve0",
+                "name": "Sim LOS30IV",
+                "x": "task_LOS30IV__time",
+                "y": "task_LOS30IV__Afeces_total",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#d62728ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_LOS30IV__plot11_curve1",
+                "name": "LOS30IV\u00b1SD (n=6)",
+                "x": "losartan_total_feces_LOS30IV__time",
+                "y": "losartan_total_feces_LOS30IV__mean",
+                "xerr": null,
+                "yerr": "losartan_total_feces_LOS30IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#d62728ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#d62728ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#d62728ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 4,
+          "col": 3,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    },
+    "Fig1_E20IV": {
+      "sid": "Fig1_E20IV",
+      "name": "FDA1995S60 (healthy)",
+      "num_rows": 1,
+      "num_cols": 1,
+      "width": 7.0,
+      "height": 5.0,
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_E20IV__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_E20IV__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": 32,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_E20IV__plot0_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_E20IV__plot0_curve0",
+                "name": "Sim E20IV",
+                "x": "task_E20IV__time",
+                "y": "task_E20IV__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#2ca02cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#2ca02cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#2ca02cff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_E20IV__plot0_curve1",
+                "name": "E20IV (n=6)",
+                "x": "exp3174_E20IV__time",
+                "y": "exp3174_E20IV__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#2ca02cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#2ca02cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#2ca02cff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    }
+  }
+}

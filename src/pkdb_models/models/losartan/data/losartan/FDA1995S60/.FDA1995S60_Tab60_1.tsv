@@ -1,0 +1,44 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+FDA1995S60	all	6.0	E20IV	concentration	exp3174	plasma	HPLC/UV	20.0	min	3720.7	342.2	NA	NA	NA	NA	NA	ng/ml	NA
+FDA1995S60	all	6.0	E20IV	auc_inf	exp3174	plasma	HPLC/UV	NA	NA	5969.27	709.03	NA	NA	NA	NA	NA	ng/ml*hr	NA
+FDA1995S60	all	6.0	E20IV	kel	exp3174	plasma	HPLC/UV	NA	NA	0.1105	0.0228	NA	NA	NA	NA	NA	1/hr	NA
+FDA1995S60	all	6.0	E20IV	thalf	exp3174	plasma	HPLC/UV	NA	NA	6.27	1.36	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	E20IV	vd_ss	exp3174	plasma	HPLC/UV	NA	NA	10.33	1.09	NA	NA	NA	NA	NA	l	NA
+FDA1995S60	all	6.0	E20IV	oral clearance	exp3174	plasma	HPLC/UV	NA	NA	46.93	5.79	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	E20IV	clearance_renal	exp3174	plasma	HPLC/UV	NA	NA	25.88	5.59	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	E20IV	cumulative amount	exp3174	urine	HPLC/UV	96.0	hr	9.129	1.414	NA	NA	NA	NA	NA	mg	NA
+FDA1995S60	all	6.0	E20IV	recovery	exp3174	urine	HPLC/UV	96.0	hr	55.07	8.95	NA	NA	NA	NA	NA	percent	NA
+FDA1995S60	all	6.0	LOS30IV	concentration	losartan	plasma	HPLC/UV	20.0	min	1452.8	636.4	NA	NA	NA	NA	NA	ng/ml	NA
+FDA1995S60	all	6.0	LOS30IV	auc_inf	losartan	plasma	HPLC/UV	NA	NA	851.18	234.54	NA	NA	NA	NA	NA	ng/ml*hr	NA
+FDA1995S60	all	6.0	LOS30IV	kel	losartan	plasma	HPLC/UV	NA	NA	0.2181	0.0531	NA	NA	NA	NA	NA	1/hr	NA
+FDA1995S60	all	6.0	LOS30IV	thalf	losartan	plasma	HPLC/UV	NA	NA	3.18	0.78	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS30IV	vd_ss	losartan	plasma	HPLC/UV	NA	NA	46.59	20.5	NA	NA	NA	NA	NA	l	NA
+FDA1995S60	all	6.0	LOS30IV	oral clearance	losartan	plasma	HPLC/UV	NA	NA	558.71	188.01	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	LOS30IV	clearance_renal	losartan	plasma	HPLC/UV	NA	NA	64.39	25.96	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	LOS30IV	cumulative amount	losartan	urine	HPLC/UV	96.0	hr	3.02	0.836	NA	NA	NA	NA	NA	mg	NA
+FDA1995S60	all	6.0	LOS30IV	recovery	losartan	urine	HPLC/UV	96.0	hr	11.5	3.49	NA	NA	NA	NA	NA	percent	NA
+FDA1995S60	all	6.0	LOS30IV	cmax	exp3174	plasma	HPLC/UV	NA	NA	148.9	78.9	NA	NA	NA	NA	NA	ng/ml	NA
+FDA1995S60	all	6.0	LOS30IV	tmax	exp3174	plasma	HPLC/UV	NA	NA	4.0	2.1	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS30IV	auc_inf	exp3174	plasma	HPLC/UV	NA	NA	1331.96	490.24	NA	NA	NA	NA	NA	ng/ml*hr	NA
+FDA1995S60	all	6.0	LOS30IV	kel	exp3174	plasma	HPLC/UV	NA	NA	0.1304	0.0501	NA	NA	NA	NA	NA	1/hr	NA
+FDA1995S60	all	6.0	LOS30IV	thalf	exp3174	plasma	HPLC/UV	NA	NA	5.32	2.12	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS30IV	clearance_renal	exp3174	plasma	HPLC/UV	NA	NA	25.25	7.0	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	LOS30IV	cumulative amount	exp3174	urine	HPLC/UV	96.0	hr	1.911	0.616	NA	NA	NA	NA	NA	mg	NA
+FDA1995S60	all	6.0	LOS30IV	recovery	exp3174	urine	HPLC/UV	96.0	hr	7.59	2.3	NA	NA	NA	NA	NA	percent	NA
+FDA1995S60	all	6.0	LOS100PO	cmax	losartan	plasma	HPLC/UV	NA	NA	659.1	244.0	NA	NA	NA	NA	NA	ng/ml	NA
+FDA1995S60	all	6.0	LOS100PO	tmax	losartan	plasma	HPLC/UV	NA	NA	0.46	0.29	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS100PO	auc_inf	losartan	plasma	HPLC/UV	NA	NA	1091.35	397.46	NA	NA	NA	NA	NA	ng/ml*hr	NA
+FDA1995S60	all	6.0	LOS100PO	kel	losartan	plasma	HPLC/UV	NA	NA	0.2418	0.0502	NA	NA	NA	NA	NA	1/hr	NA
+FDA1995S60	all	6.0	LOS100PO	thalf	losartan	plasma	HPLC/UV	NA	NA	2.87	0.57	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS100PO	clearance_renal	losartan	plasma	HPLC/UV	NA	NA	64.63	17.28	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	LOS100PO	cumulative amount	losartan	urine	HPLC/UV	96.0	hr	4.297	1.878	NA	NA	NA	NA	NA	mg	NA
+FDA1995S60	all	6.0	LOS100PO	recovery	losartan	urine	HPLC/UV	96.0	hr	4.77	2.08	NA	NA	NA	NA	NA	percent	NA
+FDA1995S60	all	6.0	LOS100PO	bioavailability	losartan	plasma	HPLC/UV	NA	NA	38.9	14.67	NA	NA	NA	NA	NA	percent	NA
+FDA1995S60	all	6.0	LOS100PO	cmax	exp3174	plasma	HPLC/UV	NA	NA	652.6	259.1	NA	NA	NA	NA	NA	ng/ml	NA
+FDA1995S60	all	6.0	LOS100PO	tmax	exp3174	plasma	HPLC/UV	NA	NA	2.33	0.52	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS100PO	auc_inf	exp3174	plasma	HPLC/UV	NA	NA	4072.54	1252.91	NA	NA	NA	NA	NA	ng/ml*hr	NA
+FDA1995S60	all	6.0	LOS100PO	kel	exp3174	plasma	HPLC/UV	NA	NA	0.0881	0.0092	NA	NA	NA	NA	NA	1/hr	NA
+FDA1995S60	all	6.0	LOS100PO	thalf	exp3174	plasma	HPLC/UV	NA	NA	7.87	0.82	NA	NA	NA	NA	NA	hr	NA
+FDA1995S60	all	6.0	LOS100PO	clearance_renal	exp3174	plasma	HPLC/UV	NA	NA	27.0	6.1	NA	NA	NA	NA	NA	ml/min	NA
+FDA1995S60	all	6.0	LOS100PO	cumulative amount	exp3174	urine	HPLC/UV	96.0	hr	6.516	2.186	NA	NA	NA	NA	NA	mg	NA
+FDA1995S60	all	6.0	LOS100PO	recovery	exp3174	urine	HPLC/UV	96.0	hr	7.63	2.58	NA	NA	NA	NA	NA	percent	NA

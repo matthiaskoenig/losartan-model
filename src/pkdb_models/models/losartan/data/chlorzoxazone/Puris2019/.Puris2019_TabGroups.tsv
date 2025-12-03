@@ -1,0 +1,18 @@
+study	name	parent	measurement_type	group_count	choice	count	mean	sd	median	min	max	unit	substance	comments
+Puris2019	all	NA	sex	14	MF	14	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	all	NA	species	14	homo sapiens	14	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	all	NA	healthy	14	Y	4	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	sex	8	M	2	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	sex	8	F	6	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	age	8	NA	8	46.4	9.5	46.7	27.0	60.0	yr	NA	NA
+Puris2019	obese	all	bmi	8	NA	8	41.0	4.9	NA	NA	NA	kg/m^2	NA	NA
+Puris2019	obese	all	smoking	8	Y	7	41.0	4.9	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	disease	8	fatty liver disease	7	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	disease	8	liver fibrosis (F1)	1	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	disease	8	liver fibrosis (F2)	1	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	disease	8	liver fibrosis (F3)	1	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	obese	all	disease	8	nash	2	NA	NA	NA	NA	NA	NA	NA	NA
+Puris2019	one_year_after	obese	bmi	8	NA	8	34.2	5.5	NA	NA	NA	kg/m^2	NA	NA
+Puris2019	healthy	all	age	6	NA	6	NA	NA	NA	18.0	60.0	yr	NA	NA
+Puris2019	healthy	all	bmi	6	NA	6	NA	NA	NA	18.0	25.0	kg/m^2	NA	NA
+Puris2019	healthy	all	smoking	6	N	6	NA	NA	NA	NA	NA	NA	NA	NA

@@ -1,0 +1,30 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+Sica1995	all	18.0	NA	species	18.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	all	18.0	NA	healthy	18.0	NA	N	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	all	18.0	NA	sex	18.0	NA	MF	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	all	18.0	NA	age	18.0	NA	NA	NA	NA	NA	NA	NA	65.0	yr	NA
+Sica1995	all	18.0	NA	blood pressure diastolic	18.0	NA	NA	NA	NA	NA	NA	95.0	115.0	mmHg	NA
+Sica1995	all	18.0	NA	obesity index	18.0	NA	NA	NA	NA	NA	NA	NA	130.0	percent	NA
+Sica1995	group1	6.0	all	age	6.0	NA	NA	48.7	NA	NA	NA	NA	NA	yr	NA
+Sica1995	group1	6.0	all	weight	6.0	NA	NA	84.6	NA	NA	NA	NA	NA	kg	NA
+Sica1995	group1	6.0	all	ethnicity	6.0	NA	caucasian	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group1	6.0	all	sex	4.0	NA	M	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group1	6.0	all	sex	2.0	NA	F	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group1	6.0	all	clearance	6.0	creatine	NA	112.2	NA	NA	NA	75.0	NA	ml/min	NA
+Sica1995	group2	6.0	all	disease	6.0	NA	renal disease (mild)	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group2	6.0	all	disease	6.0	NA	renal disease (moderate)	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group2	6.0	all	age	6.0	NA	NA	45.0	NA	NA	NA	NA	NA	yr	NA
+Sica1995	group2	6.0	all	weight	6.0	NA	NA	75.7	NA	NA	NA	NA	NA	kg	NA
+Sica1995	group2	6.0	all	ethnicity	1.0	NA	black	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group2	6.0	all	ethnicity	5.0	NA	caucasian	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group2	6.0	all	sex	2.0	NA	M	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group2	6.0	all	sex	4.0	NA	F	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group2	6.0	all	clearance	6.0	creatine	NA	58.8	NA	NA	NA	30.0	74.0	ml/min	NA
+Sica1995	group3	6.0	all	disease	6.0	NA	renal disease (end-stage)	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group3	6.0	all	age	6.0	NA	NA	47.7	NA	NA	NA	NA	NA	yr	NA
+Sica1995	group3	6.0	all	weight	6.0	NA	NA	75.4	NA	NA	NA	NA	NA	kg	NA
+Sica1995	group3	6.0	all	ethnicity	2.0	NA	black	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group3	6.0	all	ethnicity	4.0	NA	caucasian	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group3	6.0	all	sex	4.0	NA	M	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group3	6.0	all	sex	2.0	NA	F	NA	NA	NA	NA	NA	NA	NA	NA
+Sica1995	group3	6.0	all	clearance	6.0	creatine	NA	16.6	NA	NA	NA	10.0	29.0	ml/min	NA

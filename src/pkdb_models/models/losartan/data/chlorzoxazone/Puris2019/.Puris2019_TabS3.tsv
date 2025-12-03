@@ -1,0 +1,111 @@
+study	count	group	intervention	label	measurement	substance	tissue	geomean	min	max	unit	time	time_unit	method	comments
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_auc_end	auc_end	melatonin	plasma	7.93	1.48	29.3	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_cmax	cmax	melatonin	plasma	3.74	0.91	10.8	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_tmax	tmax	melatonin	plasma	1.0	1.0	4.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_clearance	clearance	melatonin	plasma	1.55	0.49	4.9	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_vd	vd	melatonin	plasma	3.48	1.01	14.5	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_auc_end	auc_end	melatonin	plasma	2.18	0.31	7.07	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_cmax	cmax	melatonin	plasma	1.37	0.18	4.64	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_tmax	tmax	melatonin	plasma	1.0	NA	NA	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_clearance	clearance	melatonin	plasma	10.2	4.09	25.2	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_vd	vd	melatonin	plasma	12.3	3.95	62.2	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_auc_end	auc_end	melatonin	plasma	9.34	4.36	24.8	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_cmax	cmax	melatonin	plasma	3.62	1.45	11.3	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_tmax	tmax	melatonin	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_clearance	clearance	melatonin	plasma	3.06	1.62	5.79	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_melatonin_vd	vd	melatonin	plasma	5.14	2.75	14.7	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_auc_end	auc_end	bupropion	plasma	67.9	50.7	101.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_cmax	cmax	bupropion	plasma	21.0	14.9	30.2	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_tmax	tmax	bupropion	plasma	2.0	1.0	4.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_clearance	clearance	bupropion	plasma	3.24	2.22	4.72	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_vd	vd	bupropion	plasma	13.3	8.74	16.7	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_auc_end	auc_end	bupropion	plasma	36.4	20.3	76.9	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_cmax	cmax	bupropion	plasma	12.5	8.03	22.1	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_tmax	tmax	bupropion	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_clearance	clearance	bupropion	plasma	9.59	7.35	12.5	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_vd	vd	bupropion	plasma	27.3	17.8	47.2	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_auc_end	auc_end	bupropion	plasma	68.1	43.2	81.6	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_cmax	cmax	bupropion	plasma	19.0	13.9	25.9	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_tmax	tmax	bupropion	plasma	3.0	2.0	4.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_clearance	clearance	bupropion	plasma	4.82	3.11	7.46	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_bupropion_vd	vd	bupropion	plasma	21.8	18.5	31.7	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_auc_end	auc_end	repaglinide	plasma	5.58	2.29	13.4	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_cmax	cmax	repaglinide	plasma	2.77	1.4	6.75	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_tmax	tmax	repaglinide	plasma	1.0	NA	NA	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_clearance	clearance	repaglinide	plasma	0.28	0.17	0.47	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_vd	vd	repaglinide	plasma	0.94	0.33	5.47	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_auc_end	auc_end	repaglinide	plasma	2.43	1.57	3.71	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_cmax	cmax	repaglinide	plasma	1.39	0.81	2.42	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_tmax	tmax	repaglinide	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_clearance	clearance	repaglinide	plasma	1.08	0.83	1.41	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_vd	vd	repaglinide	plasma	2.21	1.51	3.9	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_auc_end	auc_end	repaglinide	plasma	4.29	2.06	5.94	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_cmax	cmax	repaglinide	plasma	1.75	1.13	3.01	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_tmax	tmax	repaglinide	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_clearance	clearance	repaglinide	plasma	0.67	0.53	0.85	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_repaglinide_vd	vd	repaglinide	plasma	1.88	0.69	5.95	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _auc_end	auc_end	losartan 	plasma	47.0	13.5	86.2	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _cmax	cmax	losartan 	plasma	12.4	4.09	29.5	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _tmax	tmax	losartan 	plasma	2.0	1.0	6.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _clearance	clearance	losartan 	plasma	0.83	0.43	1.59	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _vd	vd	losartan 	plasma	7.09	2.81	26.3	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _auc_end	auc_end	losartan 	plasma	49.4	24.9	88.9	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _cmax	cmax	losartan 	plasma	13.3	7.12	24.3	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _tmax	tmax	losartan 	plasma	1.0	1.0	4.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _clearance	clearance	losartan 	plasma	1.88	0.94	3.79	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _vd	vd	losartan 	plasma	8.11	4.64	15.7	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _auc_end	auc_end	losartan 	plasma	62.9	44.8	89.8	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _cmax	cmax	losartan 	plasma	16.1	9.9	25.2	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_losartan _tmax	tmax	losartan 	plasma	4.0	1.0	6.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _auc_end	auc_end	omeprazole 	plasma	228.0	74.8	1741.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _cmax	cmax	omeprazole 	plasma	82.9	31.2	551.0	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _tmax	tmax	omeprazole 	plasma	1.0	1.0	6.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _clearance	clearance	omeprazole 	plasma	0.21	0.09	0.51	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _vd	vd	omeprazole 	plasma	0.69	0.14	3.38	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _auc_end	auc_end	omeprazole 	plasma	270.0	149.0	976.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _cmax	cmax	omeprazole 	plasma	139.0	69.6	235.0	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _tmax	tmax	omeprazole 	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _clearance	clearance	omeprazole 	plasma	0.44	0.19	0.56	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _vd	vd	omeprazole 	plasma	0.55	0.32	0.85	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _auc_end	auc_end	omeprazole 	plasma	70.6	16.9	150.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _cmax	cmax	omeprazole 	plasma	24.1	4.92	53.2	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _tmax	tmax	omeprazole 	plasma	1.0	1.0	4.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _clearance	clearance	omeprazole 	plasma	1.75	0.66	4.62	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_omeprazole _vd	vd	omeprazole 	plasma	4.37	1.85	10.1	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _auc_end	auc_end	dextromethorphan 	plasma	13.0	4.97	68.6	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _cmax	cmax	dextromethorphan 	plasma	3.3	0.06	9.92	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	8	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _tmax	tmax	dextromethorphan 	plasma	2.0	2.0	4.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _auc_end	auc_end	dextromethorphan 	plasma	13.9	3.79	125.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _cmax	cmax	dextromethorphan 	plasma	3.74	0.31	13.8	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	8	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _tmax	tmax	dextromethorphan 	plasma	2.0	2.0	6.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _auc_end	auc_end	dextromethorphan 	plasma	9.57	5.25	22.9	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _cmax	cmax	dextromethorphan 	plasma	2.45	1.35	5.9	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_dextromethorphan _tmax	tmax	dextromethorphan 	plasma	4.0	2.0	6.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_auc_end	auc_end	chlorzoxazone	plasma	1230.0	960.0	2215.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_cmax	cmax	chlorzoxazone	plasma	412.0	328.0	604.0	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_tmax	tmax	chlorzoxazone	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_clearance	clearance	chlorzoxazone	plasma	32.1	8.68	58.4	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_vd	vd	chlorzoxazone	plasma	1.18	0.63	1.99	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_auc_end	auc_end	chlorzoxazone	plasma	1960.0	1490.0	2359.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_cmax	cmax	chlorzoxazone	plasma	778.0	510.0	1076.0	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_tmax	tmax	chlorzoxazone	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_clearance	clearance	chlorzoxazone	plasma	29.2	25.0	38.9	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_vd	vd	chlorzoxazone	plasma	0.7	0.55	0.77	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_auc_end	auc_end	chlorzoxazone	plasma	2645.0	1920.0	3826.0	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_cmax	cmax	chlorzoxazone	plasma	867.0	654.0	1478.0	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_tmax	tmax	chlorzoxazone	plasma	1.0	NA	NA	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_clearance	clearance	chlorzoxazone	plasma	20.1	12.8	25.5	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_chlorzoxazone_vd	vd	chlorzoxazone	plasma	0.68	0.52	0.91	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_auc_end	auc_end	midazolam	plasma	20.3	15.1	27.4	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_cmax	cmax	midazolam	plasma	6.8	4.07	9.41	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_tmax	tmax	midazolam	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_clearance	clearance	midazolam	plasma	0.45	0.31	0.66	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	obese	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_vd	vd	midazolam	plasma	2.66	1.95	3.54	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_auc_end	auc_end	midazolam	plasma	16.3	11.2	19.4	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_cmax	cmax	midazolam	plasma	5.4	3.12	8.48	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_tmax	tmax	midazolam	plasma	1.0	1.0	2.0	hr	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_clearance	clearance	midazolam	plasma	1.05	0.91	1.21	l/h/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	7	one_year_after	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_vd	vd	midazolam	plasma	3.97	3.17	4.49	l/kg	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_auc_end	auc_end	midazolam	plasma	24.1	17.1	33.3	hr*ng/ml	6.0	hr	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_cmax	cmax	midazolam	plasma	6.46	4.92	9.01	ng/ml	NA	NA	HPLC MS/MS	NA
+Puris2019	6	healthy	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	Tab3_midazolam_tmax	tmax	midazolam	plasma	3.0	2.0	4.0	hr	NA	NA	HPLC MS/MS	NA

@@ -1,0 +1,21 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+Huang2021	all	12.0	NA	species	11.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	all	12.0	NA	healthy 	11.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	all	12.0	NA	sex	11.0	NA	MF	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	all	12.0	NA	ethnicity	11.0	NA	chinese	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	all	12.0	NA	overnight fast	11.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	all	12.0	NA	age	11.0	NA	NA	23.0	NA	NA	NA	20.0	25.0	yr	NA
+Huang2021	all	12.0	NA	weight	11.0	NA	NA	54.0	NA	NA	NA	45.0	59.0	kg	NA
+Huang2021	all	12.0	NA	height	11.0	NA	NA	1.63	NA	NA	NA	1.51	1.75	m	NA
+Huang2021	all	12.0	NA	bmi	11.0	NA	NA	19.63	NA	NA	NA	18.25	21.63	kg/m^2	NA
+Huang2021	all	12.0	NA	abstinence medication	11.0	NA	NA	NA	NA	NA	NA	30.0	NA	day	NA
+Huang2021	cyp2c9_1_1	6.0	all	cyp2c9 genotype	6.0	NA	*1/*1	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	cyp2c9_1_1	6.0	all	age	6.0	NA	NA	24.0	NA	NA	NA	21.0	25.0	yr	NA
+Huang2021	cyp2c9_1_1	6.0	all	weight	6.0	NA	NA	54.0	NA	NA	NA	45.0	59.0	kg	NA
+Huang2021	cyp2c9_1_1	6.0	all	height	6.0	NA	NA	1.62	NA	NA	NA	1.51	1.75	m	NA
+Huang2021	cyp2c9_1_1	6.0	all	bmi	6.0	NA	NA	20.03	NA	NA	NA	19.27	20.76	kg/m^2	NA
+Huang2021	cyp2c9_1_3	6.0	all	cyp2c9 genotype	6.0	NA	*3/*3	NA	NA	NA	NA	NA	NA	NA	NA
+Huang2021	cyp2c9_1_3	6.0	all	age	6.0	NA	NA	20.0	NA	NA	NA	20.0	23.0	yr	NA
+Huang2021	cyp2c9_1_3	6.0	all	weight	6.0	NA	NA	52.0	NA	NA	NA	48.0	57.0	kg	NA
+Huang2021	cyp2c9_1_3	6.0	all	height	6.0	NA	NA	1.63	NA	NA	NA	1.58	1.72	m	NA
+Huang2021	cyp2c9_1_3	6.0	all	bmi	6.0	NA	NA	19.57	NA	NA	NA	18.25	21.63	kg/m^2	NA

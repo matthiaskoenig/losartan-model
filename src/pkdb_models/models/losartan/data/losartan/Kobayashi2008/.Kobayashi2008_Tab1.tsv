@@ -1,0 +1,13 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Kobayashi2008	all	6.0	LOS25	cmax	losartan	plasma	HPLC	NA	NA	57.0	22.2	NA	NA	NA	NA	NA	ng/ml	NA
+Kobayashi2008	all	6.0	LOS25	tmax	losartan	plasma	HPLC	NA	NA	2.33	1.37	NA	NA	NA	NA	NA	hr	NA
+Kobayashi2008	all	6.0	LOS25	auc_end	losartan	plasma	HPLC	25.0	hr	329.0	115.0	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Kobayashi2008	all	6.0	LOS25	cmax	exp3174	plasma	HPLC	NA	NA	115.2	95.6	NA	NA	NA	NA	NA	ng/ml	NA
+Kobayashi2008	all	6.0	LOS25	tmax	exp3174	plasma	HPLC	NA	NA	5.0	1.1	NA	NA	NA	NA	NA	hr	NA
+Kobayashi2008	all	6.0	LOS25	auc_end	exp3174	plasma	HPLC	25.0	hr	1012.0	577.0	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Kobayashi2008	all	6.0	LOS25, BUC300	cmax	losartan	plasma	HPLC	NA	NA	102.0	19.1	NA	NA	NA	NA	NA	ng/ml	NA
+Kobayashi2008	all	6.0	LOS25, BUC300	tmax	losartan	plasma	HPLC	NA	NA	1.33	0.516	NA	NA	NA	NA	NA	hr	NA
+Kobayashi2008	all	6.0	LOS25, BUC300	auc_end	losartan	plasma	HPLC	24.0	hr	551.0	62.3	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Kobayashi2008	all	6.0	LOS25, BUC300	cmax	exp3174	plasma	HPLC	NA	NA	19.5	8.42	NA	NA	NA	NA	NA	ng/ml	NA
+Kobayashi2008	all	6.0	LOS25, BUC300	tmax	exp3174	plasma	HPLC	NA	NA	3.67	0.816	NA	NA	NA	NA	NA	hr	NA
+Kobayashi2008	all	6.0	LOS25, BUC300	auc_end	exp3174	plasma	HPLC	24.0	hr	167.0	79.3	NA	NA	NA	NA	NA	ng/ml*hr	NA

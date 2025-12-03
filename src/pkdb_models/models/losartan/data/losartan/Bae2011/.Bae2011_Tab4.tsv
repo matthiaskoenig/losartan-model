@@ -1,0 +1,15 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	median	min	max	sd	se	cv	unit	comments
+Bae2011	cyp2c9_1	12.0	LOS50	cmax	losartan	plasma	HPLC/FS	NA	NA	235.1	NA	NA	NA	98.4	NA	NA	ng/ml	NA
+Bae2011	cyp2c9_1	12.0	LOS50	thalf	losartan	plasma	HPLC/FS	NA	NA	1.92	NA	NA	NA	0.76	NA	NA	hr	NA
+Bae2011	cyp2c9_1	12.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	0.094	NA	NA	NA	0.018	NA	NA	L/hr	NA
+Bae2011	cyp2c9_1	12.0	LOS50	auc_inf	losartan	plasma	HPLC/FS	NA	NA	552.2	NA	NA	NA	102.2	NA	NA	ng/ml*hr	NA
+Bae2011	cyp2c9_3	1.0	LOS50	cmax	losartan	plasma	HPLC/FS	NA	NA	440.2	NA	NA	NA	NA	NA	NA	ng/ml	NA
+Bae2011	cyp2c9_3	1.0	LOS50	thalf	losartan	plasma	HPLC/FS	NA	NA	4.72	NA	NA	NA	NA	NA	NA	hr	NA
+Bae2011	cyp2c9_3	1.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	0.037	NA	NA	NA	NA	NA	NA	L/hr	NA
+Bae2011	cyp2c9_3	1.0	LOS50	auc_inf	losartan	plasma	HPLC/FS	NA	NA	1334.9	NA	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Bae2011	cyp2c9_1	12.0	LOS50	cmax	exp3174	plasma	HPLC/FS	NA	NA	524.3	NA	NA	NA	84.1	NA	NA	ng/ml	NA
+Bae2011	cyp2c9_1	12.0	LOS50	thalf	exp3174	plasma	HPLC/FS	NA	NA	4.29	NA	NA	NA	0.4	NA	NA	hr	NA
+Bae2011	cyp2c9_1	12.0	LOS50	auc_inf	exp3174	plasma	HPLC/FS	NA	NA	3471.9	NA	NA	NA	466.2	NA	NA	ng/ml*hr	NA
+Bae2011	cyp2c9_3	1.0	LOS50	cmax	exp3174	plasma	HPLC/FS	NA	NA	19.1	NA	NA	NA	NA	NA	NA	ng/ml	NA
+Bae2011	cyp2c9_3	1.0	LOS50	thalf	exp3174	plasma	HPLC/FS	NA	NA	10.56	NA	NA	NA	NA	NA	NA	hr	NA
+Bae2011	cyp2c9_3	1.0	LOS50	auc_inf	exp3174	plasma	HPLC/FS	NA	NA	400.9	NA	NA	NA	NA	NA	NA	ng/ml*hr	NA

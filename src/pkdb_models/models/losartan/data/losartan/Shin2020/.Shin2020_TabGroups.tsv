@@ -1,0 +1,30 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+Shin2020	all	38.0	NA	species	38.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Shin2020	all	38.0	NA	ethnicity	38.0	NA	korean	NA	NA	NA	NA	NA	NA	NA	NA
+Shin2020	all	38.0	NA	healthy 	38.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Shin2020	all	38.0	NA	sex	38.0	NA	MF	NA	NA	NA	NA	NA	NA	NA	NA
+Shin2020	all	38.0	NA	age	38.0	NA	NA	22.4	NA	1.9	NA	NA	NA	yr	NA
+Shin2020	all	38.0	NA	height	38.0	NA	NA	171.4	NA	7.7	NA	NA	NA	cm	NA
+Shin2020	all	38.0	NA	weight	38.0	NA	NA	67.4	NA	7.8	NA	NA	NA	kg	NA
+Shin2020	all	38.0	NA	overnight fast	38.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Shin2020	all	38.0	NA	abstinence smoking	38.0	NA	NA	NA	NA	NA	NA	1.0	NA	week	NA
+Shin2020	all	38.0	NA	abstinence alcohol	38.0	NA	NA	NA	NA	NA	NA	1.0	NA	week	NA
+Shin2020	all	38.0	NA	abstinence medication	38.0	NA	NA	NA	NA	NA	NA	1.0	NA	week	NA
+Shin2020	all	38.0	NA	abstinence	38.0	caffeine	NA	NA	NA	NA	NA	1.0	NA	week	NA
+Shin2020	all	38.0	NA	abstinence	38.0	grapefruit	NA	NA	NA	NA	NA	1.0	NA	week	NA
+Shin2020	all	38.0	NA	abstinence	38.0	grapefruit juice	NA	NA	NA	NA	NA	1.0	NA	week	NA
+Shin2020	GG/CC	13.0	all	ABCB1 genotype	13.0	NA	G2677T/A G/G	NA	NA	NA	NA	NA	NA	NA	c.2677G>T and c.3435C>T, c.2677GG/c.3435CC  (GG/CC)
+Shin2020	GG/CC	13.0	all	ABCB1 genotype	13.0	NA	C3435T C/C	NA	NA	NA	NA	NA	NA	NA	c.2677G>T and c.3435C>T, c.2677GG/c.3435CC  (GG/CC)
+Shin2020	GG/CC	13.0	all	age	13.0	NA	NA	22.5	NA	1.9	NA	NA	NA	yr	NA
+Shin2020	GG/CC	13.0	all	height	13.0	NA	NA	171.5	NA	7.0	NA	NA	NA	cm	NA
+Shin2020	GG/CC	13.0	all	weight	13.0	NA	NA	68.5	NA	6.2	NA	NA	NA	kg	NA
+Shin2020	GT/CT	12.0	all	ABCB1 genotype	12.0	NA	G2677T/A G/T	NA	NA	NA	NA	NA	NA	NA	c.2677GT/c.3435CT (GT/CT)
+Shin2020	GT/CT	12.0	all	ABCB1 genotype	12.0	NA	C3435T C/T	NA	NA	NA	NA	NA	NA	NA	c.2677GT/c.3435CT (GT/CT)
+Shin2020	GT/CT	12.0	all	age	12.0	NA	NA	21.7	NA	2.1	NA	NA	NA	yr	NA
+Shin2020	GT/CT	12.0	all	height	12.0	NA	NA	170.8	NA	8.8	NA	NA	NA	cm	NA
+Shin2020	GT/CT	12.0	all	weight	12.0	NA	NA	66.5	NA	9.6	NA	NA	NA	kg	NA
+Shin2020	TT/TT	13.0	all	ABCB1 genotype	13.0	NA	G2677T/A T/T	NA	NA	NA	NA	NA	NA	NA	c.2677TT/c.3435TT (TT/TT)
+Shin2020	TT/TT	13.0	all	ABCB1 genotype	13.0	NA	C3435T T/T	NA	NA	NA	NA	NA	NA	NA	c.2677TT/c.3435TT (TT/TT)
+Shin2020	TT/TT	13.0	all	age	13.0	NA	NA	23.0	NA	1.5	NA	NA	NA	yr	NA
+Shin2020	TT/TT	13.0	all	height	13.0	NA	NA	171.8	NA	7.9	NA	NA	NA	cm	NA
+Shin2020	TT/TT	13.0	all	weight	13.0	NA	NA	67.1	NA	8.0	NA	NA	NA	kg	NA

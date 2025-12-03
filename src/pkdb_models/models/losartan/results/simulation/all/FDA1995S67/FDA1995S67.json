@@ -1,0 +1,4537 @@
+{
+  "experiment_id": "FDA1995S67",
+  "base_path": "C:\\Users\\myshk\\Work\\hu\\pkdb_models\\pkdb_models\\models\\losartan",
+  "data_path": "[WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/losartan'), WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/dextromethorphan'), WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/caffeine'), WindowsPath('C:/Users/myshk/Work/hu/pkdb_models/pkdb_models/models/losartan/data/chlorzoxazone')]",
+  "models": {
+    "model": {
+      "sid": null,
+      "name": null,
+      "language": "SBML",
+      "language_type": "SBML",
+      "source": {
+        "source": "C:\\Users\\myshk\\Work\\hu\\pkdb_models\\pkdb_models\\models\\losartan\\models\\results\\models\\losartan_body_flat.xml",
+        "path": "C:\\Users\\myshk\\Work\\hu\\pkdb_models\\pkdb_models\\models\\losartan\\models\\results\\models\\losartan_body_flat.xml",
+        "content": "None"
+      },
+      "changes": {}
+    }
+  },
+  "tasks": {
+    "task_LOS50PO_cirrhosis": {
+      "model": "model",
+      "simulation": "LOS50PO_cirrhosis"
+    },
+    "task_LOS50PO_normal": {
+      "model": "model",
+      "simulation": "LOS50PO_normal"
+    },
+    "task_LOS10IV_cirrhosis": {
+      "model": "model",
+      "simulation": "LOS10IV_cirrhosis"
+    },
+    "task_LOS10IV_normal": {
+      "model": "model",
+      "simulation": "LOS10IV_normal"
+    },
+    "task_E10IV_cirrhosis": {
+      "model": "model",
+      "simulation": "E10IV_cirrhosis"
+    },
+    "task_E10IV_normal": {
+      "model": "model",
+      "simulation": "E10IV_normal"
+    }
+  },
+  "simulations": {
+    "LOS50PO_cirrhosis": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 3000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 82.3,
+              "_units": "kilogram"
+            },
+            "PODOSE_los": {
+              "_magnitude": 50,
+              "_units": "milligram"
+            },
+            "f_cirrhosis": {
+              "_magnitude": 0.67,
+              "_units": "dimensionless"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "LOS50PO_normal": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 3000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 82.3,
+              "_units": "kilogram"
+            },
+            "PODOSE_los": {
+              "_magnitude": 50,
+              "_units": "milligram"
+            },
+            "f_cirrhosis": {
+              "_magnitude": 0.0,
+              "_units": "dimensionless"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "LOS10IV_cirrhosis": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 3000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 82.3,
+              "_units": "kilogram"
+            },
+            "IVDOSE_los": {
+              "_magnitude": 10,
+              "_units": "milligram"
+            },
+            "f_cirrhosis": {
+              "_magnitude": 0.67,
+              "_units": "dimensionless"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "LOS10IV_normal": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 3000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 82.3,
+              "_units": "kilogram"
+            },
+            "IVDOSE_los": {
+              "_magnitude": 10,
+              "_units": "milligram"
+            },
+            "f_cirrhosis": {
+              "_magnitude": 0.0,
+              "_units": "dimensionless"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "E10IV_cirrhosis": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 3000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 82.3,
+              "_units": "kilogram"
+            },
+            "IVDOSE_e3174": {
+              "_magnitude": 10,
+              "_units": "milligram"
+            },
+            "f_cirrhosis": {
+              "_magnitude": 0.67,
+              "_units": "dimensionless"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    },
+    "E10IV_normal": {
+      "type": "TimecourseSim",
+      "selections": null,
+      "reset": true,
+      "time_offset": 0.0,
+      "timecourses": [
+        {
+          "start": 0,
+          "end": 3000,
+          "steps": 1000,
+          "changes": {
+            "BW": {
+              "_magnitude": 82.3,
+              "_units": "kilogram"
+            },
+            "IVDOSE_e3174": {
+              "_magnitude": 10,
+              "_units": "milligram"
+            },
+            "f_cirrhosis": {
+              "_magnitude": 0.0,
+              "_units": "dimensionless"
+            }
+          },
+          "model_changes": {},
+          "model_manipulations": {},
+          "discard": false
+        }
+      ]
+    }
+  },
+  "data": {
+    "task_LOS50PO_cirrhosis__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_cirrhosis__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_LOS50PO_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS50PO_normal__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_LOS50PO_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_cirrhosis__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_LOS10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_LOS10IV_normal__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_LOS10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_cirrhosis__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_E10IV_cirrhosis",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__time": {
+      "type": "TASK",
+      "index": "time",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__IVDOSE_los": {
+      "type": "TASK",
+      "index": "IVDOSE_los",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__PODOSE_los": {
+      "type": "TASK",
+      "index": "PODOSE_los",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__IVDOSE_e3174": {
+      "type": "TASK",
+      "index": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Cve_los": {
+      "type": "TASK",
+      "index": "Cve_los",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Cve_e3174": {
+      "type": "TASK",
+      "index": "Cve_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Cve_l158": {
+      "type": "TASK",
+      "index": "Cve_l158",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Cve_los_e3174": {
+      "type": "TASK",
+      "index": "Cve_los_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Cve_total": {
+      "type": "TASK",
+      "index": "Cve_total",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "index": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Aurine_los": {
+      "type": "TASK",
+      "index": "Aurine_los",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Aurine_e3174": {
+      "type": "TASK",
+      "index": "Aurine_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Aurine_l158": {
+      "type": "TASK",
+      "index": "Aurine_l158",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Aurine_los_e3174": {
+      "type": "TASK",
+      "index": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Aurine_total": {
+      "type": "TASK",
+      "index": "Aurine_total",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__mr_e3174_los_urine": {
+      "type": "TASK",
+      "index": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Afeces_los": {
+      "type": "TASK",
+      "index": "Afeces_los",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Afeces_e3174": {
+      "type": "TASK",
+      "index": "Afeces_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Afeces_l158": {
+      "type": "TASK",
+      "index": "Afeces_l158",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__Afeces_total": {
+      "type": "TASK",
+      "index": "Afeces_total",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__mr_e3174_los_feces": {
+      "type": "TASK",
+      "index": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__KI__f_renal_function": {
+      "type": "TASK",
+      "index": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__f_cirrhosis": {
+      "type": "TASK",
+      "index": "f_cirrhosis",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__LI__f_cyp2c9": {
+      "type": "TASK",
+      "index": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__GU__f_abcb1": {
+      "type": "TASK",
+      "index": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__e3174": {
+      "type": "TASK",
+      "index": "e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__anggen": {
+      "type": "TASK",
+      "index": "anggen",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ang1": {
+      "type": "TASK",
+      "index": "ang1",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ang1_change": {
+      "type": "TASK",
+      "index": "ang1_change",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ang1_ratio": {
+      "type": "TASK",
+      "index": "ang1_ratio",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ang2": {
+      "type": "TASK",
+      "index": "ang2",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ang2_change": {
+      "type": "TASK",
+      "index": "ang2_change",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ang2_ratio": {
+      "type": "TASK",
+      "index": "ang2_ratio",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ren": {
+      "type": "TASK",
+      "index": "ren",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ren_change": {
+      "type": "TASK",
+      "index": "ren_change",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ren_ratio": {
+      "type": "TASK",
+      "index": "ren_ratio",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ald": {
+      "type": "TASK",
+      "index": "ald",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ald_change": {
+      "type": "TASK",
+      "index": "ald_change",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ald_ratio": {
+      "type": "TASK",
+      "index": "ald_ratio",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__fe_e3174": {
+      "type": "TASK",
+      "index": "fe_e3174",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ANGGEN2ANG1": {
+      "type": "TASK",
+      "index": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ANG1ANG2": {
+      "type": "TASK",
+      "index": "ANG1ANG2",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ANG2DEG": {
+      "type": "TASK",
+      "index": "ANG2DEG",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__RENSEC": {
+      "type": "TASK",
+      "index": "RENSEC",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__RENDEG": {
+      "type": "TASK",
+      "index": "RENDEG",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ALDSEC": {
+      "type": "TASK",
+      "index": "ALDSEC",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__ALDDEG": {
+      "type": "TASK",
+      "index": "ALDDEG",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__SBP": {
+      "type": "TASK",
+      "index": "SBP",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__SBP_change": {
+      "type": "TASK",
+      "index": "SBP_change",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__SBP_ratio": {
+      "type": "TASK",
+      "index": "SBP_ratio",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__DBP": {
+      "type": "TASK",
+      "index": "DBP",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__DBP_change": {
+      "type": "TASK",
+      "index": "DBP_change",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__DBP_ratio": {
+      "type": "TASK",
+      "index": "DBP_ratio",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    },
+    "task_E10IV_normal__MAP": {
+      "type": "TASK",
+      "index": "MAP",
+      "unit": null,
+      "task": "task_E10IV_normal",
+      "dataset": null,
+      "function": null,
+      "variables": null
+    }
+  },
+  "figures": {
+    "Fig1_Tab1_LOS50PO": {
+      "sid": "Fig1_Tab1_LOS50PO",
+      "name": "FDA1995S67 (cirrhosis)",
+      "num_rows": 2,
+      "num_cols": 2,
+      "width": 14.0,
+      "height": 10.0,
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS50PO__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot0_yaxis",
+              "name": "Losartan [nM]",
+              "label": "Losartan",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot0_curve0",
+                "name": "Sim LOS50PO (normal)",
+                "x": "task_LOS50PO_normal__time",
+                "y": "task_LOS50PO_normal__Cve_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot0_curve1",
+                "name": "Sim LOS50PO (cirrhosis)",
+                "x": "task_LOS50PO_cirrhosis__time",
+                "y": "task_LOS50PO_cirrhosis__Cve_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot0_curve2",
+                "name": "LOS50PO (cirrhosis) (n=9)",
+                "x": "losartan_LOS50PO__time",
+                "y": "losartan_LOS50PO__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS50PO__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot1_yaxis",
+              "name": "Losartan urine [\u00b5mole]",
+              "label": "Losartan urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot1_curve0",
+                "name": "Sim LOS50PO (normal)",
+                "x": "task_LOS50PO_normal__time",
+                "y": "task_LOS50PO_normal__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot1_curve1",
+                "name": "Sim LOS50PO (cirrhosis)",
+                "x": "task_LOS50PO_cirrhosis__time",
+                "y": "task_LOS50PO_cirrhosis__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot1_curve2",
+                "name": "LOS50PO (cirrhosis)\u00b1SD (n=9)",
+                "x": "losartan_urine_LOS50PO__time",
+                "y": "losartan_urine_LOS50PO__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_LOS50PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS50PO__plot2",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot2_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot2_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot2_curve0",
+                "name": "Sim LOS50PO (normal)",
+                "x": "task_LOS50PO_normal__time",
+                "y": "task_LOS50PO_normal__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot2_curve1",
+                "name": "Sim LOS50PO (cirrhosis)",
+                "x": "task_LOS50PO_cirrhosis__time",
+                "y": "task_LOS50PO_cirrhosis__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot2_curve2",
+                "name": "LOS50PO (cirrhosis) (n=9)",
+                "x": "exp3174_LOS50PO__time",
+                "y": "exp3174_LOS50PO__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS50PO__plot3",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot3_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS50PO__plot3_yaxis",
+              "name": "E3174 urine [\u00b5mole]",
+              "label": "E3174 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot3_curve0",
+                "name": "Sim LOS50PO (normal)",
+                "x": "task_LOS50PO_normal__time",
+                "y": "task_LOS50PO_normal__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot3_curve1",
+                "name": "Sim LOS50PO (cirrhosis)",
+                "x": "task_LOS50PO_cirrhosis__time",
+                "y": "task_LOS50PO_cirrhosis__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#1f77b4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS50PO__plot3_curve2",
+                "name": "LOS50PO (cirrhosis)\u00b1SD (n=9)",
+                "x": "exp3174_urine_LOS50PO__time",
+                "y": "exp3174_urine_LOS50PO__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_LOS50PO__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#1f77b4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#1f77b4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#1f77b4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    },
+    "Fig1_Tab1_LOS10IV": {
+      "sid": "Fig1_Tab1_LOS10IV",
+      "name": "FDA1995S67 (cirrhosis)",
+      "num_rows": 2,
+      "num_cols": 2,
+      "width": 14.0,
+      "height": 10.0,
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS10IV__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot0_yaxis",
+              "name": "Losartan [nM]",
+              "label": "Losartan",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot0_curve0",
+                "name": "Sim LOS10IV (normal)",
+                "x": "task_LOS10IV_normal__time",
+                "y": "task_LOS10IV_normal__Cve_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot0_curve1",
+                "name": "Sim LOS10IV (cirrhosis)",
+                "x": "task_LOS10IV_cirrhosis__time",
+                "y": "task_LOS10IV_cirrhosis__Cve_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#ff7f0eff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot0_curve2",
+                "name": "LOS10IV (cirrhosis) (n=9)",
+                "x": "losartan_LOS10IV__time",
+                "y": "losartan_LOS10IV__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#ff7f0eff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS10IV__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot1_yaxis",
+              "name": "Losartan urine [\u00b5mole]",
+              "label": "Losartan urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot1_curve0",
+                "name": "Sim LOS10IV (normal)",
+                "x": "task_LOS10IV_normal__time",
+                "y": "task_LOS10IV_normal__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot1_curve1",
+                "name": "Sim LOS10IV (cirrhosis)",
+                "x": "task_LOS10IV_cirrhosis__time",
+                "y": "task_LOS10IV_cirrhosis__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#ff7f0eff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot1_curve2",
+                "name": "LOS10IV (cirrhosis)\u00b1SD (n=9)",
+                "x": "losartan_urine_LOS10IV__time",
+                "y": "losartan_urine_LOS10IV__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_LOS10IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#ff7f0eff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS10IV__plot2",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot2_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot2_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot2_curve0",
+                "name": "Sim LOS10IV (normal)",
+                "x": "task_LOS10IV_normal__time",
+                "y": "task_LOS10IV_normal__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot2_curve1",
+                "name": "Sim LOS10IV (cirrhosis)",
+                "x": "task_LOS10IV_cirrhosis__time",
+                "y": "task_LOS10IV_cirrhosis__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#ff7f0eff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot2_curve2",
+                "name": "LOS10IV (cirrhosis) (n=9)",
+                "x": "exp3174_LOS10IV__time",
+                "y": "exp3174_LOS10IV__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#ff7f0eff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_LOS10IV__plot3",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot3_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_LOS10IV__plot3_yaxis",
+              "name": "E3174 urine [\u00b5mole]",
+              "label": "E3174 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot3_curve0",
+                "name": "Sim LOS10IV (normal)",
+                "x": "task_LOS10IV_normal__time",
+                "y": "task_LOS10IV_normal__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot3_curve1",
+                "name": "Sim LOS10IV (cirrhosis)",
+                "x": "task_LOS10IV_cirrhosis__time",
+                "y": "task_LOS10IV_cirrhosis__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#ff7f0eff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_LOS10IV__plot3_curve2",
+                "name": "LOS10IV (cirrhosis)\u00b1SD (n=9)",
+                "x": "exp3174_urine_LOS10IV__time",
+                "y": "exp3174_urine_LOS10IV__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_LOS10IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#ff7f0eff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#ff7f0eff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#ff7f0eff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 2,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    },
+    "Fig1_Tab1_E10IV": {
+      "sid": "Fig1_Tab1_E10IV",
+      "name": "FDA1995S67 (cirrhosis)",
+      "num_rows": 1,
+      "num_cols": 2,
+      "width": 14.0,
+      "height": 5.0,
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_E10IV__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_E10IV__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_E10IV__plot0_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_E10IV__plot0_curve0",
+                "name": "Sim E10IV (normal)",
+                "x": "task_E10IV_normal__time",
+                "y": "task_E10IV_normal__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_E10IV__plot0_curve1",
+                "name": "Sim E10IV (cirrhosis)",
+                "x": "task_E10IV_cirrhosis__time",
+                "y": "task_E10IV_cirrhosis__Cve_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#2ca02cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#2ca02cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#2ca02cff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_E10IV__plot0_curve2",
+                "name": "E10IV (cirrhosis) (n=9)",
+                "x": "exp3174_E10IV__time",
+                "y": "exp3174_E10IV__mean",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#2ca02cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#2ca02cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#2ca02cff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_Tab1_E10IV__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_Tab1_E10IV__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_Tab1_E10IV__plot1_yaxis",
+              "name": "E3174 urine [\u00b5mole]",
+              "label": "E3174 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_Tab1_E10IV__plot1_curve0",
+                "name": "Sim E10IV (normal)",
+                "x": "task_E10IV_normal__time",
+                "y": "task_E10IV_normal__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_Tab1_E10IV__plot1_curve1",
+                "name": "Sim E10IV (cirrhosis)",
+                "x": "task_E10IV_cirrhosis__time",
+                "y": "task_E10IV_cirrhosis__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#2ca02cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#2ca02cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#2ca02cff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_Tab1_E10IV__plot1_curve2",
+                "name": "E10IV (cirrhosis)\u00b1SD (n=9)",
+                "x": "exp3174_urine_E10IV__time",
+                "y": "exp3174_urine_E10IV__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_E10IV__mean_sd",
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#2ca02cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#2ca02cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#2ca02cff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              }
+            ],
+            "areas": []
+          },
+          "row": 1,
+          "col": 2,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    }
+  }
+}

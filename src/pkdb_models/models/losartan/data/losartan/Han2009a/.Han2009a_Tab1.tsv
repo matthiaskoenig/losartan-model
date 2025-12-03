@@ -1,0 +1,49 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Han2009a	cyp2c9_1_1	6.0	LOS50	auc_end	losartan	plasma	HPLC MS	24.0	hr	409.9	76.9	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	auc_inf	losartan	plasma	HPLC MS	NA	NA	425.0	83.9	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	cmax	losartan	plasma	HPLC MS	NA	NA	170.9	54.6	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	thalf	losartan	plasma	HPLC MS	NA	NA	4.44	2.85	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	tmax	losartan	plasma	HPLC MS	NA	NA	1.14	0.72	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	oral clearance	losartan	plasma	HPLC MS	NA	NA	121.9	27.2	NA	NA	NA	NA	NA	l/hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	auc_end	exp3174	plasma	HPLC MS	24.0	hr	2501.2	496.7	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	auc_inf	exp3174	plasma	HPLC MS	NA	NA	2735.5	553.2	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	cmax	exp3174	plasma	HPLC MS	NA	NA	318.2	109.7	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	thalf	exp3174	plasma	HPLC MS	NA	NA	6.49	0.94	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	tmax	exp3174	plasma	HPLC MS	NA	NA	3.71	1.64	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50	auc_ratio	exp3174/losartan	plasma	HPLC MS	24.0	hr	5.79	2.04	NA	NA	NA	NA	NA	ng/ml*hr	auc_ratio
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	auc_end	losartan	plasma	HPLC MS	24.0	hr	854.3	236.9	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	auc_inf	losartan	plasma	HPLC MS	NA	NA	886.0	221.1	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	cmax	losartan	plasma	HPLC MS	NA	NA	323.3	121.0	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	thalf	losartan	plasma	HPLC MS	NA	NA	6.51	2.77	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	tmax	losartan	plasma	HPLC MS	NA	NA	1.86	0.8	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	oral clearance	losartan	plasma	HPLC MS	NA	NA	59.7	159.7	NA	NA	NA	NA	NA	l/hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	auc_end	exp3174	plasma	HPLC MS	24.0	hr	2134.6	510.6	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	auc_inf	exp3174	plasma	HPLC MS	NA	NA	2281.3	527.5	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	cmax	exp3174	plasma	HPLC MS	NA	NA	263.2	100.7	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	thalf	exp3174	plasma	HPLC MS	NA	NA	5.37	0.5	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	tmax	exp3174	plasma	HPLC MS	NA	NA	4.23	1.69	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_1	6.0	LOS50, SIL140	auc_ratio	exp3174/losartan	plasma	HPLC MS	24.0	hr	2.63	0.8	NA	NA	NA	NA	NA	ng/ml*hr	auc_ratio
+Han2009a	cyp2c9_1_3	6.0	LOS50	auc_end	losartan	plasma	HPLC MS	24.0	hr	816.3	282.9	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	auc_inf	losartan	plasma	HPLC MS	NA	NA	866.0	292.8	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	cmax	losartan	plasma	HPLC MS	NA	NA	184.3	84.9	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	thalf	losartan	plasma	HPLC MS	NA	NA	4.81	1.6	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	tmax	losartan	plasma	HPLC MS	NA	NA	1.87	0.53	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	oral clearance	losartan	plasma	HPLC MS	NA	NA	63.8	23.0	NA	NA	NA	NA	NA	l/hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	auc_end	exp3174	plasma	HPLC MS	24.0	hr	1810.0	890.5	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	auc_inf	exp3174	plasma	HPLC MS	NA	NA	1993.5	950.5	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	cmax	exp3174	plasma	HPLC MS	NA	NA	193.5	85.3	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	thalf	exp3174	plasma	HPLC MS	NA	NA	5.92	1.3	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	tmax	exp3174	plasma	HPLC MS	NA	NA	3.95	1.66	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50	auc_ratio	exp3174/losartan	plasma	HPLC MS	24.0	hr	2.3	0.89	NA	NA	NA	NA	NA	ng/ml*hr	auc_ratio
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	auc_end	losartan	plasma	HPLC MS	24.0	hr	805.8	266.2	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	auc_inf	losartan	plasma	HPLC MS	NA	NA	871.9	233.8	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	cmax	losartan	plasma	HPLC MS	NA	NA	260.8	150.4	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	thalf	losartan	plasma	HPLC MS	NA	NA	5.92	3.11	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	tmax	losartan	plasma	HPLC MS	NA	NA	1.93	0.75	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	oral clearance	losartan	plasma	HPLC MS	NA	NA	60.3	13.4	NA	NA	NA	NA	NA	l/hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	auc_end	exp3174	plasma	HPLC MS	24.0	hr	1548.5	741.5	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	auc_inf	exp3174	plasma	HPLC MS	NA	NA	1738.6	793.7	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	cmax	exp3174	plasma	HPLC MS	NA	NA	147.1	80.8	NA	NA	NA	NA	NA	ng/ml	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	thalf	exp3174	plasma	HPLC MS	NA	NA	6.1	1.52	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	tmax	exp3174	plasma	HPLC MS	NA	NA	5.78	1.55	NA	NA	NA	NA	NA	hr	NA
+Han2009a	cyp2c9_1_3	6.0	LOS50, SIL140	auc_ratio	exp3174/losartan	plasma	HPLC MS	24.0	hr	1.75	0.52	NA	NA	NA	NA	NA	ng/ml*hr	auc_ratio

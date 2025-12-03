@@ -1,0 +1,17 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+Fischer2002	all	16.0	NA	species	16.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	healthy 	16.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	sex	16.0	NA	MF	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	overnight fast	16.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	age	16.0	NA	NA	24.0	NA	NA	NA	19.0	41.0	yr	NA
+Fischer2002	all	16.0	NA	weight	16.0	NA	NA	72.0	NA	NA	NA	50.0	95.0	kg	NA
+Fischer2002	all	16.0	NA	obesity index	16.0	NA	NA	72.0	NA	NA	NA	0.9	1.1	dimensionless	NA
+Fischer2002	all	16.0	NA	blood pressure systolic	16.0	NA	NA	NA	NA	NA	NA	90.0	NA	mmHg	NA
+Fischer2002	all	16.0	NA	pregnant	16.0	NA	N	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	breastfeeding	16.0	NA	N	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	smoking	16.0	NA	N	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	abstinence smoking	16.0	NA	NA	NA	NA	NA	NA	6.0	NA	month	NA
+Fischer2002	all	16.0	NA	sex	7.0	NA	F	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	all	16.0	NA	sex	9.0	NA	M	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	cyp2c9_1	14.0	all	cyp2c9 genotype	14.0	NA	*1/*1	NA	NA	NA	NA	NA	NA	NA	NA
+Fischer2002	cyp2c9_2	2.0	all	cyp2c9 genotype	2.0	NA	*1/*2	NA	NA	NA	NA	NA	NA	NA	NA

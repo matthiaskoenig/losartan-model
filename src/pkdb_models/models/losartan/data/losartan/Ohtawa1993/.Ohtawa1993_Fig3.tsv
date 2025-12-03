@@ -1,0 +1,49 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_pm	sd	median	min	max	se	cv	unit	comments
+Ohtawa1993	single_dose_25	6.0	LOS25	renin activity	renin	plasma	RIA	pra_25	0.0	hr	1.59247742671508	2.57931953197824	0.98684210526316	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	renin activity	renin	plasma	RIA	pra_25	6.0	hr	15.3440078189128	23.3483937838251	8.0043859649123	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	renin activity	renin	plasma	RIA	pra_25	24.0	hr	2.342717420037	3.32955952530016	0.98684210526316	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	renin activity	renin	plasma	RIA	pra_50	0.0	hr	1.4471771220279	2.87261571851913	1.42543859649123	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	renin activity	renin	plasma	RIA	pra_50	6.0	hr	22.8741461107169	38.5539706721204	15.6798245614035	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	renin activity	renin	plasma	RIA	pra_50	24.0	hr	6.03409296436968	11.1876017362995	5.15350877192982	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	renin activity	renin	plasma	RIA	pra_100	0.0	hr	0.861715152274023	1.40996076630911	0.548245614035087	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	renin activity	renin	plasma	RIA	pra_100	6.0	hr	19.1099030287852	29.855517063873	10.7456140350878	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	renin activity	renin	plasma	RIA	pra_100	24.0	hr	6.65633651933163	12.6870382737175	6.03070175438587	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	renin activity	renin	plasma	RIA	pra_200	0.0	hr	1.04744911445941	1.92464209691556	0.87719298245615	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	renin activity	renin	plasma	RIA	pra_200	6.0	hr	28.8340672259554	40.8954707347273	12.0614035087719	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	renin activity	renin	plasma	RIA	pra_200	24.0	hr	5.63488668141408	7.38927264632636	1.75438596491228	NA	NA	NA	NA	NA	ng/ml/hr	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	renin	plasma	RIA	renin_25	0.0	hr	12.1028284430346	19.6028284430346	7.50000000000002	NA	NA	NA	NA	NA	pg/ml	1 ng/mL/h of PRA ≈ 7.6 pg/mL of DRC (range: 5.5–9.7 pg/mL)
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	renin	plasma	RIA	renin_25	6.0	hr	116.614459423737	177.447792757071	60.8333333333335	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	renin	plasma	RIA	renin_25	24.0	hr	17.8046523922812	25.3046523922812	7.50000000000002	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	renin	plasma	RIA	renin_50	0.0	hr	10.998546127412	21.8318794607454	10.8333333333333	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	renin	plasma	RIA	renin_50	6.0	hr	173.843510441448	293.010177108115	119.166666666667	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	renin	plasma	RIA	renin_50	24.0	hr	45.8591065292096	85.0257731958762	39.1666666666666	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	renin	plasma	RIA	renin_100	0.0	hr	6.54903515728257	10.7157018239492	4.16666666666666	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	renin	plasma	RIA	renin_100	6.0	hr	145.235263018768	226.901929685435	81.6666666666673	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	renin	plasma	RIA	renin_100	24.0	hr	50.5881575469204	96.421490880253	45.8333333333326	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	renin	plasma	RIA	renin_200	0.0	hr	7.96061326989152	14.6272799365583	6.66666666666674	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	renin	plasma	RIA	renin_200	6.0	hr	219.138910917261	310.805577583927	91.6666666666664	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	renin	plasma	RIA	renin_200	24.0	hr	42.825138778747	56.1584721120803	13.3333333333333	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	angiotensin II	plasma	RIA	ang2_25	0.0	hr	5.62689645947298	7.61804690195091	1.99115044247793	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	angiotensin II	plasma	RIA	ang2_25	6.0	hr	32.2521314268415	53.047711576235	20.7955801493935	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	angiotensin II	plasma	RIA	ang2_25	24.0	hr	7.33221393822916	10.8720369470786	3.53982300884944	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	angiotensin II	plasma	RIA	ang2_50	0.0	hr	10.5835639005639	14.1233869094135	3.5398230088496	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	angiotensin II	plasma	RIA	ang2_50	6.0	hr	53.1380024077555	82.7840201068706	29.6460176991151	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	angiotensin II	plasma	RIA	ang2_50	24.0	hr	17.3747368717483	24.6756218275005	7.3008849557522	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	angiotensin II	plasma	RIA	ang2_100	0.0	hr	10.6703346216937	13.1030829126801	2.4327482909864	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	angiotensin II	plasma	RIA	ang2_100	6.0	hr	40.6141536598588	65.3929147218057	24.7787610619469	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	angiotensin II	plasma	RIA	ang2_100	24.0	hr	18.1252244070374	27.8597376813737	9.7345132743363	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	angiotensin II	plasma	RIA	ang2_200	0.0	hr	7.21904238916931	9.65267070775343	2.43362831858412	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	angiotensin II	plasma	RIA	ang2_200	6.0	hr	60.8363078266135	87.3849803929851	26.5486725663716	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	angiotensin II	plasma	RIA	ang2_200	24.0	hr	18.4358741490133	24.8518033525531	6.4159292035398	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	aldosterone	plasma	RIA	aldosterone_25	0.0	hr	84.5519229321104	110.923963581534	26.3720406494236	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	aldosterone	plasma	RIA	aldosterone_25	6.0	hr	36.7606548879304	43.3540152951952	6.5933604072648	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_25	6.0	LOS25	concentration	aldosterone	plasma	RIA	aldosterone_25	24.0	hr	55.3467512157876	62.8192263440212	7.4724751282336	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	aldosterone	plasma	RIA	aldosterone_50	0.0	hr	107.020133828579	170.755951098806	63.735817270227	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	aldosterone	plasma	RIA	aldosterone_50	6.0	hr	62.7495276071794	81.650494108005	18.9009665008256	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_50	6.0	LOS50	concentration	aldosterone	plasma	RIA	aldosterone_50	24.0	hr	112.541394570153	181.991457526675	69.450062956522	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	aldosterone	plasma	RIA	aldosterone_100	0.0	hr	93.44604214497	133.445761949043	39.999719804073	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	aldosterone	plasma	RIA	aldosterone_100	6.0	hr	56.2083536913188	64.9995009010052	8.79114720968641	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_100	6.0	LOS100	concentration	aldosterone	plasma	RIA	aldosterone_100	24.0	hr	84.463310970196	117.430113006519	32.966802036323	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	aldosterone	plasma	RIA	aldosterone_200	0.0	hr	127.348348332571	161.194265089864	33.845916757293	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	aldosterone	plasma	RIA	aldosterone_200	6.0	hr	56.7028995024772	68.1313908750695	11.4284913725923	NA	NA	NA	NA	NA	pg/ml	NA
+Ohtawa1993	single_dose_200	6.0	LOS200	concentration	aldosterone	plasma	RIA	aldosterone_200	24.0	hr	84.0773410807509	106.055209104966	21.9778680242151	NA	NA	NA	NA	NA	pg/ml	NA

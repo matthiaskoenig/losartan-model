@@ -1,0 +1,151 @@
+from typing import Dict
+
+from sbmlsim.data import DataSet, load_pkdb_dataframe
+from sbmlsim.fit import FitMapping, FitData
+from sbmlutils.console import console
+
+from pkdb_models.models.losartan.experiments.base_experiment import (
+    LosartanSimulationExperiment,
+)
+from pkdb_models.models.losartan.experiments.metadata import (
+    Tissue, Route, Dosing, ApplicationForm, Health, \
+    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
+)
+
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Timecourse, TimecourseSim
+
+from pkdb_models.models.losartan.helpers import run_experiments
+
+
+class Kobayashi2008(LosartanSimulationExperiment):
+    """Simulation experiment of Kobayashi2008."""
+
+    bodyweight = 62.3  # [kg]
+    info = {
+        "los": "losartan",
+        "e3174": "exp3174",
+    }
+    interventions = ["LOS", "LOS_BUC"]
+    colors = {
+        "LOS": "black",
+        "LOS_BUC": "tab:blue",
+    }
+
+    def datasets(self) -> Dict[str, DataSet]:
+        dsets = {}
+        for fig_id in ["Fig1"]:
+            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            for label, df_label in df.groupby("label"):
+                dset = DataSet.from_df(df_label, self.ureg)
+
+                # unit conversion to mole/l
+                if label.startswith("losartan_"):
+                    dset.unit_conversion("mean", 1 / self.Mr.los)
+                elif label.startswith("exp3174_"):
+                    dset.unit_conversion("mean", 1 / self.Mr.e3174)
+                dsets[f"{label}"] = dset
+
+        # console.print(dsets)
+        # console.print(dsets.keys())
+        return dsets
+
+    def simulations(self) -> Dict[str, TimecourseSim]:
+        Q_ = self.Q_
+        tcsims = {}
+        tcsims[f"po_los25"] = TimecourseSim(
+            [Timecourse(
+                start=0,
+                end=25 * 60,  # [min]
+                steps=500,
+                changes={
+                    **self.default_changes(),
+                    "BW": Q_(self.bodyweight, "kg"),
+                    "PODOSE_los": Q_(25, "mg") * self.Mr.los/self.Mr.losp,
+                },
+            )]
+        )
+        # console.print(tcsims)
+        return tcsims
+
+    def fit_mappings(self) -> Dict[str, FitMapping]:
+        mappings = {}
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+            for intervention in self.interventions:
+                coadministration = Coadministration.NONE
+                if "BUC" in intervention:
+                    coadministration = Coadministration.BUCOLOME
+
+                mappings[f"fm_po_los25_{sid}_{intervention}"] = FitMapping(
+                    self,
+                    reference=FitData(
+                        self,
+                        dataset=f"{name}_{intervention}",
+                        xid="time",
+                        yid="mean",
+                        yid_sd="mean_sd",
+                        count="count",
+                    ),
+                    observable=FitData(
+                        self, task=f"task_po_los25", xid="time", yid=f"[Cve_{sid}]",
+                    ),
+                    metadata=LosartanMappingMetaData(
+                        tissue=Tissue.PLASMA,
+                        route=Route.PO,
+                        application_form=ApplicationForm.TABLET,
+                        dosing=Dosing.SINGLE,
+                        health=Health.HEALTHY,
+                        fasting=Fasting.FASTED,
+                        coadministration=coadministration,
+                    ),
+                )
+        # console.print(mappings)
+        return mappings
+
+    def figures(self) -> Dict[str, Figure]:
+        fig = Figure(
+            experiment=self,
+            sid="Fig1",
+            num_rows=2,
+            name=f"{self.__class__.__name__} (healthy)",
+        )
+        plots = fig.create_plots(
+            xaxis=Axis(self.label_time, unit=self.unit_time), legend=True
+        )
+        plots[0].set_yaxis(self.label_los, unit=self.unit_los)
+        plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
+
+        for k, sid in enumerate(self.info):
+            name = self.info[sid]
+
+            # simulation
+            plots[k].add_data(
+                task=f"task_po_los25",
+                xid="time",
+                yid=f"[Cve_{sid}]",
+                label=f"Sim 25 mg",
+                color="black",
+            )
+
+            for intervention in self.interventions:
+                if intervention == "LOS_BUC":
+                    continue
+                # data
+                plots[k].add_data(
+                    dataset=f"{name}_{intervention}",
+                    xid="time",
+                    yid="mean",
+                    yid_sd="mean_sd",
+                    count="count",
+                    label=f"{intervention} 25 mg",
+                    color=self.colors[intervention],
+                )
+
+        return {
+            fig.sid: fig,
+        }
+
+
+if __name__ == "__main__":
+    run_experiments(Kobayashi2008, output_dir=Kobayashi2008.__name__)

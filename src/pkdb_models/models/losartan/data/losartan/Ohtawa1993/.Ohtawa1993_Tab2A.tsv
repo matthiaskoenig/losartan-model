@@ -1,0 +1,13 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	losartan	urine	HPLC	losartan_recovery_100_multi	0.0	day	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	losartan	urine	HPLC	losartan_recovery_100_multi	1.0	day	4.7	1.5	NA	NA	NA	NA	NA	percent	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	losartan	urine	HPLC	losartan_recovery_100_multi	7.0	day	3.9	0.9	NA	NA	NA	NA	NA	percent	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	exp3174	urine	HPLC	exp3174_recovery_100_multi	0.0	day	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	exp3174	urine	HPLC	exp3174_recovery_100_multi	1.0	day	6.5	1.8	NA	NA	NA	NA	NA	percent	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	recovery	exp3174	urine	HPLC	exp3174_recovery_100_multi	7.0	day	6.1	1.7	NA	NA	NA	NA	NA	percent	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	losartan	urine	HPLC	losartan_urine_100_multi	0.0	day	0.0	0.0	NA	NA	NA	NA	NA	mg	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	losartan	urine	HPLC	losartan_urine_100_multi	1.0	day	4.7	1.5	NA	NA	NA	NA	NA	mg	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	losartan	urine	HPLC	losartan_urine_100_multi	7.0	day	3.9	0.9	NA	NA	NA	NA	NA	mg	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	exp3174	urine	HPLC	exp3174_urine_100_multi	0.0	day	0.0	NA	NA	NA	NA	NA	NA	mg	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	exp3174	urine	HPLC	exp3174_urine_100_multi	1.0	day	6.5	1.8	NA	NA	NA	NA	NA	mg	NA
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	exp3174	urine	HPLC	exp3174_urine_100_multi	7.0	day	6.1	1.7	NA	NA	NA	NA	NA	mg	NA

@@ -1,0 +1,17 @@
+study	name	group_count	parent	measurement_type	count	substance	choice	mean	median	sd	se	min	max	unit	comments
+Ohtawa1993	all	33.0	NA	species	33.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	all	33.0	NA	healthy 	33.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	all	33.0	NA	sex	33.0	NA	M	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	all	33.0	NA	age	33.0	NA	NA	34.0	NA	NA	NA	23.0	48.0	yr	NA
+Ohtawa1993	all	33.0	NA	weight	33.0	NA	NA	64.3	NA	NA	NA	48.8	84.6	kg	NA
+Ohtawa1993	all	33.0	NA	abstinence medication	33.0	NA	NA	NA	NA	NA	NA	2.0	NA	week	abstinence drug
+Ohtawa1993	single_dose	24.0	all	species	24.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	single_dose	24.0	all	overnight fast	24.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	single_dose_25	6.0	single_dose	overnight fast	6.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	single_dose_50	6.0	single_dose	overnight fast	6.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	single_dose_100	6.0	single_dose	overnight fast	6.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	single_dose_200	6.0	single_dose	overnight fast	6.0	NA	Y	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	multiple_dose	9.0	all	species	9.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	multiple_dose	9.0	all	overnight fast	9.0	NA	N	NA	NA	NA	NA	NA	NA	NA	In the multiple-dose study, on days 1 and 7, dosing with the drug (100 mg losartan capsule or placebo) was preceded by an overnight fast. On other days, the drug was administered 30 min after breakfast
+Ohtawa1993	multiple_dose_losartan	6.0	multiple_dose	species	6.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA
+Ohtawa1993	multiple_dose_placebo	3.0	multiple_dose	species	3.0	NA	homo sapiens	NA	NA	NA	NA	NA	NA	NA	NA

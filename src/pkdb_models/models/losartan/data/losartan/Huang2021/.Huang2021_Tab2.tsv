@@ -1,0 +1,27 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Huang2021	all	11.0	LOS50	cmax	losartan	plasma	HPLC	NA	NA	281.6	105.8	NA	NA	NA	NA	NA	ng/ml	NA
+Huang2021	all	11.0	LOS50	auc_end	losartan	plasma	HPLC	36.0	hr	665.9	305.4	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50	auc_inf	losartan	plasma	HPLC	NA	NA	666.1	305.6	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50	thalf	losartan	plasma	HPLC	NA	NA	2.21	0.93	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50	tmax	losartan	plasma	HPLC	NA	NA	1.65	0.86	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50	oral clearance	losartan	plasma	HPLC	NA	NA	87.51	33.27	NA	NA	NA	NA	NA	l/hr	NA
+Huang2021	all	11.0	LOS50	cmax	exp3174	plasma	HPLC	NA	NA	308.2	124.3	NA	NA	NA	NA	NA	ng/ml	NA
+Huang2021	all	11.0	LOS50	auc_end	exp3174	plasma	HPLC	36.0	hr	2148.0	720.7	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50	auc_inf	exp3174	plasma	HPLC	NA	NA	2169.0	724.7	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50	thalf	exp3174	plasma	HPLC	NA	NA	4.94	2.92	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50	tmax	exp3174	plasma	HPLC	NA	NA	3.43	0.76	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50	oral clearance	exp3174	plasma	HPLC	NA	NA	25.56	8.78	NA	NA	NA	NA	NA	l/hr	NA
+Huang2021	all	11.0	LOS50	auc_ratio	exp3174	plasma	HPLC	36.0	hr	3.66	1.53	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50, BRE40	cmax	losartan	plasma	HPLC	NA	NA	357.6	195.8	NA	NA	NA	NA	NA	ng/ml	NA
+Huang2021	all	11.0	LOS50, BRE40	auc_end	losartan	plasma	HPLC	36.0	hr	767.1	363.7	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50, BRE40	auc_inf	losartan	plasma	HPLC	NA	NA	767.1	363.7	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50, BRE40	thalf	losartan	plasma	HPLC	NA	NA	1.99	0.38	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50, BRE40	tmax	losartan	plasma	HPLC	NA	NA	1.35	0.59	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50, BRE40	oral clearance	losartan	plasma	HPLC	NA	NA	77.42	31.26	NA	NA	NA	NA	NA	l/hr	NA
+Huang2021	all	11.0	LOS50, BRE40	cmax	exp3174	plasma	HPLC	NA	NA	353.1	159.86	NA	NA	NA	NA	NA	ng/ml	NA
+Huang2021	all	11.0	LOS50, BRE40	auc_end	exp3174	plasma	HPLC	36.0	hr	2523.0	928.7	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50, BRE40	auc_inf	exp3174	plasma	HPLC	NA	NA	2542.0	940.7	NA	NA	NA	NA	NA	mg/ml*hr	NA
+Huang2021	all	11.0	LOS50, BRE40	thalf	exp3174	plasma	HPLC	NA	NA	4.51	1.6	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50, BRE40	tmax	exp3174	plasma	HPLC	NA	NA	3.4	1.31	NA	NA	NA	NA	NA	hr	NA
+Huang2021	all	11.0	LOS50, BRE40	oral clearance	exp3174	plasma	HPLC	NA	NA	23.04	10.9	NA	NA	NA	NA	NA	l/hr	NA
+Huang2021	all	11.0	LOS50, BRE40	auc_ratio	exp3174	plasma	HPLC	36.0	hr	3.73	1.76	NA	NA	NA	NA	NA	mg/ml*hr	NA

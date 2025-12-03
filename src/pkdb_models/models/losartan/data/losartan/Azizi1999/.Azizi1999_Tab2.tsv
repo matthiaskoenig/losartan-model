@@ -1,0 +1,13 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Azizi1999	all	16.0	CAN16	cmax	candesartan	plasma	RP-HPLC	NA	NA	84.0	29.0	NA	NA	NA	NA	NA	ng/ml	NA
+Azizi1999	all	16.0	CAN8	cmax	candesartan	plasma	RP-HPLC	NA	NA	40.0	14.0	NA	NA	NA	NA	NA	ng/ml	NA
+Azizi1999	all	16.0	LOS50	cmax	losartan	plasma	HPLC/UV	NA	NA	103.0	46.0	NA	NA	NA	NA	NA	ng/ml	NA
+Azizi1999	all	16.0	LOS50	cmax	exp3174	plasma	HPLC/UV	NA	NA	179.0	75.0	NA	NA	NA	NA	NA	ng/ml	NA
+Azizi1999	all	16.0	CAN16	tmax	candesartan	plasma	RP-HPLC	NA	NA	3.63	1.31	NA	NA	NA	NA	NA	hr	NA
+Azizi1999	all	16.0	CAN8	tmax	candesartan	plasma	RP-HPLC	NA	NA	3.88	0.89	NA	NA	NA	NA	NA	hr	NA
+Azizi1999	all	16.0	LOS50	tmax	losartan	plasma	HPLC/UV	NA	NA	2.88	1.46	NA	NA	NA	NA	NA	hr	NA
+Azizi1999	all	16.0	LOS50	tmax	exp3174	plasma	HPLC/UV	NA	NA	5.13	2.03	NA	NA	NA	NA	NA	hr	NA
+Azizi1999	all	16.0	CAN16	auc_end	candesartan	plasma	RP-HPLC	24.0	hr	706.0	173.0	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Azizi1999	all	16.0	CAN8	auc_end	candesartan	plasma	RP-HPLC	24.0	hr	348.0	104.0	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Azizi1999	all	16.0	LOS50	auc_end	losartan	plasma	HPLC/UV	24.0	hr	488.0	154.0	NA	NA	NA	NA	NA	ng/ml*hr	NA
+Azizi1999	all	16.0	LOS50	auc_end	exp3174	plasma	HPLC/UV	24.0	hr	1551.0	462.0	NA	NA	NA	NA	NA	ng/ml*hr	NA

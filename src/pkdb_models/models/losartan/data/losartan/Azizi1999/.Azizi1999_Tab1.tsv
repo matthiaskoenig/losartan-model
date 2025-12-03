@@ -1,0 +1,53 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Azizi1999	all	16.0	CAN16	concentration	renin	plasma	RIA	0.0	hr	56.0	32.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	CAN8	concentration	renin	plasma	RIA	0.0	hr	55.0	19.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	LOS50	concentration	renin	plasma	RIA	0.0	hr	65.0	24.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	placebo	concentration	renin	plasma	RIA	0.0	hr	51.0	18.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	CAN16	cmax	renin	plasma	RIA	NA	NA	365.0	178.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	CAN8	cmax	renin	plasma	RIA	NA	NA	241.0	111.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	LOS50	cmax	renin	plasma	RIA	NA	NA	278.0	117.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	placebo	cmax	renin	plasma	RIA	NA	NA	63.0	18.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	CAN16	concentration	renin	plasma	RIA	24.0	hr	272.0	117.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	CAN8	concentration	renin	plasma	RIA	24.0	hr	189.0	75.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	LOS50	concentration	renin	plasma	RIA	24.0	hr	150.0	57.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	placebo	concentration	renin	plasma	RIA	24.0	hr	59.0	18.0	NA	NA	NA	NA	NA	pg/ml	immunoradiometric assay
+Azizi1999	all	16.0	CAN16	auc_end	renin	plasma	RIA	24.0	hr	5121.0	2353.0	NA	NA	NA	NA	NA	pg/ml*hr	immunoradiometric assay
+Azizi1999	all	16.0	CAN8	auc_end	renin	plasma	RIA	24.0	hr	3418.0	1444.0	NA	NA	NA	NA	NA	pg/ml*hr	immunoradiometric assay
+Azizi1999	all	16.0	LOS50	auc_end	renin	plasma	RIA	24.0	hr	3704.0	1467.0	NA	NA	NA	NA	NA	pg/ml*hr	immunoradiometric assay
+Azizi1999	all	16.0	placebo	auc_end	renin	plasma	RIA	24.0	hr	1108.0	382.0	NA	NA	NA	NA	NA	pg/ml*hr	immunoradiometric assay
+Azizi1999	all	16.0	CAN16	concentration	angiotensin I	plasma	RIA	0.0	hr	11.0	7.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN8	concentration	angiotensin I	plasma	RIA	0.0	hr	12.0	5.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	LOS50	concentration	angiotensin I	plasma	RIA	0.0	hr	13.0	8.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	placebo	concentration	angiotensin I	plasma	RIA	0.0	hr	11.0	6.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN16	cmax	angiotensin I	plasma	RIA	NA	NA	84.0	49.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN8	cmax	angiotensin I	plasma	RIA	NA	NA	48.0	21.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	LOS50	cmax	angiotensin I	plasma	RIA	NA	NA	52.0	18.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	placebo	cmax	angiotensin I	plasma	RIA	NA	NA	15.0	6.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN16	concentration	angiotensin I	plasma	RIA	24.0	hr	56.0	37.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN8	concentration	angiotensin I	plasma	RIA	24.0	hr	36.0	22.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	LOS50	concentration	angiotensin I	plasma	RIA	24.0	hr	27.0	21.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	placebo	concentration	angiotensin I	plasma	RIA	24.0	hr	10.0	6.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN16	auc_end	angiotensin I	plasma	RIA	24.0	hr	1065.0	472.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	CAN8	auc_end	angiotensin I	plasma	RIA	24.0	hr	641.0	276.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	LOS50	auc_end	angiotensin I	plasma	RIA	24.0	hr	631.0	225.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	placebo	auc_end	angiotensin I	plasma	RIA	24.0	hr	181.0	73.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	CAN16	concentration	angiotensin II	plasma	RIA	0.0	hr	7.0	4.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN8	concentration	angiotensin II	plasma	RIA	0.0	hr	8.0	3.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	LOS50	concentration	angiotensin II	plasma	RIA	0.0	hr	10.0	5.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	placebo	concentration	angiotensin II	plasma	RIA	0.0	hr	6.0	2.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN16	cmax	angiotensin II	plasma	RIA	NA	NA	48.0	26.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN8	cmax	angiotensin II	plasma	RIA	NA	NA	31.0	13.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	LOS50	cmax	angiotensin II	plasma	RIA	NA	NA	41.0	18.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	placebo	cmax	angiotensin II	plasma	RIA	NA	NA	9.0	2.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN16	concentration	angiotensin II	plasma	RIA	24.0	hr	24.0	15.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN8	concentration	angiotensin II	plasma	RIA	24.0	hr	18.0	11.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	LOS50	concentration	angiotensin II	plasma	RIA	24.0	hr	15.0	11.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	placebo	concentration	angiotensin II	plasma	RIA	24.0	hr	7.0	3.0	NA	NA	NA	NA	NA	pg/ml	NA
+Azizi1999	all	16.0	CAN16	auc_end	angiotensin II	plasma	RIA	24.0	hr	616.0	304.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	CAN8	auc_end	angiotensin II	plasma	RIA	24.0	hr	406.0	168.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	LOS50	auc_end	angiotensin II	plasma	RIA	24.0	hr	456.0	176.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	placebo	auc_end	angiotensin II	plasma	RIA	24.0	hr	133.0	47.0	NA	NA	NA	NA	NA	pg/ml*hr	NA
+Azizi1999	all	16.0	CAN16	MAP	NA	NA	sphygmomanometer	0.0	hr	87.0	6.0	NA	NA	NA	NA	NA	mmHg	mean (arterial?) blood pressure
+Azizi1999	all	16.0	CAN8	MAP	NA	NA	sphygmomanometer	0.0	hr	87.0	5.0	NA	NA	NA	NA	NA	mmHg	mean (arterial?) blood pressure
+Azizi1999	all	16.0	LOS50	MAP	NA	NA	sphygmomanometer	0.0	hr	87.0	6.0	NA	NA	NA	NA	NA	mmHg	mean (arterial?) blood pressure
+Azizi1999	all	16.0	placebo	MAP	NA	NA	sphygmomanometer	0.0	hr	87.0	6.0	NA	NA	NA	NA	NA	mmHg	mean (arterial?) blood pressure

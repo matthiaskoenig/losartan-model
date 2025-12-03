@@ -1,0 +1,53 @@
+study	individual	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	value	mean	sd	median	min	max	se	cv	unit	comments
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	losartan and metabolites	urine	RIA	losartan_total_recovery_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	losartan and metabolites	urine	RIA	losartan_total_recovery_urine_LOS30IV	96.0	hr	NA	43.3	8.4	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	losartan	urine	RIA	losartan_recovery_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	losartan	urine	RIA	losartan_recovery_urine_LOS30IV	96.0	hr	NA	11.4	4.0	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	exp3174	urine	RIA	exp3174_recovery_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	exp3174	urine	RIA	exp3174_recovery_urine_LOS30IV	96.0	hr	NA	6.44	2.45	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	 L-158	urine	RIA	l158_recovery_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	 L-158	urine	RIA	l158_recovery_urine_LOS30IV	96.0	hr	NA	17.857	2.47	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	losartan and metabolites	feces	RIA	losartan_total_recovery_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	recovery	losartan and metabolites	feces	RIA	losartan_total_recovery_feces_LOS30IV	96.0	hr	NA	49.5	13.3	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	2.0	LOS30IV	recovery	losartan	feces	RIA	losartan_recovery_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	recovery	losartan	feces	RIA	losartan_recovery_feces_LOS30IV	96.0	hr	NA	10.29	3.56	NA	NA	NA	NA	NA	percent	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	recovery	exp3174	feces	RIA	exp3174_recovery_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	recovery	exp3174	feces	RIA	exp3174_recovery_feces_LOS30IV	96.0	hr	NA	10.15	4.57	NA	NA	NA	NA	NA	percent	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	recovery	 L-158	feces	RIA	l158_recovery_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	recovery	 L-158	feces	RIA	l158_recovery_feces_LOS30IV	96.0	hr	NA	17.747	1.51	NA	NA	NA	NA	NA	percent	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	losartan and metabolites	urine	RIA	losartan_total_recovery_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	losartan and metabolites	urine	RIA	losartan_total_recovery_urine_LOS100PO	96.0	hr	NA	35.2	6.2	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	losartan	urine	RIA	losartan_recovery_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	losartan	urine	RIA	losartan_recovery_urine_LOS100PO	96.0	hr	NA	4.91	2.27	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	exp3174	urine	RIA	exp3174_recovery_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	exp3174	urine	RIA	exp3174_recovery_urine_LOS100PO	96.0	hr	NA	6.41	2.22	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	 L-158	urine	RIA	l158_recovery_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	 L-158	urine	RIA	l158_recovery_urine_LOS100PO	96.0	hr	NA	16.73	2.54	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	losartan and metabolites	feces	RIA	losartan_total_recovery_feces_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	recovery	losartan and metabolites	feces	RIA	losartan_total_recovery_feces_LOS100PO	96.0	hr	NA	57.7	7.9	NA	NA	NA	NA	NA	percent	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	losartan and metabolites	urine	RIA	losartan_total_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	losartan and metabolites	urine	RIA	losartan_total_urine_LOS30IV	96.0	hr	NA	30.7156824958443	5.95870053037164	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	losartan	urine	RIA	losartan_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	losartan	urine	RIA	losartan_urine_LOS30IV	96.0	hr	NA	8.08680786264722	2.83747644303411	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	exp3174	urine	RIA	exp3174_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	exp3174	urine	RIA	exp3174_urine_LOS30IV	96.0	hr	NA	4.56833707328492	1.73795432135839	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	 L-158	urine	RIA	l158_urine_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	 L-158	urine	RIA	l158_urine_LOS30IV	96.0	hr	NA	12.667204210815	1.75214170357357	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	losartan and metabolites	feces	RIA	losartan_total_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS30IV	cumulative amount	losartan and metabolites	feces	RIA	losartan_total_feces_LOS30IV	96.0	hr	NA	35.1137709825472	9.43460917308843	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	2.0	LOS30IV	cumulative amount	losartan	feces	RIA	losartan_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	cumulative amount	losartan	feces	RIA	losartan_feces_LOS30IV	96.0	hr	NA	7.29940814970526	2.52535403430036	NA	NA	NA	NA	NA	µmole	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	cumulative amount	exp3174	feces	RIA	exp3174_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	cumulative amount	exp3174	feces	RIA	exp3174_feces_LOS30IV	96.0	hr	NA	7.20009647419906	3.24181683616648	NA	NA	NA	NA	NA	µmole	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	cumulative amount	 L-158	feces	RIA	l158_feces_LOS30IV	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	2.0	LOS30IV	cumulative amount	 L-158	feces	RIA	l158_feces_LOS30IV	96.0	hr	NA	12.5891736086316	1.07114735724538	NA	NA	NA	NA	NA	µmole	radioactivity, mean of 2 subjects
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	losartan and metabolites	urine	RIA	losartan_total_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	losartan and metabolites	urine	RIA	losartan_total_urine_LOS100PO	96.0	hr	NA	24.9697926987002	4.39808848670288	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	losartan	urine	RIA	losartan_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	losartan	urine	RIA	losartan_urine_LOS100PO	96.0	hr	NA	3.48300233382437	1.61026788142186	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	exp3174	urine	RIA	exp3174_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	exp3174	urine	RIA	exp3174_urine_LOS100PO	96.0	hr	NA	4.54705599996217	1.57479942588393	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	 L-158	urine	RIA	l158_urine_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	 L-158	urine	RIA	l158_urine_LOS100PO	96.0	hr	NA	11.8677452229902	1.80179754132666	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	losartan and metabolites	feces	RIA	losartan_total_feces_LOS100PO	0.0	hr	NA	0.0	NA	NA	NA	NA	NA	NA	µmole	radioactivity
+FDA1995S60	NA	all	6.0	LOS100PO	cumulative amount	losartan and metabolites	feces	RIA	losartan_total_feces_LOS100PO	96.0	hr	NA	40.9305976907671	5.60401597499237	NA	NA	NA	NA	NA	µmole	radioactivity

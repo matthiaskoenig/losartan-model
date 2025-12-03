@@ -1,0 +1,17 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	median	min	max	sd	se	cv	unit	comments
+Goldberg1995	all	8	LOS100	auc_inf	losartan	plasma	HPLC/UV	NA	NA	849.0	NA	NA	NA	383.0	NA	NA	ng*h/ml	include geometic mean?
+Goldberg1995	all	8	LOS100	cmax	losartan	plasma	HPLC/UV	NA	NA	614.0	NA	NA	NA	366.0	NA	NA	ng/ml	include geometic mean?
+Goldberg1995	all	8	LOS100	tmax	losartan	plasma	HPLC/UV	NA	NA	0.7	NA	NA	NA	0.2	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100	thalf	losartan	plasma	HPLC/UV	NA	NA	1.7	NA	NA	NA	0.6	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100, CIM400	auc_inf	losartan	plasma	HPLC/UV	NA	NA	1047.0	NA	NA	NA	647.0	NA	NA	ng*h/ml	include geometic mean?
+Goldberg1995	all	8	LOS100, CIM400	cmax	losartan	plasma	HPLC/UV	NA	NA	836.0	NA	NA	NA	921.0	NA	NA	ng/ml	include geometic mean?
+Goldberg1995	all	8	LOS100, CIM400	tmax	losartan	plasma	HPLC/UV	NA	NA	1.2	NA	NA	NA	1.2	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100, CIM400	thalf	losartan	plasma	HPLC/UV	NA	NA	1.7	NA	NA	NA	0.5	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100	auc_inf	exp3174	plasma	HPLC/UV	NA	NA	3359.0	NA	NA	NA	1329.0	NA	NA	ng*h/ml	include geometic mean?
+Goldberg1995	all	8	LOS100	cmax	exp3174	plasma	HPLC/UV	NA	NA	504.0	NA	NA	NA	253.0	NA	NA	ng/ml	include geometic mean?
+Goldberg1995	all	8	LOS100	tmax	exp3174	plasma	HPLC/UV	NA	NA	2.6	NA	NA	NA	0.8	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100	thalf	exp3174	plasma	HPLC/UV	NA	NA	8.7	NA	NA	NA	3.6	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100, CIM400	auc_inf	exp3174	plasma	HPLC/UV	NA	NA	3430.0	NA	NA	NA	1553.0	NA	NA	ng*h/ml	include geometic mean?
+Goldberg1995	all	8	LOS100, CIM400	cmax	exp3174	plasma	HPLC/UV	NA	NA	499.0	NA	NA	NA	218.0	NA	NA	ng/ml	include geometic mean?
+Goldberg1995	all	8	LOS100, CIM400	tmax	exp3174	plasma	HPLC/UV	NA	NA	2.8	NA	NA	NA	1.1	NA	NA	hr	NA
+Goldberg1995	all	8	LOS100, CIM400	thalf	exp3174	plasma	HPLC/UV	NA	NA	8.1	NA	NA	NA	2.1	NA	NA	hr	NA

@@ -1,0 +1,25 @@
+study	individual	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+Fischer2002	NA	all	16.0	LOS50	auc_end	losartan	plasma	HPLC/FS	24.0	hr	355.0	220.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	cyp2c9_1	16.0	LOS50	auc_end	losartan	plasma	HPLC/FS	24.0	hr	284.0	84.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	cyp2c9_2	16.0	LOS50	auc_end	losartan	plasma	HPLC/FS	24.0	hr	858.0	234.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	all	16.0	LOS50	thalf	losartan	plasma	HPLC/FS	NA	NA	2.2	0.8	NA	NA	NA	NA	NA	hr	steady state
+Fischer2002	NA	all	16.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	41.0	15.0	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	cyp2c9_1	16.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	45.0	12.0	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	cyp2c9_2	16.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	16.0	7.0	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	all	16.0	LOS50	cmax	losartan	plasma	HPLC/FS	NA	NA	110.0	62.0	NA	NA	NA	NA	NA	ng/ml	steady state
+Fischer2002	NA	all	16.0	LOS50	auc_end	exp3174	plasma	HPLC/FS	24.0	hr	1254.0	256.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	all	16.0	LOS50	thalf	exp3174	plasma	HPLC/FS	NA	NA	4.9	1.0	NA	NA	NA	NA	NA	hr	steady state
+Fischer2002	NA	all	16.0	LOS50	cmax	exp3174	plasma	HPLC/FS	NA	NA	167.0	56.0	NA	NA	NA	NA	NA	ng/ml	steady state
+Fischer2002	NA	all	16.0	LOS50	oral clearance	exp3174	plasma	HPLC/FS	NA	NA	1.9	0.8	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	auc_end	losartan	plasma	HPLC/FS	24.0	hr	427.0	177.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	cyp2c9_1	16.0	LOS50, PHE4	auc_end	losartan	plasma	HPLC/FS	24.0	hr	402.0	128.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	cyp2c9_2	16.0	LOS50, PHE4	auc_end	losartan	plasma	HPLC/FS	24.0	hr	603.0	427.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	thalf	losartan	plasma	HPLC/FS	NA	NA	2.6	1.0	NA	NA	NA	NA	NA	hr	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	oral clearance	losartan	plasma	HPLC/FS	NA	NA	31.0	10.0	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	cyp2c9_1	16.0	LOS50, PHE4	oral clearance	losartan	plasma	HPLC/FS	NA	NA	32.0	24.0	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	cyp2c9_2	16.0	LOS50, PHE4	oral clearance	losartan	plasma	HPLC/FS	NA	NA	30.0	8.0	NA	NA	NA	NA	NA	ml/min/kg	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	cmax	losartan	plasma	HPLC/FS	NA	NA	146.0	56.0	NA	NA	NA	NA	NA	ng/ml	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	auc_end	exp3174	plasma	HPLC/FS	24.0	hr	466.0	174.0	NA	NA	NA	NA	NA	ng/ml*hr	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	thalf	exp3174	plasma	HPLC/FS	NA	NA	5.2	1.2	NA	NA	NA	NA	NA	hr	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	cmax	exp3174	plasma	HPLC/FS	NA	NA	56.0	26.0	NA	NA	NA	NA	NA	ng/ml	steady state
+Fischer2002	NA	all	16.0	LOS50, PHE4	oral clearance	exp3174	plasma	HPLC/FS	NA	NA	0.6	0.4	NA	NA	NA	NA	NA	ml/min/kg	steady state

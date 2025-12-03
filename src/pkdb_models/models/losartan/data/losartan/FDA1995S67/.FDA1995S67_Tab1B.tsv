@@ -1,0 +1,21 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	sd	median	min	max	se	cv	unit	comments
+FDA1995S67	all	9.0	E10IV	recovery	exp3174	urine	HPLC/UV	exp3174_urine_recovery_E10IV	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	E10IV	recovery	exp3174	urine	HPLC/UV	exp3174_urine_recovery_E10IV	48.0	hr	59.05	13.89	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS10IV	recovery	losartan	urine	HPLC/UV	losartan_urine_recovery_LOS10IV	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS10IV	recovery	losartan	urine	HPLC/UV	losartan_urine_recovery_LOS10IV	48.0	hr	19.69	9.98	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS10IV	recovery	exp3174	urine	HPLC/UV	exp3174_urine_recovery_LOS10IV	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS10IV	recovery	exp3174	urine	HPLC/UV	exp3174_urine_recovery_LOS10IV	48.0	hr	8.14	2.97	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS50PO	recovery	losartan	urine	HPLC/UV	losartan_urine_recovery_LOS50PO	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS50PO	recovery	losartan	urine	HPLC/UV	losartan_urine_recovery_LOS50PO	48.0	hr	16.21	11.0	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS50PO	recovery	exp3174	urine	HPLC/UV	exp3174_urine_recovery_LOS50PO	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	LOS50PO	recovery	exp3174	urine	HPLC/UV	exp3174_urine_recovery_LOS50PO	48.0	hr	7.84	1.93	NA	NA	NA	NA	NA	percent	NA
+FDA1995S67	all	9.0	E10IV	cumulative amount	exp3174	urine	HPLC/UV	exp3174_urine_E10IV	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	E10IV	cumulative amount	exp3174	urine	HPLC/UV	exp3174_urine_E10IV	48.0	hr	13.9627486634304	3.28437898281199	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS10IV	cumulative amount	losartan	urine	HPLC/UV	losartan_urine_LOS10IV	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS10IV	cumulative amount	losartan	urine	HPLC/UV	losartan_urine_LOS10IV	48.0	hr	4.65582593027848	2.35983457512337	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS10IV	cumulative amount	exp3174	urine	HPLC/UV	exp3174_urine_LOS10IV	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS10IV	cumulative amount	exp3174	urine	HPLC/UV	exp3174_urine_LOS10IV	48.0	hr	1.92475485385814	0.702275419650943	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS50PO	cumulative amount	losartan	urine	HPLC/UV	losartan_urine_LOS50PO	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS50PO	cumulative amount	losartan	urine	HPLC/UV	losartan_urine_LOS50PO	48.0	hr	19.1647888089929	13.0051003639064	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS50PO	cumulative amount	exp3174	urine	HPLC/UV	exp3174_urine_LOS50PO	0.0	hr	0.0	NA	NA	NA	NA	NA	NA	µmole	NA
+FDA1995S67	all	9.0	LOS50PO	cumulative amount	exp3174	urine	HPLC/UV	exp3174_urine_LOS50PO	48.0	hr	9.26908971391144	2.28180397293993	NA	NA	NA	NA	NA	µmole	NA

@@ -1,0 +1,15 @@
+study	individual	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	sd	se	min	max	unit	comments
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	plasma	HPLC/FS	exp3174_losartan_plasma_1	0.0	hr	0.0	NA	NA	NA	NA	dimensionless	NA
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	plasma	HPLC/FS	exp3174_losartan_plasma_1	4.0	hr	16.4	3.4	NA	13.0	21.0	dimensionless	NA
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	plasma	HPLC/FS	exp3174_losartan_plasma_1	6.0	hr	21.5	5.1	NA	15.9	27.6	dimensionless	NA
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	plasma	HPLC/FS	exp3174_losartan_plasma_3	0.0	hr	0.0	NA	NA	NA	NA	dimensionless	NA
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	plasma	HPLC/FS	exp3174_losartan_plasma_3	4.0	hr	6.84	5.94	NA	2.63	13.6	dimensionless	NA
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	plasma	HPLC/FS	exp3174_losartan_plasma_3	6.0	hr	8.49	5.1	NA	4.64	14.3	dimensionless	NA
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_1	0.0	hr	0.0	NA	NA	NA	NA	dimensionless	NA
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_1	2.0	hr	1.12	0.49	NA	0.35	1.46	dimensionless	0-4 hr
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_1	6.0	hr	5.22	0.37	NA	4.95	5.76	dimensionless	4-8 hr
+Sekino2003	NA	cyp2c9_1	4.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_1	10.0	hr	9.48	5.21	NA	5.72	17.1	dimensionless	8-12 hr
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	0.0	hr	0.0	NA	NA	NA	NA	dimensionless	NA
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	2.0	hr	0.53	0.3	NA	1.23	0.52	dimensionless	0-4 hr
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	6.0	hr	1.95	0.92	NA	1.02	2.87	dimensionless	4-8 hr
+Sekino2003	NA	cyp2c9_3	3.0	LOS25	metabolic ratio	exp3174/losartan	urine	HPLC/FS	exp3174_losartan_urine_3	10.0	hr	4.2	0.99	NA	3.41	5.31	dimensionless	8-12 hr

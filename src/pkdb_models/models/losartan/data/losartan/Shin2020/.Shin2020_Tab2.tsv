@@ -1,0 +1,34 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	time	time_unit	mean	median	min	max	sd	se	cv	unit	comments
+Shin2020	GG/CC	13.0	LOS50	cmax	losartan	plasma	HPLC/FS	NA	NA	574.1	NA	NA	NA	238.3	NA	NA	nmol/l	NA
+Shin2020	GG/CC	13.0	LOS50	tmax	losartan	plasma	HPLC/FS	NA	NA	NA	2.0	0.5	4.0	NA	NA	NA	hr	NA
+Shin2020	GG/CC	13.0	LOS50	thalf	losartan	plasma	HPLC/FS	NA	NA	2.4	NA	NA	NA	0.8	NA	NA	hr	NA
+Shin2020	GG/CC	13.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	83.0	NA	NA	NA	30.6	NA	NA	ml/hr	NA
+Shin2020	GG/CC	13.0	LOS50	auc_inf	losartan	plasma	HPLC/FS	NA	NA	1649.3	NA	NA	NA	698.2	NA	NA	nmol/l*hr	NA
+Shin2020	GG/CC	13.0	LOS50	cmax	exp3174	plasma	HPLC/FS	NA	NA	1085.8	NA	NA	NA	312.7	NA	NA	nmol/l	NA
+Shin2020	GG/CC	13.0	LOS50	tmax	exp3174	plasma	HPLC/FS	NA	NA	NA	4.0	3.0	6.0	NA	NA	NA	hr	NA
+Shin2020	GG/CC	13.0	LOS50	thalf	exp3174	plasma	HPLC/FS	NA	NA	4.7	NA	NA	NA	0.8	NA	NA	hr	NA
+Shin2020	GG/CC	13.0	LOS50	auc_inf	exp3174	plasma	HPLC/FS	NA	NA	7825.9	NA	NA	NA	1560.0	NA	NA	nmol/l*hr	NA
+Shin2020	GG/CC	13.0	LOS50	cmax	losartan+exp3174	plasma	HPLC/FS	NA	NA	1288.6	NA	NA	NA	334.4	NA	NA	nmol/l	NA
+Shin2020	GG/CC	13.0	LOS50	auc_inf	losartan+exp3174	plasma	HPLC/FS	NA	NA	9475.3	NA	NA	NA	1923.5	NA	NA	nmol/l*hr	NA
+Shin2020	GT/CT	12.0	LOS50	cmax	losartan	plasma	HPLC/FS	NA	NA	786.0	NA	NA	NA	270.0	NA	NA	nmol/l	NA
+Shin2020	GT/CT	12.0	LOS50	tmax	losartan	plasma	HPLC/FS	NA	NA	NA	1.5	0.5	3.0	NA	NA	NA	hr	NA
+Shin2020	GT/CT	12.0	LOS50	thalf	losartan	plasma	HPLC/FS	NA	NA	1.9	NA	NA	NA	0.7	NA	NA	hr	NA
+Shin2020	GT/CT	12.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	71.4	NA	NA	NA	19.5	NA	NA	ml/hr	NA
+Shin2020	GT/CT	12.0	LOS50	auc_inf	losartan	plasma	HPLC/FS	NA	NA	1755.0	NA	NA	NA	436.4	NA	NA	nmol/l*hr	NA
+Shin2020	GT/CT	12.0	LOS50	cmax	exp3174	plasma	HPLC/FS	NA	NA	1192.5	NA	NA	NA	474.0	NA	NA	nmol/l	NA
+Shin2020	GT/CT	12.0	LOS50	tmax	exp3174	plasma	HPLC/FS	NA	NA	NA	3.0	2.0	6.0	NA	NA	NA	hr	NA
+Shin2020	GT/CT	12.0	LOS50	thalf	exp3174	plasma	HPLC/FS	NA	NA	4.6	NA	NA	NA	0.9	NA	NA	hr	NA
+Shin2020	GT/CT	12.0	LOS50	auc_inf	exp3174	plasma	HPLC/FS	NA	NA	8276.3	NA	NA	NA	1383.3	NA	NA	nmol/l*hr	NA
+Shin2020	GT/CT	12.0	LOS50	cmax	losartan+exp3174	plasma	HPLC/FS	NA	NA	1445.2	NA	NA	NA	482.7	NA	NA	nmol/l	NA
+Shin2020	GT/CT	12.0	LOS50	auc_inf	losartan+exp3174	plasma	HPLC/FS	NA	NA	10031.3	NA	NA	NA	1561.8	NA	NA	nmol/l*hr	NA
+Shin2020	TT/TT	13.0	LOS50	cmax	losartan	plasma	HPLC/FS	NA	NA	1033.4	NA	NA	NA	475.5	NA	NA	nmol/l	NA
+Shin2020	TT/TT	13.0	LOS50	tmax	losartan	plasma	HPLC/FS	NA	NA	NA	1.0	0.5	1.5	NA	NA	NA	hr	NA
+Shin2020	TT/TT	13.0	LOS50	thalf	losartan	plasma	HPLC/FS	NA	NA	2.2	NA	NA	NA	0.4	NA	NA	hr	NA
+Shin2020	TT/TT	13.0	LOS50	oral clearance	losartan	plasma	HPLC/FS	NA	NA	70.9	NA	NA	NA	18.7	NA	NA	ml/hr	NA
+Shin2020	TT/TT	13.0	LOS50	auc_inf	losartan	plasma	HPLC/FS	NA	NA	1788.4	NA	NA	NA	506.6	NA	NA	nmol/l*hr	NA
+Shin2020	TT/TT	13.0	LOS50	cmax	exp3174	plasma	HPLC/FS	NA	NA	1484.6	NA	NA	NA	464.6	NA	NA	nmol/l	NA
+Shin2020	TT/TT	13.0	LOS50	tmax	exp3174	plasma	HPLC/FS	NA	NA	NA	2.0	1.5	4.0	NA	NA	NA	hr	NA
+Shin2020	TT/TT	13.0	LOS50	thalf	exp3174	plasma	HPLC/FS	NA	NA	4.6	NA	NA	NA	0.4	NA	NA	hr	NA
+Shin2020	TT/TT	13.0	LOS50	auc_inf	exp3174	plasma	HPLC/FS	NA	NA	8614.5	NA	NA	NA	1577.2	NA	NA	nmol/l*hr	NA
+Shin2020	TT/TT	13.0	LOS50	cmax	losartan+exp3174	plasma	HPLC/FS	NA	NA	1884.0	NA	NA	NA	484.8	NA	NA	nmol/l	NA
+Shin2020	TT/TT	13.0	LOS50	auc_inf	losartan+exp3174	plasma	HPLC/FS	NA	NA	10403.0	NA	NA	NA	NA	NA	NA	nmol/l*hr	NA

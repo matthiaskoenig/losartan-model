@@ -1,0 +1,6 @@
+study	name	time	time_end	time_unit	route	application	measurement_type	form	substance	value	unit	comments
+Lo1995	LOS50PO	0	NA	hr	oral	single dose	dosing	tablet	losartan potassium	50	mg	NA
+Lo1995	LOS20IV	0	20.0	min	iv	constant infusion	dosing	solution	losartan potassium	20	mg	NA
+Lo1995	LOS100PO	0	NA	hr	oral	single dose	dosing	solution	14C-losartan	100	mg	oral administration of radio labeled solution
+Lo1995	LOS30IV	0	20.0	min	iv	constant infusion	dosing	solution	14C-losartan	30	mg	NA
+Lo1995	E20IV	0	20.0	min	iv	constant infusion	dosing	solution	exp3174	20	mg	NA
