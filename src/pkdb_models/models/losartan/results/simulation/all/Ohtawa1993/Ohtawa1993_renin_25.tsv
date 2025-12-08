@@ -1,4 +1,0 @@
-study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_pm	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit
-Ohtawa1993	single_dose_25	6.0	LOS25	concentration	renin	plasma	RIA	renin_25	0.0	hr	2.6861150194275245e-10	19.6028284430346	1.6645582262467583e-10						1 ng/mL/h of PRA ≈ 7.6 pg/mL of DRC (range: 5.5–9.7 pg/mL)	mole/meter^3	pg/ml
-Ohtawa1993	single_dose_25	6.0	LOS25	concentration	renin	plasma	RIA	renin_25	6.0	hr	2.5881541031079964e-09	177.447792757071	1.3501416724001486e-09							mole/meter^3	pg/ml
-Ohtawa1993	single_dose_25	6.0	LOS25	concentration	renin	plasma	RIA	renin_25	24.0	hr	3.9515840806714155e-10	25.3046523922812	1.6645582262467583e-10							mole/meter^3	pg/ml

@@ -1,1 +1,5 @@
 .idea
+*.pyc
+__pycache__
+results
+src/pkdb_models/models/losartan/results/
