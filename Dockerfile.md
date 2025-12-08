@@ -3,13 +3,13 @@
 ## Build image
 To build the latest image use:
 ```bash
-docker build -f Dockerfile -t matthiaskoenig/losartan:0.9.6 -t matthiaskoenig/losartan:latest .
+docker build -f Dockerfile -t matthiaskoenig/losartan:0.7.2 -t matthiaskoenig/losartan:latest .
 ```
 
 ## Push images
 The image is pushed to dockerhub: [Docker Hub – Losartan](https://hub.docker.com/repository/docker/matthiaskoenig/losartan/general)
 
-```
+```bash
 docker login
 docker push --all-tags matthiaskoenig/losartan
 ```
@@ -23,7 +23,7 @@ docker run -v "${PWD}/results:/results" -it matthiaskoenig/losartan:latest /bin/
 
 To use a specific container version provide the version tag:
 ```bash
-docker run -v "${PWD}/results:/results" -it matthiaskoenig/losartan:0.9.6 /bin/bash
+docker run -v "${PWD}/results:/results" -it matthiaskoenig/losartan:0.7.2 /bin/bash
 ```
 
 ## Run simulations
