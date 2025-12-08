@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # copy code
 WORKDIR /code
-COPY .python-version /code/python-version.py
+COPY .python-version /code/.python-version
 COPY pyproject.toml /code/pyproject.toml
 COPY README.md /code/README.md
 COPY src /code/src
