@@ -763,7 +763,7 @@ wheels = [
 
 [[package]]
 name = "losartan-model"
-version = "0.0.0"
+version = "0.7.2"
 source = { editable = "." }
 dependencies = [
     { name = "pkdb-analysis" },
@@ -775,8 +775,8 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "pkdb-analysis", specifier = ">=0.2.2" },
-    { name = "sbmlsim", git = "https://github.com/matthiaskoenig/sbmlsim.git?rev=9617fa09197549b9c675a5dc65c1d170590942a4" },
-    { name = "sbmlutils", git = "https://github.com/matthiaskoenig/sbmlutils.git?rev=ae7ee27d781f217daee2a654059a5ff66d17e15d" },
+    { name = "sbmlsim", git = "https://github.com/matthiaskoenig/sbmlsim.git?rev=d8df7e98fa32cbedc20fdbcb386feaa09d5bebe2" },
+    { name = "sbmlutils", git = "https://github.com/matthiaskoenig/sbmlutils.git?rev=f560466f0c2e3613eaba7ecb217ce4cbab9fe636" },
     { name = "statsmodels" },
 ]
 
@@ -1956,7 +1956,7 @@ wheels = [
 [[package]]
 name = "sbmlsim"
 version = "0.2.2"
-source = { git = "https://github.com/matthiaskoenig/sbmlsim.git?rev=9617fa09197549b9c675a5dc65c1d170590942a4#9617fa09197549b9c675a5dc65c1d170590942a4" }
+source = { git = "https://github.com/matthiaskoenig/sbmlsim.git?rev=d8df7e98fa32cbedc20fdbcb386feaa09d5bebe2#d8df7e98fa32cbedc20fdbcb386feaa09d5bebe2" }
 dependencies = [
     { name = "altair" },
     { name = "bottleneck" },
@@ -1988,8 +1988,8 @@ dependencies = [
 
 [[package]]
 name = "sbmlutils"
-version = "0.9.1"
-source = { git = "https://github.com/matthiaskoenig/sbmlutils.git?rev=ae7ee27d781f217daee2a654059a5ff66d17e15d#ae7ee27d781f217daee2a654059a5ff66d17e15d" }
+version = "0.9.4"
+source = { git = "https://github.com/matthiaskoenig/sbmlutils.git?rev=f560466f0c2e3613eaba7ecb217ce4cbab9fe636#f560466f0c2e3613eaba7ecb217ce4cbab9fe636" }
 dependencies = [
     { name = "antimony" },
     { name = "depinfo" },
@@ -2012,7 +2012,6 @@ dependencies = [
     { name = "rich" },
     { name = "scipy" },
     { name = "setuptools" },
-    { name = "tabulate" },
     { name = "uvicorn" },
     { name = "xmlschema" },
     { name = "xmltodict" },
@@ -2262,15 +2261,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/72/9b/ea43159eed8f81bfa1ead8fa8201a3c352e84c7220e046bb548736833951/tables-3.10.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:aaaea478dcf27dd54679ef2643c26d3b8b15676ad81e4d80a88fd1682d23deb1", size = 7078747, upload-time = "2025-01-04T20:43:59.596Z" },
     { url = "https://files.pythonhosted.org/packages/04/95/b3e88edc674e35d9011b168df0d7a9b1c3ab98733fa26e740ac7964edc2f/tables-3.10.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c5e67a9f901842f9a4b1f3d2307f4bdd94047514fe0d0c558ed19c11f53c402a", size = 7479985, upload-time = "2025-01-04T20:44:04.13Z" },
     { url = "https://files.pythonhosted.org/packages/63/ca/eaa029a43d269bdda6985931d6cfd479e876cd8cf7c887d818bef05ef03b/tables-3.10.2-cp313-cp313-win_amd64.whl", hash = "sha256:5637fdcded5ba5426aa24e0e42d6f990926a4da7f193830df131dfcb7e842900", size = 6385562, upload-time = "2025-01-04T20:44:08.196Z" },
-]
-
-[[package]]
-name = "tabulate"
-version = "0.9.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ec/fe/802052aecb21e3797b8f7902564ab6ea0d60ff8ca23952079064155d1ae1/tabulate-0.9.0.tar.gz", hash = "sha256:0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c", size = 81090, upload-time = "2022-10-06T17:21:48.54Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/40/44/4a5f08c96eb108af5cb50b41f76142f0afa346dfa99d5296fe7202a11854/tabulate-0.9.0-py3-none-any.whl", hash = "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f", size = 35252, upload-time = "2022-10-06T17:21:44.262Z" },
 ]
 
 [[package]]
