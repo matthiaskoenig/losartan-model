@@ -7,7 +7,6 @@ from sbmlutils import cytoscape as cyviz
 from sbmlutils.cytoscape import visualize_sbml
 from sbmlutils.factory import *
 from sbmlutils.metadata import *
-from pkdb_models.models.templates import terms_of_use
 
 from pkdb_models.models.losartan.models import annotations
 from pkdb_models.models.losartan.models import templates
@@ -38,7 +37,7 @@ _m = Model(
     
     - initial model
         
-    """ + terms_of_use,
+    """ + templates.terms_of_use,
     creators=templates.creators,
     units=U,
     model_units=templates.model_units,

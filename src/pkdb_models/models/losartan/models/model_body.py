@@ -3,7 +3,6 @@
 from sbmlutils.cytoscape import visualize_sbml
 from sbmlutils.factory import *
 from sbmlutils.metadata import *
-from pkdb_models.models.templates import terms_of_use
 from pkdb_models.models.losartan.models import annotations
 from pkdb_models.models.losartan.models import templates
 
@@ -78,7 +77,7 @@ _m = Model(
     - 33-35 % bioavailability; 38.9 ± 14.7% [Lo1995]
     - 55% of infused EXP3174 is recovered in urine; probably metabolization of the metabolite (in liver?) [Lo1995]
     """
-    + terms_of_use,
+    + templates.terms_of_use,
     units=U,
     model_units=templates.model_units,
     creators=templates.creators,

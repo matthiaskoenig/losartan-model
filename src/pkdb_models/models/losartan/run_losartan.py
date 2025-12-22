@@ -66,7 +66,7 @@ def _list_available_experiments():
                 console.print(f"  {exp.__name__}")
 
     console.print("\n[dim]Use '--experiments' with comma-separated names to run specific experiments.[/dim]")
-    console.print('[dim]Example: run_losartan --action simulate --experiments "misc,LaCreta2016"[/dim]')
+    console.print('[dim]Example: run_losartan --action simulate --experiments "misc,Doig1993"[/dim]')
     console.print('[dim]Or use "all" to run all experiments: run_losartan --action simulate --experiments all[/dim]\n')
 
 

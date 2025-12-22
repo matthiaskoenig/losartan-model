@@ -9,9 +9,9 @@ description = "Python utilities for computational models in SBML."
 readme = "README.md"
 requires-python = ">=3.13"
 authors = [
+    {name="Ennie Tensil", email="enniejoana@gmail.com"},
     {name="Mariia Myshkina", email="mariia.myshkina@hu-berlin.de"},
     {name="Michelle Elias", email="eliasmic@hu-berlin.de"},
-    {name="Ennie Tensil", email="enniejoana@gmail.com"},
 	{name="Matthias König", email="konigmatt@googlemail.com"},
 ]
 maintainers = [
