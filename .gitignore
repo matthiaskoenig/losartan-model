@@ -1,5 +1,7 @@
+.venv
 .idea
 *.pyc
 __pycache__
-results
+results/
 src/pkdb_models/models/losartan/results/
+src/pkdb_models/models/losartan/models/results/losartan_model.omex
