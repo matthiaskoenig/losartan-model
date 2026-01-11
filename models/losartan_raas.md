@@ -12,13 +12,13 @@ length: [m]
 ## Parameters `p`
 ```
 ALDSEC_k = 1.0105027952686e-06  # [mmol/min] rate aldosterone secretion  
-ANGGEN2ANG1_k = 0.100300143544081  # [l/min] rate angen to ang1 conversion  
-BP_ald_fe = 0.311999262694736  # [-] effect of aldosterone on blood pressure [-]  
-DBP_ref = 80.0  # [133.32239 N/m^2] reference diastolic blood pressure [mmHg]  
-E50_e3174 = 0.000291072740111984  # [mmol/l] half-maximum effect concentration exp3174  
-RENSEC_fa = 5.0  # [-] activation renin secretion via exp3174  
+ANGGEN2ANG1_k = 0.100300143544081  # [l/min] rate angen → ang1  
+BP_ald_fe = 0.311999262694736  # [-] aldosterone effect on blood pressure  
+DBP_ref = 80.0  # [133.32239 N/m^2] reference diastolic blood pressure  
+E50_e3174 = 0.000291072740111984  # [mmol/l] half-maximum effect E3174  
+RENSEC_fa_e3174 = 5.0  # [-] activation renin secretion by E3174  
 RENSEC_k = 0.1  # [mmol/min] rate renin secretion  
-SBP_ref = 120.0  # [133.32239 N/m^2] reference systolic blood pressure [mmHg]  
+SBP_ref = 120.0  # [133.32239 N/m^2] reference systolic blood pressure  
 Vplasma = 5.0  # [l] plasma  
 ald_ref = 2.5e-07  # [mmol/l] reference concentration of aldosterone  
 ang1_ref = 1e-08  # [mmol/l] reference concentration of angiotensin I  
@@ -29,24 +29,24 @@ ren_ref = 1e-09  # [mmol/l] reference concentration of renin
 
 ## Initial conditions `x0`
 ```
-ald = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x79312292e6d0> >  # [mmol/l] aldosterone in Vplasma  
-ang1 = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x79312292e040> >  # [mmol/l] angiotensin I in Vplasma  
-ang2 = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x79312292e550> >  # [mmol/l] angiotensin II in Vplasma  
-anggen = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x79312292e100> >  # [mmol/l] angiotensinogen in Vplasma  
+ald = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x7ff748e01260> >  # [mmol/l] aldosterone in Vplasma  
+ang1 = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x7ff748e01c20> >  # [mmol/l] angiotensin I in Vplasma  
+ang2 = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x7ff748e01da0> >  # [mmol/l] angiotensin II in Vplasma  
+anggen = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x7ff748ff1290> >  # [mmol/l] angiotensinogen in Vplasma  
 e3174 = 0.0  # [mmol/l] e3174 in Vplasma  
-ren = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x79312292d860> >  # [mmol/l] renin in Vplasma  
+ren = <libsbml.ASTNode; proxy of <Swig Object of type 'ASTNode *' at 0x7ff748e01c80> >  # [mmol/l] renin in Vplasma  
 ```
 
 ## ODE system
 ```
 # y
 ALDDEG_k = ALDSEC_k / ald_ref  # [l/min] rate aldosterone degradation  
-ANG1ANG2_k = ANGGEN2ANG1_k * anggen_ref / ang1_ref  # [l/min] rate ang1 to ang2 conversion  
+ANG1ANG2_k = ANGGEN2ANG1_k * anggen_ref / ang1_ref  # [l/min] rate ang1 → ang2  
 ANG2DEG_k = ANGGEN2ANG1_k * anggen_ref / ang2_ref  # [l/min] rate aldosterone degradation  
 ANGGEN2ANG1 = ANGGEN2ANG1_k * anggen * ren / ren_ref  # [mmol/min] angiotensinogen to angiotensin I (renin)  
-DBP = DBP_ref + BP_ald_fe * DBP_ref * (ald - ald_ref) / ald_ref  # [133.32239 N/m^2] diastolic blood pressure [mmHg]  
+DBP = DBP_ref + BP_ald_fe * DBP_ref * (ald - ald_ref) / ald_ref  # [133.32239 N/m^2] diastolic blood pressure  
 RENDEG_k = RENSEC_k / ren_ref  # [l/min] rate renin degradation  
-SBP = SBP_ref + BP_ald_fe * SBP_ref * (ald - ald_ref) / ald_ref  # [133.32239 N/m^2] systolic blood pressure [mmHg]  
+SBP = SBP_ref + BP_ald_fe * SBP_ref * (ald - ald_ref) / ald_ref  # [133.32239 N/m^2] systolic blood pressure  
 ald_change = ald - ald_ref  # [mmol/l] aldosterone change  
 ald_ratio = ald / ald_ref  # [-] aldosterone ratio  
 ang1_change = ang1 - ang1_ref  # [mmol/l] angiotensin I change  
@@ -62,9 +62,9 @@ ANG1ANG2 = ANG1ANG2_k * ang1  # [mmol/min] angiotensin I to angiotensin II (ACE)
 ANG2DEG = ANG2DEG_k * ang2  # [mmol/min] angiotensin II degradation (ANG2DEG)  
 DBP_change = DBP - DBP_ref  # [133.32239 N/m^2] e3174 change  
 DBP_ratio = DBP / DBP_ref  # [-] e3174 ratio  
-MAP = DBP + (SBP - DBP) / 3  # [133.32239 N/m^2] mean arterial pressure [mmHg]  
+MAP = DBP + (SBP - DBP) / 3  # [133.32239 N/m^2] mean arterial pressure  
 RENDEG = RENDEG_k * ren  # [mmol/min] renin degradation (RENDEG)  
-RENSEC = RENSEC_k * (1 + RENSEC_fa * fe_e3174)  # [mmol/min] renin secretion (RENSEC)  
+RENSEC = RENSEC_k * (1 + RENSEC_fa_e3174 * fe_e3174)  # [mmol/min] renin secretion (RENSEC)  
 SBP_change = SBP - SBP_ref  # [133.32239 N/m^2] e3174 change  
 SBP_ratio = SBP / SBP_ref  # [-] e3174 ratio  
 

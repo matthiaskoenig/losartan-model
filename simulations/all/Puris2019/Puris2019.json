@@ -1,7 +1,7 @@
 {
   "experiment_id": "Puris2019",
-  "base_path": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan",
-  "data_path": "[PosixPath('/home/mkoenig/git/pkdb_data/studies/losartan'), PosixPath('/home/mkoenig/git/pkdb_data/studies/dextromethorphan'), PosixPath('/home/mkoenig/git/pkdb_data/studies/caffeine'), PosixPath('/home/mkoenig/git/pkdb_data/studies/chlorzoxazone')]",
+  "base_path": "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan",
+  "data_path": "[PosixPath('/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/losartan'), PosixPath('/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/dextromethorphan'), PosixPath('/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/caffeine'), PosixPath('/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/chlorzoxazone')]",
   "models": {
     "model": {
       "sid": null,
@@ -9,8 +9,8 @@
       "language": "SBML",
       "language_type": "SBML",
       "source": {
-        "source": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
-        "path": "/home/mkoenig/git/pkdb_models/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
+        "source": "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
+        "path": "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml",
         "content": "None"
       },
       "changes": {}

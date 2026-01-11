@@ -242,7 +242,7 @@ _m.parameters = [
         "METEXC_k",
         2.6964160819935065e-05,
         unit=U.per_min,
-        name="rate of metabolite feces excretion",
+        name="rate of feces excretion",
         sboTerm=SBO.KINETIC_CONSTANT,
     ),
 ]
@@ -266,7 +266,7 @@ _m.reactions = [
         pars=[
             Parameter(
                 sid="f_OATP2B1",
-                name="parameter for OATP2B1 activity",
+                name="absorption activity",
                 value=1.0,
                 unit=U.dimensionless,
                 sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
@@ -292,7 +292,7 @@ _m.reactions = [
         pars=[
             Parameter(
                 sid="f_abcb1",
-                name="parameter for P-glycoprotein activity",
+                name="PG activity",
                 value=1.0,
                 unit=U.dimensionless,
                 sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
@@ -305,7 +305,7 @@ _m.reactions = [
                 "f_LOSEFL_k",
                 1.020035540752619,
                 unit=U.dimensionless,
-                name="Rate for losartan efflux (PG) relative to absorption.",
+                name="fractional rate losartan efflux (PG)",
                 sboTerm=SBO.MAXIMAL_VELOCITY,
             ),
         ],
@@ -392,7 +392,7 @@ _m.parameters.extend([
         U.per_hr,
         constant=True,
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        name=f"Ka_dis [1/hr] dissolution losartan",
+        name=f"rate dissolution losartan",
         port=True
     ),
     Parameter(

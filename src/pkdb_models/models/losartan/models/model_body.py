@@ -402,6 +402,13 @@ _m.replaced_elements.extend(
             submodelRef=SUBMODEL_SID_DICT["gu"],
             portRef=f"Vfeces{PORT_SUFFIX}",
         ),
+        ReplacedElement(
+            sid="Vstomach",
+            metaId="Vstomach_RE",
+            elementRef="Vstomach",
+            submodelRef=SUBMODEL_SID_DICT["gu"],
+            portRef=f"Vstomach{PORT_SUFFIX}",
+        ),
     ]
 )
 
@@ -610,47 +617,39 @@ _m.parameters.extend(
             75,
             U.kg,
             constant=True,
-            name="body weight [kg]",
+            name="body weight",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         ),
-        Parameter(
-            "HEIGHT",
-            170,
-            U.cm,
-            constant=True,
-            name="height [cm]",
-            sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        ),
+        # Parameter(
+        #     "HEIGHT",
+        #     170,
+        #     U.cm,
+        #     constant=True,
+        #     name="height",
+        #     sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
+        # ),
         Parameter(
             "HR",
             70,
             U.per_min,
             constant=True,
-            name="heart rate [1/min]",
+            name="heart rate",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         ),
-        Parameter(
-            "HRrest",
-            70,
-            U.per_min,
-            constant=True,
-            name="heart rate [1/min]",
-            sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        ),
-        Parameter(
-            "BSA",
-            0,
-            U.m2,
-            constant=False,
-            name="body surface area [m^2]",
-            sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        ),
+        # Parameter(
+        #     "BSA",
+        #     0,
+        #     U.m2,
+        #     constant=False,
+        #     name="body surface area [m^2]",
+        #     sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
+        # ),
         Parameter(
             "COBW",
             1.548,
             U.ml_per_s_kg,
             constant=True,
-            name="cardiac output per bodyweight [ml/s/kg]",
+            name="cardiac output per bodyweight",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         ),
         Parameter(
@@ -658,7 +657,7 @@ _m.parameters.extend(
             1.0,
             U.dimensionless,
             constant=False,
-            name="heart function",
+            name="cardiac function",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
             notes="""
             1.0: normal function;
@@ -670,7 +669,7 @@ _m.parameters.extend(
             108.33,
             U.ml_per_s,
             constant=False,
-            name="cardiac output [ml/s]",
+            name="cardiac output",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         ),
         Parameter(
@@ -678,15 +677,7 @@ _m.parameters.extend(
             108.33 * 1000 * 60,
             U.l_per_min,
             constant=False,
-            name="cardiac output [L/hr]",
-            sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        ),
-        Parameter(
-            "COHRI",
-            150,
-            U.ml,
-            constant=True,
-            name="increase of cardiac output per heartbeat [ml/min*min]",
+            name="cardiac output",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         ),
         # fractional tissue volumes
@@ -807,7 +798,7 @@ _m.parameters.extend(
             0.215,
             U.dimensionless,
             constant=True,
-            name="hepatic (venous side) fractional tissue blood flow",
+            name="hepatic fractional tissue blood flow",
             sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         ),
         Parameter(
@@ -926,6 +917,7 @@ for ckey, pids in replaced_parameters.items():
 
 # species specific parameters
 for sid, sdict in SUBSTANCES_BODY.items():
+    sname = sdict["name"]
     _m.parameters.extend(
         [
             # molecular weights
@@ -934,7 +926,7 @@ for sid, sdict in SUBSTANCES_BODY.items():
                 sdict["Mr"],
                 U.g_per_mole,
                 constant=True,
-                name=f"Molecular weight {sid} [g/mole]",
+                name=f"Molecular weight {sid}",
                 sboTerm=SBO.MOLECULAR_MASS,
             ),
         ]
@@ -949,7 +941,7 @@ for sid, sdict in SUBSTANCES_BODY.items():
                 U.l_per_min,
                 constant=True,
                 sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-                name=f"tissue distribution {sid}",
+                name=f"tissue distribution {sid.upper()}",
             ),
             Parameter(
                 f"Kp_{sid}",
@@ -957,7 +949,7 @@ for sid, sdict in SUBSTANCES_BODY.items():
                 U.dimensionless,
                 constant=True,
                 sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-                name=f"tissue/plasma partition coefficient {sid}",
+                name=f"tissue/plasma partition coefficient {sid.upper()}",
             ),
         ])
 
@@ -980,7 +972,7 @@ for sid, sdict in SUBSTANCES_BODY.items():
                     U.second,
                     constant=True,
                     sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-                    name=f"injection time {sid} [s]",
+                    name=f"injection time {sid}",
                 ),
                 Parameter(
                     f"Ki_{sid}",
@@ -1023,12 +1015,12 @@ _m.rules = _m.rules + [
     ),
     # Rest body perfusion
     AssignmentRule("FQre", "1.0 dimensionless - (FQki + FQh)", U.dimensionless),
-    # Body surface area (Haycock1978)
-    AssignmentRule(
-        "BSA", "0.024265 m2 * power(BW/1 kg, 0.5378) * power(HEIGHT/1 cm, 0.3964)", U.m2
-    ),
+    # # Body surface area (Haycock1978)
+    # AssignmentRule(
+    #     "BSA", "0.024265 m2 * power(BW/1 kg, 0.5378) * power(HEIGHT/1 cm, 0.3964)", U.m2
+    # ),
     # cardiac output (depending on heart rate and bodyweight)
-    AssignmentRule("CO", "f_cardiac_function*BW*COBW + (HR-HRrest)*COHRI / 60 s_per_min", U.ml_per_s),
+    AssignmentRule("CO", "f_cardiac_function * BW * COBW", U.ml_per_s),
     # cardiac output (depending on bodyweight)
     AssignmentRule("QC", "CO/1000 ml_per_l * 60 s_per_min", U.l_per_min),
     # volumes

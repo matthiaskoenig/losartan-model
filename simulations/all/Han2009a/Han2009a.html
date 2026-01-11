@@ -22,7 +22,7 @@
             <h2>Models</h2>
             <p>
             <ul>
-                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/models/losartan_body_flat.xml</a></li>
+                <li><strong>model</strong>: <a href="../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml">../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml</a></li>
             </ul>
             </p>
 
@@ -65,7 +65,7 @@
 
             <h2>Code</h2>
             <p>
-                <a href="../../../../experiments/studies/han2009a.py">../../../../experiments/studies/han2009a.py</a>
+                <a href="../../../../src/pkdb_models/models/losartan/experiments/studies/han2009a.py">../../../../src/pkdb_models/models/losartan/experiments/studies/han2009a.py</a>
             <pre>
 <code class="python">from typing import Dict
 
@@ -73,6 +73,7 @@ from sbmlsim.data import DataSet, load_pkdb_dataframe
 from sbmlsim.fit import FitMapping, FitData
 from sbmlutils.console import console
 
+from pkdb_models.models import losartan
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
@@ -226,6 +227,8 @@ class Han2009a(LosartanSimulationExperiment):
 
 
 if __name__ == "__main__":
+    out = losartan.RESULTS_PATH_SIMULATION / Han2009a.__name__
+    out.mkdir(parents=True, exist_ok=True)
     run_experiments(Han2009a, output_dir=Han2009a.__name__)
 </code>
         </pre>

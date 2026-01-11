@@ -12,12 +12,12 @@ length: [m]
 ## Parameters `p`
 ```
 E3174EX_k = 0.0112001182272967  # [1/min] rate E3174 export  
-E3174L158_k = 0.00113400909936956  # [1/min] rate losartan conversion  
+E3174L158_k = 0.00113400909936956  # [1/min] rate losartan → L158  
 L158EX_k = 1.0  # [1/min] rate L158 export  
-LOS2E3174_Km_los = 0.0011  # [mmol/l] Km losartan conversion  
-LOS2E3174_Vmax = 0.00072514631731673  # [mmol/min/l] Vmax losartan conversion  
+LOS2E3174_Km_los = 0.0011  # [mmol/l] Km losartan → E3174  
+LOS2E3174_Vmax = 0.00072514631731673  # [mmol/min/l] Vmax losartan → E3174  
 LOSIM_k = 1.0  # [1/min] rate losartan import  
-MBIEX_k = 0.066315021777011  # [1/min] rate for export in bile  
+MBIEX_k = 0.066315021777011  # [1/min] rate biliary export  
 Vapical = nan  # [m^2] apical membrane  
 Vbi = 1.0  # [l] bile  
 Vext = 1.5  # [l] plasma  

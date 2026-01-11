@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "losartan-model"
-version = "0.7.2"
+version = "0.8.0"
 description = "Python utilities for computational models in SBML."
 readme = "README.md"
 requires-python = ">=3.13"
@@ -23,6 +23,7 @@ classifiers = [
 	"License :: OSI Approved :: MIT License",
 	"Operating System :: OS Independent",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 	"Programming Language :: Python :: Implementation :: CPython",
 	"Topic :: Scientific/Engineering",
 	"Topic :: Scientific/Engineering :: Bio-Informatics",
@@ -36,10 +37,8 @@ keywords = [
     "computational modeling",
 ]
 dependencies = [
-    "pkdb_analysis>=0.2.2",
-    "statsmodels",
-    "sbmlutils @ git+https://github.com/matthiaskoenig/sbmlutils.git@f560466f0c2e3613eaba7ecb217ce4cbab9fe636",
-    "sbmlsim @ git+https://github.com/matthiaskoenig/sbmlsim.git@d8df7e98fa32cbedc20fdbcb386feaa09d5bebe2"
+    "sbmlutils>=0.9.6",
+    "sbmlsim @ git+https://github.com/matthiaskoenig/sbmlsim.git@abc487cc1e068b30019700a8b3d2c4e8b38f55c3"
 ]
 
 [project.scripts]

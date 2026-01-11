@@ -12,9 +12,9 @@ length: [m]
 ## Parameters `p`
 ```
 F_los_abs = 0.6  # [-] fraction absorbed losartan  
-Ka_dis_los = 2.0  # [1/hr] Ka_dis [1/hr] dissolution losartan  
+Ka_dis_los = 2.0  # [1/hr] rate dissolution losartan  
 LOSABS_k = 0.0361772268991116  # [1/min] rate of losartan absorption  
-METEXC_k = 2.69641608199351e-05  # [1/min] rate of metabolite feces excretion  
+METEXC_k = 2.69641608199351e-05  # [1/min] rate of feces excretion  
 Mr_los = 422.911  # [g/mol] Molecular weight losartan [g/mole]  
 Vapical = nan  # [m^2] apical membrane (intestinal membrane enterocytes)  
 Vbaso = nan  # [m^2] basolateral membrane (intestinal membrane enterocytes)  
@@ -24,9 +24,9 @@ Vfeces = 1.0  # [l] feces
 Vgu = 1.2825  # [l] intestine  
 Vlumen = 1.15425  # [l] intestinal lumen (inner part of intestine)  
 Vstomach = 1.0  # [l] stomach  
-f_LOSEFL_k = 1.02003554075262  # [-] Rate for losartan efflux (PG) relative to absorption.  
-f_OATP2B1 = 1.0  # [-] parameter for OATP2B1 activity  
-f_abcb1 = 1.0  # [-] parameter for P-glycoprotein activity  
+f_LOSEFL_k = 1.02003554075262  # [-] fractional rate losartan efflux (PG)  
+f_OATP2B1 = 1.0  # [-] absorption activity  
+f_abcb1 = 1.0  # [-] PG activity  
 ```
 
 ## Initial conditions `x0`

@@ -22,7 +22,7 @@
           </ul>
           <p>The content of this model has been carefully created in a manual research effort.</p>
           <h2>Terms of use</h2>
-          <p>Copyright © 2025 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
+          <p>Copyright © 2026 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
           <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
             <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
           </a>
@@ -45,27 +45,35 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
                 <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>König</vCard4:family-name>
-                  <vCard4:given-name>Matthias</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
-                <vCard4:organization-name>Humboldt-University Berlin, Institute for Theoretical Biology</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
                   <vCard4:family-name>Tensil</vCard4:family-name>
                   <vCard4:given-name>Ennie</vCard4:given-name>
                 </vCard4:hasName>
                 <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
                 <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
               </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Myshkina</vCard4:family-name>
+                  <vCard4:given-name>Mariia</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>mariia.myshkina@hu-berlin.de</vCard4:hasEmail>
+                <vCard4:organization-name>Humboldt-Universität zu Berlin, Faculty of Life Sciences, Department of Biology, Institute of Theoretical Biology, Systems Medicine of the Liver</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>König</vCard4:family-name>
+                  <vCard4:given-name>Matthias</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
+                <vCard4:organization-name>Humboldt-Universität zu Berlin, Faculty of Life Sciences, Department of Biology, Institute of Theoretical Biology, Systems Medicine of the Liver; University of Stuttgart, Institute of Structural Mechanics and Dynamics in Aerospace Engineering</vCard4:organization-name>
+              </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>1900-01-01T00:00:00Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-01-11T14:43:46Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>1900-01-01T00:00:00Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-01-11T14:43:46Z</dcterms:W3CDTF>
           </dcterms:modified>
         </rdf:Description>
       </rdf:RDF>
@@ -322,7 +330,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
       </species>
     </listOfSpecies>
     <listOfParameters>
-      <parameter metaid="meta_f_renal_function" sboTerm="SBO:0000009" id="f_renal_function" name="parameter for renal function" value="1" units="dimensionless" constant="true">
+      <parameter metaid="meta_f_renal_function" sboTerm="SBO:0000009" id="f_renal_function" name="renal function" value="1" units="dimensionless" constant="true">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>scaling factor for renal function. 1.0: normal renal function;
@@ -341,7 +349,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_LOSEX_k" sboTerm="SBO:0000009" id="LOSEX_k" name="rate urinary excretion of losartan" value="0.0773896174258953" units="per_min" constant="true">
+      <parameter metaid="meta_LOSEX_k" sboTerm="SBO:0000009" id="LOSEX_k" name="rate urinary excretion losartan" value="0.0773896174258953" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_LOSEX_k">
@@ -354,7 +362,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_E3174EX_k" sboTerm="SBO:0000009" id="E3174EX_k" name="rate urinary excretion of e3174" value="0.0289271732633318" units="per_min" constant="true">
+      <parameter metaid="meta_E3174EX_k" sboTerm="SBO:0000009" id="E3174EX_k" name="rate urinary excretion E3174" value="0.0289271732633318" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_E3174EX_k">
@@ -367,7 +375,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_L158EX_k" sboTerm="SBO:0000009" id="L158EX_k" name="rate urinary excretion of l158" value="0.28890834506773" units="per_min" constant="true">
+      <parameter metaid="meta_L158EX_k" sboTerm="SBO:0000009" id="L158EX_k" name="rate urinary excretion L158" value="0.28890834506773" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_L158EX_k">

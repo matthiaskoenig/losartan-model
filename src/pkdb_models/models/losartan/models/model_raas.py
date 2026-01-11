@@ -216,7 +216,7 @@ _m.parameters.extend([
     # pharmacodynamics of exp3174
     Parameter(
         sid="E50_e3174",
-        name="half-maximum effect concentration exp3174",  # Mr = 436.894 g/mol
+        name="half-maximum effect E3174",  # Mr = 436.894 g/mol
         # value=73.24E-6,  # ~ 32 [1-99] ng/ml {Munafo1992} = 32/436.894*1000 [nmol/l] = 73.24 [2.29 - 226.6] [nmol/l]
         value = 0.00029107274011198355,
         unit=U.mM,
@@ -250,14 +250,14 @@ _m.reactions = [
                 sboTerm=SBO.KINETIC_CONSTANT,
             ),
             Parameter(
-                "RENSEC_fa",
+                "RENSEC_fa_e3174",
                 5,
                 U.dimensionless,
-                name="activation renin secretion via exp3174",
+                name="activation renin secretion by E3174",
                 sboTerm=SBO.KINETIC_CONSTANT,
             )
         ],
-        formula=("RENSEC_k * (1 dimensionless + RENSEC_fa * fe_e3174)", U.mmole_per_min)
+        formula=("RENSEC_k * (1 dimensionless + RENSEC_fa_e3174 * fe_e3174)", U.mmole_per_min)
     ),
     Reaction(
         sid="RENDEG",
@@ -335,7 +335,7 @@ _m.reactions = [
                 "ANGGEN2ANG1_k",  # k1
                 0.10030014354408065,
                 U.l_per_min,
-                name="rate angen to ang1 conversion",
+                name="rate angen → ang1",
                 sboTerm=SBO.KINETIC_CONSTANT,
             ),
         ],
@@ -352,7 +352,7 @@ _m.reactions = [
                 "ANG1ANG2_k",  # k2
                 "ANGGEN2ANG1_k * anggen_ref/ang1_ref",
                 U.l_per_min,
-                name="rate ang1 to ang2 conversion",
+                name="rate ang1 → ang2",
                 sboTerm=SBO.KINETIC_CONSTANT,
                 constant=False,
             ),
@@ -385,14 +385,14 @@ _m.parameters.extend([
         "SBP_ref",
         120,
         U.mmHg,
-        name="reference systolic blood pressure [mmHg]",
+        name="reference systolic blood pressure",
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
     ),
     Parameter(
         "DBP_ref",
         80,
         U.mmHg,
-        name="reference diastolic blood pressure [mmHg]",
+        name="reference diastolic blood pressure",
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
     ),
 
@@ -400,7 +400,7 @@ _m.parameters.extend([
         "SBP",
         np.nan,
         U.mmHg,
-        name="systolic blood pressure [mmHg]",
+        name="systolic blood pressure",
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         constant=False,
     ),
@@ -408,7 +408,7 @@ _m.parameters.extend([
         "DBP",
         np.nan,
         U.mmHg,
-        name="diastolic blood pressure [mmHg]",
+        name="diastolic blood pressure",
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
         constant=False,
     ),
@@ -417,14 +417,14 @@ _m.parameters.extend([
         np.nan,
         U.mmHg,
         constant=False,
-        name="mean arterial pressure [mmHg]",
+        name="mean arterial pressure",
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
     ),
     Parameter(
         "BP_ald_fe",
         0.3119992626947359,
         U.dimensionless,
-        name="effect of aldosterone on blood pressure [-]",
+        name="aldosterone effect on blood pressure",
         sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
     ),
 ])

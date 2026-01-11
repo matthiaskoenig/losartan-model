@@ -22,7 +22,7 @@
             <h2>Models</h2>
             <p>
             <ul>
-                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/models/losartan_body_flat.xml</a></li>
+                <li><strong>model</strong>: <a href="../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml">../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml</a></li>
             </ul>
             </p>
 
@@ -281,7 +281,7 @@
 
             <h2>Code</h2>
             <p>
-                <a href="../../../../experiments/scans/scan_parameters.py">../../../../experiments/scans/scan_parameters.py</a>
+                <a href="../../../../src/pkdb_models/models/losartan/experiments/scans/scan_parameters.py">../../../../src/pkdb_models/models/losartan/experiments/scans/scan_parameters.py</a>
             <pre>
 <code class="python">"""Parameter scans losartan."""
 from typing import Dict
@@ -411,7 +411,7 @@ class LosartanParameterScan(LosartanSimulationExperiment):
         # calculate pharmacokinetic parameters
         self.pk_dfs = self.calculate_losartan_pk()
         self.pd_dfs = self.calculate_losartan_pd()
-        console.print(self.pd_dfs)
+        #console.print(self.pd_dfs)
 
         return {
             **self.figures_mpl_timecourses(),
@@ -574,7 +574,7 @@ class LosartanParameterScan(LosartanSimulationExperiment):
                 ticks.append(scan_data["default"])
                 ticks = sorted(ticks)
             cbar.set_ticks(ticks)
-            console.print(f"{ticks=}")
+            #console.print(f"{ticks=}")
 
             cbar.set_ticklabels(
                 ticks, **{"size": 15, "weight": "medium"}

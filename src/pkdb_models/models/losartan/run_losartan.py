@@ -66,7 +66,7 @@ def _list_available_experiments():
                 console.print(f"  {exp.__name__}")
 
     console.print("\n[dim]Use '--experiments' with comma-separated names to run specific experiments.[/dim]")
-    console.print('[dim]Example: run_losartan --action simulate --experiments "misc,Doig1993"[/dim]')
+    console.print('[dim]Example: run_losartan --action simulate --experiments "misc,LaCreta2016"[/dim]')
     console.print('[dim]Or use "all" to run all experiments: run_losartan --action simulate --experiments all[/dim]\n')
 
 
@@ -152,11 +152,11 @@ def main() -> None:
         _list_available_experiments()
 
     elif action == Action.SIMULATE:
-        if not options.experiments:
+        if not options.EXPERIMENTS:
             _parser_message("For '--action simulate', the '--experiments' argument is required.")
 
         # Parse experiment names
-        exp_list = [e.strip() for e in options.experiments.split(",")]
+        exp_list = [e.strip() for e in options.EXPERIMENTS.split(",")]
 
         # Resolve names to experiment classes
         experiment_classes, not_found = _resolve_experiment_names(exp_list)

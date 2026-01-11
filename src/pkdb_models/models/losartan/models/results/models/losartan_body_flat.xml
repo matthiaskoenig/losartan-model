@@ -49,7 +49,7 @@
         </ul>
         <p>The content of this model has been carefully created in a manual research effort.</p>
         <h2>Terms of use</h2>
-        <p>Copyright © 2025 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
+        <p>Copyright © 2026 <a href="https://livermetabolism.com" title="Matthias König" target="_blank">Matthias König</a>.</p>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
         </a>
@@ -72,27 +72,35 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
                 <vCard4:hasName rdf:parseType="Resource">
-                  <vCard4:family-name>König</vCard4:family-name>
-                  <vCard4:given-name>Matthias</vCard4:given-name>
-                </vCard4:hasName>
-                <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
-                <vCard4:organization-name>Humboldt-University Berlin, Institute for Theoretical Biology</vCard4:organization-name>
-              </rdf:li>
-              <rdf:li rdf:parseType="Resource">
-                <vCard4:hasName rdf:parseType="Resource">
                   <vCard4:family-name>Tensil</vCard4:family-name>
                   <vCard4:given-name>Ennie</vCard4:given-name>
                 </vCard4:hasName>
                 <vCard4:hasEmail>ennie@tensil.de</vCard4:hasEmail>
                 <vCard4:organization-name>Charité Berlin</vCard4:organization-name>
               </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>Myshkina</vCard4:family-name>
+                  <vCard4:given-name>Mariia</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>mariia.myshkina@hu-berlin.de</vCard4:hasEmail>
+                <vCard4:organization-name>Humboldt-Universität zu Berlin, Faculty of Life Sciences, Department of Biology, Institute of Theoretical Biology, Systems Medicine of the Liver</vCard4:organization-name>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard4:hasName rdf:parseType="Resource">
+                  <vCard4:family-name>König</vCard4:family-name>
+                  <vCard4:given-name>Matthias</vCard4:given-name>
+                </vCard4:hasName>
+                <vCard4:hasEmail>koenigmx@hu-berlin.de</vCard4:hasEmail>
+                <vCard4:organization-name>Humboldt-Universität zu Berlin, Faculty of Life Sciences, Department of Biology, Institute of Theoretical Biology, Systems Medicine of the Liver; University of Stuttgart, Institute of Structural Mechanics and Dynamics in Aerospace Engineering</vCard4:organization-name>
+              </rdf:li>
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>1900-01-01T00:00:00Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-01-11T14:43:46Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>1900-01-01T00:00:00Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-01-11T14:43:46Z</dcterms:W3CDTF>
           </dcterms:modified>
         </rdf:Description>
       </rdf:RDF>
@@ -1188,23 +1196,6 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </compartment>
-      <compartment metaid="GU__meta_Vstomach" sboTerm="SBO:0000290" id="GU__Vstomach" name="stomach" spatialDimensions="3" size="1" units="litre" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#GU__meta_Vstomach">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="https://identifiers.org/SBO:0000290"/>
-                  <rdf:li rdf:resource="https://identifiers.org/FMA:7148"/>
-                  <rdf:li rdf:resource="https://identifiers.org/ncit/C12391"/>
-                  <rdf:li rdf:resource="https://identifiers.org/UBERON:0000945"/>
-                  <rdf:li rdf:resource="https://identifiers.org/BTO:0001307"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </compartment>
     </listOfCompartments>
     <listOfSpecies>
       <species metaid="meta_ald" sboTerm="SBO:0000247" id="ald" name="aldosterone" compartment="Vplasma" initialConcentration="2.5e-07" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
@@ -2003,7 +1994,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="GU__meta_los_stomach" sboTerm="SBO:0000247" id="GU__los_stomach" name="losartan (stomach)" compartment="GU__Vstomach" initialConcentration="0" substanceUnits="GU__mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false">
+      <species metaid="GU__meta_los_stomach" sboTerm="SBO:0000247" id="GU__los_stomach" name="losartan (stomach)" compartment="Vstomach" initialConcentration="0" substanceUnits="GU__mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#GU__meta_los_stomach">
@@ -2256,7 +2247,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_E50_e3174" sboTerm="SBO:0000002" id="E50_e3174" name="half-maximum effect concentration exp3174" value="0.000291072740111984" units="mM" constant="true">
+      <parameter metaid="meta_E50_e3174" sboTerm="SBO:0000002" id="E50_e3174" name="half-maximum effect E3174" value="0.000291072740111984" units="mM" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_E50_e3174">
@@ -2269,7 +2260,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_SBP_ref" sboTerm="SBO:0000002" id="SBP_ref" name="reference systolic blood pressure [mmHg]" value="120" units="mmHg" constant="true">
+      <parameter metaid="meta_SBP_ref" sboTerm="SBO:0000002" id="SBP_ref" name="reference systolic blood pressure" value="120" units="mmHg" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_SBP_ref">
@@ -2282,7 +2273,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_DBP_ref" sboTerm="SBO:0000002" id="DBP_ref" name="reference diastolic blood pressure [mmHg]" value="80" units="mmHg" constant="true">
+      <parameter metaid="meta_DBP_ref" sboTerm="SBO:0000002" id="DBP_ref" name="reference diastolic blood pressure" value="80" units="mmHg" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_DBP_ref">
@@ -2295,7 +2286,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_SBP" sboTerm="SBO:0000002" id="SBP" name="systolic blood pressure [mmHg]" value="NaN" units="mmHg" constant="false">
+      <parameter metaid="meta_SBP" sboTerm="SBO:0000002" id="SBP" name="systolic blood pressure" value="NaN" units="mmHg" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_SBP">
@@ -2308,7 +2299,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_DBP" sboTerm="SBO:0000002" id="DBP" name="diastolic blood pressure [mmHg]" value="NaN" units="mmHg" constant="false">
+      <parameter metaid="meta_DBP" sboTerm="SBO:0000002" id="DBP" name="diastolic blood pressure" value="NaN" units="mmHg" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_DBP">
@@ -2321,7 +2312,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_MAP" sboTerm="SBO:0000002" id="MAP" name="mean arterial pressure [mmHg]" value="NaN" units="mmHg" constant="false">
+      <parameter metaid="meta_MAP" sboTerm="SBO:0000002" id="MAP" name="mean arterial pressure" value="NaN" units="mmHg" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_MAP">
@@ -2334,7 +2325,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_BP_ald_fe" sboTerm="SBO:0000002" id="BP_ald_fe" name="effect of aldosterone on blood pressure [-]" value="0.311999262694736" units="dimensionless" constant="true">
+      <parameter metaid="meta_BP_ald_fe" sboTerm="SBO:0000002" id="BP_ald_fe" name="aldosterone effect on blood pressure" value="0.311999262694736" units="dimensionless" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_BP_ald_fe">
@@ -2375,7 +2366,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </body>
         </notes>
       </parameter>
-      <parameter metaid="meta_BW" sboTerm="SBO:0000002" id="BW" name="body weight [kg]" value="75" units="kg" constant="true">
+      <parameter metaid="meta_BW" sboTerm="SBO:0000002" id="BW" name="body weight" value="75" units="kg" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_BW">
@@ -2388,20 +2379,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_HEIGHT" sboTerm="SBO:0000002" id="HEIGHT" name="height [cm]" value="170" units="cm" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_HEIGHT">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="https://identifiers.org/SBO:0000002"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_HR" sboTerm="SBO:0000002" id="HR" name="heart rate [1/min]" value="70" units="per_min" constant="true">
+      <parameter metaid="meta_HR" sboTerm="SBO:0000002" id="HR" name="heart rate" value="70" units="per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_HR">
@@ -2414,33 +2392,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_HRrest" sboTerm="SBO:0000002" id="HRrest" name="heart rate [1/min]" value="70" units="per_min" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_HRrest">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="https://identifiers.org/SBO:0000002"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_BSA" sboTerm="SBO:0000002" id="BSA" name="body surface area [m^2]" value="0" units="m2" constant="false">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_BSA">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="https://identifiers.org/SBO:0000002"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_COBW" sboTerm="SBO:0000002" id="COBW" name="cardiac output per bodyweight [ml/s/kg]" value="1.548" units="ml_per_s_kg" constant="true">
+      <parameter metaid="meta_COBW" sboTerm="SBO:0000002" id="COBW" name="cardiac output per bodyweight" value="1.548" units="ml_per_s_kg" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_COBW">
@@ -2453,7 +2405,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_f_cardiac_function" sboTerm="SBO:0000002" id="f_cardiac_function" name="heart function" value="1" units="dimensionless" constant="false">
+      <parameter metaid="meta_f_cardiac_function" sboTerm="SBO:0000002" id="f_cardiac_function" name="cardiac function" value="1" units="dimensionless" constant="false">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>1.0: normal function;
@@ -2472,7 +2424,7 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_CO" sboTerm="SBO:0000002" id="CO" name="cardiac output [ml/s]" value="108.33" units="ml_per_s" constant="false">
+      <parameter metaid="meta_CO" sboTerm="SBO:0000002" id="CO" name="cardiac output" value="108.33" units="ml_per_s" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_CO">
@@ -2485,23 +2437,10 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_QC" sboTerm="SBO:0000002" id="QC" name="cardiac output [L/hr]" value="6499800" units="l_per_min" constant="false">
+      <parameter metaid="meta_QC" sboTerm="SBO:0000002" id="QC" name="cardiac output" value="6499800" units="l_per_min" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_QC">
-              <bqbiol:is>
-                <rdf:Bag>
-                  <rdf:li rdf:resource="https://identifiers.org/SBO:0000002"/>
-                </rdf:Bag>
-              </bqbiol:is>
-            </rdf:Description>
-          </rdf:RDF>
-        </annotation>
-      </parameter>
-      <parameter metaid="meta_COHRI" sboTerm="SBO:0000002" id="COHRI" name="increase of cardiac output per heartbeat [ml/min*min]" value="150" units="ml" constant="true">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_COHRI">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/SBO:0000002"/>
@@ -2686,7 +2625,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_FQh" sboTerm="SBO:0000002" id="FQh" name="hepatic (venous side) fractional tissue blood flow" value="0.215" units="dimensionless" constant="true">
+      <parameter metaid="meta_FQh" sboTerm="SBO:0000002" id="FQh" name="hepatic fractional tissue blood flow" value="0.215" units="dimensionless" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_FQh">
@@ -2802,7 +2741,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Mr_los" sboTerm="SBO:0000647" id="Mr_los" name="Molecular weight los [g/mole]" value="422.911" units="g_per_mole" constant="true">
+      <parameter metaid="meta_Mr_los" sboTerm="SBO:0000647" id="Mr_los" name="Molecular weight los" value="422.911" units="g_per_mole" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Mr_los">
@@ -2815,7 +2754,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_ftissue_los" sboTerm="SBO:0000002" id="ftissue_los" name="tissue distribution los" value="0.144942664253079" units="l_per_min" constant="true">
+      <parameter metaid="meta_ftissue_los" sboTerm="SBO:0000002" id="ftissue_los" name="tissue distribution LOS" value="0.144942664253079" units="l_per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_ftissue_los">
@@ -2828,7 +2767,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Kp_los" sboTerm="SBO:0000002" id="Kp_los" name="tissue/plasma partition coefficient los" value="3.26214895692923" units="dimensionless" constant="true">
+      <parameter metaid="meta_Kp_los" sboTerm="SBO:0000002" id="Kp_los" name="tissue/plasma partition coefficient LOS" value="3.26214895692923" units="dimensionless" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Kp_los">
@@ -2854,7 +2793,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_ti_los" sboTerm="SBO:0000002" id="ti_los" name="injection time los [s]" value="10" units="second" constant="true">
+      <parameter metaid="meta_ti_los" sboTerm="SBO:0000002" id="ti_los" name="injection time los" value="10" units="second" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_ti_los">
@@ -2906,7 +2845,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Mr_e3174" sboTerm="SBO:0000647" id="Mr_e3174" name="Molecular weight e3174 [g/mole]" value="436.894" units="g_per_mole" constant="true">
+      <parameter metaid="meta_Mr_e3174" sboTerm="SBO:0000647" id="Mr_e3174" name="Molecular weight e3174" value="436.894" units="g_per_mole" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Mr_e3174">
@@ -2932,7 +2871,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_ti_e3174" sboTerm="SBO:0000002" id="ti_e3174" name="injection time e3174 [s]" value="10" units="second" constant="true">
+      <parameter metaid="meta_ti_e3174" sboTerm="SBO:0000002" id="ti_e3174" name="injection time e3174" value="10" units="second" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_ti_e3174">
@@ -2984,7 +2923,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_Mr_l158" sboTerm="SBO:0000647" id="Mr_l158" name="Molecular weight l158 [g/mole]" value="436.894" units="g_per_mole" constant="true">
+      <parameter metaid="meta_Mr_l158" sboTerm="SBO:0000647" id="Mr_l158" name="Molecular weight l158" value="436.894" units="g_per_mole" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_Mr_l158">
@@ -3073,10 +3012,10 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_RENSEC_fa" sboTerm="SBO:0000009" id="RENSEC_fa" name="activation renin secretion via exp3174" value="5" units="dimensionless" constant="true">
+      <parameter metaid="meta_RENSEC_fa_e3174" sboTerm="SBO:0000009" id="RENSEC_fa_e3174" name="activation renin secretion by E3174" value="5" units="dimensionless" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_RENSEC_fa">
+            <rdf:Description rdf:about="#meta_RENSEC_fa_e3174">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/SBO:0000009"/>
@@ -3125,7 +3064,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_ANGGEN2ANG1_k" sboTerm="SBO:0000009" id="ANGGEN2ANG1_k" name="rate angen to ang1 conversion" value="0.100300143544081" units="l_per_min" constant="true">
+      <parameter metaid="meta_ANGGEN2ANG1_k" sboTerm="SBO:0000009" id="ANGGEN2ANG1_k" name="rate angen → ang1" value="0.100300143544081" units="l_per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_ANGGEN2ANG1_k">
@@ -3138,7 +3077,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="meta_ANG1ANG2_k" sboTerm="SBO:0000009" id="ANG1ANG2_k" name="rate ang1 to ang2 conversion" units="l_per_min" constant="false">
+      <parameter metaid="meta_ANG1ANG2_k" sboTerm="SBO:0000009" id="ANG1ANG2_k" name="rate ang1 → ang2" units="l_per_min" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_ANG1ANG2_k">
@@ -3172,7 +3111,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
       <parameter id="Qlu" name="lung blood flow" value="NaN" units="l_per_min" constant="false"/>
       <parameter id="Qre" name="rest of body blood flow" value="NaN" units="l_per_min" constant="false"/>
       <parameter id="Qpo" name="portal blood flow" value="NaN" units="l_per_min" constant="false"/>
-      <parameter metaid="KI__meta_f_renal_function" sboTerm="SBO:0000009" id="KI__f_renal_function" name="parameter for renal function" value="1" units="dimensionless" constant="true">
+      <parameter metaid="KI__meta_f_renal_function" sboTerm="SBO:0000009" id="KI__f_renal_function" name="renal function" value="1" units="dimensionless" constant="true">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>scaling factor for renal function. 1.0: normal renal function;
@@ -3191,7 +3130,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="KI__meta_LOSEX_k" sboTerm="SBO:0000009" id="KI__LOSEX_k" name="rate urinary excretion of losartan" value="0.0773896174258953" units="KI__per_min" constant="true">
+      <parameter metaid="KI__meta_LOSEX_k" sboTerm="SBO:0000009" id="KI__LOSEX_k" name="rate urinary excretion losartan" value="0.0773896174258953" units="KI__per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#KI__meta_LOSEX_k">
@@ -3204,7 +3143,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="KI__meta_E3174EX_k" sboTerm="SBO:0000009" id="KI__E3174EX_k" name="rate urinary excretion of e3174" value="0.0289271732633318" units="KI__per_min" constant="true">
+      <parameter metaid="KI__meta_E3174EX_k" sboTerm="SBO:0000009" id="KI__E3174EX_k" name="rate urinary excretion E3174" value="0.0289271732633318" units="KI__per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#KI__meta_E3174EX_k">
@@ -3217,7 +3156,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="KI__meta_L158EX_k" sboTerm="SBO:0000009" id="KI__L158EX_k" name="rate urinary excretion of l158" value="0.28890834506773" units="KI__per_min" constant="true">
+      <parameter metaid="KI__meta_L158EX_k" sboTerm="SBO:0000009" id="KI__L158EX_k" name="rate urinary excretion L158" value="0.28890834506773" units="KI__per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#KI__meta_L158EX_k">
@@ -3249,7 +3188,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="LI__meta_MBIEX_k" sboTerm="SBO:0000009" id="LI__MBIEX_k" name="rate for export in bile" value="0.066315021777011" units="LI__per_min" constant="true">
+      <parameter metaid="LI__meta_MBIEX_k" sboTerm="SBO:0000009" id="LI__MBIEX_k" name="rate biliary export" value="0.066315021777011" units="LI__per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#LI__meta_MBIEX_k">
@@ -3275,7 +3214,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="LI__meta_LOS2E3174_Vmax" sboTerm="SBO:0000186" id="LI__LOS2E3174_Vmax" name="Vmax losartan conversion" value="0.00072514631731673" units="LI__mmole_per_min_l" constant="true">
+      <parameter metaid="LI__meta_LOS2E3174_Vmax" sboTerm="SBO:0000186" id="LI__LOS2E3174_Vmax" name="Vmax losartan → E3174" value="0.00072514631731673" units="LI__mmole_per_min_l" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#LI__meta_LOS2E3174_Vmax">
@@ -3288,7 +3227,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="LI__meta_LOS2E3174_Km_los" sboTerm="SBO:0000027" id="LI__LOS2E3174_Km_los" name="Km losartan conversion" value="0.0011" units="LI__mM" constant="true">
+      <parameter metaid="LI__meta_LOS2E3174_Km_los" sboTerm="SBO:0000027" id="LI__LOS2E3174_Km_los" name="Km losartan → E3174" value="0.0011" units="LI__mM" constant="true">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>FIXME: check in vitro data</p>
@@ -3312,7 +3251,7 @@ with FQgu=0.146, FQsp=0.017, FQpa=0.017</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="LI__meta_E3174L158_k" sboTerm="SBO:0000153" id="LI__E3174L158_k" name="rate losartan conversion" value="0.00113400909936956" units="LI__per_min" constant="true">
+      <parameter metaid="LI__meta_E3174L158_k" sboTerm="SBO:0000153" id="LI__E3174L158_k" name="rate losartan → L158" value="0.00113400909936956" units="LI__per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#LI__meta_E3174L158_k">
@@ -3385,7 +3324,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="GU__meta_METEXC_k" sboTerm="SBO:0000009" id="GU__METEXC_k" name="rate of metabolite feces excretion" value="2.69641608199351e-05" units="GU__per_min" constant="true">
+      <parameter metaid="GU__meta_METEXC_k" sboTerm="SBO:0000009" id="GU__METEXC_k" name="rate of feces excretion" value="2.69641608199351e-05" units="GU__per_min" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#GU__meta_METEXC_k">
@@ -3398,7 +3337,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="GU__meta_Ka_dis_los" sboTerm="SBO:0000002" id="GU__Ka_dis_los" name="Ka_dis [1/hr] dissolution losartan" value="2" units="GU__per_hr" constant="true">
+      <parameter metaid="GU__meta_Ka_dis_los" sboTerm="SBO:0000002" id="GU__Ka_dis_los" name="rate dissolution losartan" value="2" units="GU__per_hr" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#GU__meta_Ka_dis_los">
@@ -3411,7 +3350,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="GU__meta_f_OATP2B1" sboTerm="SBO:0000002" id="GU__f_OATP2B1" name="parameter for OATP2B1 activity" value="1" units="dimensionless" constant="true">
+      <parameter metaid="GU__meta_f_OATP2B1" sboTerm="SBO:0000002" id="GU__f_OATP2B1" name="absorption activity" value="1" units="dimensionless" constant="true">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>parameter controls activity (1.0 reference activity,
@@ -3430,7 +3369,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="GU__meta_f_abcb1" sboTerm="SBO:0000002" id="GU__f_abcb1" name="parameter for P-glycoprotein activity" value="1" units="dimensionless" constant="true">
+      <parameter metaid="GU__meta_f_abcb1" sboTerm="SBO:0000002" id="GU__f_abcb1" name="PG activity" value="1" units="dimensionless" constant="true">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>parameter controls activity (1.0 reference activity,
@@ -3449,7 +3388,7 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </rdf:RDF>
         </annotation>
       </parameter>
-      <parameter metaid="GU__meta_f_LOSEFL_k" sboTerm="SBO:0000186" id="GU__f_LOSEFL_k" name="Rate for losartan efflux (PG) relative to absorption." value="1.02003554075262" units="dimensionless" constant="true">
+      <parameter metaid="GU__meta_f_LOSEFL_k" sboTerm="SBO:0000186" id="GU__f_LOSEFL_k" name="fractional rate losartan efflux (PG)" value="1.02003554075262" units="dimensionless" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#GU__meta_f_LOSEFL_k">
@@ -3759,55 +3698,13 @@ is absorbed. This parameter determines how much of the losartan is excreted.</p>
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule variable="BSA">
-        <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
+      <assignmentRule variable="CO">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
             <times/>
-            <cn sbml:units="m2"> 0.024265 </cn>
-            <apply>
-              <power/>
-              <apply>
-                <divide/>
-                <ci> BW </ci>
-                <cn sbml:units="kg" type="integer"> 1 </cn>
-              </apply>
-              <cn> 0.5378 </cn>
-            </apply>
-            <apply>
-              <power/>
-              <apply>
-                <divide/>
-                <ci> HEIGHT </ci>
-                <cn sbml:units="cm" type="integer"> 1 </cn>
-              </apply>
-              <cn> 0.3964 </cn>
-            </apply>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="CO">
-        <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version2/core">
-          <apply>
-            <plus/>
-            <apply>
-              <times/>
-              <ci> f_cardiac_function </ci>
-              <ci> BW </ci>
-              <ci> COBW </ci>
-            </apply>
-            <apply>
-              <divide/>
-              <apply>
-                <times/>
-                <apply>
-                  <minus/>
-                  <ci> HR </ci>
-                  <ci> HRrest </ci>
-                </apply>
-                <ci> COHRI </ci>
-              </apply>
-              <cn sbml:units="s_per_min" type="integer"> 60 </cn>
-            </apply>
+            <ci> f_cardiac_function </ci>
+            <ci> BW </ci>
+            <ci> COBW </ci>
           </apply>
         </math>
       </assignmentRule>
@@ -4504,7 +4401,7 @@ injection rate.</p>
                 <cn sbml:units="dimensionless" type="integer"> 1 </cn>
                 <apply>
                   <times/>
-                  <ci> RENSEC_fa </ci>
+                  <ci> RENSEC_fa_e3174 </ci>
                   <ci> fe_e3174 </ci>
                 </apply>
               </apply>

@@ -22,7 +22,7 @@
             <h2>Models</h2>
             <p>
             <ul>
-                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/models/losartan_body_flat.xml</a></li>
+                <li><strong>model</strong>: <a href="../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml">../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml</a></li>
             </ul>
             </p>
 
@@ -129,7 +129,7 @@
 
             <h2>Code</h2>
             <p>
-                <a href="../../../../experiments/studies/yasar2002a.py">../../../../experiments/studies/yasar2002a.py</a>
+                <a href="../../../../src/pkdb_models/models/losartan/experiments/studies/yasar2002a.py">../../../../src/pkdb_models/models/losartan/experiments/studies/yasar2002a.py</a>
             <pre>
 <code class="python">from typing import Dict
 
@@ -137,6 +137,7 @@ from sbmlsim.data import DataSet, load_pkdb_dataframe
 from sbmlsim.fit import FitMapping, FitData
 from sbmlutils.console import console
 
+from pkdb_models.models import losartan
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
@@ -393,6 +394,8 @@ class Yasar2002a(LosartanSimulationExperiment):
         }
 
 if __name__ == "__main__":
+    out = losartan.RESULTS_PATH_SIMULATION / Yasar2002a.__name__
+    out.mkdir(parents=True, exist_ok=True)
     run_experiments(Yasar2002a, output_dir=Yasar2002a.__name__)
 </code>
         </pre>

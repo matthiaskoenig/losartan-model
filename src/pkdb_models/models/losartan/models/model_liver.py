@@ -167,7 +167,7 @@ _m.parameters = [
         "MBIEX_k",
         0.066315021777011,
         U.per_min,
-        name="rate for export in bile",
+        name="rate biliary export",
         sboTerm=SBO.KINETIC_CONSTANT,
     )
 ]
@@ -208,14 +208,14 @@ _m.reactions = [
                 "LOS2E3174_Vmax",
                 0.0007251463173167296,
                 U.mmole_per_min_l,
-                name="Vmax losartan conversion",
+                name="Vmax losartan → E3174",
                 sboTerm=SBO.MAXIMAL_VELOCITY,
             ),
             Parameter(
                 "LOS2E3174_Km_los",
                 0.0011,  # 1.1 µM
                 U.mM,
-                name="Km losartan conversion",
+                name="Km losartan → E3174",
                 sboTerm=SBO.MICHAELIS_CONSTANT,
                 notes="""FIXME: check in vitro data
                 
@@ -244,7 +244,7 @@ _m.reactions = [
                 "E3174L158_k",
                 0.0011340090993695589,
                 U.per_min,
-                name="rate losartan conversion",
+                name="rate losartan → L158",
                 sboTerm=SBO.FORWARD_RATE_CONSTANT,
             ),
         ],

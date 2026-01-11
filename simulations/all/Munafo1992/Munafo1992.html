@@ -22,7 +22,7 @@
             <h2>Models</h2>
             <p>
             <ul>
-                <li><strong>model</strong>: <a href="../../../../models/results/models/losartan_body_flat.xml">../../../../models/results/models/losartan_body_flat.xml</a></li>
+                <li><strong>model</strong>: <a href="../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml">../../../../src/pkdb_models/models/losartan/models/results/models/losartan_body_flat.xml</a></li>
             </ul>
             </p>
 
@@ -35,10 +35,6 @@
                 <li><strong>losartan_LOS120</strong>: <a href="Munafo1992_losartan_LOS120.tsv">Munafo1992_losartan_LOS120.tsv</a></li>
                 <li><strong>losartan_LOS40</strong>: <a href="Munafo1992_losartan_LOS40.tsv">Munafo1992_losartan_LOS40.tsv</a></li>
                 <li><strong>losartan_LOS80</strong>: <a href="Munafo1992_losartan_LOS80.tsv">Munafo1992_losartan_LOS80.tsv</a></li>
-                <li><strong>SBP_ratio_LOS120</strong>: <a href="Munafo1992_SBP_ratio_LOS120.tsv">Munafo1992_SBP_ratio_LOS120.tsv</a></li>
-                <li><strong>SBP_ratio_LOS40</strong>: <a href="Munafo1992_SBP_ratio_LOS40.tsv">Munafo1992_SBP_ratio_LOS40.tsv</a></li>
-                <li><strong>SBP_ratio_LOS80</strong>: <a href="Munafo1992_SBP_ratio_LOS80.tsv">Munafo1992_SBP_ratio_LOS80.tsv</a></li>
-                <li><strong>SBP_ratio_Placebo</strong>: <a href="Munafo1992_SBP_ratio_Placebo.tsv">Munafo1992_SBP_ratio_Placebo.tsv</a></li>
                 <li><strong>aldosterone_LOS120</strong>: <a href="Munafo1992_aldosterone_LOS120.tsv">Munafo1992_aldosterone_LOS120.tsv</a></li>
                 <li><strong>aldosterone_LOS40</strong>: <a href="Munafo1992_aldosterone_LOS40.tsv">Munafo1992_aldosterone_LOS40.tsv</a></li>
                 <li><strong>aldosterone_LOS80</strong>: <a href="Munafo1992_aldosterone_LOS80.tsv">Munafo1992_aldosterone_LOS80.tsv</a></li>
@@ -87,7 +83,7 @@
 
             <h2>Code</h2>
             <p>
-                <a href="../../../../experiments/studies/munafo1992.py">../../../../experiments/studies/munafo1992.py</a>
+                <a href="../../../../src/pkdb_models/models/losartan/experiments/studies/munafo1992.py">../../../../src/pkdb_models/models/losartan/experiments/studies/munafo1992.py</a>
             <pre>
 <code class="python">from typing import Dict
 
@@ -95,6 +91,7 @@ from sbmlsim.data import DataSet, load_pkdb_dataframe
 from sbmlsim.fit import FitMapping, FitData
 from sbmlutils.console import console
 
+from pkdb_models.models import losartan
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
@@ -129,7 +126,7 @@ class Munafo1992(LosartanSimulationExperiment):
 
     def datasets(self) -> Dict[str, DataSet]:
         dsets = {}
-        for fig_id in ["Fig1", "Fig2", "Fig6"]:
+        for fig_id in ["Fig1", "Fig6"]:
             df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
             for label, df_label in df.groupby("label"):
                 dset = DataSet.from_df(df_label, self.ureg)
@@ -298,6 +295,8 @@ class Munafo1992(LosartanSimulationExperiment):
 
 
 if __name__ == "__main__":
+    out = losartan.RESULTS_PATH_SIMULATION / Munafo1992.__name__
+    out.mkdir(parents=True, exist_ok=True)
     run_experiments(Munafo1992, output_dir=Munafo1992.__name__)
 </code>
         </pre>

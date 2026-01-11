@@ -3,7 +3,6 @@ from .bae2011 import Bae2011
 from .christen1991a import Christen1991a
 from .donzelli2014 import Donzelli2014
 from .doig1993 import Doig1993
-from .donzelli2014 import Donzelli2014
 from .fda1995S60 import FDA1995S60
 from .fda1995S67 import FDA1995S67
 from .fischer2002 import Fischer2002
