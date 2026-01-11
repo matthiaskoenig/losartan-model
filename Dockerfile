@@ -1,7 +1,7 @@
 # Dockerfile for losartan
 # -----------------------
 # Build and push image
-#   docker build -f Dockerfile -t matthiaskoenig/losartan:0.7.2 -t matthiaskoenig/losartan:latest .
+#   docker build -f Dockerfile -t matthiaskoenig/losartan:0.8.0 -t matthiaskoenig/losartan:latest .
 #   docker login
 #   docker push --all-tags matthiaskoenig/losartan
 
