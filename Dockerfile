@@ -1,14 +1,14 @@
 # Dockerfile for losartan
 # -----------------------
 # Build and push image
-#   docker build -f Dockerfile -t matthiaskoenig/losartan:0.8.0 -t matthiaskoenig/losartan:latest .
+#   docker build -f Dockerfile -t matthiaskoenig/losartan:0.8.1 -t matthiaskoenig/losartan:latest .
 #   docker login
 #   docker push --all-tags matthiaskoenig/losartan
 
 FROM python:3.14-slim
 
 # install uv
-COPY --from=ghcr.io/astral-sh/uv:0.9.24 /uv /bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.10.3 /uv /bin/uv
 ENV UV_SYSTEM_PYTHON=1
 
 # install git
