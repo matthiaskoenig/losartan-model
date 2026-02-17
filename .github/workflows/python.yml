@@ -2,6 +2,9 @@ name: Run Python
 
 on: [push]
 
+env:
+  PYTHONIOENCODING: utf-8
+
 jobs:
   python-run:
     runs-on: ${{ matrix.os }}
