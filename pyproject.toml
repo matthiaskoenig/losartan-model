@@ -38,7 +38,7 @@ keywords = [
 ]
 dependencies = [
     "sbmlutils>=0.9.6",
-    "sbmlsim @ git+https://github.com/matthiaskoenig/sbmlsim.git@f59df2b30c5802840e90d5aa5d0dd6a34ea9a5e6"
+    "sbmlsim @ git+https://github.com/matthiaskoenig/sbmlsim.git@4c0515664a3a5b535ab83534949d45cd25f30e22"
 ]
 
 [project.scripts]
