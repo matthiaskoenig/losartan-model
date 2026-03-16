@@ -97,11 +97,46 @@ implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p></bo
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-01-11T14:29:08Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-03-16T18:12:43Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-01-11T14:29:08Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-03-16T18:12:43Z</dcterms:W3CDTF>
           </dcterms:modified>
+          <bqbiol:hasProperty>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C15720"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C91434"/>
+              <rdf:li rdf:resource="https://identifiers.org/mamo/MAMO_0000046"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C66869"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C29165"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C66930"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C2985"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C99532"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C79369"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C79371"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C79372"/>
+              <rdf:li rdf:resource="https://identifiers.org/ncit/C79370"/>
+            </rdf:Bag>
+          </bqbiol:hasProperty>
+          <bqbiol:hasTaxon>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/taxonomy/9606"/>
+              <rdf:li rdf:resource="https://identifiers.org/snomedct/337915000"/>
+            </rdf:Bag>
+          </bqbiol:hasTaxon>
+          <bqbiol:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/doi/10.3390/pharmaceutics18020262"/>
+              <rdf:li rdf:resource="https://identifiers.org/doi/10.36903/physiome.31359823"/>
+              <rdf:li rdf:resource="https://identifiers.org/doi/10.5281/zenodo.14761114"/>
+            </rdf:Bag>
+          </bqbiol:isDescribedBy>
+          <bqbiol:occursIn>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/BTO:0001489"/>
+              <rdf:li rdf:resource="https://identifiers.org/FMA:256135"/>
+            </rdf:Bag>
+          </bqbiol:occursIn>
         </rdf:Description>
       </rdf:RDF>
     </annotation>

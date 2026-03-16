@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14761114.svg)](https://doi.org/10.5281/zenodo.14761114)
-[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml/badge.svg)](https://github.com/matthiaskoenig/edoxaban-model/actions/workflows/python.yml)
-[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml/badge.svg)](https://github.com/matthiaskoenig/edoxaban-model/actions/workflows/docker.yml)
+[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml/badge.svg)](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml)
+[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml/badge.svg)](https://github.com/matthiaskoenig/sorafenib-model/actions/workflows/docker.yml)
 
 
 # losartan model
@@ -10,6 +10,7 @@ The model is distributed in [SBML](http://sbml.org) format available from [`losa
 corresponding [SBML4humans model report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_body_flat.xml) and [model equations](./models/losartan_body_flat.md).
 
 The COMBINE archive is available from [`losartan_model.omex`](./losartan_model.omex).
+The FAIR assessment is available from [`losartan_model_fair.xlsx`](./losartan_model_fair.xlsx).
 
 ![PK/PD model overview](./figures/losartan_model.png)
 
@@ -21,11 +22,23 @@ The COMBINE archive is available from [`losartan_model.omex`](./losartan_model.o
 * **raas** submodel [`losartan_raas.xml`](./models/losartan_body.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_raas.xml) and [equations](./models/losartan_raas.md).
 
 ## How to cite
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14761114.svg)](https://doi.org/10.5281/zenodo.14761114)
+To cite the model repository
 
 > Tensil, E., Myshkina, M. & König, M. (2026).
 > *Physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) model of losartan.*   
 > Zenodo. [https://doi.org/10.5281/zenodo.14761114](https://doi.org/10.5281/zenodo.14761114)
+
+To cite the main publication
+
+> Ennie Tensil, Mariia Myshkina, Matthias König
+> A Digital Twin of the Angiotensin II Receptor Blocker Losartan: Physiologically Based Modeling of Blood Pressure Regulation
+> Pharmaceutics 2026, 18(2), 262; [doi:10.3390/pharmaceutics18020262](https://doi.org/10.3390/pharmaceutics18020262). 
+
+To cite the reproducibility publication
+
+> Mariia Myshkina, Michelle Elias, Ennie Tensil, Matthias König
+> Reproducibility of a Digital Twin of the Angiotensin II Receptor Blocker Losartan
+> Physiome. February 2, 2026 (publication). [doi:10.36903/physiome.31359823](https://doi.org/10.36903/physiome.31359823)
 
 ## License
 
@@ -85,7 +98,7 @@ sudo chmod 775 "${PWD}/results"
 ```
 
 ## Funding
-Matthias König was supported by the Federal Ministry of Education and Research (BMBF, Germany) within LiSyM by grant number 031L0054 and ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within the Research Unit Program FOR 5151 QuaLiPerF (Quantifying Liver Perfusion-Function Relationship in Complex Resection - A Systems Medicine Approach) by grant number 436883643 and by grant number 465194077 (Priority Programme SPP 2311, Subproject SimLivA). This work was supported by the BMBF-funded de.NBI Cloud within the German Network for Bioinformatics Infrastructure (de.NBI) (031A537B, 031A533A, 031A538A, 031A533B, 031A535A, 031A537C, 031A534A, 031A532B). 
-Mariia Myshkina was supported by the Federal Ministry of Education and Research (BMBF, Germany) within ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within Priority Programme SPP 2311 by grant number 465194077 (Subproject SimLivA).
+Matthias König was supported by the Federal Ministry of Research, Technology and Space (BMFTR, Germany) within ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within the Research Unit Program FOR 5151 QuaLiPerF (Quantifying Liver Perfusion-Function Relationship in Complex Resection - A Systems Medicine Approach) by grant number 436883643 and by grant number 465194077 (Priority Programme SPP 2311, Subproject SimLivA). This work was supported by the BMBF-funded de.NBI Cloud within the German Network for Bioinformatics Infrastructure (de.NBI) (031A537B, 031A533A, 031A538A, 031A533B, 031A535A, 031A537C, 031A534A, 031A532B). 
+Mariia Myshkina was supported by the Federal Ministry of Research, Technology and Space (BMFTR, Germany) within ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within Priority Programme SPP 2311 by grant number 465194077 (Subproject SimLivA).
 
 © 2024-2026 Ennie Tensil, Mariia Myshkina & Matthias König, [Systems Medicine of the Liver](https://livermetabolism.com)
