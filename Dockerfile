@@ -1,9 +1,10 @@
-# Dockerfile for losartan
-# -----------------------
+# --------------------------------------------------------
+# Dockerfile
+# --------------------------------------------------------
 # Build and push image
 #   docker build -f Dockerfile -t matthiaskoenig/losartan:0.8.2 -t matthiaskoenig/losartan:latest .
 #   docker login
-#   docker push --all-tags matthiaskoenig/losartan
+# --------------------------------------------------------
 
 FROM python:3.14-slim
 
