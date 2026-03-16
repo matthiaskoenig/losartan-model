@@ -36,7 +36,7 @@ keywords = [
     "computational modeling",
 ]
 dependencies = [
-    "sbmlutils>=0.9.6",
+    "sbmlutils==0.9.6",
     "sbmlsim @ git+https://github.com/matthiaskoenig/sbmlsim.git@4c0515664a3a5b535ab83534949d45cd25f30e22"
 ]
 
