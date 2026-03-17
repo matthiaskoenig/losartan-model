@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14761114.svg)](https://doi.org/10.5281/zenodo.14761114)
 [![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml/badge.svg)](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml)
-[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml/badge.svg)](https://github.com/matthiaskoenig/sorafenib-model/actions/workflows/docker.yml)
+[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml/badge.svg)](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml)
 
 
 # losartan model
@@ -12,7 +12,7 @@ corresponding [SBML4humans model report](https://sbml4humans.de/model_url?url=ht
 The COMBINE archive is available from [`losartan_model.omex`](./losartan_model.omex).
 The FAIR assessment is available from [`losartan_model_fair.xlsx`](./losartan_model_fair.xlsx).
 
-![PK/PD model overview](./figures/losartan_model.png)
+![model overview](./figures/losartan_model.png)
 
 ### Comp submodels
 * **liver** submodel [`losartan_liver.xml`](./models/losartan_liver.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_liver.xml) and [equations](./models/losartan_liver.md).
