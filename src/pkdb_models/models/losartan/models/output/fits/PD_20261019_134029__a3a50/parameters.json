@@ -1,0 +1,19 @@
+{
+  "sets": [
+    {
+      "sid": "PD_20261019_134029__a3a50_0",
+      "values": {
+        "E50_e3174": 0.0002068853693351313,
+        "RENSEC_n": 2.9680635276708203,
+        "BP_emax": 0.2443466614325247
+      },
+      "units": {
+        "E50_e3174": "mmol/l",
+        "RENSEC_n": "dimensionless",
+        "BP_emax": "dimensionless"
+      },
+      "cost": 96.56530200263546,
+      "provenance": "optimization 'PD_20261019_134029__a3a50', run '2'"
+    }
+  ]
+}

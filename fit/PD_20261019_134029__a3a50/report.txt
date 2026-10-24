@@ -1,0 +1,786 @@
+--------------------------------------------------------------------------------
+OptimizationProblem: PD
+--------------------------------------------------------------------------------
+Experiments
+	*** FitMappingCollection ***
+experiment: Azizi1999
+mappings: ['fm_po_LOS50_renin', 'fm_po_LOS50_ang1', 'fm_po_LOS50_ang2', 'fm_po_LOS50_map']
+weights: [16.0, 16.0, 16.0, 16.0]
+use_mapping_weights: True
+kind: training
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Azizi1999
+mappings: ['fm_po_placebo_renin', 'fm_po_placebo_ang1', 'fm_po_placebo_ang2', 'fm_po_placebo_map']
+weights: [16.0, 16.0, 16.0, 16.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Azizi1999
+mappings: ['fm_po_LOS50_losartan', 'fm_po_LOS50_exp3174']
+weights: [None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Bae2011
+mappings: ['fm_po_los50_los_1', 'fm_po_los50_los_3', 'fm_po_los50_e3174_1', 'fm_po_los50_e3174_3']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Christen1991a
+mappings: ['fm_po_ang2_placebo', 'fm_po_ang2_LOS10', 'fm_po_ang2_LOS20', 'fm_po_ang2_LOS40', 'fm_po_aldosterone_placebo', 'fm_po_aldosterone_LOS10', 'fm_po_aldosterone_LOS20', 'fm_po_aldosterone_LOS40', 'fm_po_pra_placeboM', 'fm_po_pra_LOS5M', 'fm_po_pra_LOS10M', 'fm_po_pra_LOS20M', 'fm_po_pra_LOS40M', 'fm_po_ang2_placeboM', 'fm_po_ang2_LOS5M', 'fm_po_ang2_LOS10M', 'fm_po_ang2_LOS20M', 'fm_po_ang2_LOS40M']
+weights: [6.0, 6.0, 8.0, 7.0, 6.0, 6.0, 8.0, 7.0, 6.0, 6.0, 6.0, 5.0, 6.0, 6.0, 6.0, 6.0, 5.0, 6.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Christen1991a
+mappings: ['fm_po_los_LOS20', 'fm_po_los_LOS40']
+weights: [None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Doig1993
+mappings: ['fm_po_LOS5_pra', 'fm_po_LOS10_pra', 'fm_po_LOS25_pra', 'fm_po_LOS50_pra', 'fm_po_LOS100_pra', 'fm_po_LOS5_aldosterone', 'fm_po_LOS10_aldosterone', 'fm_po_LOS25_aldosterone', 'fm_po_LOS50_aldosterone', 'fm_po_LOS100_aldosterone', 'fm_po_LOS50_supine_sbp', 'fm_po_LOS100_supine_sbp', 'fm_po_LOS50_supine_dbp', 'fm_po_LOS100_supine_dbp']
+weights: [4.0, 8.0, 7.0, 8.0, 8.0, 4.0, 8.0, 7.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0]
+use_mapping_weights: True
+kind: training
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Doig1993
+mappings: ['fm_po_placebo_pra', 'fm_po_placebo_aldosterone', 'fm_po_placebo_supine_sbp', 'fm_po_placebo_supine_dbp']
+weights: [12.0, 12.0, 12.0, 12.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Donzelli2014
+mappings: ['fm_po_los12p5_los_los_ome_mid', 'fm_po_los12p5_los_basel_cocktail', 'fm_po_los12p5_e3174_los_ome_mid', 'fm_po_los12p5_e3174_basel_cocktail']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: FDA1995S60
+mappings: ['fm_losartan_LOS100PO', 'fm_losartan_urine_LOS100PO', 'fm_exp3174_LOS100PO', 'fm_exp3174_urine_LOS100PO', 'fm_l158_urine_LOS100PO', 'fm_losartan_total_urine_LOS100PO', 'fm_losartan_total_feces_LOS100PO', 'fm_losartan_LOS30IV', 'fm_losartan_urine_LOS30IV', 'fm_losartan_feces_LOS30IV', 'fm_exp3174_LOS30IV', 'fm_exp3174_urine_LOS30IV', 'fm_exp3174_feces_LOS30IV', 'fm_l158_urine_LOS30IV', 'fm_l158_feces_LOS30IV', 'fm_losartan_total_urine_LOS30IV', 'fm_losartan_total_feces_LOS30IV', 'fm_exp3174_E20IV']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: FDA1995S67
+mappings: ['fm_losartan_LOS50PO', 'fm_losartan_urine_LOS50PO', 'fm_exp3174_LOS50PO', 'fm_exp3174_urine_LOS50PO', 'fm_losartan_LOS10IV', 'fm_losartan_urine_LOS10IV', 'fm_exp3174_LOS10IV', 'fm_exp3174_urine_LOS10IV', 'fm_exp3174_E10IV', 'fm_exp3174_urine_E10IV']
+weights: [None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Fischer2002
+mappings: ['fm_po_los50_losartan_LOS50', 'fm_po_los50_losartan_LOS50_PHE4', 'fm_po_los50_exp3174_LOS50', 'fm_po_los50_exp3174_LOS50_PHE4', 'fm_po_los50_losartan_urine_LOS50', 'fm_po_los50_losartan_urine_LOS50_PHE4', 'fm_po_los50_exp3174_urine_LOS50', 'fm_po_los50_exp3174_urine_LOS50_PHE4']
+weights: [None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Goldberg1995
+mappings: ['fm_po_LOS100_pra_ratio']
+weights: [8.0]
+use_mapping_weights: True
+kind: training
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Goldberg1995
+mappings: ['fm_po_control_pra_ratio']
+weights: [8.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Goldberg1995
+mappings: ['fm_po_LOS100_losartan', 'fm_po_LOS100_CIM400_losartan', 'fm_po_LOS100_exp3174', 'fm_po_LOS100_CIM400_exp3174']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Goldberg1995a
+mappings: ['fm_po_LOS25_ratio_pra', 'fm_po_LOS100_ratio_pra', 'fm_po_LOS25_ang2_ratio', 'fm_po_LOS100_ang2_ratio', 'fm_po_LOS25_ald_change', 'fm_po_LOS100_ald_change']
+weights: [11.0, 13.0, 11.0, 13.0, 11.0, 13.0]
+use_mapping_weights: True
+kind: training
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Goldberg1995a
+mappings: ['fm_po_placebo_ratio_pra', 'fm_po_placebo_ang2_ratio', 'fm_po_placebo_ald_change', 'fm_po_placebo_dbp_change', 'fm_po_LOS25_dbp_change', 'fm_po_LOS100_dbp_change']
+weights: [12.0, 12.0, 12.0, 12.0, 11.0, 13.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Goldberg1995a
+mappings: ['fm_po_LOS25_losartan', 'fm_po_LOS100_losartan', 'fm_po_LOS25_exp3174', 'fm_po_LOS100_exp3174']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Han2009a
+mappings: ['fm_po_los50_losartan_1', 'fm_po_los50_losartan_1_SIL140', 'fm_po_los50_losartan_3', 'fm_po_los50_losartan_3_SIL140', 'fm_po_los50_exp3174_1', 'fm_po_los50_exp3174_1_SIL140', 'fm_po_los50_exp3174_3', 'fm_po_los50_exp3174_3_SIL140']
+weights: [None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Huang2021
+mappings: ['fm_po_los50_los_placebo', 'fm_po_los50_los_placebo_1', 'fm_po_los50_los_placebo_3', 'fm_po_los50_los_breviscapine', 'fm_po_los50_los_breviscapine_1', 'fm_po_los50_los_breviscapine_3', 'fm_po_los50_e3174_placebo', 'fm_po_los50_e3174_placebo_1', 'fm_po_los50_e3174_placebo_3', 'fm_po_los50_e3174_breviscapine', 'fm_po_los50_e3174_breviscapine_1', 'fm_po_los50_e3174_breviscapine_3']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Kim2016
+mappings: ['fm_po_los50_los_control', 'fm_po_los50_los_ginseng', 'fm_po_los50_e3174_control', 'fm_po_los50_e3174_ginseng']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Kobayashi2008
+mappings: ['fm_po_los25_los_LOS', 'fm_po_los25_los_LOS_BUC', 'fm_po_los25_e3174_LOS', 'fm_po_los25_e3174_LOS_BUC']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Lee2003b
+mappings: ['fm_po_los50_los_1', 'fm_po_los50_los_2', 'fm_po_los50_los_3', 'fm_po_los50_e3174_1', 'fm_po_los50_e3174_2', 'fm_po_los50_e3174_3']
+weights: [None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Li2009
+mappings: ['fm_po_los50_los_1_1', 'fm_po_los50_los_1_3', 'fm_po_los50_los_1_13', 'fm_po_los50_e3174_1_1', 'fm_po_los50_e3174_1_3', 'fm_po_los50_e3174_1_13']
+weights: [None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Lo1995
+mappings: ['fm_losartan_LOS50PO', 'fm_exp3174_LOS50PO', 'fm_losartan_urine_LOS50PO', 'fm_exp3174_urine_LOS50PO', 'fm_losartan_LOS20IV', 'fm_exp3174_LOS20IV', 'fm_losartan_urine_LOS20IV', 'fm_exp3174_urine_LOS20IV', 'fm_losartan_LOS30IV', 'fm_exp3174_LOS30IV', 'fm_losartan_urine_LOS30IV', 'fm_exp3174_urine_LOS30IV', 'fm_exp3174_E20IV', 'fm_exp3174_urine_E20IV', 'fm_losartan_urine_LOS100PO', 'fm_exp3174_urine_LOS100PO']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Munafo1992
+mappings: ['fm_po_aldosterone_corrected_LOS80', 'fm_po_aldosterone_corrected_LOS120']
+weights: [6.0, 6.0]
+use_mapping_weights: True
+kind: training
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Munafo1992
+mappings: ['fm_po_aldosterone_Placebo']
+weights: [6.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Munafo1992
+mappings: ['fm_po_aldosterone_corrected_LOS40']
+weights: [6.0]
+use_mapping_weights: True
+kind: outlier
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Munafo1992
+mappings: ['fm_po_losartan_LOS40', 'fm_po_losartan_LOS80', 'fm_po_losartan_LOS120', 'fm_po_exp3174_LOS40', 'fm_po_exp3174_LOS80', 'fm_po_exp3174_LOS120']
+weights: [None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Oh2012
+mappings: ['fm_po_los2_losartan', 'fm_po_los2_exp3174', 'fm_po_los2_exp3174_losartan']
+weights: [None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Ohtawa1993
+mappings: ['fm_po_pra_ratio_LOS25', 'fm_po_ang2_LOS25', 'fm_po_sbp_LOS25', 'fm_po_pra_ratio_LOS50', 'fm_po_ang2_LOS50', 'fm_po_sbp_LOS50', 'fm_po_pra_ratio_LOS100', 'fm_po_ang2_LOS100', 'fm_po_sbp_LOS100', 'fm_po_pra_ratio_LOS200', 'fm_po_ang2_LOS200', 'fm_po_sbp_LOS200']
+weights: [6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0]
+use_mapping_weights: True
+kind: training
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Ohtawa1993
+mappings: ['fm_po_aldosterone_LOS25', 'fm_po_aldosterone_LOS50', 'fm_po_aldosterone_LOS100', 'fm_po_aldosterone_LOS200', 'fm_po_pra_ratio_placebo_multi', 'fm_po_ang2_placebo_multi', 'fm_po_aldosterone_placebo_multi', 'fm_po_sbp_placebo_multi', 'fm_po_dbp_placebo_multi', 'fm_po_pra_ratio_LOS100M_multi', 'fm_po_ang2_LOS100M_multi', 'fm_po_aldosterone_LOS100M_multi', 'fm_po_sbp_LOS100M_multi', 'fm_po_dbp_LOS100M_multi']
+weights: [6.0, 6.0, 6.0, 6.0, 3.0, 3.0, 3.0, 3.0, 3.0, 6.0, 6.0, 6.0, 6.0, 6.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Ohtawa1993
+mappings: ['fm_po_losartan_LOS25', 'fm_po_exp3174_LOS25', 'fm_po_losartan_LOS50', 'fm_po_exp3174_LOS50', 'fm_po_losartan_LOS100', 'fm_po_exp3174_LOS100', 'fm_po_losartan_LOS200', 'fm_po_exp3174_LOS200', 'fm_po_losartan_LOS100M_multi', 'fm_po_losartan_urine_LOS100M_multi', 'fm_po_exp3174_LOS100M_multi', 'fm_po_exp3174_urine_LOS100M_multi']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Puris2019
+mappings: ['fm_po_los12p5_losartan_healthy', 'fm_po_los12p5_losartan_obese', 'fm_po_los12p5_losartan_one_year_after', 'fm_po_los12p5_exp3174_healthy', 'fm_po_los12p5_exp3174_obese', 'fm_po_los12p5_exp3174_one_year_after', 'fm_po_los12p5_losartan_urine_obese', 'fm_po_los12p5_losartan_urine_one_year_after', 'fm_po_los12p5_exp3174_urine_obese', 'fm_po_los12p5_exp3174_urine_one_year_after']
+weights: [None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Sekino2003
+mappings: ['fm_po_los25_sbp_change_1', 'fm_po_los25_sbp_change_3', 'fm_po_los25_dbp_change_1', 'fm_po_los25_dbp_change_3']
+weights: [4.0, 3.0, 4.0, 3.0]
+use_mapping_weights: True
+kind: validation
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Sekino2003
+mappings: ['fm_po_los25_exp3174_losartan_plasma_1', 'fm_po_los25_exp3174_losartan_plasma_3', 'fm_po_los25_exp3174_losartan_urine_1', 'fm_po_los25_exp3174_losartan_urine_3']
+weights: [None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Shin2020
+mappings: ['fm_po_los50_losartan_GG_CC', 'fm_po_los50_losartan_GT_CT', 'fm_po_los50_losartan_TT_TT', 'fm_po_los50_exp3174_GG_CC', 'fm_po_los50_exp3174_GT_CT', 'fm_po_los50_exp3174_TT_TT', 'fm_po_los50_losartan_exp3174_GG_CC', 'fm_po_los50_losartan_exp3174_GT_CT', 'fm_po_los50_losartan_exp3174_TT_TT', 'fm_po_los50_losartan_exp3174_urine_GG_CC', 'fm_po_los50_losartan_exp3174_urine_GT_CT', 'fm_po_los50_losartan_exp3174_urine_TT_TT']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Sica1995
+mappings: ['fm_po_los100_losartan_group1', 'fm_po_los100_losartan_group2', 'fm_po_los100_losartan_group3', 'fm_po_los100_exp3174_group1', 'fm_po_los100_exp3174_group2', 'fm_po_los100_exp3174_group3', 'fm_po_los100_losartan_urine_group1', 'fm_po_los100_losartan_urine_group2', 'fm_po_los100_losartan_urine_group3', 'fm_po_los100_exp3174_urine_group1', 'fm_po_los100_exp3174_urine_group2', 'fm_po_los100_exp3174_urine_group3']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Tanaka2014
+mappings: ['fm_po_los50_losartan', 'fm_po_los50_exp3174', 'fm_po_los50_exp3174_losartan', 'fm_po_los50_losartan_urine', 'fm_po_los50_exp3174_urine']
+weights: [None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+	*** FitMappingCollection ***
+experiment: Yasar2002a
+mappings: ['fm_po_los50_losartan_1_1', 'fm_po_los50_losartan_2_2', 'fm_po_los50_losartan_3_3', 'fm_po_los50_e3174_1_1', 'fm_po_los50_e3174_2_2', 'fm_po_los50_e3174_3_3', 'fm_po_los50_losartan_urine_1_1', 'fm_po_los50_losartan_urine_1_2', 'fm_po_los50_losartan_urine_1_3', 'fm_po_los50_losartan_urine_2_2', 'fm_po_los50_losartan_urine_2_3', 'fm_po_los50_losartan_urine_3_3', 'fm_po_los50_e3174_urine_1_1', 'fm_po_los50_e3174_urine_1_2', 'fm_po_los50_e3174_urine_1_3', 'fm_po_los50_e3174_urine_2_2', 'fm_po_los50_e3174_urine_2_3', 'fm_po_los50_e3174_urine_3_3', 'fm_po_los50_losartan_exp3174_urine_1_1', 'fm_po_los50_losartan_exp3174_urine_1_2', 'fm_po_los50_losartan_exp3174_urine_1_3', 'fm_po_los50_losartan_exp3174_urine_2_2', 'fm_po_los50_losartan_exp3174_urine_2_3', 'fm_po_los50_losartan_exp3174_urine_3_3', 'fm_po_los25_losartan_exp3174_urine_1_1_spanish', 'fm_po_los25_losartan_exp3174_urine_1_2_spanish', 'fm_po_los25_losartan_exp3174_urine_1_3_spanish', 'fm_po_los25_losartan_exp3174_urine_3_3_spanish']
+weights: [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+use_mapping_weights: True
+kind: excluded
+fit_parameters: {}
+Parameters
+	FitParameter<E50_e3174 = 0.0002 [1e-05 - 0.01]>
+	FitParameter<RENSEC_n = 2.0 [0.2 - 10]>
+	FitParameter<BP_emax = 0.25 [0.01 - 0.6]>
+FitSettings:
+	residual: NORMALIZED
+	parameter_scale: LOG10
+	loss_function: LINEAR
+	weighting_curves: ['MAPPING', 'POINTS']
+	weighting_points: ERROR_WEIGHTING
+	variable_step_size: True
+	relative_tolerance: 1e-06
+	absolute_tolerance: {'amount': 1e-10, 'concentration': 1e-10, 'other': 1e-06, 'ids': {'ald': 1e-14, 'ang1': 1e-14, 'ang2': 1e-14, 'ren': 1e-14}}
+	initial_time_step: 0.0
+	data_at_change: before
+Mappings: 92 (39 training, 52 validation, 1 outlier)
+Data
+	experiment_keys: ['Azizi1999', 'Azizi1999', 'Azizi1999', 'Azizi1999', 'Azizi1999', 'Azizi1999', 'Azizi1999', 'Azizi1999', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Christen1991a', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Doig1993', 'Goldberg1995', 'Goldberg1995', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Goldberg1995a', 'Munafo1992', 'Munafo1992', 'Munafo1992', 'Munafo1992', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Ohtawa1993', 'Sekino2003', 'Sekino2003', 'Sekino2003', 'Sekino2003']
+	mapping_keys: ['fm_po_LOS50_renin', 'fm_po_LOS50_ang1', 'fm_po_LOS50_ang2', 'fm_po_LOS50_map', 'fm_po_placebo_renin', 'fm_po_placebo_ang1', 'fm_po_placebo_ang2', 'fm_po_placebo_map', 'fm_po_ang2_placebo', 'fm_po_ang2_LOS10', 'fm_po_ang2_LOS20', 'fm_po_ang2_LOS40', 'fm_po_aldosterone_placebo', 'fm_po_aldosterone_LOS10', 'fm_po_aldosterone_LOS20', 'fm_po_aldosterone_LOS40', 'fm_po_pra_placeboM', 'fm_po_pra_LOS5M', 'fm_po_pra_LOS10M', 'fm_po_pra_LOS20M', 'fm_po_pra_LOS40M', 'fm_po_ang2_placeboM', 'fm_po_ang2_LOS5M', 'fm_po_ang2_LOS10M', 'fm_po_ang2_LOS20M', 'fm_po_ang2_LOS40M', 'fm_po_LOS5_pra', 'fm_po_LOS10_pra', 'fm_po_LOS25_pra', 'fm_po_LOS50_pra', 'fm_po_LOS100_pra', 'fm_po_LOS5_aldosterone', 'fm_po_LOS10_aldosterone', 'fm_po_LOS25_aldosterone', 'fm_po_LOS50_aldosterone', 'fm_po_LOS100_aldosterone', 'fm_po_LOS50_supine_sbp', 'fm_po_LOS100_supine_sbp', 'fm_po_LOS50_supine_dbp', 'fm_po_LOS100_supine_dbp', 'fm_po_placebo_pra', 'fm_po_placebo_aldosterone', 'fm_po_placebo_supine_sbp', 'fm_po_placebo_supine_dbp', 'fm_po_LOS100_pra_ratio', 'fm_po_control_pra_ratio', 'fm_po_LOS25_ratio_pra', 'fm_po_LOS100_ratio_pra', 'fm_po_LOS25_ang2_ratio', 'fm_po_LOS100_ang2_ratio', 'fm_po_LOS25_ald_change', 'fm_po_LOS100_ald_change', 'fm_po_placebo_ratio_pra', 'fm_po_placebo_ang2_ratio', 'fm_po_placebo_ald_change', 'fm_po_placebo_dbp_change', 'fm_po_LOS25_dbp_change', 'fm_po_LOS100_dbp_change', 'fm_po_aldosterone_corrected_LOS80', 'fm_po_aldosterone_corrected_LOS120', 'fm_po_aldosterone_Placebo', 'fm_po_aldosterone_corrected_LOS40', 'fm_po_pra_ratio_LOS25', 'fm_po_ang2_LOS25', 'fm_po_sbp_LOS25', 'fm_po_pra_ratio_LOS50', 'fm_po_ang2_LOS50', 'fm_po_sbp_LOS50', 'fm_po_pra_ratio_LOS100', 'fm_po_ang2_LOS100', 'fm_po_sbp_LOS100', 'fm_po_pra_ratio_LOS200', 'fm_po_ang2_LOS200', 'fm_po_sbp_LOS200', 'fm_po_aldosterone_LOS25', 'fm_po_aldosterone_LOS50', 'fm_po_aldosterone_LOS100', 'fm_po_aldosterone_LOS200', 'fm_po_pra_ratio_placebo_multi', 'fm_po_ang2_placebo_multi', 'fm_po_aldosterone_placebo_multi', 'fm_po_sbp_placebo_multi', 'fm_po_dbp_placebo_multi', 'fm_po_pra_ratio_LOS100M_multi', 'fm_po_ang2_LOS100M_multi', 'fm_po_aldosterone_LOS100M_multi', 'fm_po_sbp_LOS100M_multi', 'fm_po_dbp_LOS100M_multi', 'fm_po_los25_sbp_change_1', 'fm_po_los25_sbp_change_3', 'fm_po_los25_dbp_change_1', 'fm_po_los25_dbp_change_3']
+	xid_observable: ['time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time', 'time']
+	yid_observable: ['[ren]', '[ang1]', '[ang2]', 'MAP', '[ren]', '[ang1]', '[ang2]', 'MAP', '[ang2]', '[ang2]', '[ang2]', '[ang2]', '[ald]', '[ald]', '[ald]', '[ald]', 'ren_ratio', 'ren_ratio', 'ren_ratio', 'ren_ratio', 'ren_ratio', '[ang2]', '[ang2]', '[ang2]', '[ang2]', '[ang2]', 'ren_ratio', 'ren_ratio', 'ren_ratio', 'ren_ratio', 'ren_ratio', '[ald]', '[ald]', '[ald]', '[ald]', '[ald]', 'SBP', 'SBP', 'DBP', 'DBP', 'ren_ratio', '[ald]', 'SBP', 'DBP', 'ren_ratio', 'ren_ratio', 'ren_ratio', 'ren_ratio', 'ang2_ratio', 'ang2_ratio', 'ald_change', 'ald_change', 'ren_ratio', 'ang2_ratio', 'ald_change', 'DBP_change', 'DBP_change', 'DBP_change', 'ald_change', 'ald_change', 'ald_change', 'ald_change', 'ren_ratio', '[ang2]', 'SBP', 'ren_ratio', '[ang2]', 'SBP', 'ren_ratio', '[ang2]', 'SBP', 'ren_ratio', '[ang2]', 'SBP', '[ald]', '[ald]', '[ald]', '[ald]', 'ren_ratio', '[ang2]', '[ald]', 'SBP', 'DBP', 'ren_ratio', '[ang2]', '[ald]', 'SBP', 'DBP', 'SBP_change', 'SBP_change', 'DBP_change', 'DBP_change']
+	x_references: [array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  540.,  720., 1440.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([   0.,   30.,  120.,  240.,  420., 1380.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([    0.,   360., 10080., 10440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  300.,  360.,  420.,
+        480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  300.,  360.,  420.,
+        480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  300.,  360.,  420.,
+        480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  300.,  360.,  420.,
+        480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  300.,  360.,  420.,
+        480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  240.,  480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  240.,  480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  240.,  480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  240.,  480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  240.,  480.,  600., 1440.]), array([ -30.,    0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,
+        240.,  270.,  300.,  330.,  360.,  390.,  420.,  450.,  480.,
+        540.,  600., 1440.]), array([ -30.,    0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,
+        240.,  270.,  300.,  330.,  360.,  390.,  420.,  450.,  480.,
+        540.,  600., 1440.]), array([ -30.,    0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,
+        240.,  270.,  300.,  330.,  360.,  390.,  420.,  450.,  480.,
+        540.,  600., 1440.]), array([ -30.,    0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,
+        240.,  270.,  300.,  330.,  360.,  390.,  420.,  450.,  480.,
+        540.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  300.,  360.,  420.,
+        480.,  600., 1440.]), array([   0.,   30.,   60.,  120.,  240.,  480.,  600., 1440.]), array([ -30.,    0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,
+        240.,  270.,  300.,  330.,  360.,  390.,  420.,  450.,  480.,
+        540.,  600., 1440.]), array([ -30.,    0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,
+        240.,  270.,  300.,  330.,  360.,  390.,  420.,  450.,  480.,
+        540.,  600., 1440.]), array([   0.,  120.,  240.,  360.,  480.,  720., 1440.]), array([   0.,  120.,  240.,  360.,  480.,  720., 1440.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([    0.,   240., 18720., 18960., 59040., 59280.]), array([0.000e+00, 3.000e+01, 6.000e+01, 9.000e+01, 1.200e+02, 1.800e+02,
+       2.400e+02, 3.600e+02, 4.800e+02, 7.200e+02, 1.872e+04, 1.875e+04,
+       1.878e+04, 1.881e+04, 1.884e+04, 1.890e+04, 1.896e+04, 1.908e+04,
+       1.920e+04, 1.944e+04, 5.904e+04, 5.907e+04, 5.910e+04, 5.913e+04,
+       5.916e+04, 5.922e+04, 5.928e+04, 5.940e+04, 5.952e+04, 5.976e+04]), array([0.000e+00, 3.000e+01, 6.000e+01, 9.000e+01, 1.200e+02, 1.800e+02,
+       2.400e+02, 3.600e+02, 4.800e+02, 7.200e+02, 1.872e+04, 1.875e+04,
+       1.878e+04, 1.881e+04, 1.884e+04, 1.890e+04, 1.896e+04, 1.908e+04,
+       1.920e+04, 1.944e+04, 5.904e+04, 5.907e+04, 5.910e+04, 5.913e+04,
+       5.916e+04, 5.922e+04, 5.928e+04, 5.940e+04, 5.952e+04, 5.976e+04]), array([0.000e+00, 3.000e+01, 6.000e+01, 9.000e+01, 1.200e+02, 1.800e+02,
+       2.400e+02, 3.600e+02, 4.800e+02, 7.200e+02, 1.872e+04, 1.875e+04,
+       1.878e+04, 1.881e+04, 1.884e+04, 1.890e+04, 1.896e+04, 1.908e+04,
+       1.920e+04, 1.944e+04, 5.904e+04, 5.907e+04, 5.910e+04, 5.913e+04,
+       5.916e+04, 5.922e+04, 5.928e+04, 5.940e+04, 5.952e+04, 5.976e+04]), array([   0.,   60.,  120.,  240.,  540., 1440., 1560., 1980.]), array([   0.,   60.,  120.,  240.,  540., 1440., 1560., 1980.]), array([   0.,   60.,  120.,  240.,  540., 1440., 1560., 1980.]), array([   0.,   60.,  120.,  240.,  540., 1440., 1560., 1980.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  360.,  480.,  600.,
+        720.,  840., 1440., 1800.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  360.,  480.,  600.,
+        720.,  840., 1440., 1800.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  360.,  480.,  600.,
+        720.,  840., 1440., 1800.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([   0.,   30.,   60.,  120.,  180.,  240.,  360.,  480.,  600.,
+        720.,  840., 1440., 1800.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([   0.,  360., 1440.]), array([    0.,   360.,  8640.,  9000., 10080., 11520.]), array([    0.,   360.,  8640.,  9000., 10080., 11520.]), array([    0.,   360.,  8640.,  9000., 10080., 11520.]), array([    0.,   360.,  1440.,  1800.,  2880.,  3240.,  4320.,  4680.,
+        5760.,  6120.,  7200.,  7560.,  8640.,  9000., 10080., 10440.,
+       11520.]), array([    0.,   360.,  1440.,  1800.,  2880.,  3240.,  4320.,  4680.,
+        5760.,  6120.,  7200.,  7560.,  8640.,  9000., 10080., 10440.,
+       11520.]), array([    0.,   360.,  8640.,  9000., 10080., 11520.]), array([    0.,   360.,  8640.,  9000., 10080., 11520.]), array([    0.,   360.,  8640.,  9000., 10080., 11520.]), array([    0.,   360.,  1440.,  1800.,  2880.,  3240.,  4320.,  4680.,
+        5760.,  6120.,  7200.,  7560.,  8640.,  9000., 10080., 10440.,
+       11520.]), array([    0.,   360.,  1440.,  1800.,  2880.,  3240.,  4320.,  4680.,
+        5760.,  6120.,  7200.,  7560.,  8640.,  9000., 10080., 10440.,
+       11520.]), array([  0.,  15.,  30.,  60.,  90., 120., 180., 240., 360., 480., 600.,
+       720.]), array([  0.,  15.,  30.,  60.,  90., 120., 180., 240., 360., 480., 600.,
+       720.]), array([  0.,  15.,  30.,  60.,  90., 120., 180., 240., 360., 480., 600.,
+       720.]), array([  0.,  15.,  30.,  60.,  90., 120., 180., 240., 360., 480., 600.,
+       720.])]
+	y_references: [array([1.57325334e-09, 3.13629076e-09, 3.90248557e-09, 4.71976003e-09,
+       5.91502394e-09, 2.65614201e-09, 3.50406427e-09]), array([1.12799444e-08, 1.98736569e-08, 2.39178920e-08, 2.65668734e-08,
+       3.38777396e-08, 1.51015947e-08, 2.17145390e-08]), array([1.06116731e-08, 2.36864898e-08, 2.51772235e-08, 2.79608573e-08,
+       2.96589671e-08, 1.33054673e-08, 1.47068268e-08]), array([87.        , 83.27081394, 80.25288965, 79.26620491, 79.25308769,
+       81.27132576, 83.30252674]), array([1.29742321e-09, 1.35871880e-09, 1.11353646e-09, 1.07267273e-09,
+       1.21569577e-09, 9.70513427e-10, 1.46087811e-09]), array([9.09606934e-09, 8.22737236e-09, 6.50781665e-09, 5.39541756e-09,
+       6.51837532e-09, 5.09242948e-09, 8.85394121e-09]), array([6.83956994e-09, 7.89949206e-09, 6.48090942e-09, 5.59996844e-09,
+       6.22070017e-09, 4.46766252e-09, 7.21766469e-09]), array([87.        , 84.22567014, 83.3083909 , 83.31128441, 81.30164968,
+       83.30252674, 83.31984918]), array([5.24007743e-09, 5.21680694e-09, 5.79602066e-09, 6.98199647e-09,
+       6.88117791e-09, 6.76397595e-09]), array([6.49950546e-09, 6.20906427e-09, 7.07471435e-09, 8.79503158e-09,
+       1.05070661e-08, 9.68377012e-09]), array([6.51849807e-09, 6.57165308e-09, 7.15104884e-09, 9.67278718e-09,
+       1.05452333e-08, 9.68377012e-09]), array([5.96507303e-09, 7.77392127e-09, 1.12732022e-08, 1.21536580e-08,
+       1.26444318e-08, 1.13630378e-08]), array([2.17640339e-07, 2.73276385e-07, 2.14889010e-07, 1.73190983e-07,
+       1.51057660e-07, 1.61766902e-07]), array([2.56587038e-07, 2.89189545e-07, 2.04419826e-07, 1.45553670e-07,
+       1.14204798e-07, 1.75586225e-07]), array([2.57424573e-07, 2.61552232e-07, 1.80968853e-07, 1.11632179e-07,
+       1.07505853e-07, 1.63860739e-07]), array([2.17641672e-07, 2.24698036e-07, 1.44534758e-07, 1.06189537e-07,
+       1.07085752e-07, 1.60929367e-07]), array([1.        , 1.42381967, 1.26447658, 1.54604771]), array([1.        , 2.03500684, 1.30429197, 2.64112852]), array([1.        , 2.7568352 , 1.48951806, 3.19237533]), array([1.        , 3.81808423, 1.81086692, 6.19420978]), array([ 1.        ,  5.19880174,  2.84594978, 11.0333748 ]), array([4.05755396e-09, 6.73381295e-09, 4.58149780e-09, 6.69603524e-09]), array([6.12949640e-09, 1.39856115e-08, 7.57709251e-09, 1.81497797e-08]), array([6.73381295e-09, 1.65755396e-08, 9.33920705e-09, 1.90308370e-08]), array([5.69784173e-09, 2.09784173e-08, 1.11894273e-08, 3.54185022e-08]), array([4.40287770e-09, 2.15827338e-08, 1.35682819e-08, 4.96916300e-08]), array([1.        , 0.97474896, 1.12945857, 1.16880713, 1.36011906,
+       1.40516434, 2.3852631 , 2.09252553, 1.68705317, 1.91808004,
+       2.3628815 , 1.63773454]), array([1.        , 1.01100479, 1.22059631, 1.2867165 , 1.74115755,
+       2.27953328, 3.22416378, 3.51116741, 3.14929514, 3.11408033,
+       3.40528667, 1.46447265]), array([1.        , 1.02268469, 1.16690221, 1.48558932, 1.95105818,
+       2.67480615, 5.76253777, 5.68666571, 4.82123823, 4.01145744,
+       4.4365426 , 1.49724782]), array([ 1.        ,  1.4314554 ,  2.12832447,  4.18608512,  5.55040363,
+        6.0223365 ,  8.44932884, 10.26405904,  8.3980101 ,  7.38755101,
+        7.726828  ,  2.18180042]), array([1.        , 2.14446675, 3.57277175, 4.77139458, 5.23629441,
+       5.1948631 , 7.18926813, 7.19980071, 6.37841431, 5.69133092,
+       5.4949211 , 2.29813947]), array([2.14150213e-06, 1.70915465e-06, 1.73543602e-06, 2.18814473e-06,
+       1.93631267e-06, 1.66994549e-06, 1.96291160e-06, 3.15270321e-06]), array([2.42469833e-06, 2.08161418e-06, 1.74467016e-06, 1.92037070e-06,
+       1.60697772e-06, 1.64225905e-06, 1.91678881e-06, 2.21696127e-06]), array([1.94138125e-06, 1.78918385e-06, 1.67078109e-06, 1.90190242e-06,
+       1.19451956e-06, 1.39601537e-06, 2.18767282e-06, 2.43244046e-06]), array([1.76598053e-06, 1.46294291e-06, 1.15368533e-06, 8.92319315e-07,
+       7.51264976e-07, 9.00481903e-07, 1.62129640e-06, 2.00459207e-06]), array([1.98752000e-06, 1.80454214e-06, 1.57845568e-06, 1.01236311e-06,
+       9.63682081e-07, 1.12206928e-06, 1.16883961e-06, 1.88450038e-06]), array([114.11613285, 111.89926126, 110.92736671, 112.04372832,
+       109.14412739, 107.00748447, 104.95116265, 104.74222611,
+       104.53347444, 104.44520442, 110.26025792, 103.46526852,
+       102.13183659,  99.51372922, 100.91139954, 101.66640863,
+       100.05176043, 102.21257363, 106.09187939, 105.51354899,
+       109.12388536]), array([113.63402139, 110.57387069, 109.96323623, 108.18803826,
+       104.92689994, 105.2001673 , 102.46130099,  99.60158331,
+        98.95115802,  99.94713042, 105.40073897, 100.21226399,
+        97.31257062,  95.69838457,  97.05570948,  97.93129265,
+        97.7626091 ,  98.11592026, 102.91919596, 103.0235949 ,
+       110.52978189]), array([66.88723389, 63.94756483, 64.1402338 , 63.69024154, 60.83098601,
+       59.33709675, 58.40508546, 57.71422233, 58.10787891, 56.37293392,
+       60.34060213, 56.03565924, 53.97952228, 54.01182633, 54.48571158,
+       53.11221153, 54.46962887, 54.34082858, 55.97169814, 56.59799937,
+       61.49384305]), array([62.54998694, 61.17630204, 56.75041535, 55.29650178, 53.68194601,
+       53.67418194, 53.02357179, 50.28461306, 50.39705335, 48.86291111,
+       52.7905112 , 48.80676028, 47.83505059, 47.02379825, 47.21655964,
+       49.9395281 , 49.1280909 , 48.51754887, 50.99169753, 52.10011022,
+       59.96774216]), array([1.        , 1.03708489, 1.13659661, 1.06813598, 1.15909873,
+       1.2900649 , 1.67764774, 1.62650476, 1.49555172, 1.27346212,
+       1.7462133 , 1.39447252]), array([2.14767419e-06, 1.73068501e-06, 1.67076512e-06, 1.87113793e-06,
+       1.72080155e-06, 1.47607650e-06, 1.74438630e-06, 2.46936104e-06]), array([112.91122393, 111.81894016, 110.76663208, 111.80267259,
+       111.11208675, 110.86280481, 109.32866257, 109.84252351,
+       109.47312963, 109.62582291, 115.84248191, 112.18001539,
+       111.73030042, 109.83480566, 109.78669618, 109.05585736,
+       109.44923665, 110.00344299, 116.3728877 , 114.9110252 ,
+       114.70620178]), array([62.54989452, 63.18442196, 61.24858179, 61.4010902 , 62.11612361,
+       60.2605121 , 60.17205722, 59.2402308 , 58.67003418, 58.74240635,
+       61.14390556, 59.0477929 , 56.71043966, 56.54194097, 57.73871611,
+       55.84331378, 57.60205933, 57.27273357, 60.26878453, 59.65029358,
+       63.14033316]), array([ 1.        ,  5.37878788,  6.84848485, 10.12121212,  4.54545455,
+        2.40151515,  3.24242424]), array([1.        , 0.88549618, 0.89312977, 1.23664122, 0.61068702,
+       0.49618321, 1.03053435]), array([0.87435802, 0.71668345, 1.39975347, 1.33552189, 1.31981947,
+       0.99766279]), array([0.78466668, 1.53499385, 1.93781062, 3.0430909 , 1.29740042,
+       1.72631215]), array([0.81957256, 1.53420379, 1.90411155, 1.41620244, 1.42606901,
+       1.61218921]), array([1.29439665, 2.01673671, 3.29809832, 4.38793855, 2.21490621,
+       2.44320008]), array([ 1.20268224e-08, -3.25150935e-08, -2.18973645e-09, -7.10555703e-08,
+        6.20250395e-10, -6.55408851e-08]), array([-3.74331445e-08, -1.00623573e-07,  1.21054771e-07, -1.30516624e-07,
+       -9.07323663e-08, -2.09868002e-07]), array([0.85938169, 1.00442486, 0.83555591, 1.1748369 , 0.84154644,
+       0.85941199]), array([1.01867783, 0.85254062, 0.88170423, 1.4238613 , 1.53331798,
+       1.26764062]), array([4.77035202e-08, 1.93789708e-08, 1.24568321e-07, 3.16481862e-08,
+       1.36839176e-07, 8.60826204e-08]), array([-1.83552706, -2.45434405, -0.37945987, -1.21274411, -1.68852331,
+       -1.49585309, -6.21376453, -2.53880756, -0.72312085, -2.33612248,
+       -2.75862069, -1.20051086, -1.71136654,  0.6385696 ,  0.07662835,
+       -2.68199234, -1.35376756, -2.17113665, -0.07662835, -3.16730524,
+        2.22515736, -1.55589812,  1.61966156,  0.39652454, -0.41777902,
+       -3.83648063, -3.41858483,  0.94633827, -2.92412617, -0.63929276]), array([-1.93092065, -2.45436509, -0.40329775, -1.30814822, -0.68733247,
+       -3.25984549, -3.90149045, -2.63413803, -1.67663593, -0.14305882,
+       -7.7394636 , -4.0357599 , -5.26181354, -4.01021711, -4.98084291,
+       -6.07918263, -2.27330779, -5.38952746, -7.30523627, -3.32056194,
+       -3.14578005, -4.98310152, -3.54657885, -3.030819  , -5.07255719,
+       -0.3325976 , -4.56966682, -6.77749361, -3.6913896 , -4.52676079]), array([ -0.83433622,  -0.6903201 ,  -2.64403716,  -3.83494216,
+        -5.83633498,  -4.49942562,  -3.30556456,  -4.01669283,
+        -3.58365559,  -4.48154195,  -7.7394636 ,  -7.33077905,
+        -8.91443167,  -8.91443167, -12.23499361,  -9.29757344,
+        -8.76117497,  -7.33077905,  -8.19923372, -10.44699872,
+        -7.90286001,  -6.41513973,  -9.24976351,  -6.9693445 ,
+        -5.66074578,  -6.18932838,  -7.61300494, -10.56270656,
+        -7.9881115 ,  -8.67003001]), array([ 0.00000000e+00, -4.95602968e-08, -5.68015105e-08, -5.47095927e-08,
+       -4.29632458e-08,  8.44786493e-09, -2.35734101e-08, -6.59731223e-09]), array([ 0.00000000e+00, -5.96976302e-08, -6.28357246e-08, -8.61675954e-08,
+       -8.82596003e-08, -3.60438522e-08, -3.83770480e-08, -8.13401196e-08]), array([ 0.00000000e+00, -1.53757045e-08, -4.88537031e-08, -7.43757096e-08,
+       -7.20069882e-08, -6.40953159e-08, -4.69762450e-08, -6.86815137e-08]), array([ 0.00000000e+00, -2.79178945e-08, -9.33287023e-09, -7.32132041e-09,
+       -4.18374849e-09,  4.70663651e-08,  8.52805874e-09,  3.84576772e-08]), array([1.        , 9.63530632, 1.47111499]), array([5.37852171e-09, 3.08285020e-08, 7.00856540e-09]), array([112., 112., 112., 109., 104., 109., 110., 108., 112., 112., 113.,
+       112., 118.]), array([ 1.        , 15.80604458,  4.16956078]), array([1.01163987e-08, 5.07924575e-08, 1.66078050e-08]), array([115., 113., 112., 112., 107., 110., 106., 106., 109., 108., 109.,
+       109., 110.]), array([ 1.        , 22.1765893 ,  7.72452069]), array([1.01993393e-08, 3.88214193e-08, 1.73251656e-08]), array([114., 114., 113., 113., 110., 110., 108., 107., 111., 112., 112.,
+       106., 110.]), array([ 1.        , 27.52789308,  5.37962809]), array([6.90038931e-09, 5.81509549e-08, 1.76221031e-08]), array([110., 107., 105., 108., 103., 103.,  98., 100., 101., 108., 103.,
+       104., 109.]), array([2.34577141e-07, 1.01987146e-07, 1.53551595e-07]), array([2.96911958e-07, 1.74089533e-07, 3.12229901e-07]), array([2.59252594e-07, 1.55941987e-07, 2.34331300e-07]), array([3.53309663e-07, 1.57314034e-07, 2.33260482e-07]), array([1.        , 1.32432999, 0.55537009, 1.11313461, 1.09483025,
+       0.93641722]), array([1.07020839e-08, 1.31730748e-08, 6.72657457e-09, 1.64784117e-08,
+       8.87515957e-09, 6.41920190e-09]), array([3.37588738e-07, 1.85457555e-07, 1.15348435e-07, 1.03646607e-07,
+       1.56090631e-07, 1.49683248e-07]), array([115., 109., 110., 111., 115., 112., 117., 119., 112., 111., 116.,
+       113., 108., 114., 107., 107., 109.]), array([70., 59., 59., 60., 62., 60., 64., 63., 61., 61., 61., 60., 64.,
+       61., 61., 57., 63.]), array([ 1.        , 13.83326301,  4.39708342, 17.58938078,  4.66870464,
+        2.23377545]), array([9.02532182e-09, 5.08036024e-08, 1.51781199e-08, 4.75941930e-08,
+       1.32757737e-08, 5.45439029e-09]), array([2.75046364e-07, 1.51872586e-07, 1.42171575e-07, 9.24813894e-08,
+       1.52708393e-07, 1.71212120e-07]), array([117., 107., 111., 105., 114., 108., 113., 112., 111., 108., 114.,
+       110., 107., 103., 107., 108., 112.]), array([71., 57., 62., 57., 64., 59., 64., 63., 63., 60., 63., 59., 63.,
+       54., 62., 60., 66.]), array([  0.        ,  -5.58917495,  -2.46253779, -12.09343134,
+       -11.01910512,  -6.73946716,  -8.30135121, -13.2737075 ,
+        -8.92895078, -15.49476045, -13.2657903 ,  -9.1737037 ]), array([ 0.        , -1.16811848, -0.06252782,  4.09077829, -2.050686  ,
+       -2.72894027,  0.46180794, -1.96843631, -1.28683159, -4.85265046,
+       -1.34473275, -1.48422251]), array([  0.        ,  -0.71834334,  -1.38758569,  -6.43517832,
+        -5.01228062,  -6.85736209, -11.03759876,  -8.46956745,
+       -18.57841958, -14.43898677, -13.5185271 , -11.1928461 ]), array([  0.        ,   3.20323708,   4.34772619,  -0.66720707,
+        -0.89464221,  -1.85733721,  -3.47220878,  -4.36824854,
+       -10.32677575,  -9.66775388,  -1.60676779,  -3.46406429])]
+	y_errors: [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, array([0.59119918, 0.50024546, 0.55532901, 0.5552849 ]), array([0.67996899, 1.14532619, 0.65558705, 1.38401711]), array([0.35415057, 1.53440799, 0.57054716, 1.80160886]), array([0.2043649 , 1.48888846, 0.7427231 , 3.56504254]), array([0.26165914, 3.22712936, 0.88755096, 2.61827535]), array([2.32613414e-09, 3.17200111e-09, 2.37395482e-09, 2.58976889e-09]), array([4.86373503e-09, 1.07848038e-08, 4.10046741e-09, 1.07907037e-08]), array([1.69173392e-09, 1.09962705e-08, 3.45302519e-09, 1.07907037e-08]), array([1.54433472e-09, 7.72167359e-09, 5.12227026e-09, 1.91100083e-08]), array([1.90320066e-09, 1.05733370e-08, 3.88465334e-09, 1.53227993e-08]), None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, array([1.18742887e-07, 1.14203306e-07, 1.16755523e-07, 8.05890451e-08,
+       1.12467821e-07, 7.37175939e-08, 1.04487176e-07, 1.18742887e-07]), array([1.00114112e-07, 9.79458740e-08, 8.90771281e-08, 2.66047449e-08,
+       7.84353581e-08, 5.22247607e-08, 6.85816699e-08, 1.00114112e-07]), None, array([0.61968985, 5.02637327, 0.61968985]), array([1.90325981e-09, 1.98776501e-08, 3.38357299e-09]), array([7., 3., 5., 6., 3., 5., 7., 5., 6., 6., 6., 5., 9.]), array([ 0.98497867, 10.83476537,  3.56107673]), array([3.38357299e-09, 2.83374238e-08, 6.97861930e-09]), array([ 7.,  8., 12.,  2.,  8.,  7.,  7.,  8.,  6.,  5.,  7.,  7.,  9.]), array([ 0.63622603, 12.47003027,  6.99848638]), array([2.32536525e-09, 2.36850109e-08, 9.30482573e-09]), array([12., 11., 15., 12., 11., 12., 12., 10., 11., 12., 10.,  9., 11.]), array([ 0.83745642, 11.51502573,  1.67491283]), array([2.32620643e-09, 2.53767974e-08, 6.13272605e-09]), array([7., 5., 6., 5., 3., 5., 6., 6., 2., 6., 6., 3., 7.]), array([7.31654311e-08, 1.82923295e-08, 2.07313067e-08]), array([1.76825852e-07, 5.24380112e-08, 1.92679204e-07]), array([1.10973466e-07, 2.43897726e-08, 9.14616474e-08]), array([9.39006247e-08, 3.17067044e-08, 6.09744316e-08]), array([0.54510011, 0.37378293, 0.23361433, 0.31154571, 0.32706006,
+       0.6384859 ]), array([3.83203327e-09, 2.29923700e-09, 1.75177934e-09, 2.11865263e-08,
+       2.68245736e-09, 7.66440723e-10]), array([9.31009634e-08, 3.67419725e-08, 3.67421490e-08, 4.85745999e-08,
+       1.00885354e-07, 5.97839464e-08]), array([ 4.,  7.,  4., 12.,  5.,  3.,  1.,  7., 16.,  7.,  6., 10., 11.,
+       14.,  8.,  8.,  2.]), array([ 3.,  3.,  1.,  9.,  5.,  1.,  1.,  3.,  9.,  5.,  5.,  4.,  5.,
+       10.,  4.,  5.,  3.]), array([ 0.29900351,  8.37202166,  3.52816475, 11.86039599,  3.34876264,
+        1.01661195]), array([2.46347429e-09, 2.84674576e-08, 8.21160937e-09, 3.26282210e-08,
+       5.52915201e-09, 2.46347429e-09]), array([4.91969981e-08, 3.02032606e-08, 6.63223053e-08, 2.67779520e-08,
+       7.78437335e-08, 5.44907370e-08]), array([18., 17., 13., 12., 14.,  9., 12., 17., 13., 17., 16., 16., 19.,
+       14., 15., 14., 16.]), array([16., 14., 12., 11.,  9.,  9.,  9., 19., 14., 16., 10., 14., 16.,
+       11., 12., 12., 14.]), array([13.31051217,  8.90524196,  6.59998169,  3.6947149 , 10.23156436,
+       13.31051217, 12.03154857,  4.78418233,  9.36312714, 12.25261086,
+        8.17891965,  9.11050515]), array([10.26318824,  3.50528612,  3.56842798,  4.12106927,  4.01054935,
+        3.5210756 ,  8.88950384,  4.10527979,  8.17896137,  3.18949019,
+       10.26318824,  3.61580283]), array([9.75482971, 3.59470177, 7.41824302, 6.73198239, 4.00321867,
+       5.620865  , 8.79078464, 9.75482971, 5.58816492, 1.94440286,
+       6.69929589, 3.82345984]), array([7.23859952, 3.12097468, 7.23859952, 5.16343706, 3.54579074,
+       5.19609643, 2.17322198, 4.03600016, 5.84972483, 6.83011654,
+       5.19612357, 3.41508541])]
+	y_errors_type: [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, 'SD', 'SD', None, 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD', 'SD']
+	weights: [array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([4.57142857, 4.57142857, 4.57142857, 4.57142857, 4.57142857,
+       4.57142857, 4.57142857]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2.66666667, 2.66666667, 2.66666667, 2.66666667, 2.66666667,
+       2.66666667]), array([2.33333333, 2.33333333, 2.33333333, 2.33333333, 2.33333333,
+       2.33333333]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2.66666667, 2.66666667, 2.66666667, 2.66666667, 2.66666667,
+       2.66666667]), array([2.33333333, 2.33333333, 2.33333333, 2.33333333, 2.33333333,
+       2.33333333]), array([2.53721599, 4.26936312, 3.41547953, 4.17636347]), array([2.20598295, 2.66518857, 2.98425349, 2.86245938]), array([4.23548659, 2.69501515, 3.91602526, 2.65793708]), array([6.11651017, 3.20548208, 3.04768178, 2.1718569 ]), array([5.73264903, 2.41645182, 4.80977976, 6.32097851]), array([2.61650041, 3.18433667, 2.89485151, 3.87835876]), array([1.89036708, 1.94518303, 2.77179102, 2.52297444]), array([5.97063125, 2.26106745, 4.05696739, 2.64544892]), array([4.6118902 , 3.39602824, 2.73058301, 2.31675084]), array([3.47011047, 3.06186218, 5.23918639, 4.86447963]), array([0.66666667, 0.66666667, 0.66666667, 0.66666667, 0.66666667,
+       0.66666667, 0.66666667, 0.66666667, 0.66666667, 0.66666667,
+       0.66666667, 0.66666667]), array([1.33333333, 1.33333333, 1.33333333, 1.33333333, 1.33333333,
+       1.33333333, 1.33333333, 1.33333333, 1.33333333, 1.33333333,
+       1.33333333, 1.33333333]), array([1.16666667, 1.16666667, 1.16666667, 1.16666667, 1.16666667,
+       1.16666667, 1.16666667, 1.16666667, 1.16666667, 1.16666667,
+       1.16666667, 1.16666667]), array([1.33333333, 1.33333333, 1.33333333, 1.33333333, 1.33333333,
+       1.33333333, 1.33333333, 1.33333333, 1.33333333, 1.33333333,
+       1.33333333, 1.33333333]), array([1.33333333, 1.33333333, 1.33333333, 1.33333333, 1.33333333,
+       1.33333333, 1.33333333, 1.33333333, 1.33333333, 1.33333333,
+       1.33333333, 1.33333333]), array([1., 1., 1., 1., 1., 1., 1., 1.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476]), array([0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476]), array([0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476]), array([0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476, 0.76190476, 0.76190476, 0.76190476, 0.76190476,
+       0.76190476]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([3., 3., 3., 3., 3., 3., 3., 3.]), array([1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714]), array([1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714, 1.14285714, 1.14285714, 1.14285714, 1.14285714,
+       1.14285714]), array([2.28571429, 2.28571429, 2.28571429, 2.28571429, 2.28571429,
+       2.28571429, 2.28571429]), array([2.28571429, 2.28571429, 2.28571429, 2.28571429, 2.28571429,
+       2.28571429, 2.28571429]), array([3.66666667, 3.66666667, 3.66666667, 3.66666667, 3.66666667,
+       3.66666667]), array([4.33333333, 4.33333333, 4.33333333, 4.33333333, 4.33333333,
+       4.33333333]), array([3.66666667, 3.66666667, 3.66666667, 3.66666667, 3.66666667,
+       3.66666667]), array([4.33333333, 4.33333333, 4.33333333, 4.33333333, 4.33333333,
+       4.33333333]), array([3.66666667, 3.66666667, 3.66666667, 3.66666667, 3.66666667,
+       3.66666667]), array([4.33333333, 4.33333333, 4.33333333, 4.33333333, 4.33333333,
+       4.33333333]), array([4., 4., 4., 4., 4., 4.]), array([4., 4., 4., 4., 4., 4.]), array([4., 4., 4., 4., 4., 4.]), array([0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8,
+       0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8,
+       0.8, 0.8, 0.8, 0.8]), array([0.73333333, 0.73333333, 0.73333333, 0.73333333, 0.73333333,
+       0.73333333, 0.73333333, 0.73333333, 0.73333333, 0.73333333,
+       0.73333333, 0.73333333, 0.73333333, 0.73333333, 0.73333333,
+       0.73333333, 0.73333333, 0.73333333, 0.73333333, 0.73333333,
+       0.73333333, 0.73333333, 0.73333333, 0.73333333, 0.73333333,
+       0.73333333, 0.73333333, 0.73333333, 0.73333333, 0.73333333]), array([0.86666667, 0.86666667, 0.86666667, 0.86666667, 0.86666667,
+       0.86666667, 0.86666667, 0.86666667, 0.86666667, 0.86666667,
+       0.86666667, 0.86666667, 0.86666667, 0.86666667, 0.86666667,
+       0.86666667, 0.86666667, 0.86666667, 0.86666667, 0.86666667,
+       0.86666667, 0.86666667, 0.86666667, 0.86666667, 0.86666667,
+       0.86666667, 0.86666667, 0.86666667, 0.86666667, 0.86666667]), array([1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]), array([0.        , 0.39204839, 0.40363652, 0.80191664, 0.58856569,
+       0.36670878, 0.27546716, 0.51375784]), array([0.        , 0.11773623, 0.41133205, 2.09668548, 0.68853184,
+       0.92047309, 0.51372595, 0.51452422]), array([1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]), array([3.22742092, 3.83390004, 4.7479073 ]), array([5.65190489, 3.1018256 , 4.14270088]), array([ 7.38461538, 17.23076923, 10.33846154,  8.38461538, 16.        ,
+       10.06153846,  7.25274725,  9.96923077,  8.61538462,  8.61538462,
+        8.69230769, 10.33846154,  6.05128205]), array([2.03050082, 2.91765332, 2.34174161]), array([5.9797136 , 3.5848324 , 4.75962489]), array([ 7.58241758,  6.51923077,  4.30769231, 25.84615385,  6.17307692,
+        7.25274725,  6.98901099,  6.11538462,  8.38461538,  9.96923077,
+        7.18681319,  7.18681319,  5.64102564]), array([3.14353688, 3.55678195, 2.20748324]), array([8.77224714, 3.2781424 , 3.72390974]), array([4.38461538, 4.78321678, 3.47692308, 4.34615385, 4.61538462,
+       4.23076923, 4.15384615, 4.93846154, 4.65734266, 4.30769231,
+       5.16923077, 5.43589744, 4.61538462]), array([2.38818398, 4.7812126 , 6.42377082]), array([5.93274029, 4.58300186, 5.74690698]), array([ 7.25274725,  9.87692308,  8.07692308,  9.96923077, 15.84615385,
+        9.50769231,  7.53846154,  7.69230769, 23.30769231,  8.30769231,
+        7.92307692, 16.        ,  7.18681319]), array([ 6.41223969, 11.15081009, 14.81349895]), array([3.35824152, 6.63982211, 3.24092995]), array([ 4.67233484, 12.78749004,  5.12414343]), array([7.52518239, 9.92307692, 7.65109163]), array([0.91726271, 1.77152283, 1.1886473 , 1.78647076, 1.67374493,
+       0.7333108 ]), array([1.39639757, 2.86466225, 1.91992634, 0.38888894, 1.65429649,
+       4.18767017]), array([1.81302495, 2.52378333, 1.5697018 , 1.06688071, 0.77360402,
+       1.25186824]), array([ 5.07352941,  2.74789916,  4.85294118,  1.63235294,  4.05882353,
+        6.58823529, 20.64705882,  3.        ,  1.23529412,  2.79831933,
+        3.41176471,  1.99411765,  1.73262032,  1.43697479,  2.36029412,
+        2.36029412,  9.61764706]), array([ 4.11764706,  3.47058824, 10.41176471,  1.17647059,  2.18823529,
+       10.58823529, 11.29411765,  3.70588235,  1.19607843,  2.15294118,
+        2.15294118,  2.64705882,  2.25882353,  1.07647059,  2.69117647,
+        2.01176471,  3.70588235]), array([3.34444231, 1.6523205 , 1.24628064, 1.48303487, 1.39415813,
+       2.19727445]), array([3.66365577, 1.78462029, 1.84837334, 1.45868183, 2.40105059,
+       2.21410481]), array([5.59071436, 5.02835068, 2.14364647, 3.45363937, 1.96173007,
+       3.14204082]), array([2.29411765, 2.22145329, 3.01357466, 3.08823529, 2.87394958,
+       4.23529412, 3.32352941, 2.32525952, 3.01357466, 2.24221453,
+       2.51470588, 2.42647059, 1.9876161 , 2.59663866, 2.51764706,
+       2.72268908, 2.47058824]), array([1.56617647, 1.43697479, 1.82352941, 1.82887701, 2.50980392,
+       2.31372549, 2.50980392, 1.17027864, 1.58823529, 1.32352941,
+       2.22352941, 1.48739496, 1.38970588, 1.73262032, 1.82352941,
+       1.76470588, 1.66386555]), array([0.        , 0.20920917, 0.12437094, 1.09105679, 0.35899056,
+       0.16877555, 0.22998844, 0.92483289, 0.31787638, 0.42153629,
+       0.54064966, 0.33564563]), array([0.        , 0.08331121, 0.00438063, 0.24816243, 0.12783074,
+       0.19375757, 0.01298745, 0.11987224, 0.03933359, 0.38036255,
+       0.03275621, 0.10262054]), array([0.        , 0.06661131, 0.06235015, 0.31863711, 0.41735422,
+       0.40666114, 0.41852915, 0.2894145 , 1.10820039, 2.47530781,
+       0.67263423, 0.97580434]), array([0.        , 0.25658948, 0.15015771, 0.03230441, 0.06307776,
+       0.08936214, 0.39943098, 0.2705803 , 0.44133596, 0.35386489,
+       0.07730608, 0.25358548])]
+	weights_points: [array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([1.69147733, 2.84624208, 2.27698635, 2.78424231]), array([1.4706553 , 1.77679238, 1.98950233, 1.90830626]), array([2.82365772, 1.79667677, 2.6106835 , 1.77195805]), array([4.89320814, 2.56438567, 2.43814543, 1.73748552]), array([3.82176602, 1.61096788, 3.20651984, 4.21398567]), array([1.7443336 , 2.12289111, 1.92990101, 2.58557251]), array([1.26024472, 1.29678869, 1.84786068, 1.68198296]), array([3.98042083, 1.5073783 , 2.70464492, 1.76363261]), array([3.68951216, 2.71682259, 2.18446641, 1.85340067]), array([2.31340698, 2.04124145, 3.49279093, 3.24298642]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.,
+       2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2., 2.]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([0.        , 0.52273119, 0.53818203, 1.06922219, 0.78475425,
+       0.48894504, 0.36728955, 0.68501046]), array([0.        , 0.15698165, 0.54844273, 2.79558064, 0.91804245,
+       1.22729745, 0.68496794, 0.68603229]), array([2., 2., 2., 2., 2., 2., 2., 2.]), array([1.61371046, 1.91695002, 2.37395365]), array([2.82595244, 1.5509128 , 2.07135044]), array([16.        , 37.33333333, 22.4       , 18.16666667, 34.66666667,
+       21.8       , 15.71428571, 21.6       , 18.66666667, 18.66666667,
+       18.83333333, 22.4       , 13.11111111]), array([1.01525041, 1.45882666, 1.17087081]), array([2.9898568 , 1.7924162 , 2.37981244]), array([16.42857143, 14.125     ,  9.33333333, 56.        , 13.375     ,
+       15.71428571, 15.14285714, 13.25      , 18.16666667, 21.6       ,
+       15.57142857, 15.57142857, 12.22222222]), array([1.57176844, 1.77839098, 1.10374162]), array([4.38612357, 1.6390712 , 1.86195487]), array([ 9.5       , 10.36363636,  7.53333333,  9.41666667, 10.        ,
+        9.16666667,  9.        , 10.7       , 10.09090909,  9.33333333,
+       11.2       , 11.77777778, 10.        ]), array([1.19409199, 2.3906063 , 3.21188541]), array([2.96637015, 2.29150093, 2.87345349]), array([15.71428571, 21.4       , 17.5       , 21.6       , 34.33333333,
+       20.6       , 16.33333333, 16.66666667, 50.5       , 18.        ,
+       17.16666667, 34.66666667, 15.57142857]), array([3.20611985, 5.57540505, 7.40674947]), array([1.67912076, 3.31991105, 1.62046498]), array([2.33616742, 6.39374502, 2.56207171]), array([3.76259119, 4.96153846, 3.82554582]), array([1.83452541, 3.54304567, 2.37729459, 3.57294152, 3.34748985,
+       1.46662161]), array([2.79279515, 5.72932449, 3.83985268, 0.77777789, 3.30859297,
+       8.37534033]), array([3.62604989, 5.04756666, 3.13940361, 2.13376141, 1.54720804,
+       2.50373649]), array([ 28.75      ,  15.57142857,  27.5       ,   9.25      ,
+        23.        ,  37.33333333, 117.        ,  17.        ,
+         7.        ,  15.85714286,  19.33333333,  11.3       ,
+         9.81818182,   8.14285714,  13.375     ,  13.375     ,
+        54.5       ]), array([23.33333333, 19.66666667, 59.        ,  6.66666667, 12.4       ,
+       60.        , 64.        , 21.        ,  6.77777778, 12.2       ,
+       12.2       , 15.        , 12.8       ,  6.1       , 15.25      ,
+       11.4       , 21.        ]), array([3.34444231, 1.6523205 , 1.24628064, 1.48303487, 1.39415813,
+       2.19727445]), array([3.66365577, 1.78462029, 1.84837334, 1.45868183, 2.40105059,
+       2.21410481]), array([5.59071436, 5.02835068, 2.14364647, 3.45363937, 1.96173007,
+       3.14204082]), array([ 6.5       ,  6.29411765,  8.53846154,  8.75      ,  8.14285714,
+       12.        ,  9.41666667,  6.58823529,  8.53846154,  6.35294118,
+        7.125     ,  6.875     ,  5.63157895,  7.35714286,  7.13333333,
+        7.71428571,  7.        ]), array([4.4375    , 4.07142857, 5.16666667, 5.18181818, 7.11111111,
+       6.55555556, 7.11111111, 3.31578947, 4.5       , 3.75      ,
+       6.3       , 4.21428571, 3.9375    , 4.90909091, 5.16666667,
+       5.        , 4.71428571]), array([0.        , 0.62762752, 0.37311282, 3.27317037, 1.07697169,
+       0.50632666, 0.68996532, 2.77449867, 0.95362913, 1.26460888,
+       1.62194897, 1.00693689]), array([0.        , 0.33324483, 0.01752251, 0.99264973, 0.51132297,
+       0.7750303 , 0.0519498 , 0.47948895, 0.15733435, 1.52145019,
+       0.13102486, 0.41048215]), array([0.        , 0.19983392, 0.18705045, 0.95591134, 1.25206266,
+       1.21998342, 1.25558744, 0.8682435 , 3.32460116, 7.42592344,
+       2.01790268, 2.92741302]), array([0.        , 1.02635792, 0.60063085, 0.12921762, 0.25231106,
+       0.35744856, 1.59772393, 1.0823212 , 1.76534385, 1.41545958,
+       0.30922432, 1.01434192])]
+	weights_curves: [2.2857142857142856, 2.2857142857142856, 2.2857142857142856, 2.2857142857142856, 2.2857142857142856, 2.2857142857142856, 2.2857142857142856, 2.2857142857142856, 1.0, 1.0, 1.3333333333333333, 1.1666666666666667, 1.0, 1.0, 1.3333333333333333, 1.1666666666666667, 1.5, 1.5, 1.5, 1.25, 1.5, 1.5, 1.5, 1.5, 1.25, 1.5, 0.3333333333333333, 0.6666666666666666, 0.5833333333333334, 0.6666666666666666, 0.6666666666666666, 0.5, 1.0, 0.875, 1.0, 1.0, 0.38095238095238093, 0.38095238095238093, 0.38095238095238093, 0.38095238095238093, 1.0, 1.5, 0.5714285714285714, 0.5714285714285714, 1.1428571428571428, 1.1428571428571428, 1.8333333333333333, 2.1666666666666665, 1.8333333333333333, 2.1666666666666665, 1.8333333333333333, 2.1666666666666665, 2.0, 2.0, 2.0, 0.4, 0.36666666666666664, 0.43333333333333335, 0.75, 0.75, 0.75, 0.75, 2.0, 2.0, 0.46153846153846156, 2.0, 2.0, 0.46153846153846156, 2.0, 2.0, 0.46153846153846156, 2.0, 2.0, 0.46153846153846156, 2.0, 2.0, 2.0, 2.0, 0.5, 0.5, 0.5, 0.17647058823529413, 0.17647058823529413, 1.0, 1.0, 1.0, 0.35294117647058826, 0.35294117647058826, 0.3333333333333333, 0.25, 0.3333333333333333, 0.25]
+--------------------------------------------------------------------------------
+Parameter sets: ['PD_20261019_134029__a3a50_0']
+--------------------------------------------------------------------------------
+parameter          unit  PD_20261019_134029__a3a50_0
+E50_e3174            mM                     0.000207
+ RENSEC_n dimensionless                     2.968064
+  BP_emax dimensionless                     0.244347
+
+PD_20261019_134029__a3a50_0: cost = 96.5653
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Metrics: PD_20261019_134029__a3a50_0
+--------------------------------------------------------------------------------
+              parameter_set       kind   n  k      cost          MSE         RMSE    NRMSE   RMSE_w        R2  within_2fold         AIC         BIC     GMFE      AFE  within_1.25fold  within_1.5fold  within_1sd  within_2sd
+PD_20261019_134029__a3a50_0   training 347  3 96.565302 1.324005e+01 3.638688e+00 0.462097 0.746038  0.993837     85.000000  902.386404  913.934378 1.453050 0.771789        67.500000       76.875000   85.542169   97.590361
+PD_20261019_134029__a3a50_0 validation 465  3       NaN 1.349163e+01 3.673096e+00 0.789450 0.784388  0.991537     91.373802 1215.962446 1228.388558 1.261972 0.972698        68.051118       79.872204   67.149758   86.473430
+PD_20261019_134029__a3a50_0    outlier   8  3       NaN 1.246313e-15 3.530316e-08 6.235068 7.636367 -1.241514           NaN -268.548693 -268.310368      NaN      NaN              NaN             NaN         NaN         NaN
+
+   experiment                            mapping       kind  n          MSE         RMSE    NRMSE   RMSE_w        R2  within_2fold         GMFE          AFE  within_1.25fold  within_1.5fold  within_1sd  within_2sd
+    Azizi1999                  fm_po_LOS50_renin   training  7 2.212790e-18 1.487545e-09 0.409840 0.876275 -0.299307     71.428571 1.342922e+00 7.529955e-01        57.142857       71.428571         NaN         NaN
+    Azizi1999                   fm_po_LOS50_ang1   training  7 4.845938e-17 6.961278e-09 0.319886 0.683945 -0.020724    100.000000 1.259200e+00 8.825256e-01        71.428571       71.428571         NaN         NaN
+    Azizi1999                   fm_po_LOS50_ang2   training  7 2.429413e-17 4.928907e-09 0.237771 0.508376  0.520032    100.000000 1.187062e+00 8.844098e-01        71.428571       85.714286         NaN         NaN
+    Azizi1999                    fm_po_LOS50_map   training  7 7.859455e+00 2.803472e+00 0.034212 0.073147 -0.173226    100.000000 1.029638e+00 1.024527e+00       100.000000      100.000000         NaN         NaN
+    Azizi1999                fm_po_placebo_renin validation  7 3.278028e-20 1.810532e-10 0.149288 0.319192 -0.287693    100.000000 1.131598e+00 1.079988e+00        85.714286      100.000000         NaN         NaN
+    Azizi1999                 fm_po_placebo_ang1 validation  7 6.290140e-18 2.508015e-09 0.353303 0.755393 -1.759444    100.000000 1.312197e+00 1.312197e+00        42.857143       71.428571         NaN         NaN
+    Azizi1999                 fm_po_placebo_ang2 validation  7 1.317411e-18 1.147785e-09 0.179638 0.384083 -0.225960    100.000000 1.152090e+00 1.092633e+00        85.714286       85.714286         NaN         NaN
+    Azizi1999                  fm_po_placebo_map validation  7 1.351679e+01 3.676519e+00 0.043935 0.093936 -4.399640    100.000000 1.039842e+00 1.039842e+00       100.000000      100.000000         NaN         NaN
+Christen1991a                 fm_po_ang2_placebo validation  6 1.393369e-18 1.180411e-09 0.192040 0.271586 -1.438910    100.000000 1.165727e+00 8.591028e-01        50.000000      100.000000         NaN         NaN
+Christen1991a                   fm_po_ang2_LOS10 validation  6 2.832453e-18 1.682989e-09 0.207056 0.292821 -0.064230    100.000000 1.151566e+00 9.227942e-01        66.666667      100.000000         NaN         NaN
+Christen1991a                   fm_po_ang2_LOS20 validation  6 2.909049e-18 1.705593e-09 0.204088 0.333274 -0.070694    100.000000 1.160398e+00 9.877641e-01        66.666667      100.000000         NaN         NaN
+Christen1991a                   fm_po_ang2_LOS40 validation  6 5.537847e-18 2.353263e-09 0.230813 0.352572  0.080010    100.000000 1.195800e+00 8.643852e-01        66.666667       83.333333         NaN         NaN
+Christen1991a          fm_po_aldosterone_placebo validation  6 2.100675e-15 4.583312e-08 0.230738 0.326313 -0.204171    100.000000 1.207131e+00 1.118474e+00        33.333333      100.000000         NaN         NaN
+Christen1991a            fm_po_aldosterone_LOS10 validation  6 5.308846e-15 7.286183e-08 0.368752 0.521494 -0.443745     83.333333 1.364317e+00 1.310104e+00        50.000000       66.666667         NaN         NaN
+Christen1991a            fm_po_aldosterone_LOS20 validation  6 6.008620e-15 7.751529e-08 0.429470 0.701321 -0.578802     83.333333 1.421512e+00 1.412019e+00        33.333333       50.000000         NaN         NaN
+Christen1991a            fm_po_aldosterone_LOS40 validation  6 2.074408e-15 4.554567e-08 0.284341 0.434338  0.074182    100.000000 1.280826e+00 1.263184e+00        50.000000       66.666667         NaN         NaN
+Christen1991a                 fm_po_pra_placeboM validation  4 1.369348e-01 3.700470e-01 0.282784 0.573270 -2.283063    100.000000 1.291657e+00 7.741994e-01        25.000000       75.000000  100.000000  100.000000
+Christen1991a                    fm_po_pra_LOS5M validation  4 7.775077e-01 8.817640e-01 0.505278 0.847890 -0.900534     75.000000 1.517703e+00 6.588906e-01        25.000000       50.000000   75.000000  100.000000
+Christen1991a                   fm_po_pra_LOS10M validation  4 1.503678e+00 1.226245e+00 0.581247 0.958561 -0.875477     50.000000 1.673143e+00 5.976774e-01        25.000000       50.000000   75.000000  100.000000
+Christen1991a                   fm_po_pra_LOS20M validation  4 6.813743e+00 2.610315e+00 0.814250 1.257909 -0.691083     50.000000 2.042555e+00 4.895828e-01        25.000000       25.000000   25.000000  100.000000
+Christen1991a                   fm_po_pra_LOS40M validation  4 2.346273e+01 4.843835e+00 0.964997 2.334929 -0.644213     25.000000 2.476036e+00 4.038714e-01        25.000000       25.000000   50.000000   50.000000
+Christen1991a                fm_po_ang2_placeboM validation  4 3.592481e-18 1.895384e-09 0.343539 0.644029 -1.445568    100.000000 1.325692e+00 7.545506e-01        50.000000       50.000000   75.000000  100.000000
+Christen1991a                   fm_po_ang2_LOS5M validation  4 4.346663e-17 6.592923e-09 0.575274 0.884709 -0.837464     75.000000 1.585238e+00 6.308459e-01        50.000000       50.000000   75.000000  100.000000
+Christen1991a                  fm_po_ang2_LOS10M validation  4 4.404227e-17 6.636435e-09 0.513662 0.822047 -0.730604     75.000000 1.550046e+00 6.451422e-01        25.000000       50.000000  100.000000  100.000000
+Christen1991a                  fm_po_ang2_LOS20M validation  4 2.199207e-16 1.482972e-08 0.809436 1.282517 -0.726256     50.000000 2.065877e+00 4.841475e-01        25.000000       25.000000   25.000000  100.000000
+Christen1991a                  fm_po_ang2_LOS40M validation  4 4.727695e-16 2.174326e-08 0.974537 2.119487 -0.648192     25.000000 2.503026e+00 3.995165e-01        25.000000       25.000000   25.000000   50.000000
+     Doig1993                     fm_po_LOS5_pra   training 12 4.697430e-01 6.853780e-01 0.430112 0.351185 -1.009843     83.333333 1.407901e+00 7.137927e-01        50.000000       50.000000         NaN         NaN
+     Doig1993                    fm_po_LOS10_pra   training 12 1.890203e+00 1.374846e+00 0.624753 0.721403 -0.996275     58.333333 1.692870e+00 5.907129e-01        33.333333       50.000000         NaN         NaN
+     Doig1993                    fm_po_LOS25_pra   training 12 5.091730e+00 2.256486e+00 0.762397 0.823482 -0.596917     58.333333 1.762271e+00 5.719244e-01        41.666667       50.000000         NaN         NaN
+     Doig1993                    fm_po_LOS50_pra   training 12 2.007981e+01 4.481050e+00 0.830770 0.959291 -1.203282     25.000000 2.544827e+00 3.929540e-01         8.333333       16.666667         NaN         NaN
+     Doig1993                   fm_po_LOS100_pra   training 12 6.549022e+00 2.559106e+00 0.546704 0.631279 -0.759278     41.666667 1.876671e+00 5.328585e-01         8.333333       25.000000         NaN         NaN
+     Doig1993             fm_po_LOS5_aldosterone   training  8 1.960921e-13 4.428228e-07 0.214753 0.214753  0.033037    100.000000 1.162030e+00 1.039908e+00        75.000000      100.000000         NaN         NaN
+     Doig1993            fm_po_LOS10_aldosterone   training  8 2.031052e-13 4.506720e-07 0.231792 0.327804 -1.849707    100.000000 1.215020e+00 1.215020e+00        62.500000      100.000000         NaN         NaN
+     Doig1993            fm_po_LOS25_aldosterone   training  8 9.895031e-14 3.145637e-07 0.173386 0.229368  0.296758    100.000000 1.167726e+00 1.015247e+00        75.000000      100.000000         NaN         NaN
+     Doig1993            fm_po_LOS50_aldosterone   training  8 1.577060e-13 3.971222e-07 0.301062 0.425766  0.152572    100.000000 1.320016e+00 1.251135e+00        50.000000       62.500000         NaN         NaN
+     Doig1993           fm_po_LOS100_aldosterone   training  8 7.056676e-14 2.656440e-07 0.184443 0.260842  0.542435    100.000000 1.185887e+00 1.185887e+00        50.000000      100.000000         NaN         NaN
+     Doig1993             fm_po_LOS50_supine_sbp   training 21 1.514658e+01 3.891860e+00 0.036736 0.032066  0.129907    100.000000 1.030672e+00 1.020977e+00       100.000000      100.000000         NaN         NaN
+     Doig1993            fm_po_LOS100_supine_sbp   training 21 1.643598e+01 4.054131e+00 0.039426 0.034414  0.383157    100.000000 1.033019e+00 1.024090e+00       100.000000      100.000000         NaN         NaN
+     Doig1993             fm_po_LOS50_supine_dbp   training 21 2.807742e+01 5.298813e+00 0.090891 0.079336 -0.859677    100.000000 1.078543e+00 1.075296e+00       100.000000      100.000000         NaN         NaN
+     Doig1993            fm_po_LOS100_supine_dbp   training 21 4.219359e+01 6.495659e+00 0.124006 0.108242 -1.146170    100.000000 1.113634e+00 1.112527e+00       100.000000      100.000000         NaN         NaN
+     Doig1993                  fm_po_placebo_pra validation 12 1.682198e-01 4.101460e-01 0.309450 0.437629 -1.698736    100.000000 1.302424e+00 7.677989e-01        41.666667       75.000000         NaN         NaN
+     Doig1993          fm_po_placebo_aldosterone validation  8 1.721212e-13 4.148749e-07 0.223790 0.387615 -1.005572    100.000000 1.213622e+00 1.171993e+00        75.000000      100.000000         NaN         NaN
+     Doig1993           fm_po_placebo_supine_sbp validation 21 5.651446e+00 2.377277e+00 0.021322 0.022794 -0.169018    100.000000 1.019099e+00 1.008301e+00       100.000000      100.000000         NaN         NaN
+     Doig1993           fm_po_placebo_supine_dbp validation 21 1.519729e+01 3.898370e+00 0.065360 0.069872 -2.301985    100.000000 1.056093e+00 1.055256e+00       100.000000      100.000000         NaN         NaN
+ Goldberg1995             fm_po_LOS100_pra_ratio   training  7 1.034839e+01 3.216892e+00 0.671427 1.015102 -0.304507     71.428571 1.850368e+00 5.404330e-01        14.285714       28.571429         NaN         NaN
+ Goldberg1995            fm_po_control_pra_ratio validation  7 6.955139e-02 2.637260e-01 0.300046 0.453626 -0.266896     85.714286 1.269632e+00 1.184651e+00        71.428571       71.428571         NaN         NaN
+Goldberg1995a              fm_po_LOS25_ratio_pra   training  6 3.798805e-01 6.163445e-01 0.556619 1.065845 -4.674907     83.333333 1.521507e+00 1.256454e+00        16.666667       66.666667         NaN         NaN
+Goldberg1995a             fm_po_LOS100_ratio_pra   training  6 1.658777e+00 1.287935e+00 0.748490 1.558105 -2.448943     66.666667 1.610859e+00 1.246384e+00        33.333333       50.000000         NaN         NaN
+Goldberg1995a             fm_po_LOS25_ang2_ratio   training  6 2.056227e-01 4.534564e-01 0.312285 0.597981 -0.931512    100.000000 1.320722e+00 9.592789e-01        50.000000       83.333333         NaN         NaN
+Goldberg1995a            fm_po_LOS100_ang2_ratio   training  6 1.869162e+00 1.367173e+00 0.523979 1.090749 -0.900444     66.666667 1.729331e+00 8.146119e-01        16.666667       33.333333         NaN         NaN
+Goldberg1995a             fm_po_LOS25_ald_change   training  6 1.675017e-16 1.294224e-08 0.489451 0.937227  0.841889      0.000000 2.271803e+14 4.401791e-15         0.000000        0.000000         NaN         NaN
+Goldberg1995a            fm_po_LOS100_ald_change   training  6 5.370254e-15 7.328201e-08 0.981195 2.042520  0.480497           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+Goldberg1995a            fm_po_placebo_ratio_pra validation  6 2.037923e-02 1.427559e-01 0.153634 0.307268 -0.326290    100.000000 1.146592e+00 1.085036e+00       100.000000      100.000000         NaN         NaN
+Goldberg1995a           fm_po_placebo_ang2_ratio validation  6 9.530083e-02 3.087083e-01 0.265451 0.530902 -0.386278    100.000000 1.246472e+00 8.823445e-01        50.000000       83.333333         NaN         NaN
+Goldberg1995a           fm_po_placebo_ald_change validation  6 7.550870e-15 8.689574e-08 1.168423 2.336845 -2.738140           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+Goldberg1995a           fm_po_placebo_dbp_change validation 30 4.996380e+00 2.235258e+00 1.563523 1.398458 -0.692231           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+Goldberg1995a             fm_po_LOS25_dbp_change validation 30 7.054328e+00 2.655998e+00 0.734568 0.629046 -0.776803           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+Goldberg1995a            fm_po_LOS100_dbp_change validation 30 1.244034e+01 3.527087e+00 0.528752 0.492241 -0.591922           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+   Munafo1992  fm_po_aldosterone_corrected_LOS80   training  8 3.121883e-16 1.766885e-08 0.626118 0.766835  0.481996           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+   Munafo1992 fm_po_aldosterone_corrected_LOS120   training  8 1.191320e-15 3.451551e-08 0.609920 0.418146 -0.467297           NaN          NaN          NaN              NaN             NaN  100.000000  100.000000
+   Munafo1992          fm_po_aldosterone_Placebo validation  8 3.046497e-15 5.519508e-08 1.131148 1.111205 -3.577881           NaN          NaN          NaN              NaN             NaN   71.428571   85.714286
+   Munafo1992  fm_po_aldosterone_corrected_LOS40    outlier  8 1.246313e-15 3.530316e-08 6.235068 7.636367 -1.241514           NaN          NaN          NaN              NaN             NaN         NaN         NaN
+   Ohtawa1993              fm_po_pra_ratio_LOS25   training  3 2.085182e+01 4.566379e+00 1.131560 2.216484 -0.326785     66.666667 1.997852e+00 5.005375e-01        33.333333       66.666667   66.666667  100.000000
+   Ohtawa1993                   fm_po_ang2_LOS25   training  3 1.542685e-16 1.242049e-08 0.862223 1.519796 -0.140151     66.666667 1.612695e+00 6.203082e-01        33.333333       66.666667   66.666667  100.000000
+   Ohtawa1993                    fm_po_sbp_LOS25   training 13 6.235192e+00 2.497037e+00 0.022496 0.064599  0.356686    100.000000 1.018230e+00 9.865377e-01       100.000000      100.000000  100.000000  100.000000
+   Ohtawa1993              fm_po_pra_ratio_LOS50   training  3 6.333514e+01 7.958338e+00 1.138228 1.934334 -0.563089     33.333333 2.981646e+00 3.353852e-01        33.333333       33.333333   66.666667  100.000000
+   Ohtawa1993                   fm_po_ang2_LOS50   training  3 2.492400e-16 1.578734e-08 0.610991 1.166055  0.217121     66.666667 1.490505e+00 6.709137e-01        33.333333       33.333333  100.000000  100.000000
+   Ohtawa1993                    fm_po_sbp_LOS50   training 13 9.936101e+00 3.152158e+00 0.028736 0.089771 -0.455114    100.000000 1.024048e+00 1.011708e+00       100.000000      100.000000   92.307692   92.307692
+   Ohtawa1993             fm_po_pra_ratio_LOS100   training  3 1.307095e+02 1.143283e+01 1.109943 2.048208 -0.674500     33.333333 3.549912e+00 2.816971e-01        33.333333       33.333333   66.666667  100.000000
+   Ohtawa1993                  fm_po_ang2_LOS100   training  3 1.560338e-17 3.950111e-09 0.178614 0.341105  0.894579    100.000000 1.189718e+00 8.405353e-01        66.666667       66.666667  100.000000  100.000000
+   Ohtawa1993                   fm_po_sbp_LOS100   training 13 2.368783e+01 4.867015e+00 0.043938 0.093256 -2.834525    100.000000 1.039167e+00 9.772512e-01       100.000000      100.000000  100.000000  100.000000
+   Ohtawa1993             fm_po_pra_ratio_LOS200   training  3 1.676886e+02 1.294946e+01 1.145716 2.520307 -0.243719     33.333333 2.841949e+00 3.518712e-01        33.333333       33.333333   33.333333   66.666667
+   Ohtawa1993                  fm_po_ang2_LOS200   training  3 1.653199e-16 1.285768e-08 0.466571 1.021731  0.660624     66.666667 1.492707e+00 6.699830e-01        33.333333       33.333333   66.666667  100.000000
+   Ohtawa1993                   fm_po_sbp_LOS200   training 13 1.756506e+01 4.191070e+00 0.040091 0.132539 -0.398914    100.000000 1.029097e+00 9.814622e-01       100.000000      100.000000   69.230769  100.000000
+   Ohtawa1993            fm_po_aldosterone_LOS25 validation  3 4.931052e-15 7.022145e-08 0.429826 1.532101 -0.655695    100.000000 1.424032e+00 1.424011e+00        33.333333       33.333333   33.333333   33.333333
+   Ohtawa1993            fm_po_aldosterone_LOS50 validation  3 8.649916e-16 2.941074e-08 0.112652 0.278903  0.773712    100.000000 1.106692e+00 1.059548e+00        66.666667      100.000000  100.000000  100.000000
+   Ohtawa1993           fm_po_aldosterone_LOS100 validation  3 1.598879e-16 1.264468e-08 0.058403 0.164169  0.917484    100.000000 1.052387e+00 1.052387e+00       100.000000      100.000000  100.000000  100.000000
+   Ohtawa1993           fm_po_aldosterone_LOS200 validation  3 3.963910e-15 6.295959e-08 0.253909 0.716893  0.391146    100.000000 1.217907e+00 1.217907e+00        33.333333      100.000000   33.333333  100.000000
+   Ohtawa1993      fm_po_pra_ratio_placebo_multi validation  6 5.478678e-02 2.340658e-01 0.233130 0.276445 -0.000294    100.000000 1.207739e+00 1.029618e+00        66.666667       83.333333   83.333333  100.000000
+   Ohtawa1993           fm_po_ang2_placebo_multi validation  6 1.282838e-17 3.581672e-09 0.344532 0.470074 -0.007542    100.000000 1.350469e+00 1.091503e+00        50.000000       50.000000   50.000000   66.666667
+   Ohtawa1993    fm_po_aldosterone_placebo_multi validation  6 3.258394e-14 1.805102e-07 1.033638 1.201137 -4.401880     33.333333 2.095360e+00 2.095350e+00        16.666667       16.666667   16.666667   33.333333
+   Ohtawa1993            fm_po_sbp_placebo_multi validation 17 2.058824e+01 4.537426e+00 0.040491 0.076160 -0.724638    100.000000 1.034017e+00 1.026733e+00       100.000000      100.000000   82.352941   94.117647
+   Ohtawa1993            fm_po_dbp_placebo_multi validation 17 7.941176e+01 8.911328e+00 0.144830 0.284325 -9.365854    100.000000 1.138776e+00 1.138776e+00       100.000000      100.000000   17.647059   47.058824
+   Ohtawa1993      fm_po_pra_ratio_LOS100M_multi validation  6 5.484426e+01 7.405691e+00 1.016283 1.256957 -0.435331     16.666667 3.015516e+00 3.316182e-01        16.666667       16.666667   33.333333  100.000000
+   Ohtawa1993           fm_po_ang2_LOS100M_multi validation  6 1.094082e-16 1.045984e-08 0.444056 0.576604  0.677412    100.000000 1.419911e+00 8.336599e-01        16.666667       50.000000   83.333333  100.000000
+   Ohtawa1993    fm_po_aldosterone_LOS100M_multi validation  6 7.937591e-15 8.909316e-08 0.542428 0.869771 -1.609776    100.000000 1.514257e+00 1.514257e+00        33.333333       33.333333   33.333333   83.333333
+   Ohtawa1993            fm_po_sbp_LOS100M_multi validation 17 2.364258e+01 4.862363e+00 0.044274 0.070500 -0.891668    100.000000 1.035494e+00 1.025780e+00       100.000000      100.000000  100.000000  100.000000
+   Ohtawa1993            fm_po_dbp_LOS100M_multi validation 17 5.331972e+01 7.302035e+00 0.118562 0.159413 -2.682935    100.000000 1.111535e+00 1.111535e+00       100.000000      100.000000   94.117647  100.000000
+   Sekino2003           fm_po_los25_sbp_change_1 validation 12 4.631070e+01 6.805196e+00 0.767922 0.580457 -1.384425           NaN          NaN          NaN              NaN             NaN   72.727273   90.909091
+   Sekino2003           fm_po_los25_sbp_change_3 validation 12 7.399961e+00 2.720287e+00 2.633691 1.001504 -0.766923           NaN          NaN          NaN              NaN             NaN   90.909091  100.000000
+   Sekino2003           fm_po_los25_dbp_change_1 validation 12 6.083799e+01 7.799871e+00 0.958542 1.033601 -0.938232           NaN          NaN          NaN              NaN             NaN   63.636364   72.727273
+   Sekino2003           fm_po_los25_dbp_change_3 validation 12 1.334351e+01 3.652877e+00 1.523405 0.890818  0.240012           NaN          NaN          NaN              NaN             NaN   72.727273  100.000000
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Optimization results: PD_20261019_134029__a3a50
+--------------------------------------------------------------------------------
+   run  success   duration       cost  E50_e3174  RENSEC_n   BP_emax                                message                                                  x                   x0
+0    2     True  59.057428  96.565302   0.000207  2.968064  0.244347  Optimization terminated successfully.  [0.0002068853693351313, 2.9680635276708203, 0....  [0.0002, 2.0, 0.25]
+1    1     True  69.319199  96.570213   0.000206  3.048298  0.215844  Optimization terminated successfully.  [0.0002062473063712658, 3.0482977677393523, 0....  [0.0002, 2.0, 0.25]
+2    0     True  91.085621  96.616353   0.000199  2.993405  0.216412  Optimization terminated successfully.  [0.00019922130340231824, 2.9934046045642986, 0...  [0.0002, 2.0, 0.25]
+--------------------------------------------------------------------------------
+Optimal parameters:
+	'E50_e3174': Q(0.0002068853693351313, 'mmol/l'),  # [1e-05 - 0.01]
+	'RENSEC_n': Q(2.9680635276708203, 'dimensionless'),  # [0.2 - 10]
+	'BP_emax': Q(0.2443466614325247, 'dimensionless'),  # [0.01 - 0.6]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Identifiability 'PD_20261019_134029__a3a50'
+--------------------------------------------------------------------------------
+parameter set: PD_20261019_134029__a3a50_0
+cost: 96.5653
+cost_min: 96.5611
+alpha: 0.95
+degrees of freedom: 1
+threshold: 98.4818
+reoptimize: True
+duration: 58.5 s
+
+parameter    value          unit  lower_bound  upper_bound  ci_lower  ci_upper        identifiability  n_points  cost_min  converged
+E50_e3174 0.000207            mM      0.00001         0.01  0.000172  0.000255           identifiable        15 96.565302       True
+ RENSEC_n 2.968064 dimensionless      0.20000        10.00  2.354217  3.809175           identifiable        15 96.565302       True
+  BP_emax 0.244347 dimensionless      0.01000         0.60       NaN  0.576248 non_identifiable_lower        14 96.561109       True
+--------------------------------------------------------------------------------

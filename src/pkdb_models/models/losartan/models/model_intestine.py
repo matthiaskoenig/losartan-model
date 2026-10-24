@@ -1,18 +1,29 @@
 """Losartan intestine model."""
+
 import numpy as np
-import pandas as pd
+from sbmlutils.factory import (
+    AssignmentRule,
+    Compartment,
+    FactoryResult,
+    Model,
+    Parameter,
+    RateRule,
+    Reaction,
+    Species,
+    UnitDefinition,
+    create_model,
+)
+from sbmlutils.metadata import (
+    BQB,
+    SBO,
+)
 
-from sbmlutils import cytoscape as cyviz
-from sbmlutils.cytoscape import visualize_sbml
-from sbmlutils.factory import *
-from sbmlutils.metadata import *
-
-from pkdb_models.models.losartan.models import annotations
-from pkdb_models.models.losartan.models import templates
+from pkdb_models.models.losartan.models import annotations, templates
+from pkdb_models.models.losartan.models.fits import FITS
 
 
 class U(templates.U):
-    """UnitDefinitions"""
+    """Units of the intestine model."""
 
     per_hr = UnitDefinition("per_hr", "1/hr")
     mg_per_min = UnitDefinition("mg_per_min", "mg/min")
@@ -24,25 +35,43 @@ _m = Model(
     notes="""
     # Model for losartan absorption
 
-    - absorption losartan (los), ~60% fraction absorbed (bioavailability ~33%, due to liver metabolism)
-    - enterohepatic circulation of los, e3174 and l158
-    - ABCB1 (P-glycoprotein) influences pharmacokinetics, possible role in intestinal uptake
+    - dissolution of the tablet and transit into the gut lumen
+    - absorption of losartan (`LOSABS`, OATP2B1) into the enterocytes, efflux
+      back into the lumen (`LOSEFL`, P-glycoprotein/ABCB1) and transport into
+      the portal blood (`LOSEX`); the absorption is nearly complete, the
+      bioavailability of 33 % is the hepatic first pass [Lo1995]
+    - the fecal excretion of the content of the gut lumen with the transit
+      through the colon (`METEXC_k`): unabsorbed losartan and the E3174 and
+      other metabolites of the bile
+
+    The species of the gut lumen (`*_lumen`) are concentrations in the lumen
+    volume `Vlumen`.
     """
     + templates.terms_of_use,
     creators=templates.creators,
     units=U,
     model_units=templates.model_units,
+    annotations=[
+        # tissue
+        (BQB.OCCURS_IN, "bto/BTO:0000545"),  # gut
+        (BQB.OCCURS_IN, "ncit/C12736"),  # intestine
+        (BQB.OCCURS_IN, "fma/FMA:7199"),  # intestine
+        (BQB.OCCURS_IN, "bto/BTO:0000648"),  # intestine
+        (BQB.HAS_PROPERTY, "ncit/C79369"),  # Pharmacokinetics: Absorption
+        (BQB.HAS_PROPERTY, "ncit/C79372"),  # Pharmacokinetics: Excretion
+        *annotations.model,
+    ],
 )
 
 _m.compartments = [
     Compartment(
         "Vext",
         1.0,
-        name="plasma",
+        name="blood",
         sboTerm=SBO.PHYSICAL_COMPARTMENT,
         unit=U.liter,
         port=True,
-        annotations=annotations.compartments["plasma"],
+        annotations=annotations.compartments["blood"],
     ),
     Compartment(
         "Vgu",
@@ -116,12 +145,12 @@ _m.compartments = [
 
 _m.species = [
     Species(
-        f"los_stomach",
-        metaId=f"meta_los_stomach",
+        "los_stomach",
+        metaId="meta_los_stomach",
         initialConcentration=0.0,
         compartment="Vstomach",
         substanceUnit=U.mmole,
-        name=f"losartan (stomach)",
+        name="losartan (stomach)",
         hasOnlySubstanceUnits=True,
         sboTerm=SBO.SIMPLE_CHEMICAL,
         annotations=annotations.species["los"],
@@ -130,7 +159,7 @@ _m.species = [
     Species(
         "los_lumen",
         initialConcentration=0.0,
-        name="losartan (lumen)",
+        name="losartan (gut lumen)",
         compartment="Vlumen",
         substanceUnit=U.mmole,
         hasOnlySubstanceUnits=False,
@@ -151,7 +180,7 @@ _m.species = [
     Species(
         "los_ext",
         initialConcentration=0.0,
-        name="losartan (plasma)",
+        name="losartan (blood)",
         compartment="Vext",
         substanceUnit=U.mmole,
         hasOnlySubstanceUnits=False,
@@ -173,7 +202,7 @@ _m.species = [
     Species(
         "e3174_lumen",
         initialConcentration=0.0,
-        name="E3174 (lumen)",
+        name="E3174 (gut lumen)",
         compartment="Vlumen",
         substanceUnit=U.mmole,
         hasOnlySubstanceUnits=False,
@@ -195,7 +224,7 @@ _m.species = [
     Species(
         "l158_lumen",
         initialConcentration=0.0,
-        name="L158 (lumen)",
+        name="other losartan metabolites (gut lumen)",
         compartment="Vlumen",
         substanceUnit=U.mmole,
         hasOnlySubstanceUnits=False,
@@ -206,7 +235,7 @@ _m.species = [
     Species(
         "l158_feces",
         initialConcentration=0.0,
-        name="L158 (feces)",
+        name="other losartan metabolites (feces)",
         compartment="Vfeces",
         substanceUnit=U.mmole,
         hasOnlySubstanceUnits=True,
@@ -218,43 +247,26 @@ _m.species = [
 
 _m.parameters = [
     Parameter(
-        f"F_los_abs",
-        0.6,
-        U.dimensionless,
-        constant=True,
-        sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        name=f"fraction absorbed losartan",
-        notes="""
-        Fraction absorbed, i.e., only a fraction of the losartan in the intestinal lumen
-        is absorbed. This parameter determines how much of the losartan is excreted.
-        
-        `F_los_abs` of dose is absorbed. `(1-F_los_abs)` is excreted in feces.
-        """,
-    ),
-    Parameter(
         "LOSABS_k",
-        0.03617722689911161,
-        unit=U.per_min,
+        **FITS.parameter("GU__LOSABS_k", unit=U.per_min),
         name="rate of losartan absorption",
         sboTerm=SBO.KINETIC_CONSTANT,
+        notes="Fitted: tmax of losartan about 1 hr.",
     ),
     Parameter(
         "METEXC_k",
-        2.6964160819935065e-05,
+        6e-4,
         unit=U.per_min,
         name="rate of feces excretion",
         sboTerm=SBO.KINETIC_CONSTANT,
+        notes="""
+        The transit of the content of the gut lumen into the feces, the
+        colonic transit time of 24-36 hr (mean residence 1/METEXC_k = 28 hr).
+        Not fitted: the data of the feces are amounts at the end of the
+        collection (96-168 hr), which do not identify the rate.
+        """,
     ),
 ]
-
-_m.rules.append(
-    AssignmentRule(
-        "absorption",
-        value="LOSABS_k * Vgu * los_lumen",
-        unit=U.mmole_per_min,
-        name="absorption losartan",
-    ),
-)
 
 _m.reactions = [
     Reaction(
@@ -276,18 +288,19 @@ _m.reactions = [
                 """,
             ),
         ],
-        formula=("f_OATP2B1 * F_los_abs * absorption", U.mmole_per_min),
+        formula=("f_OATP2B1 * LOSABS_k * Vgu * los_lumen", U.mmole_per_min),
         notes="""
-        Import via OATP2B1 is irreversible at apical membrane of enterocytes.
+        Import via OATP2B1 at the apical membrane of the enterocytes.
+        `f_OATP2B1` is an interaction factor, set by the experiments (no
+        experiment uses it at the moment).
         """,
-        #formula=("F_los_abs * absorption", U.mmole_per_min),
     ),
-    #fraction excreted (not available for absorption)
+    # efflux back into the lumen
     Reaction(
         sid="LOSEFL",
-        name=f"efflux losartan (PG)",
+        name="efflux losartan (PG)",
         compartment="Vapical",
-        equation=f"los -> los_lumen",
+        equation="los -> los_lumen",
         sboTerm=SBO.TRANSPORT_REACTION,
         pars=[
             Parameter(
@@ -297,16 +310,23 @@ _m.reactions = [
                 unit=U.dimensionless,
                 sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
                 notes="""
-               parameter controls activity (1.0 reference activity, 
-               < 1.0 reduced activity, > 1.0 increased activity) 
+               parameter controls activity (1.0 reference activity,
+               < 1.0 reduced activity, > 1.0 increased activity)
                """,
             ),
             Parameter(
                 "f_LOSEFL_k",
-                1.020035540752619,
+                1.0,
                 unit=U.dimensionless,
                 name="fractional rate losartan efflux (PG)",
-                sboTerm=SBO.MAXIMAL_VELOCITY,
+                sboTerm=SBO.KINETIC_CONSTANT,
+                notes="""
+                The efflux relative to the absorption, not fitted: the
+                absorption is nearly complete, so the efflux delays the
+                absorption (the ABCB1 genotypes change Cmax and the early AUC,
+                not the AUC [Shin2020]) and is not identifiable separately
+                from `LOSABS_k`.
+                """,
             ),
         ],
         rules=[
@@ -333,78 +353,79 @@ _m.reactions = [
             U.mmole_per_min,
         ),
         notes="""
-        Assumption: transport over basolateral membrane is similar to apical memmrane
-        in the enterocytes; reusing rate constant for absorption.
-        """
+        Assumption: the transport over the basolateral membrane of the
+        enterocytes has the rate constant of the absorption.
+        """,
     ),
-
     Reaction(
         sid="LOSEXC",
-        name=f"excretion losartan (feces)",
+        name="excretion losartan (feces)",
         compartment="Vlumen",
-        equation=f"los_lumen -> los_feces",
+        equation="los_lumen -> los_feces",
         sboTerm=SBO.TRANSPORT_REACTION,
         pars=[],
         formula=(
-            f"(1 dimensionless - F_los_abs) * absorption",
+            "METEXC_k * Vgu * los_lumen",
             U.mmole_per_min,
         ),
     ),
     Reaction(
         sid="E3174EXC",
-        name=f"excretion e3174 (feces)",
+        name="excretion E3174 (feces)",
         compartment="Vlumen",
-        equation=f"e3174_lumen -> e3174_feces",
+        equation="e3174_lumen -> e3174_feces",
         sboTerm=SBO.TRANSPORT_REACTION,
         pars=[],
         formula=(
-            f"METEXC_k * Vgu * e3174_lumen",
+            "METEXC_k * Vgu * e3174_lumen",
             U.mmole_per_min,
         ),
     ),
     Reaction(
         sid="L158EXC",
-        name=f"excretion l158 (feces)",
+        name="excretion other metabolites (feces)",
         compartment="Vlumen",
-        equation=f"l158_lumen -> l158_feces",
+        equation="l158_lumen -> l158_feces",
         sboTerm=SBO.TRANSPORT_REACTION,
         pars=[],
         formula=(
-            f"METEXC_k * Vgu * l158_lumen",
+            "METEXC_k * Vgu * l158_lumen",
             U.mmole_per_min,
         ),
     ),
 ]
 
-_m.parameters.extend([
-    Parameter(
-        f"PODOSE_los",
-        0,
-        U.mg,
-        constant=False,
-        sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        name=f"oral dose losartan [mg]",
-        port=True,
-    ),
-    Parameter(
-        f"Ka_dis_los",
-        2.0,
-        U.per_hr,
-        constant=True,
-        sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
-        name=f"rate dissolution losartan",
-        port=True
-    ),
-    Parameter(
-        f"Mr_los",
-        422.911,
-        U.g_per_mole,
-        constant=True,
-        name=f"Molecular weight losartan [g/mole]",
-        sboTerm=SBO.MOLECULAR_MASS,
-        port=True,
-    ),
-])
+_m.parameters.extend(
+    [
+        Parameter(
+            "PODOSE_los",
+            0,
+            U.mg,
+            constant=False,
+            sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
+            name="oral dose losartan [mg]",
+            port=True,
+        ),
+        Parameter(
+            "Ka_dis_los",
+            2.0,
+            U.per_hr,
+            constant=True,
+            sboTerm=SBO.QUANTITATIVE_SYSTEMS_DESCRIPTION_PARAMETER,
+            name="rate dissolution losartan",
+            port=True,
+        ),
+        Parameter(
+            "Mr_los",
+            422.911,
+            U.g_per_mole,
+            constant=True,
+            name="Molecular weight losartan [g/mole]",
+            sboTerm=SBO.MOLECULAR_MASS,
+            port=True,
+        ),
+    ]
+)
 
 # -------------------------------------
 # Dissolution of tablet/dose in stomach
@@ -413,130 +434,39 @@ _m.reactions.extend(
     [
         # fraction dose available for absorption from stomach
         Reaction(
-            sid=f"dissolution_los",
-            name=f"dissolution losartan",
+            sid="dissolution_los",
+            name="dissolution losartan",
             formula=(
-                f"Ka_dis_los/60 min_per_hr * PODOSE_los/Mr_los",
+                "Ka_dis_los/60 min_per_hr * PODOSE_los/Mr_los",
                 U.mmole_per_min,
             ),
-            equation=f"los_stomach -> los_lumen",
+            equation="los_stomach -> los_lumen",
             compartment="Vgu",
             notes="""Swallowing, dissolution of tablet, and transport into intestine.
             Overall process describing the rates of this processes.
-            """
+            """,
         ),
     ]
 )
 _m.rate_rules.append(
-    RateRule(f"PODOSE_los", f"-dissolution_los * Mr_los", U.mg_per_min),
+    RateRule("PODOSE_los", "-dissolution_los * Mr_los", U.mg_per_min),
 )
 
 model_intestine = _m
 
-def intestine_layout(dx=200, dy=200) -> pd.DataFrame:
-    """Layout definition."""
-
-    positions = [
-        # sid, x, y
-
-        ["los_ext", 0, 0],
-
-        ["LOSEX", 0, 0.5 * dy],
-
-        ["los", 0, dy],
-
-        ["LOSABS", -0.5*dx, 1.5*dy],
-        ["LOSEFL", 0.5*dx, 1.5*dy],
-
-        ["los_lumen", 0, 2 * dy],
-        ["e3174_lumen", 1.5 * dx, 2 * dy],
-        ["l158_lumen", 2.5 * dx, 2 * dy],
-
-        ["dissolution_los", -0.5 * dx, 2.5 * dy],
-        ["LOSEXC", 0.5 * dx, 2.5 * dy],
-        ["E3174EXC", 1.5 * dx, 2.5 * dy],
-        ["L158EXC", 2.5 * dx, 2.5 * dy],
-
-        ["los_stomach", -0.5 * dx, 3 *dy],
-        ["los_feces", 0.5 * dx, 3 * dy],
-        ["e3174_feces", 1.5 * dx, 3 * dy],
-        ["l158_feces", 2.5 * dx, 3 *dy],
-
-    ]
-
-    df = pd.DataFrame(positions, columns=["id", "x", "y"])
-    df.set_index("id", inplace=True)
-    return df
-
-def intestine_annotations(dx=200, dy=200) -> list:
-    """Bounding boxes for 'plasma','enterocytes', intestinal 'lumen' and 'feces'."""
-
-    kwargs = {
-        "type": cyviz.AnnotationShapeType.ROUND_RECTANGLE,
-        "opacity": 20,
-        "border_color": "#000000",
-        "border_thickness": 2,
-    }
-    annotations = [
-
-        #plasma
-        cyviz.AnnotationShape(
-            x_pos= -dx,
-            y_pos= -0.25 * dy,
-            width= 2 * dx,
-            height=0.75 * dy,
-            fill_color="#FF0000",  # pale pink
-            **kwargs
-        ),
-
-        # enterocytes
-        cyviz.AnnotationShape(
-            x_pos= -dx,
-            y_pos= 0.5 * dy,
-            width= 2 * dx,
-            height=1 * dy,
-            fill_color="#FFC0CB", # pastel pink
-            **kwargs
-        ),
-        # lumen
-        cyviz.AnnotationShape(
-            x_pos= -dx,
-            y_pos= 1.5 * dy,
-            width= 4 * dx,
-            height= 1 * dy,
-            fill_color="#0000FF", # blue
-            **kwargs
-        ),
-        # stomach
-        cyviz.AnnotationShape(
-            x_pos= -dx,
-            y_pos= 2.5 * dy,
-            width= 1 * dx,
-            height= 0.75 * dy,
-            fill_color="#FFA500", # orange
-            **kwargs
-        ),
-        # feces
-        cyviz.AnnotationShape(
-            x_pos=0,
-            y_pos= 2.5 * dy,
-            width= 3 * dx,
-            height= 0.75 * dy,
-            fill_color="#E0FFD1", # light green
-            **kwargs
-        ),
-    ]
-    return annotations
 
 if __name__ == "__main__":
+    from sbmlode import OdeSystem
+
     from pkdb_models.models.losartan import MODEL_BASE_PATH
+
     results: FactoryResult = create_model(
         model=model_intestine,
         filepath=MODEL_BASE_PATH / f"{model_intestine.sid}.xml",
-        sbml_level=3, sbml_version=2
+        sbml_level=3,
+        sbml_version=2,
     )
 
-    cyviz.visualize_sbml(results.sbml_path, delete_session=True)
-    cyviz.apply_layout(layout=intestine_layout())
-    cyviz.add_annotations(annotations=intestine_annotations())
-
+    # ODE equations
+    ode_system = OdeSystem.from_sbml(results.sbml_path)
+    ode_system.write(results.sbml_path.parent / f"{results.sbml_path.stem}.md")

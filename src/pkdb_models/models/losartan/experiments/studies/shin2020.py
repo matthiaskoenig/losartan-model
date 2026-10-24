@@ -1,113 +1,141 @@
-from typing import Dict
+"""Simulation experiment of the study Shin2020."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    Dosing,
+    Fasting,
+    Genotype,
+    Health,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Shin2020(LosartanSimulationExperiment):
-    """Simulation experiment of Shin2020."""
+    """Simulation experiment of Shin2020.
 
-    info = {
-        "[Cve_los]": "losartan",
-        "[Cve_e3174]": "exp3174",
-        "[Cve_los_e3174]": "losartan_exp3174",
-        "Aurine_los_e3174": "losartan_exp3174_urine"
+    Single oral dose of 50 mg losartan potassium after an overnight fast in 38
+    healthy Korean subjects grouped by the ABCB1 c.2677G>T/c.3435C>T diplotype
+    (GG/CC n=13, GT/CT n=12, TT/TT n=13): losartan, E3174 and their sum in
+    plasma (Fig 1) and the urinary excretion of losartan plus E3174 (Tab 4).
+
+    Table 4 gives the excretion in the intervals 0-4 and 4-8 h, the copy of
+    the data holds the cumulative amounts (8 h: the sum of both intervals) for
+    the cumulative observable `Aurine_los_e3174`.
+    """
+
+    info: ClassVar[dict[str, str]] = {
+        "[Cveplasma_los]": "losartan",
+        "[Cveplasma_e3174]": "exp3174",
+        "[Cveplasma_los_e3174]": "losartan_exp3174",
+        "Aurine_los_e3174": "losartan_exp3174_urine",
     }
 
-    genotypes = {
+    genotypes: ClassVar[dict[str, str]] = {
         "GG_CC": "GG/CC",
         "GT_CT": "GT/CT",
-        "TT_TT": "TT/TT"
+        "TT_TT": "TT/TT",
     }
 
-    bodyweight = 67.4  # kg
+    #: the genotypes of the metadata: the diplotypes of c.2677G>T and c.3435C>T
+    metadata_genotypes: ClassVar[dict[str, Genotype]] = {
+        "GG_CC": Genotype.ABCB1_2677GG_3435CC,
+        "GT_CT": Genotype.ABCB1_2677GT_3435CT,
+        "TT_TT": Genotype.ABCB1_2677TT_3435TT,
+    }
 
-    def datasets(self) -> Dict[str, DataSet]:
+    #: body weight of the groups [kg]
+    bodyweights: ClassVar[dict[str, float]] = {
+        "GG_CC": 68.5,
+        "GT_CT": 66.5,
+        "TT_TT": 67.1,
+    }
+
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1", "Tab4"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
-                dset = DataSet.from_df(df_label, self.ureg)
+                label = str(label)
+                dsets[self.to_sid(label)] = DataSet.from_df(df_label, self.ureg)
 
-                dsets[f"{label}"] = dset
-
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
+    @override
+    def simulations(self) -> dict[str, Simulation]:
         tcsims = {}
         for number, genotype in self.genotypes.items():
-            tcsims[f"po_los50_{number}"] = TimecourseSim(
-                [Timecourse(
-                    start=0,
-                    end=20 * 60,  # [min]
-                    steps=500,
-                    changes={
-                        **self.default_changes(),
-                        "BW": Q_(self.bodyweight, "kg"),
-                        "GU__f_abcb1": Q_(self.abcb1_activity[genotype], "dimensionless"),
-                        "PODOSE_los": Q_(50, "mg") * self.Mr.los/self.Mr.losp,
-                    },
-                )]
+            tcsims[f"po_los50_{number}"] = Simulation(
+                time_unit="min",
+                end=12 * 60,
+                preinit_changes={
+                    **self.default_changes(),
+                    "BW": Q(self.bodyweights[number], "kg"),
+                    "GU__f_abcb1": Q(self.abcb1_activity[genotype], "dimensionless"),
+                    "PODOSE_los": self.losartan_dose(Q(50, "mg")),
+                },
             )
-        # console.print(tcsims)
         return tcsims
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-            for number, genotype in self.genotypes.items():
-                mappings[f"fm_po_los50_{name}_{number}"] = FitMapping(
+        for sid, name in self.info.items():
+            for number, genotype in self.metadata_genotypes.items():
+                mappings[self.to_sid(f"fm_po_los50_{name}_{number}")] = FitMapping(
                     self,
                     reference=FitData(
                         self,
-                        dataset=f"{name}_{number}",
+                        dataset=self.to_sid(f"{name}_{number}"),
                         xid="time",
                         yid="mean",
                         yid_sd="mean_sd",
                         count="count",
                     ),
                     observable=FitData(
-                        self, task=f"task_po_los50_{number}", xid="time", yid=sid,
+                        self,
+                        task=f"task_po_los50_{number}",
+                        xid="time",
+                        yid=sid,
                     ),
-                    metadata=LosartanMappingMetaData(
-                        tissue=Tissue.URINE if sid == "Aurine_los_e3174" else Tissue.PLASMA,
+                    metadata=PKPDMappingMetaData(
+                        tissue=Tissue.URINE
+                        if sid == "Aurine_los_e3174"
+                        else Tissue.PLASMA,
                         route=Route.PO,
                         application_form=ApplicationForm.TABLET,
                         dosing=Dosing.SINGLE,
                         health=Health.HEALTHY,
                         fasting=Fasting.FASTED,
                         coadministration=Coadministration.NONE,
-                        genotype=Genotype(genotype),
+                        genotype=genotype,
                     ),
                 )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         return {
             **self.fig1_tab4(),
         }
 
-    def fig1_tab4(self) -> Dict[str, Figure]:
+    def fig1_tab4(self) -> dict[str, Figure]:
+        """Losartan and E3174 in plasma and urine by ABCB1 diplotype."""
         fig = Figure(
             experiment=self,
             sid="Fig1_Tab4",
@@ -123,9 +151,7 @@ class Shin2020(LosartanSimulationExperiment):
         plots[2].set_yaxis(self.label_los_e3174, unit=self.unit_los_e3174)
         plots[3].set_yaxis(self.label_los_e3174_urine, unit=self.unit_los_e3174_urine)
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-
+        for k, (sid, name) in enumerate(self.info.items()):
             for number, genotype in self.genotypes.items():
                 # simulation
                 plots[k].add_data(
@@ -137,7 +163,7 @@ class Shin2020(LosartanSimulationExperiment):
                 )
                 # data
                 plots[k].add_data(
-                    dataset=f"{name}_{number}",
+                    dataset=self.to_sid(f"{name}_{number}"),
                     xid="time",
                     yid="mean",
                     yid_sd="mean_sd",
@@ -146,12 +172,8 @@ class Shin2020(LosartanSimulationExperiment):
                     color=self.abcb1_colors[genotype],
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Shin2020.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Shin2020, output_dir=Shin2020.__name__)
+    MODEL.run_experiments(Shin2020, output_dir=Shin2020.__name__)

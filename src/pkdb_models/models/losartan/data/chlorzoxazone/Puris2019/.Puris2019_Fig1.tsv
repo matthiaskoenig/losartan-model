@@ -71,18 +71,18 @@ Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_y
 Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	2	hr	0.5285935	0.45208657	0.0765069299999999	0.216394276043058	ng/ml	HPLC	NA
 Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	3	hr	0.13910356	0.20170015	0.06259659	0.177049893072616	ng/ml	HPLC	NA
 Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_repaglinide	concentration	repaglinide	plasma	4	hr	0.083462134	0.13910356	0.055641426	0.157377718557958	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	plasma	1	hr	9.551778	5.904173	3.647605	8.93477103322464	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	plasma	2	hr	9.335394	7.48068	1.854714	4.54310291879636	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	plasma	3	hr	15.085008	13.044823	2.040185	4.9974122308801	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	plasma	4	hr	10.633694	9.675425	0.958269	2.34727008632709	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	plasma	1	hr	10.386398	7.2642965	3.1221015	8.83063656881077	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	plasma	2	hr	11.530139	13.601236	2.071097	5.85794693278046	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	plasma	3	hr	10.170015	8.253478	1.916537	5.42078523637969	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	plasma	4	hr	7.6970634	9.057187	1.3601236	3.84701048324744	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	plasma	1	hr	11.313756	13.3230295	2.0092735	5.68308366843372	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	plasma	2	hr	11.746522	13.044823	1.298301	3.6721497644851	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	plasma	3	hr	9.211746	11.530139	2.318393	6.5574056470217	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	plasma	4	hr	5.03864	3.8330758	1.2055642	3.40985048390294	ng/ml	HPLC	NA
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	serum	1.0	hr	9.603	5.925	3.678	9.009223	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	serum	2.0	hr	9.337	7.493	1.844	4.516859	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	serum	4.0	hr	15.16	13.03	2.13	5.217413	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	losartan_healthy	concentration	losartan	serum	6.0	hr	10.72	9.657	1.063	2.603808	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	serum	1.0	hr	10.36	7.248	3.112	8.802065	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	serum	2.0	hr	11.52	13.63	2.11	5.967981	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	serum	4.0	hr	10.1	8.259	1.841	5.207134	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	losartan_obese	concentration	losartan	serum	6.0	hr	7.663	9.04	1.377	3.894744	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	serum	1.0	hr	11.31	13.26	1.95	5.515433	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	serum	2.0	hr	11.73	13.03	1.3	3.676955	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	serum	4.0	hr	9.262	11.55	2.288	6.471441	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	losartan_one_year_after	concentration	losartan	serum	6.0	hr	5.018	3.776	1.242	3.512906	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
 Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_dextromethorphan	concentration	dextromethorphan	plasma	1	hr	0.61728394	0.7654321	0.14814816	0.362887398332201	ng/ml	HPLC	NA
 Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_dextromethorphan	concentration	dextromethorphan	plasma	2	hr	2.2345679	1.4691358	0.7654321	1.87491807774699	ng/ml	HPLC	NA
 Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	Fig1_healthy_dextromethorphan	concentration	dextromethorphan	plasma	3	hr	2.419753	1.7777778	0.6419752	1.57251166752118	ng/ml	HPLC	NA
@@ -191,15 +191,15 @@ Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_y
 Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_chlorzoxazone	concentration	chlorzoxazone	plasma	2	hr	547.46545	565.8986	18.43315	48.7695307795501	ng/ml	HPLC	NA
 Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_chlorzoxazone	concentration	chlorzoxazone	plasma	3	hr	182.48848	158.52534	23.96314	63.4005090722244	ng/ml	HPLC	NA
 Puris2019	7	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	Fig1_one_year_after_chlorzoxazone	concentration	chlorzoxazone	plasma	4	hr	84.792625	62.67281	22.119815	58.5235295367562	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	plasma	1	hr	0.15360983	-0.84485406	0.99846389	2.44572705709439	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	plasma	2	hr	2.2273426	2.764977	0.5376344	1.31692994816739	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	plasma	3	hr	14.592934	13.056835	1.536099	3.7626587443995	ng/ml	HPLC	NA
-Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	plasma	4	hr	34.02458	32.718895	1.305685	3.19826201480585	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	plasma	1	hr	0.6144393	1.3056836	0.6912443	1.95513412794619	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	plasma	2	hr	5.299539	3.456221	1.843318	5.2136906307329	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	plasma	3	hr	23.11828	18.58679	4.53149	12.8169892315161	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	plasma	4	hr	41.167435	35.714287	5.453148	15.4238317184554	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	plasma	1	hr	1.0752689	1.7665131	0.6912442	1.95513384510348	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	plasma	2	hr	6.912442	7.834101	0.921659	2.60684531536645	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	plasma	3	hr	30.414747	35.253456	4.838709	13.6859357843535	ng/ml	HPLC	NA
-Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	plasma	4	hr	43.394775	39.324116	4.07065900000001	11.5135623311922	ng/ml	HPLC	NA
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	serum	1.0	hr	0.02194	1.020404	0.998464	2.445727	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	serum	2.0	hr	2.203	2.740634	0.537634	1.316929	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	serum	4.0	hr	14.61	13.14	1.47	3.60075	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	6	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	healthy	exp3174_healthy	concentration	exp3174	serum	6.0	hr	34.21	32.7	1.51	3.69873	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	serum	1.0	hr	0.614	1.306	0.692	1.957272	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	serum	2.0	hr	5.252	3.522	1.73	4.893179	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	serum	4.0	hr	23.02	18.64	4.38	12.388511	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	obese	exp3174_obese	concentration	exp3174	serum	6.0	hr	41.18	35.67	5.51	15.584633	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	serum	1.0	hr	0.9222	1.613444	0.691244	1.955133	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	serum	2.0	hr	6.69	7.877	1.187	3.357343	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	serum	4.0	hr	30.52	35.3	4.78	13.519882	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)
+Puris2019	8	MEL, NIC, BUP, REP, LOS, OME,CZX, MID, DEX	one_year_after	exp3174_one_year_after	concentration	exp3174	serum	6.0	hr	43.3	39.38	3.92	11.087434	ng/ml	HPLC MS/MS	pkdb_data format 2 (sample times 1, 2, 4, 6 h, serum)

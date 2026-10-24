@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_pm	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit	count_unit
+Ohtawa1993	single_dose_200	6.0	LOS200	renin activity	renin	plasma	RIA	pra_200	0.0	hr	1.0	1.8374564170679264	0.8374564170679265							dimensionless	dimensionless	dimensionless
+Ohtawa1993	single_dose_200	6.0	LOS200	renin activity	renin	plasma	RIA	pra_200	6.0	hr	27.52789307654024	39.04291881122408	11.515025734683835							dimensionless	dimensionless	dimensionless
+Ohtawa1993	single_dose_200	6.0	LOS200	renin activity	renin	plasma	RIA	pra_200	24.0	hr	5.379628092312869	7.054540926448703	1.674912834135834							dimensionless	dimensionless	dimensionless

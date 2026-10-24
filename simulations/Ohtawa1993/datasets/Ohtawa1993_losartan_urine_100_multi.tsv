@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	mean_sd	median	min	max	mean_se	cv	comments	mean_unit	median_unit	count_unit
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	losartan	urine	HPLC	losartan_urine_100_multi	0.0	day	0.0	0.0							µmole	µmole	dimensionless
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	losartan	urine	HPLC	losartan_urine_100_multi	1.0	day	10.19522776572668	3.2537960954446854							µmole	µmole	dimensionless
+Ohtawa1993	multiple_dose_losartan	6.0	LOS100M	cumulative amount	losartan	urine	HPLC	losartan_urine_100_multi	7.0	day	8.459869848156183	1.952277657266812							µmole	µmole	dimensionless

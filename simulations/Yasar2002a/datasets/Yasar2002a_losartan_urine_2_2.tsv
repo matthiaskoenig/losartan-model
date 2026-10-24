@@ -1,0 +1,3 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	median	min	max	mean_sd	mean_se	cv	comments	mean_unit	median_unit	count_unit
+Yasar2002a	cyp2c9_2_2_swedish	3.0	LOS50	cumulative amount	losartan	urine	HPLC/FS	losartan_urine_2_2	0.0	hr	0.0								µmole	µmole	dimensionless
+Yasar2002a	cyp2c9_2_2_swedish	3.0	LOS50	cumulative amount	losartan	urine	HPLC/FS	losartan_urine_2_2	24.0	hr	3.5791757049891544		2.169197396963124	6.290672451193059	2.27765726681128			recovery [% of dose] x 108.46 µmole (50 mg losartan potassium)	µmole	µmole	dimensionless

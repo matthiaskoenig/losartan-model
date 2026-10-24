@@ -1,51 +1,90 @@
-from typing import Dict
+"""Simulation experiment of the study Azizi1999."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    DataType,
+    Dosing,
+    Fasting,
+    Health,
+    PKPDData,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Azizi1999(LosartanSimulationExperiment):
-    """Simulation experiment of Azizi1999."""
+    """Simulation experiment of Azizi1999.
 
-    info = {
-        "[Cve_los]": "losartan",
-        "[Cve_e3174]": "exp3174",
+    Single oral dose of losartan potassium 50 mg (tablet) or placebo in 16
+    healthy male subjects after a light breakfast (the candesartan cilexetil
+    arms of the study are not simulated): losartan and E3174 in plasma, plasma
+    renin (active renin concentration), angiotensin I and II and the mean
+    arterial pressure (change from the baseline, curated as 87 mmHg plus the
+    change).
+
+    The subjects were mildly sodium depleted (furosemide 40 mg at 9 pm on the
+    evening before and a diet of 30 mmol sodium for 36 hr), which the model
+    describes only by the baselines of the RAAS of each arm. Losartan in plasma
+    is reported as the potassium salt (HPLC of Merck). The RAAS of the placebo
+    arm falls at 12 hr with the meals, which the model does not describe.
+    """
+
+    info: ClassVar[dict[str, str]] = {
+        "[Cveplasma_los]": "losartan",
+        "[Cveplasma_e3174]": "exp3174",
         "[ren]": "renin",
         "[ang1]": "ang1",
         "[ang2]": "ang2",
         "MAP": "map",
     }
-    colors = {
+    pk_sids: ClassVar[set[str]] = {"[Cveplasma_los]", "[Cveplasma_e3174]"}
+    colors: ClassVar[dict[str, str]] = {
         "placebo": "black",
         "LOS50": "tab:blue",
     }
-    losp_doses = {
-        "placebo": 0,  # [mg]
-        "LOS50": 50,  # [mg]
+    losp_doses: ClassVar[dict[str, int]] = {
+        "placebo": 0,  # [mg] losartan potassium
+        "LOS50": 50,  # [mg] losartan potassium
     }
-    interventions = list(losp_doses.keys())
+    interventions: ClassVar[list[str]] = list(losp_doses.keys())
+    legend_labels: ClassVar[dict[str, str]] = {
+        "placebo": "placebo",
+        "LOS50": "50 mg",
+    }
 
+    #: the baselines of the arms, the values before the dose (Fig1, Fig2):
+    #: renin, angiotensin I and II [pg/ml] and the mean arterial pressure
+    #: [mmHg] (the change from the baseline is plotted, 87 mmHg is the baseline
+    #: of the curation)
+    baselines: ClassVar[dict[str, dict[str, float]]] = {
+        "placebo": {"ren": 58.5, "ang1": 11.8, "ang2": 7.2, "MAP": 87.0},
+        "LOS50": {"ren": 70.9, "ang1": 14.6, "ang2": 11.1, "MAP": 87.0},
+    }
+    #: the systolic blood pressure is not reported, an assumption which splits
+    #: the mean arterial pressure into SBP and DBP (only MAP is mapped)
+    sbp_ref: ClassVar[float] = 120.0  # [mmHg]
 
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1", "Fig2", "Fig3"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
+                label = str(label)
                 dset = DataSet.from_df(df_label, self.ureg)
 
                 # unit conversion to mole/l
@@ -56,50 +95,50 @@ class Azizi1999(LosartanSimulationExperiment):
                 elif label.endswith("_ang2"):
                     dset.unit_conversion("mean", 1 / self.Mr.ang2)
                 elif label.endswith("_losartan"):
-                    dset.unit_conversion("mean", 1 / self.Mr.los)
+                    # reported as losartan potassium
+                    dset.unit_conversion("mean", 1 / self.Mr.losp)
                 elif label.endswith("_exp3174"):
                     dset.unit_conversion("mean", 1 / self.Mr.e3174)
                 dsets[label] = dset
 
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
+    @override
+    def simulations(self) -> dict[str, Simulation]:
         tcsims = {}
-
-        map_value = 87  # mmHg
         for intervention in self.interventions:
-            tcsims[f"po_{intervention}"] = TimecourseSim(
-                [Timecourse(
-                    start=0,
-                    end=25 * 60,  # [min]
-                    steps=500,
-                    changes={
-                        **self.default_changes(),
-                        "PODOSE_los": Q_(self.losp_doses[intervention], "mg") * self.Mr.los/self.Mr.losp,
-                        "ren_ref" : Q_(58.5, "pg/ml") / self.Mr.ren, # placebo
-                        "[ren]": Q_(58.5, "pg/ml") / self.Mr.ren,  # placebo
-                        "ang1_ref" : Q_(11.8, "pg/ml") / self.Mr.ang1,  # placebo
-                        "[ang1]": Q_(11.8, "pg/ml") / self.Mr.ang1,  # placebo
-                        "ang2_ref" : Q_(7.2, "pg/ml") / self.Mr.ang2,  # placebo
-                        "[ang2]": Q_(7.2, "pg/ml") / self.Mr.ang2,  # placebo
-                        # MAP 87  MAP = DBP + (SBP - DBP)/3  =>
-                        "SBP_ref" : Q_(120, "mmHg"),
-                        "DBP_ref" : Q_((3 * map_value - 120) / 2, "mmHg"),
-                    },
-                )]
+            baseline = self.baselines[intervention]
+            ren = Q(baseline["ren"], "pg/ml") / self.Mr.ren
+            ang1 = Q(baseline["ang1"], "pg/ml") / self.Mr.ang1
+            ang2 = Q(baseline["ang2"], "pg/ml") / self.Mr.ang2
+            # MAP = DBP + (SBP - DBP)/3
+            dbp = (3 * baseline["MAP"] - self.sbp_ref) / 2
+            tcsims[f"po_{intervention}"] = Simulation(
+                time_unit="min",
+                end=25 * 60,
+                preinit_changes={
+                    **self.default_changes(),
+                    "PODOSE_los": self.losartan_dose(
+                        Q(self.losp_doses[intervention], "mg")
+                    ),
+                    "ren_ref": ren,
+                    "[ren]": ren,
+                    "ang1_ref": ang1,
+                    "[ang1]": ang1,
+                    "ang2_ref": ang2,
+                    "[ang2]": ang2,
+                    "SBP_ref": Q(self.sbp_ref, "mmHg"),
+                    "DBP_ref": Q(dbp, "mmHg"),
+                },
             )
-        # console.print(tcsims)
         return tcsims
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for sid, name in self.info.items():
             for intervention in self.interventions:
-                if intervention == "placebo" and sid in {"[Cve_los]", "[Cve_e3174]"}:
+                if intervention == "placebo" and sid in self.pk_sids:
                     continue
 
                 mappings[f"fm_po_{intervention}_{name}"] = FitMapping(
@@ -113,33 +152,41 @@ class Azizi1999(LosartanSimulationExperiment):
                         count="count",
                     ),
                     observable=FitData(
-                        self, task=f"task_po_{intervention}", xid="time", yid=sid,
+                        self,
+                        task=f"task_po_{intervention}",
+                        xid="time",
+                        yid=sid,
                     ),
-                    metadata=LosartanMappingMetaData(
-                        tissue=Tissue.PLASMA,
+                    metadata=PKPDMappingMetaData(
+                        tissue=Tissue.NONE if sid == "MAP" else Tissue.PLASMA,
                         route=Route.PO,
                         application_form=ApplicationForm.TABLET,
                         dosing=Dosing.SINGLE,
                         health=Health.HEALTHY,
-                        fasting=Fasting.FED,
-                        coadministration=Coadministration.NONE,
+                        # a light breakfast 2 hr before the dose
+                        fasting=Fasting.LIGHT_BREAKFAST,
+                        # furosemide 40 mg on the evening before the dose
+                        coadministration=Coadministration.FUROSEMIDE,
+                        data=PKPDData.PK if sid in self.pk_sids else PKPDData.PD,
+                        data_type=DataType.MEAN,
                     ),
                 )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         return {
             **self.fig1_2_3(),
         }
 
-    def fig1_2_3(self) -> Dict[str, Figure]:
+    def fig1_2_3(self) -> dict[str, Figure]:
+        """Figures 1, 2 and 3: pharmacokinetics, RAAS and blood pressure."""
         fig = Figure(
             experiment=self,
             sid="Fig1_2_3",
             num_rows=3,
             num_cols=2,
-            name=f"{self.__class__.__name__} (healthy)",
+            name=f"{self.__class__.__name__} (healthy, sodium depleted)",
         )
         plots = fig.create_plots(
             xaxis=Axis(self.label_time, unit=self.unit_time), legend=True
@@ -151,19 +198,18 @@ class Azizi1999(LosartanSimulationExperiment):
         plots[4].set_yaxis(self.labels["[ang2]"], unit=self.units["[ang2]"], min=0)
         plots[5].set_yaxis(self.labels["MAP"], unit=self.units["MAP"], min=60)
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for k, (sid, name) in enumerate(self.info.items()):
             for intervention in self.interventions:
                 # simulation
                 plots[k].add_data(
                     task=f"task_po_{intervention}",
                     xid="time",
                     yid=sid,
-                    label=f"Sim {intervention}",
+                    label=f"Sim {self.legend_labels[intervention]}",
                     color=self.colors[intervention],
                 )
                 # data
-                if intervention == "placebo" and sid in {"[Cve_los]", "[Cve_e3174]"}:
+                if intervention == "placebo" and sid in self.pk_sids:
                     continue
                 plots[k].add_data(
                     dataset=f"{intervention}_{name}",
@@ -171,16 +217,12 @@ class Azizi1999(LosartanSimulationExperiment):
                     yid="mean",
                     yid_sd=None,
                     count="count",
-                    label=f"{intervention}",
+                    label=self.legend_labels[intervention],
                     color=self.colors[intervention],
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Azizi1999.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Azizi1999, output_dir=Azizi1999.__name__)
+    MODEL.run_experiments(Azizi1999, output_dir=Azizi1999.__name__)

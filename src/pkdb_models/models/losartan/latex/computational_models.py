@@ -1,12 +1,12 @@
-"""Module for creating latex table from computational models table."""
+"""Create the LaTeX table of the computational models of losartan from their table."""
 
 from pathlib import Path
+
 import pandas as pd
 
 
 def create_latex_table(df: pd.DataFrame) -> str:
     """Transform DataFrame into LaTeX table."""
-
     # Preamble with color definitions
     latex_header = r"""
 \begin{landscape}
@@ -15,10 +15,10 @@ def create_latex_table(df: pd.DataFrame) -> str:
 \tabcolsep=3pt
 \renewcommand{\arraystretch}{1.3}
 \tiny
-\begin{threeparttable} 
+\begin{threeparttable}
 
-\caption{\scriptsize{\textbf{Summary of published computational models for losartan.} 
-Overview of published computational models including model type, software/platform, 
+\caption{\scriptsize{\textbf{Summary of published computational models for losartan.}
+Overview of published computational models including model type, software/platform,
 reproducibility criteria (open software, open model, open code, open data, open license,
 reproducibility, FAIR, long-term storage), resources, clinical data sources, and model scope.}}
 
@@ -41,7 +41,7 @@ reproducibility, FAIR, long-term storage), resources, clinical data sources, and
     >{\raggedright\arraybackslash}p{4.3cm}  % Scope
 }
 \toprule
-""".strip('\n')
+""".strip("\n")
 
     # Column headers row
     column_names = df.columns.tolist()
@@ -52,37 +52,39 @@ reproducibility, FAIR, long-term storage), resources, clinical data sources, and
 
     # Indices of columns that need conditional coloring
     color_columns = {
-        'Open Software': 4,
-        'Open Model': 5,
-        'Open Code': 6,
-        'Open Data': 7,
-        'Open License': 8,
-        'Reproducibility': 9,
-        'FAIR': 10,
-        'Longterm Storage': 11
+        "Open Software": 4,
+        "Open Model": 5,
+        "Open Code": 6,
+        "Open Data": 7,
+        "Open License": 8,
+        "Reproducibility": 9,
+        "FAIR": 10,
+        "Longterm Storage": 11,
     }
 
-    for index, row in df.iterrows():
+    for _, row in df.iterrows():
         values = list(row.astype(str).values)
 
         # First column: Study with citation
         values[0] = f"{values[0]} \\cite{{{values[0]}}}"
 
         # Second column: PubMed ID to clickable link
-        if values[1] and values[1] != 'nan' and values[1] != '' and values[1] != '-':
-            values[1] = f"\\href{{https://pubmed.ncbi.nlm.nih.gov/{values[1]}/}}{{{values[1]}}}"
+        if values[1] and values[1] != "nan" and values[1] != "" and values[1] != "-":
+            values[1] = (
+                f"\\href{{https://pubmed.ncbi.nlm.nih.gov/{values[1]}/}}{{{values[1]}}}"
+            )
 
         # Apply conditional coloring to Yes/No columns
-        for col_name, col_idx in color_columns.items():
+        for col_idx in color_columns.values():
             if col_idx < len(values):
                 val = values[col_idx].strip()
-                if val == 'Yes':
-                    values[col_idx] = f"\\cellcolor{{green!20}}Yes"
-                elif val == 'No':
-                    values[col_idx] = f"\\cellcolor{{red!20}}No"
+                if val == "Yes":
+                    values[col_idx] = r"\cellcolor{green!20}Yes"
+                elif val == "No":
+                    values[col_idx] = r"\cellcolor{red!20}No"
 
         # Clean up
-        values = [v if v != 'nan' else '' for v in values]
+        values = [v if v != "nan" else "" for v in values]
         row_str = " & ".join(values) + r" \\"
 
         latex_body += row_str + "\n"
@@ -93,21 +95,19 @@ reproducibility, FAIR, long-term storage), resources, clinical data sources, and
 \bottomrule
 \end{tabularx}
 
-\end{threeparttable} 
+\end{threeparttable}
 \end{table}
 \end{landscape}
-""".strip('\n')
+""".strip("\n")
 
     # Combine all parts
-    full_latex = latex_header + "\n" + latex_body + latex_footer
-
-    return full_latex
+    return latex_header + "\n" + latex_body + latex_footer
 
 
 if __name__ == "__main__":
     # Input and output file paths
-    tsv_path = Path(__file__).parent / 'computational_models.tsv'
-    latex_path = Path(__file__).parent / 'computational_models.tex'
+    tsv_path = Path(__file__).parent / "computational_models.tsv"
+    latex_path = Path(__file__).parent / "computational_models.tex"
 
     # Load TSV file
     df = pd.read_csv(tsv_path, sep="\t")
@@ -117,5 +117,5 @@ if __name__ == "__main__":
     latex_str = create_latex_table(df)
 
     # Save LaTeX table to file
-    with open(latex_path, 'w') as f_tex:
+    with open(latex_path, "w") as f_tex:
         f_tex.write(latex_str)

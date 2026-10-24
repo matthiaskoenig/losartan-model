@@ -1,0 +1,4 @@
+parameter	value	unit	lower_bound	upper_bound	ci_lower	ci_upper	identifiability	n_points	cost_min	converged
+E50_e3174	0.0002068853693351313	mM	1e-05	0.01	0.00017170071798799805	0.00025468961268899665	identifiable	15	96.56530200263546	True
+RENSEC_n	2.9680635276708203	dimensionless	0.2	10.0	2.354216712618549	3.8091748584922724	identifiable	15	96.56530200263546	True
+BP_emax	0.2443466614325247	dimensionless	0.01	0.6		0.5762481113962266	non_identifiable_lower	14	96.56110931660653	True

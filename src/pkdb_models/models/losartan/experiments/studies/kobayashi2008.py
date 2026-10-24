@@ -1,43 +1,64 @@
-from typing import Dict
+"""Simulation experiment of the study Kobayashi2008."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    DataType,
+    Dosing,
+    Fasting,
+    Health,
+    PKPDData,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Kobayashi2008(LosartanSimulationExperiment):
-    """Simulation experiment of Kobayashi2008."""
+    """Simulation experiment of Kobayashi2008.
+
+    Single oral dose of losartan potassium 25 mg as tablet after an overnight
+    fast in six healthy Japanese men (62.3 kg), alone and after bucolome 300 mg
+    once daily for 7 days: losartan and E3174 in serum (samples 0-24 hr).
+    Bucolome is a potent CYP2C9 inhibitor (`cyp2c9_interactions`, losartan AUC
+    x1.67, E3174 AUC x0.165), its arm is validation data.
+    """
 
     bodyweight = 62.3  # [kg]
-    info = {
+    info: ClassVar[dict[str, str]] = {
         "los": "losartan",
         "e3174": "exp3174",
     }
-    interventions = ["LOS", "LOS_BUC"]
-    colors = {
+    interventions: ClassVar[list[str]] = ["LOS", "LOS_BUC"]
+    #: the legend names of the arms
+    legends: ClassVar[dict[str, str]] = {
+        "LOS": "losartan 25 mg",
+        "LOS_BUC": "losartan 25 mg + bucolome 300 mg",
+    }
+    colors: ClassVar[dict[str, str]] = {
         "LOS": "black",
         "LOS_BUC": "tab:blue",
     }
 
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
+                label = str(label)
                 dset = DataSet.from_df(df_label, self.ureg)
 
                 # unit conversion to mole/l
@@ -45,34 +66,33 @@ class Kobayashi2008(LosartanSimulationExperiment):
                     dset.unit_conversion("mean", 1 / self.Mr.los)
                 elif label.startswith("exp3174_"):
                     dset.unit_conversion("mean", 1 / self.Mr.e3174)
-                dsets[f"{label}"] = dset
+                dsets[label] = dset
 
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
-        tcsims = {}
-        tcsims[f"po_los25"] = TimecourseSim(
-            [Timecourse(
-                start=0,
-                end=25 * 60,  # [min]
-                steps=500,
-                changes={
+    @override
+    def simulations(self) -> dict[str, Simulation]:
+        simulations = {}
+        for intervention in self.interventions:
+            f_cyp2c9 = 1.0
+            if "BUC" in intervention:
+                f_cyp2c9 = self.cyp2c9_interactions["bucolome"]
+            simulations[f"po_los25_{intervention.lower()}"] = Simulation(
+                time_unit="min",
+                end=25 * 60,
+                preinit_changes={
                     **self.default_changes(),
-                    "BW": Q_(self.bodyweight, "kg"),
-                    "PODOSE_los": Q_(25, "mg") * self.Mr.los/self.Mr.losp,
+                    "BW": Q(self.bodyweight, "kg"),
+                    "LI__f_cyp2c9": Q(f_cyp2c9, "dimensionless"),
+                    "PODOSE_los": self.losartan_dose(Q(25, "mg")),
                 },
-            )]
-        )
-        # console.print(tcsims)
-        return tcsims
+            )
+        return simulations
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for sid, name in self.info.items():
             for intervention in self.interventions:
                 coadministration = Coadministration.NONE
                 if "BUC" in intervention:
@@ -89,22 +109,27 @@ class Kobayashi2008(LosartanSimulationExperiment):
                         count="count",
                     ),
                     observable=FitData(
-                        self, task=f"task_po_los25", xid="time", yid=f"[Cve_{sid}]",
+                        self,
+                        task=f"task_po_los25_{intervention.lower()}",
+                        xid="time",
+                        yid=f"[Cveplasma_{sid}]",
                     ),
-                    metadata=LosartanMappingMetaData(
-                        tissue=Tissue.PLASMA,
+                    metadata=PKPDMappingMetaData(
+                        tissue=Tissue.SERUM,
                         route=Route.PO,
                         application_form=ApplicationForm.TABLET,
                         dosing=Dosing.SINGLE,
                         health=Health.HEALTHY,
                         fasting=Fasting.FASTED,
                         coadministration=coadministration,
+                        data=PKPDData.PK,
+                        data_type=DataType.MEAN,
                     ),
                 )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         fig = Figure(
             experiment=self,
             sid="Fig1",
@@ -117,21 +142,16 @@ class Kobayashi2008(LosartanSimulationExperiment):
         plots[0].set_yaxis(self.label_los, unit=self.unit_los)
         plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-
-            # simulation
-            plots[k].add_data(
-                task=f"task_po_los25",
-                xid="time",
-                yid=f"[Cve_{sid}]",
-                label=f"Sim 25 mg",
-                color="black",
-            )
-
+        for k, (sid, name) in enumerate(self.info.items()):
             for intervention in self.interventions:
-                if intervention == "LOS_BUC":
-                    continue
+                # simulation
+                plots[k].add_data(
+                    task=f"task_po_los25_{intervention.lower()}",
+                    xid="time",
+                    yid=f"[Cveplasma_{sid}]",
+                    label=f"Sim {self.legends[intervention]}",
+                    color=self.colors[intervention],
+                )
                 # data
                 plots[k].add_data(
                     dataset=f"{name}_{intervention}",
@@ -139,16 +159,12 @@ class Kobayashi2008(LosartanSimulationExperiment):
                     yid="mean",
                     yid_sd="mean_sd",
                     count="count",
-                    label=f"{intervention} 25 mg",
+                    label=self.legends[intervention],
                     color=self.colors[intervention],
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Kobayashi2008.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Kobayashi2008, output_dir=Kobayashi2008.__name__)
+    MODEL.run_experiments(Kobayashi2008, output_dir=Kobayashi2008.__name__)

@@ -1,44 +1,29 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14761114.svg)](https://doi.org/10.5281/zenodo.14761114)
-[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml/badge.svg)](https://github.com/matthiaskoenig/losartan-model/actions/workflows/python.yml)
-[![GitHub Action](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml/badge.svg)](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docker.yml)
+[![Release](https://img.shields.io/github/v/release/matthiaskoenig/losartan-model)](https://github.com/matthiaskoenig/losartan-model/releases)
+[![Documentation](https://github.com/matthiaskoenig/losartan-model/actions/workflows/docs.yml/badge.svg)](https://matthiaskoenig.github.io/losartan-model/)
+[![CI](https://github.com/matthiaskoenig/losartan-model/actions/workflows/ci.yml/badge.svg)](https://github.com/matthiaskoenig/losartan-model/actions/workflows/ci.yml)
+[![Docker](https://img.shields.io/docker/v/matthiaskoenig/losartan?sort=semver&label=docker)](https://hub.docker.com/r/matthiaskoenig/losartan)
+[![Python](https://img.shields.io/badge/python-3.14-blue)](https://www.python.org)
+[![Code license: MIT](https://img.shields.io/badge/code%20license-MIT-blue)](https://opensource.org/license/MIT)
+[![Model license: CC BY-SA 4.0](https://img.shields.io/badge/model%20license-CC%20BY--SA%204.0-lightgrey)](https://creativecommons.org/licenses/by-sa/4.0/)
 
+# Physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) model of losartan
 
-# losartan model
-This repository provides the losartan physiologically based pharmacokinetics (PBPK) model.
+This repository provides the losartan physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) model: the oral absorption of losartan, its distribution, its hepatic metabolism to the active metabolite E3174 (CYP2C9) and to inactive metabolites, the renal and biliary excretion of losartan and its metabolites, and the blockade of the AT1 receptor by E3174 with its effects on renin, angiotensin, aldosterone and the blood pressure.
 
-The model is distributed in [SBML](http://sbml.org) format available from [`losartan_body_flat.xml`](./models/losartan_body_flat.xml) with 
-corresponding [SBML4humans model report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_body_flat.xml) and [model equations](./models/losartan_body_flat.md).
+Documentation: <https://matthiaskoenig.github.io/losartan-model/>
 
-The COMBINE archive is available from [`losartan_model.omex`](./losartan_model.omex).
-The FAIR assessment is available from [`losartan_model_fair.xlsx`](./losartan_model_fair.xlsx).
+## Quick start
 
-![model overview](./figures/losartan_model.png)
-
-### Comp submodels
-* **liver** submodel [`losartan_liver.xml`](./models/losartan_liver.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_liver.xml) and [equations](./models/losartan_liver.md).
-* **kidney** submodel [`losartan_kidney.xml`](./models/losartan_kidney.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_kidney.xml) and [equations](./models/losartan_kidney.md).
-* **intestine** submodel [`losartan_intestine.xml`](./models/losartan_intestine.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_intestine.xml) and [equations](./models/losartan_intestine.md).
-* **whole-body** submodel [`losartan_body.xml`](./models/losartan_body.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_body.xml) and [equations](./models/losartan_body.md).
-* **raas** submodel [`losartan_raas.xml`](./models/losartan_body.xml) with [SBML4humans report](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/losartan-model/main/models/losartan_raas.xml) and [equations](./models/losartan_raas.md).
+```bash
+git clone https://github.com/matthiaskoenig/losartan-model.git && cd losartan-model
+uv sync
+uv run run_simulation pkdb_models.models.losartan --action all -r results
+```
 
 ## How to cite
-To cite the model repository
 
-> Tensil, E., Myshkina, M. & König, M. (2026).
-> *Physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) model of losartan.*   
-> Zenodo. [https://doi.org/10.5281/zenodo.14761114](https://doi.org/10.5281/zenodo.14761114)
-
-To cite the main publication
-
-> Ennie Tensil, Mariia Myshkina, Matthias König
-> A Digital Twin of the Angiotensin II Receptor Blocker Losartan: Physiologically Based Modeling of Blood Pressure Regulation
-> Pharmaceutics 2026, 18(2), 262; [doi:10.3390/pharmaceutics18020262](https://doi.org/10.3390/pharmaceutics18020262). 
-
-To cite the reproducibility publication
-
-> Mariia Myshkina, Michelle Elias, Ennie Tensil, Matthias König
-> Reproducibility of a Digital Twin of the Angiotensin II Receptor Blocker Losartan
-> Physiome. February 2, 2026 (publication). [doi:10.36903/physiome.31359823](https://doi.org/10.36903/physiome.31359823)
+> Tensil, E., Myshkina, M. & König, M. (2026). *Physiologically based pharmacokinetic/pharmacodynamic (PBPK/PD) model of losartan*. Zenodo. https://doi.org/10.5281/zenodo.14761114
 
 ## License
 
@@ -46,59 +31,4 @@ To cite the reproducibility publication
 * Documentation: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 * Models: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.
-
-## Run simulations
-### python
-Clone the repository 
-```bash
-git clone https://github.com/matthiaskoenig/losartan-model.git
-cd losartan-model
-```
-
-#### uv
-Setup environment with uv (https://docs.astral.sh/uv/getting-started/installation/)
-```bash
-uv sync
-```
-Run the complete analysis:
-```bash
-uv run run_losartan -a all -r results
-```
-
-#### pip
-If you use pip install the package via
-```bash
-pip install -e .
-```
-Run the complete analysis in the environment via:
-```bash
-run run_losartan -a all -r results
-```
-
-### docker
-Simulations can also be run within a docker container:
-
-```bash
-docker run -v "${PWD}/results:/results" -it matthiaskoenig/losartan:latest /bin/bash
-```
-
-Run the complete analysis:
-```bash
-uv run run_losartan -a all -r /results
-```
-The results are written into the mounted `/results` folder on the host.
-
-In case of permission issues with the mounted folder, adjust ownership and access rights with:
-```bash
-sudo chown $(id -u):$(id -g) -R "${PWD}/results"
-sudo chmod 775 "${PWD}/results"
-```
-
-## Funding
-Matthias König was supported by the Federal Ministry of Research, Technology and Space (BMFTR, Germany) within ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within the Research Unit Program FOR 5151 QuaLiPerF (Quantifying Liver Perfusion-Function Relationship in Complex Resection - A Systems Medicine Approach) by grant number 436883643 and by grant number 465194077 (Priority Programme SPP 2311, Subproject SimLivA). This work was supported by the BMBF-funded de.NBI Cloud within the German Network for Bioinformatics Infrastructure (de.NBI) (031A537B, 031A533A, 031A538A, 031A533B, 031A535A, 031A537C, 031A534A, 031A532B). 
-Mariia Myshkina was supported by the Federal Ministry of Research, Technology and Space (BMFTR, Germany) within ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within Priority Programme SPP 2311 by grant number 465194077 (Subproject SimLivA).
-
-© 2024-2026 Ennie Tensil, Mariia Myshkina & Matthias König, [Systems Medicine of the Liver](https://livermetabolism.com)
+&copy; 2024-2026 Ennie Tensil, Mariia Myshkina and Matthias König

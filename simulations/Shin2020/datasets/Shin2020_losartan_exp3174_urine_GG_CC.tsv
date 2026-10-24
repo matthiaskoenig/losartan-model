@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	substance	tissue	method	label	time	time_unit	mean	median	min	max	mean_sd	mean_se	cv	comments	mean_unit	median_unit	count_unit
+Shin2020	GG/CC	13.0	LOS50	cumulative amount	losartan+exp3174	urine	HPLC/FS	losartan_exp3174_urine_GG_CC	0.0	hr	0.0								µmol	µmol	dimensionless
+Shin2020	GG/CC	13.0	LOS50	cumulative amount	losartan+exp3174	urine	HPLC/FS	losartan_exp3174_urine_GG_CC	4.0	hr	3.54				1.88			0-4 hr (Table 4)	µmol	µmol	dimensionless
+Shin2020	GG/CC	13.0	LOS50	cumulative amount	losartan+exp3174	urine	HPLC/FS	losartan_exp3174_urine_GG_CC	8.0	hr	7.78				2.158			0-8 hr: sum of 0-4 hr 3.54 +- 1.88 and 4-8 hr 4.24 +- 1.06 (Table 4), sd of independent intervals	µmol	µmol	dimensionless

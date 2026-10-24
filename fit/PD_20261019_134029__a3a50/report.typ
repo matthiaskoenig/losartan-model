@@ -1,0 +1,686 @@
+#set page(paper: "a4", margin: 2cm)
+#set text(size: 10pt)
+#set heading(numbering: "1.1")
+#set math.equation(numbering: "(1)")
+// a table longer than a page continues on the next page, its
+// caption above it and its header repeated
+#show figure.where(kind: table): set block(breakable: true)
+#show figure.where(kind: table): set figure.caption(position: top)
+
+#align(center, text(size: 16pt, weight: "bold")[Losartan PBPK\/PD model: fit PD])
+
+= Methods: Losartan PBPK\/PD model: fit PD
+
+== Parameters and data
+
+3 parameters were optimized: half-maximum effect E3174 (#raw("E50_e3174")), feedback of the AT1 signal on the renin secretion (#raw("RENSEC_n")) and maximal fractional fall of the blood pressure (#raw("BP_emax")). The parameters of the adopted fit PK\_20261019\_113633\_\_d9465 were fixed at their fitted values.
+
+A fit mapping is a curve of a study, the data and the observable of the model it is compared with. The fit has 39 fit mappings of training data with 347 data points, whose residuals enter the objective; 52 fit mappings of validation data with 465 data points, which were simulated and evaluated with the fitted parameters but not fitted; and 1 fit mapping of outliers with 8 data points, data the fit dropped as not usable, which were evaluated like the validation data so that the decision to drop them can be checked. The fit was set up and run with sbmlsim #cite(<Koenig2026_sbmlsim>).
+
+== Objective function
+
+The parameters were estimated by minimizing the objective function
+
+$ F(arrow(p)) = 1/2 sum_k sum_i rho(w_(i,k) r_(i,k)(arrow(p))^2) $
+
+where $k$ runs over the fit mappings of the training data and $i$ over their data points, $r_(i,k)$ is the residual, $w_(i,k) = w_k w^p_(i,k)$ the weight of the data point and $rho$ the loss function, applied to the squared weighted residual $z = w_(i,k) r_(i,k)^2$. The loss function is linear, $rho(z) = z$, i.e. a standard least squares problem.
+
+The residuals are normalized by the mean $overline(y)_k$ of the data of their curve, which makes curves of different quantities and magnitudes comparable:
+
+$ r_(i,k) = (y_(i,k) - f_k(x_(i,k), arrow(p))) / overline(y)_k $
+
+The weight of curve $k$ is $w_k = n_k / N_k$, the weight $n_k$ of its fit mapping (the weight its fit mapping collection assigns, 1 by default, or, for a collection which uses the weights of its mappings, the weight of the mapping, by default the number of subjects of its data) divided by the number $N_k$ of its data points.
+
+A data point is weighted with the inverse of its coefficient of variation, $w^p_(i,k) = |y_(i,k)| / sigma_(i,k)$, with $sigma_(i,k)$ the standard deviation of the data point, or its standard error for data without a standard deviation. An error of zero is missing, a missing error of a curve with errors is replaced by the largest error of the curve, and the data points of a curve without errors have the weight $w^p_(i,k) = 2$, the weight of a coefficient of variation of 0.5.
+
+== Optimization
+
+The optimizer searched the parameters in log10 space within their bounds; bounds, values and intervals are given in the units of the fit parameters, the units of the table of the parameters.
+
+The objective was minimized in 3 runs with differential evolution #cite(<Storn1997>) of SciPy #cite(<Virtanen2020>) within the bounds of the parameters, with the strategy #raw("best1bin"), a population of 15 times the number of parameters, at most 1000 generations, the relative tolerance 0.01 of convergence, the recombination constant 0.7 and a mutation dithered between 0.5 and 1. The initial population of a run was drawn by latin hypercube sampling #cite(<McKay1979>), with a seed of every run derived from the seed 1234 of the fit. The best member of the final population was polished with the L-BFGS-B method of SciPy.
+
+The convergence of the runs was assessed from the traces of their cost and the waterfall plot of their final costs, and the parameter set with the lowest cost was used.
+
+The models were simulated with libRoadRunner #cite(<Welsh2023>) and its integrator CVODE #cite(<Hindmarsh2005>) with the relative tolerance $10^(-6)$ and the absolute tolerances $10^(-10)$ of an amount, $10^(-10)$ of a concentration and $10^(-6)$ of the other states, which for a species in a concentration is multiplied by the initial volume of its compartment, and 4 states of its own. It ran with the variable step size of libRoadRunner, i.e. with an output at every step of the integrator. A data point at the time of a change after the start of a simulation, e.g. a dose or the reset of a collection, was compared with the state before the change, except the first data point of a curve with data at later times, which starts a collection and was compared with the state after the change.
+
+== Goodness of fit
+
+The goodness of fit is given per kind of data (training data, validation data and outliers) by metrics over its $n$ data points with the residuals $e_i = y_i - f(x_i, hat(arrow(p)))$ at the fitted parameters $hat(arrow(p))$, the mean squared error, its root and the root mean squared error normalized by the mean $overline(y)_(k(i))$ of the data of the curve of a point:
+
+$ "MSE" = 1/n sum_(i=1)^n e_i^2, quad "RMSE" = sqrt("MSE"), quad "NRMSE" = sqrt(1/n sum_(i=1)^n (e_i / overline(y)_(k(i)))^2) $
+
+The root mean square of the residuals of the objective, i.e. what the fit minimizes, and the coefficient of determination:
+
+$ "RMSE"_w = sqrt(1/n sum_(i=1)^n rho(w_i r_i^2)), quad R^2 = 1 - (sum_i e_i^2) / (sum_i (y_i - overline(y))^2) $
+
+The predictions of a non-linear model are no linear regression of the data, so $R^2$ can be negative: the prediction is worse than the mean of the data. The information criteria of Akaike #cite(<Akaike1974>) and Schwarz #cite(<Schwarz1978>) with the number $n_p$ of fitted parameters are those of a least squares fit with normally distributed residuals, up to an additive constant, so only differences between models fitted to the same data are meaningful:
+
+$ "AIC" = n ln("MSE") + 2 n_p, quad "BIC" = n ln("MSE") + n_p ln(n) $
+
+The percentage of the data points whose prediction $f_i = f(x_i, hat(arrow(p)))$ lies within twofold of the data is taken over the $n_(+)$ data points with positive data $y_i > 0$ and a positive prediction $f_i > 0$; the others have no ratio and are not counted, and a kind of data without such a point has no percentage:
+
+$ P_2 = 100 / n_(+) abs(\{ i : 1/2 <= f_i / y_i <= 2 \}) $
+
+The goodness of fit plot shows the predictions against the data on logarithmic axes, with the lines of twofold $f = 2y$ and $f = y/2$. The Bland-Altman plot #cite(<Bland1986>) shows the ratio of prediction and data as $d_i = log_10(f_i / y_i)$ against the geometric mean $sqrt(f_i y_i)$ for the data points with positive values, with the bias $overline(d)$ and the limits of agreement $overline(d) plus.minus 1.96 s_d$, with the sample standard deviation $s_d$ of $d_i$, of the training data; they are read as the fold factors $10^(overline(d))$ and $10^(overline(d) plus.minus 1.96 s_d)$.
+
+== Identifiability
+
+The identifiability of the parameters was analysed with the profile likelihood #cite(<Raue2009>) #cite(<Kreutz2013>). The profile of a parameter is the lowest objective with the parameter fixed:
+
+$ "PL"(p_j) = min_(p_(l != j)) F(arrow(p)) $
+
+At every point of a scan the other parameters were re-optimized from the previous point with the least squares optimizer of SciPy with the relative step 0.05. A scan ran from the optimum in both directions in the space of the optimizer, with steps in decades of the parameter, starting at 0.1. A step which raised the objective by more than 0.2 of the distance between the objective at the optimum and the threshold was reduced by the factor 2 and repeated, down to 0.01, and the step after one which raised it by less than that divided by the factor was enlarged by the factor, up to 1. A scan stopped at the threshold, at the bound of the parameter, at a point which failed or after 50 points.
+
+The confidence intervals are the values at which the profile crosses the threshold of the likelihood ratio test
+
+$ F_"thr" = F_"min" + chi^2_alpha ("df") / 2 $
+
+with $F_"min"$ the lowest objective of the fit and of all profiles and $chi^2_alpha ("df")$ the quantile of the $chi^2$ distribution at the confidence level $alpha = 0.95$ with df \= 1 degrees of freedom, i.e. 1.92 above the lowest objective. The threshold has this confidence level if $F$ is the negative log-likelihood of the data up to a constant, i.e. if the weighted residuals are independent and normally distributed with unit variance; otherwise the level is approximate. A crossing is interpolated between two points of the profile, on the logarithm of a parameter on a logarithmic scale. A parameter is identifiable if its profile reaches the threshold within the scan on both sides of the optimum, i.e. its confidence interval is finite; practically non-identifiable towards the lower bound if its profile reaches the threshold above the optimum but not below it within the scan, which ends at the lower bound or after 50 points; practically non-identifiable towards the upper bound if its profile reaches the threshold below the optimum but not above it within the scan, which ends at the upper bound or after 50 points; practically non-identifiable if its profile reaches the threshold on neither side within the scans, which end at the bounds or after 50 points, and is not flat; and structurally non-identifiable if its profile is flat on both sides. A side of a profile is flat if it rises by less than 0.05 of the distance between the lowest objective and the threshold, and a profile with a point which failed or did not converge is not classified. The profile likelihood is preferred over the intervals of the Fisher information, its intervals are invariant under a transformation of the parameters and can be asymmetric #cite(<Wieland2021>).
+
+The Fisher information is the local alternative to the profiles: it is the Gauss-Newton approximation of the curvature of the objective at the optimum, from the Jacobian $J$ of the weighted residuals of the training data with respect to the parameters $arrow(p)$ in the space of the optimizer, computed by central finite differences with the step $h_j = epsilon max(|p_j|, 1), space epsilon = 10^(-6)$ of the parameter $p_j$:
+
+$ I = J^top J, quad "cov" = sigma^2 I^(-1), quad sigma^2 = (2 F) / (n - n_p) $
+
+with the number $n$ of data points of the training data and the number $n_p$ of parameters. The information has rank 3 of 3, the number of its eigenvalues above $10^(-8)$ of the largest one, and the condition number 55.3; the covariance of an information of a lower rank is computed with the pseudo-inverse. The Wald intervals are $hat(p)_j plus.minus t_((1+alpha)/2, n-n_p) "SE"_j$ with the standard errors $"SE"_j = sqrt("cov"_(j j))$ at the confidence level $alpha = 0.95$, transformed back into the units of the fit parameters.
+
+== Provenance
+
+The fit PD\_20261019\_134029\_\_a3a50 was run on 2026-10-19 11:40:34 UTC with sbmlsim 0.10.0 #cite(<Koenig2026_sbmlsim>), libRoadRunner 2.10.0 #cite(<Welsh2023>), SciPy 1.18.1 #cite(<Virtanen2020>), NumPy 2.5.3 #cite(<Harris2020>) and Python 3.14.4 (seed 1234). The models and data were those of commit #raw("dadfdee839977ab278f7b0bb0b9e485c9fad01ff") of #raw("/home/mkoenig/git/pkdb_models-losartan"); their SHA-256 checksums are listed in #ref(<tab:checksums:PD_20261019_134029__a3a50>). The fit kept the values #raw("ftissue_los") \= 1.03525, #raw("Kp_los") \= 1.16736, #raw("ftissue_e3174") \= 0.00217362, #raw("Kp_e3174") \= 0.185665, #raw("GU__LOSABS_k") \= 0.0476385, #raw("LI__LOS2E3174_k") \= 0.412801, #raw("LI__LOS2L158_k") \= 1.78636, #raw("LI__E3174EX_k") \= 0.0041128, #raw("LI__E3174IM_k") \= 0.06141, #raw("LI__E3174BIEX_k") \= 0.00274339, #raw("LI__L158BIEX_k") \= 0.257303, #raw("KI__LOSEX_f") \= 59.632, #raw("KI__E3174EX_f") \= 124.916 and #raw("KI__L158EX_f") \= 5.18712 of the model fixed.
+
+#figure(
+  table(
+  columns: 2,
+  align: (left, left,),
+  table.header([File], [SHA-256]),
+  raw("pkdb_models/models/losartan/data/caffeine/Oh2012/.Oh2012_Fig3.tsv"),
+  raw("e60ef89928e7..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Oh2012/.Oh2012_TabGroups.tsv"),
+  raw("021f55009aad..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Oh2012/.Oh2012_TabInterventions.tsv"),
+  raw("2ccc461e26f0..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_Fig3A.tsv"),
+  raw("d3c6049b450f..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_Fig3B.tsv"),
+  raw("86b2d598853f..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_Fig3C.tsv"),
+  raw("b615f51b6bb6..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_Fig3D.tsv"),
+  raw("035aba0ccaec..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_Fig3E.tsv"),
+  raw("b2c71cf1bb7c..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_Tab5.tsv"),
+  raw("aa23acadd634..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_TabGroups.tsv"),
+  raw("2d6d7efcfbec..."),
+  raw("pkdb_models/models/losartan/data/caffeine/Tanaka2014/.Tanaka2014_TabInterventions.tsv"),
+  raw("ddded3dea742..."),
+  raw("pkdb_models/models/losartan/data/chlorzoxazone/Puris2019/.Puris2019_Fig1.tsv"),
+  raw("655030c953c5..."),
+  raw("pkdb_models/models/losartan/data/chlorzoxazone/Puris2019/.Puris2019_Tab2.tsv"),
+  raw("118f0088ed72..."),
+  raw("pkdb_models/models/losartan/data/chlorzoxazone/Puris2019/.Puris2019_TabGroups.tsv"),
+  raw("e515a75bff14..."),
+  raw("pkdb_models/models/losartan/data/chlorzoxazone/Puris2019/.Puris2019_TabInterventions.tsv"),
+  raw("d447ba94154e..."),
+  raw("pkdb_models/models/losartan/data/chlorzoxazone/Puris2019/.Puris2019_TabS3.tsv"),
+  raw("1bfb438995b3..."),
+  raw("pkdb_models/models/losartan/data/chlorzoxazone/Puris2019/.Puris2019_TabS4.tsv"),
+  raw("61f03a6b5f6d..."),
+  raw("pkdb_models/models/losartan/data/dextromethorphan/Kim2016/.Kim2016_Fig1.tsv"),
+  raw("c44528ec99d6..."),
+  raw("pkdb_models/models/losartan/data/dextromethorphan/Kim2016/.Kim2016_Tab2.tsv"),
+  raw("ebf3972b7a8d..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Fig1.tsv"),
+  raw("6a94b463a1a9..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Fig1A.tsv"),
+  raw("9fccde15cbcf..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Fig2.tsv"),
+  raw("09b76010486d..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Fig3.tsv"),
+  raw("15959fdca948..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Fig4.tsv"),
+  raw("953290847694..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Fig5.tsv"),
+  raw("e3ac24952f91..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Tab1.tsv"),
+  raw("67e8ad2df53b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_Tab2.tsv"),
+  raw("0f7eb7fc7843..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_TabGroups.tsv"),
+  raw("d8ad24602406..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_TabIndividuals.tsv"),
+  raw("942da8c1d6f0..."),
+  raw("pkdb_models/models/losartan/data/losartan/Azizi1999/.Azizi1999_TabInterventions.tsv"),
+  raw("07e29032bfad..."),
+  raw("pkdb_models/models/losartan/data/losartan/Bae2011/.Bae2011_Fig1.tsv"),
+  raw("c064ae630cc4..."),
+  raw("pkdb_models/models/losartan/data/losartan/Bae2011/.Bae2011_Tab4.tsv"),
+  raw("1be68f5a5d24..."),
+  raw("pkdb_models/models/losartan/data/losartan/Bae2011/.Bae2011_TabGroups.tsv"),
+  raw("7f3c372a49d9..."),
+  raw("pkdb_models/models/losartan/data/losartan/Bae2011/.Bae2011_TabInterventions.tsv"),
+  raw("7834782f5928..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig1.tsv"),
+  raw("a59ac80ea2c2..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig2.tsv"),
+  raw("40c8679dde83..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig2A.tsv"),
+  raw("40b594aa4902..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig3.tsv"),
+  raw("8a059dea6437..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig4.tsv"),
+  raw("c89c02ea95d7..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig5.tsv"),
+  raw("23c3e4ca55ac..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig6.tsv"),
+  raw("74606074cc22..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Fig7.tsv"),
+  raw("619954aecce8..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Tab1.tsv"),
+  raw("cf8c1f921eae..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_Tab2.tsv"),
+  raw("17a325111a09..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_TabGroups.tsv"),
+  raw("6e44cdbdc84d..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_TabIndividuals.tsv"),
+  raw("a5359065a28f..."),
+  raw("pkdb_models/models/losartan/data/losartan/Christen1991a/.Christen1991a_TabInterventions.tsv"),
+  raw("3e9da7607f61..."),
+  raw("pkdb_models/models/losartan/data/losartan/Doig1993/.Doig1993_Fig1.tsv"),
+  raw("4042469aae50..."),
+  raw("pkdb_models/models/losartan/data/losartan/Doig1993/.Doig1993_Fig2.tsv"),
+  raw("9f453a3ef799..."),
+  raw("pkdb_models/models/losartan/data/losartan/Doig1993/.Doig1993_Tab4.tsv"),
+  raw("8fd1cc52c3a5..."),
+  raw("pkdb_models/models/losartan/data/losartan/Doig1993/.Doig1993_TabGroups.tsv"),
+  raw("d1f5f840fd81..."),
+  raw("pkdb_models/models/losartan/data/losartan/Doig1993/.Doig1993_TabInterventions.tsv"),
+  raw("665bebb83ead..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1.tsv"),
+  raw("0c25c2d2ea51..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1A.tsv"),
+  raw("152e7814ae3a..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1B.tsv"),
+  raw("e0b6940affd1..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1C.tsv"),
+  raw("e5cd078748a6..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1D.tsv"),
+  raw("6a524077d90c..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1E.tsv"),
+  raw("8921290ac889..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig1F.tsv"),
+  raw("7753a7a91fb5..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig2.tsv"),
+  raw("d8a2233fb05a..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_Fig3.tsv"),
+  raw("f6ed75bf7891..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_TabGroups.tsv"),
+  raw("6155fc803d61..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_TabIndividuals.tsv"),
+  raw("fadbdce5455a..."),
+  raw("pkdb_models/models/losartan/data/losartan/Donzelli2014/.Donzelli2014_TabInterventions.tsv"),
+  raw("a44e6da6107e..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_Fig1.tsv"),
+  raw("c21fa402fe13..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_Tab60_1.tsv"),
+  raw("6370229df392..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_Tab60_2.tsv"),
+  raw("7261317e664e..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_Tab60_2A.tsv"),
+  raw("84bc34a7f5e6..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_Tab60_2B.tsv"),
+  raw("52e11b11cd83..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_TabGroups.tsv"),
+  raw("d938463cefba..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_TabIndividuals.tsv"),
+  raw("9ec28c2aad7f..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S60/.FDA1995S60_TabInterventions.tsv"),
+  raw("7e65e3994c5a..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S67/.FDA1995S67_Fig1.tsv"),
+  raw("99c530ccf784..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S67/.FDA1995S67_Tab1.tsv"),
+  raw("2a117a95e309..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S67/.FDA1995S67_Tab1B.tsv"),
+  raw("017964273f06..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S67/.FDA1995S67_TabGroups.tsv"),
+  raw("1d4cb9ecd79c..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S67/.FDA1995S67_TabIndividuals.tsv"),
+  raw("31e18bcc45fe..."),
+  raw("pkdb_models/models/losartan/data/losartan/FDA1995S67/.FDA1995S67_TabInterventions.tsv"),
+  raw("348bb267e1a9..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_Fig1.tsv"),
+  raw("8bd34688a7a3..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_Fig2.tsv"),
+  raw("0f93307f2ea1..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_Fig3.tsv"),
+  raw("4549d5c65670..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_Tab1.tsv"),
+  raw("bd520f015732..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_Tab2.tsv"),
+  raw("91aeaec34cb8..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_Tab2A.tsv"),
+  raw("04a60bf345e6..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_TabGroups.tsv"),
+  raw("09ad283d841e..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_TabIndividuals.tsv"),
+  raw("d4419bf54d77..."),
+  raw("pkdb_models/models/losartan/data/losartan/Fischer2002/.Fischer2002_TabInterventions.tsv"),
+  raw("b54215b38ad6..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995/.Goldberg1995_Fig1.tsv"),
+  raw("8c07d6f26cca..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995/.Goldberg1995_Fig2.tsv"),
+  raw("c6b0d0d9a82a..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995/.Goldberg1995_Tab1.tsv"),
+  raw("e18e6f9471d5..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995/.Goldberg1995_TabGroups.tsv"),
+  raw("7de68e35df2f..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995/.Goldberg1995_TabInterventions.tsv"),
+  raw("77000078bdf3..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Fig2.tsv"),
+  raw("2070a3347963..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Fig3.tsv"),
+  raw("36138e6628e7..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Fig4.tsv"),
+  raw("8535d3752708..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Fig5.tsv"),
+  raw("df668ef0a0d4..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Fig6.tsv"),
+  raw("3aa62b27763b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Fig7.tsv"),
+  raw("945c5840f387..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Tab1.tsv"),
+  raw("2c0f00193067..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Tab2.tsv"),
+  raw("c3399f096831..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_Tab3.tsv"),
+  raw("58ab398b08de..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_TabGroups.tsv"),
+  raw("058a98915c8d..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_TabIndividuals.tsv"),
+  raw("3b4bf0f9c7c2..."),
+  raw("pkdb_models/models/losartan/data/losartan/Goldberg1995a/.Goldberg1995a_TabInterventions.tsv"),
+  raw("b3b0d326ffc9..."),
+  raw("pkdb_models/models/losartan/data/losartan/Han2009a/.Han2009a_Fig1.tsv"),
+  raw("fc31c3c12568..."),
+  raw("pkdb_models/models/losartan/data/losartan/Han2009a/.Han2009a_Fig2.tsv"),
+  raw("c8c387924e97..."),
+  raw("pkdb_models/models/losartan/data/losartan/Han2009a/.Han2009a_Tab1.tsv"),
+  raw("4e2d160252cf..."),
+  raw("pkdb_models/models/losartan/data/losartan/Han2009a/.Han2009a_TabGroups.tsv"),
+  raw("fb294e1561dd..."),
+  raw("pkdb_models/models/losartan/data/losartan/Han2009a/.Han2009a_TabIndividuals.tsv"),
+  raw("b3cbd106b395..."),
+  raw("pkdb_models/models/losartan/data/losartan/Han2009a/.Han2009a_TabInterventions.tsv"),
+  raw("f6510cba7ad2..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_Fig2.tsv"),
+  raw("a9abc6e5b144..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_Fig3.tsv"),
+  raw("d173fb346a9a..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_Fig4.tsv"),
+  raw("745dec1a460e..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_Tab2.tsv"),
+  raw("d53f3bef9a53..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_Tab3.tsv"),
+  raw("ca41f2ce1dfc..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_TabGroups.tsv"),
+  raw("44e079c8f3a1..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_TabIndividuals.tsv"),
+  raw("c167ba44dd37..."),
+  raw("pkdb_models/models/losartan/data/losartan/Huang2021/.Huang2021_TabInterventions.tsv"),
+  raw("78612df49059..."),
+  raw("pkdb_models/models/losartan/data/losartan/Kobayashi2008/.Kobayashi2008_Fig1.tsv"),
+  raw("48f009fde5f8..."),
+  raw("pkdb_models/models/losartan/data/losartan/Kobayashi2008/.Kobayashi2008_Tab1.tsv"),
+  raw("841b99a46ccb..."),
+  raw("pkdb_models/models/losartan/data/losartan/Kobayashi2008/.Kobayashi2008_TabGroups.tsv"),
+  raw("7a927d53b3ab..."),
+  raw("pkdb_models/models/losartan/data/losartan/Kobayashi2008/.Kobayashi2008_TabInterventions.tsv"),
+  raw("95245c7bd501..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lee2003b/.Lee2003b_Fig1.tsv"),
+  raw("d9868d7bed7d..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lee2003b/.Lee2003b_Tab1.tsv"),
+  raw("068fea01a957..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lee2003b/.Lee2003b_TabGroups.tsv"),
+  raw("855bd0dc6251..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lee2003b/.Lee2003b_TabInterventions.tsv"),
+  raw("36f565cb3fae..."),
+  raw("pkdb_models/models/losartan/data/losartan/Li2009/.Li2009_Fig1.tsv"),
+  raw("501573f906be..."),
+  raw("pkdb_models/models/losartan/data/losartan/Li2009/.Li2009_Tab2.tsv"),
+  raw("cfdf04998d98..."),
+  raw("pkdb_models/models/losartan/data/losartan/Li2009/.Li2009_TabGroups.tsv"),
+  raw("360f966a359b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Li2009/.Li2009_TabInterventions.tsv"),
+  raw("847db02a0e45..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Fig1.tsv"),
+  raw("2efbf4757755..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Fig2.tsv"),
+  raw("dc34fc36e639..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab1.tsv"),
+  raw("0627c2a4c8ae..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab1A.tsv"),
+  raw("6c275f3ae2d0..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab1B.tsv"),
+  raw("487dfe09dfd5..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab2.tsv"),
+  raw("76820a6128cf..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab2A.tsv"),
+  raw("433bb67d263c..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab2B.tsv"),
+  raw("6f92d3a78662..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab3.tsv"),
+  raw("9c990116c9b6..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab3A.tsv"),
+  raw("fa15fe578097..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab3B.tsv"),
+  raw("ad850d0cc936..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab4.tsv"),
+  raw("1474e2e0a690..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_Tab4A.tsv"),
+  raw("34c6c3c60d7a..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_TabGroups.tsv"),
+  raw("a20603cb621f..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_TabIndividuals.tsv"),
+  raw("aa7bde9a12bc..."),
+  raw("pkdb_models/models/losartan/data/losartan/Lo1995/.Lo1995_TabInterventions.tsv"),
+  raw("6e9d9fa12de5..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig1.tsv"),
+  raw("cb479ee413cd..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig2.tsv"),
+  raw("de1ad16348e0..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig3.tsv"),
+  raw("5bb39cedc6e6..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig3A.tsv"),
+  raw("18e6d4812024..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig4.tsv"),
+  raw("440f14855a04..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig5.tsv"),
+  raw("5cb0abcdfded..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_Fig6.tsv"),
+  raw("4e0cd4817e37..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_TabGroups.tsv"),
+  raw("334b899c5c18..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_TabIndividuals.tsv"),
+  raw("618365c06a18..."),
+  raw("pkdb_models/models/losartan/data/losartan/Munafo1992/.Munafo1992_TabInterventions.tsv"),
+  raw("848741b84049..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Fig1.tsv"),
+  raw("ba2286aef5e9..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Fig2.tsv"),
+  raw("fa3b3a1f9c42..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Fig3.tsv"),
+  raw("8e1f6c68b4a1..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Fig4.tsv"),
+  raw("59bfc02a64e1..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Tab1.tsv"),
+  raw("80b9a05004b7..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Tab2.tsv"),
+  raw("0d08d74e8c9d..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Tab2A.tsv"),
+  raw("477804665d07..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Tab3.tsv"),
+  raw("7787f1d6079b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_Tab4.tsv"),
+  raw("273635c02d6e..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_TabGroups.tsv"),
+  raw("63f27119bf00..."),
+  raw("pkdb_models/models/losartan/data/losartan/Ohtawa1993/.Ohtawa1993_TabInterventions.tsv"),
+  raw("143b0732e772..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sekino2003/.Sekino2003_Fig1.tsv"),
+  raw("7abf4402adec..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sekino2003/.Sekino2003_Tab1.tsv"),
+  raw("699c9f0fb3a4..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sekino2003/.Sekino2003_Tab1A.tsv"),
+  raw("f381bc40fb37..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sekino2003/.Sekino2003_TabGroups.tsv"),
+  raw("c3ee84511d8b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sekino2003/.Sekino2003_TabInterventions.tsv"),
+  raw("6e859af3177b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_Fig1.tsv"),
+  raw("ff0ae7c1e4b2..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_Fig2.tsv"),
+  raw("c48800f37127..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_Tab2.tsv"),
+  raw("7a4c2788ae12..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_Tab3.tsv"),
+  raw("15e50c2f044c..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_Tab4.tsv"),
+  raw("83cb1b07e887..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_TabGroups.tsv"),
+  raw("456ca8d500c0..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_TabIndividuals.tsv"),
+  raw("a180faf3e67f..."),
+  raw("pkdb_models/models/losartan/data/losartan/Shin2020/.Shin2020_TabInterventions.tsv"),
+  raw("4bcf9af32a88..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_Fig1.tsv"),
+  raw("36b10f7a5472..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_Fig2.tsv"),
+  raw("ebf8c317e078..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_Fig3.tsv"),
+  raw("0ccaa0f70727..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_Fig4.tsv"),
+  raw("7c4c6d82cbdc..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_Tab2.tsv"),
+  raw("87eacd3141b6..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_TabGroups.tsv"),
+  raw("137980523f53..."),
+  raw("pkdb_models/models/losartan/data/losartan/Sica1995/.Sica1995_TabInterventions.tsv"),
+  raw("f0268e49c99c..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Fig1.tsv"),
+  raw("853ab007c5cf..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Fig2.tsv"),
+  raw("081c8c68e4f1..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Tab1.tsv"),
+  raw("0274a8d09729..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Tab2.tsv"),
+  raw("8c80933cafcb..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Tab2A.tsv"),
+  raw("ef795b234916..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Tab3.tsv"),
+  raw("8ec143a94a8b..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_Tab4.tsv"),
+  raw("e4ea62a8dd5f..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_TabGroups.tsv"),
+  raw("c3e180feba2c..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_TabIndividuals.tsv"),
+  raw("ddbc35360002..."),
+  raw("pkdb_models/models/losartan/data/losartan/Yasar2002a/.Yasar2002a_TabInterventions.tsv"),
+  raw("8c946bce36dd..."),
+  raw("pkdb_models/models/losartan/models/output/models/losartan_body_flat.xml"),
+  raw("1f98a858835c..."),
+  ),
+  caption: [SHA-256 checksums of the models and data of the fit PD\_20261019\_134029\_\_a3a50, their first 12 characters; the full checksums are in the provenance of the result (optimization\_result.json).],
+) <tab:checksums:PD_20261019_134029__a3a50>
+
+= Results: Losartan PBPK\/PD model: fit PD
+
+== Parameters
+
+#figure(
+  table(
+  columns: 6,
+  align: (left, left, right, left, right, left,),
+  table.header([Parameter], [Description], [Value \[95% CI\]], [Unit], [Bounds], [Identifiable]),
+  raw("E50_e3174"),
+  [half-maximum effect E3174],
+  [0.000207 \[0.000172, 0.000255\]],
+  [mmol\/l],
+  [\[1e-05, 0.01\]],
+  [yes],
+  raw("RENSEC_n"),
+  [feedback of the AT1 signal on the renin secretion],
+  [2.97 \[2.35, 3.81\]],
+  [dimensionless],
+  [\[0.2, 10\]],
+  [yes],
+  raw("BP_emax"),
+  [maximal fractional fall of the blood pressure],
+  [0.244 \[LB, 0.576\]],
+  [dimensionless],
+  [\[0.01, 0.6\]],
+  [no (LB)],
+  ),
+  caption: [Parameters of the fit PD\_20261019\_134029\_\_a3a50, the parameter set PD\_20261019\_134029\_\_a3a50\_0, cost 96.6, with their bounds in the optimization. The 95% confidence intervals are those of the profile likelihood, LB and UB an interval which is open towards the lower or the upper bound, and the Wald intervals of the Fisher information for a parameter without a profile. Identifiable is the classification of the profile: yes, no (LB) or no (UB) if the profile does not reach the threshold towards the lower or the upper bound, no if it reaches it on neither side, structural if it is flat.],
+) <tab:parameters:PD_20261019_134029__a3a50>
+
+== Data
+
+#figure(
+  table(
+  columns: 5,
+  align: (left, right, right, right, right,),
+  table.header([Study], [Training], [Validation], [Outlier], [Total]),
+  [Azizi1999],
+  [4 (28)],
+  [4 (28)],
+  [-],
+  [8 (56)],
+  [Christen1991a],
+  [-],
+  [18 (88)],
+  [-],
+  [18 (88)],
+  [Doig1993],
+  [14 (184)],
+  [4 (62)],
+  [-],
+  [18 (246)],
+  [Goldberg1995],
+  [1 (7)],
+  [1 (7)],
+  [-],
+  [2 (14)],
+  [Goldberg1995a],
+  [6 (36)],
+  [6 (108)],
+  [-],
+  [12 (144)],
+  [Munafo1992],
+  [2 (16)],
+  [1 (8)],
+  [1 (8)],
+  [4 (32)],
+  [Ohtawa1993],
+  [12 (76)],
+  [14 (116)],
+  [-],
+  [26 (192)],
+  [Sekino2003],
+  [-],
+  [4 (48)],
+  [-],
+  [4 (48)],
+  [Total],
+  [39 (347)],
+  [52 (465)],
+  [1 (8)],
+  [92 (820)],
+  ),
+  caption: [Data of the fit PD\_20261019\_134029\_\_a3a50: the number of fit mappings and, in parentheses, of data points per study and kind. The training data enters the cost, the validation data and the outliers are evaluated only.],
+) <tab:data:PD_20261019_134029__a3a50>
+
+== Goodness of fit
+
+#figure(
+  table(
+  columns: 11,
+  align: (left, right, right, right, right, right, right, right, right, right, right,),
+  table.header([Kind], [n], [cost], [MSE], [RMSE], [NRMSE], [RMSE\_w], [R²], [2-fold \[%\]], [AIC], [BIC]),
+  [training],
+  [347],
+  [96.6],
+  [13.2],
+  [3.64],
+  [0.462],
+  [0.746],
+  [0.994],
+  [85.0],
+  [902.4],
+  [913.9],
+  [validation],
+  [465],
+  [-],
+  [13.5],
+  [3.67],
+  [0.789],
+  [0.784],
+  [0.992],
+  [91.4],
+  [1216.0],
+  [1228.4],
+  [outlier],
+  [8],
+  [-],
+  [1.25e-15],
+  [3.53e-08],
+  [6.24],
+  [7.64],
+  [-1.24],
+  [-],
+  [-268.5],
+  [-268.3],
+  ),
+  caption: [Goodness of fit of the fit PD\_20261019\_134029\_\_a3a50 per kind of data, the parameter set PD\_20261019\_134029\_\_a3a50\_0. The cost is defined on the training data only, 2-fold is the percentage of the data points with a positive value and prediction whose prediction is within twofold of the data.],
+) <tab:metrics:PD_20261019_134029__a3a50>
+
+== Figures
+
+#figure(
+  image("plots/traces.svg", width: 100%),
+  caption: [Cost of the optimizers over their steps, fit PD\_20261019\_134029\_\_a3a50. The cost of every optimization run over its steps. Runs which end at the same cost found the same optimum; a run which stops much higher is stuck in a local minimum.],
+) <fig:traces:PD_20261019_134029__a3a50>
+
+#figure(
+  image("plots/waterfall.svg", width: 100%),
+  caption: [Cost of the optimization runs, ordered, fit PD\_20261019\_134029\_\_a3a50. The final cost of the runs, ordered. A flat plateau at the left is the global optimum found repeatedly, which is the evidence that the multistart converged; steps to the right are local minima.],
+) <fig:waterfall:PD_20261019_134029__a3a50>
+
+#figure(
+  image("plots/goodness_of_fit.svg", width: 100%),
+  caption: [Prediction against the measured data points, per kind of fit mapping, with the agreement of the training data, the lines of twofold and the metrics of the panel, fit PD\_20261019\_134029\_\_a3a50. Within twofold of the data are 272 of the 320 training data points (85.0%) and 286 of the 313 validation data points (91.4%); only the data points with a positive value and prediction are counted. Prediction against measurement, one point per data point, with a panel per kind of fit mapping. The points scatter around the diagonal when the model describes the data; a systematic deviation from it is a systematic error of the model. The band is the agreement of the training data, i.e. the same band the Bland-Altman plot draws, here as lines parallel to the diagonal. The dark red dotted lines are twofold, prediction \= 2 x measurement and prediction \= measurement \/ 2; the caption states the points between them of every kind. A point which is zero or negative is not drawn on the logarithmic axes and not counted, the title of a panel then states the points drawn of all. The validation panel shows how the fit describes data it was not fitted on, the outlier panel the data the fit dropped. The box of a panel carries its R², its normalized RMSE, the RMSE of the residuals of the cost, its fold errors GMFE and AFE and the percentages of its points within twofold and within two standard deviations of the data.],
+) <fig:goodness_of_fit:PD_20261019_134029__a3a50>
+
+#figure(
+  image("plots/bland_altman.svg", width: 100%),
+  caption: [Agreement of prediction and measurement as a ratio, per kind of fit mapping, with the agreement of the training data and the agreement of the panel, fit PD\_20261019\_134029\_\_a3a50. The ratio of prediction and measurement over the geometric mean of the two, i.e. the goodness of fit with the diagonal turned into the horizontal. The band is the same, the bias and the limits of agreement #raw("bias ± 1.96 SD") of the training data as fold factors. A bias away from 1 is a systematic over- or underprediction, wide limits are a large scatter, and a trend over the mean is a model which describes the large or the small values better. The box of a panel carries the bias and the SD of its own points as fold factors and the share of them inside the limits of agreement of the training data.],
+) <fig:bland_altman:PD_20261019_134029__a3a50>
+
+#figure(
+  image("plots/profiles.svg", width: 100%),
+  caption: [Profile likelihood of every parameter: the cost with the parameter fixed and the other parameters optimized, the threshold of the confidence level and the confidence interval, fit PD\_20261019\_134029\_\_a3a50. One profile per parameter. A profile which crosses the dashed threshold on both sides gives a finite confidence interval; one which stays below it up to a bound is practically non-identifiable; a flat profile is structurally non-identifiable, the parameter is compensated by the others.],
+) <fig:profiles:PD_20261019_134029__a3a50>
+
+== Provenance
+
+#figure(
+  table(
+  columns: 2,
+  align: (left, left,),
+  table.header([Item], [Value]),
+  [Fit],
+  raw("PD_20261019_134029__a3a50"),
+  [Created],
+  [2026-10-19 11:40:34 UTC],
+  [Seed],
+  [1234],
+  [Python],
+  [3.14.4],
+  [sbmlsim],
+  [0.10.0],
+  [libRoadRunner],
+  [2.10.0],
+  [SciPy],
+  [1.18.1],
+  [NumPy],
+  [2.5.3],
+  [Repository],
+  raw("/home/mkoenig/git/pkdb_models-losartan"),
+  [Commit],
+  raw("dadfdee839977ab278f7b0bb0b9e485c9fad01ff"),
+  [Uncommitted changes],
+  [no],
+  ),
+  caption: [Provenance of the fit PD\_20261019\_134029\_\_a3a50: the versions it ran with and the revision of its models and data; the SHA-256 checksums of the models and data are listed in #ref(<tab:checksums:PD_20261019_134029__a3a50>).],
+) <tab:provenance:PD_20261019_134029__a3a50>
+
+#bibliography("references.bib", style: "references.csl")

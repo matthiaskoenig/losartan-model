@@ -1,0 +1,3641 @@
+{
+  "experiment_id": "Sica1995",
+  "base_path": "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan",
+  "data_path": [
+    "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/losartan",
+    "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/dextromethorphan",
+    "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/caffeine",
+    "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/data/chlorzoxazone"
+  ],
+  "models": {
+    "model": {
+      "sid": null,
+      "name": null,
+      "language": "SBML",
+      "language_type": "SBML",
+      "source": {
+        "source": "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/models/output/models/losartan_body_flat.xml",
+        "path": "/home/mkoenig/git/losartan-model/src/pkdb_models/models/losartan/models/output/models/losartan_body_flat.xml",
+        "content": null
+      },
+      "base_path": null,
+      "changes": {},
+      "selections": [
+        "ALDDEG",
+        "ALDSEC",
+        "ANG1ANG2",
+        "ANG2DEG",
+        "ANGGEN2ANG1",
+        "Afeces_e3174",
+        "Afeces_l158",
+        "Afeces_los",
+        "Afeces_total",
+        "Aurine_e3174",
+        "Aurine_l158",
+        "Aurine_los",
+        "Aurine_los_e3174",
+        "Aurine_total",
+        "BW",
+        "DBP",
+        "DBP_change",
+        "DBP_ratio",
+        "GU__f_abcb1",
+        "IVDOSE_e3174",
+        "IVDOSE_los",
+        "KI__GFR",
+        "KI__f_renal_function",
+        "LI__f_cyp2c9",
+        "MAP",
+        "PODOSE_los",
+        "RENDEG",
+        "RENSEC",
+        "Ri_e3174",
+        "Ri_los",
+        "SBP",
+        "SBP_change",
+        "SBP_ratio",
+        "[Cve_e3174]",
+        "[Cve_los]",
+        "[Cveplasma_e3174]",
+        "[Cveplasma_l158]",
+        "[Cveplasma_los]",
+        "[Cveplasma_los_e3174]",
+        "[Cveplasma_total]",
+        "[ald]",
+        "[ang1]",
+        "[ang2]",
+        "[anggen]",
+        "[e3174]",
+        "[ren]",
+        "ald_change",
+        "ald_ratio",
+        "ang1_change",
+        "ang1_ratio",
+        "ang2_change",
+        "ang2_ratio",
+        "f_at1",
+        "f_cirrhosis",
+        "fe_e3174",
+        "mr_e3174_los_feces",
+        "mr_e3174_los_plasma",
+        "mr_e3174_los_urine",
+        "ren_change",
+        "ren_ratio",
+        "time"
+      ],
+      "parameters": {}
+    }
+  },
+  "tasks": {
+    "task_po_los100_group1": {
+      "sid": "model__po_los100_group1",
+      "name": null,
+      "model": "model",
+      "simulation": "po_los100_group1",
+      "observables": []
+    },
+    "task_po_los100_group2": {
+      "sid": "model__po_los100_group2",
+      "name": null,
+      "model": "model",
+      "simulation": "po_los100_group2",
+      "observables": []
+    },
+    "task_po_los100_group3": {
+      "sid": "model__po_los100_group3",
+      "name": null,
+      "model": "model",
+      "simulation": "po_los100_group3",
+      "observables": []
+    }
+  },
+  "observables": {},
+  "simulations": {
+    "po_los100_group1": {
+      "type": "Simulation",
+      "time_unit": "hr",
+      "start": 0.0,
+      "end": 209,
+      "preinit_changes": {
+        "KI__f_renal_function": {
+          "value": 1.110891089108911,
+          "unit": "dimensionless"
+        },
+        "BW": {
+          "value": 84.6,
+          "unit": "kilogram"
+        },
+        "PODOSE_los": {
+          "value": 91.73774403470715,
+          "unit": "milligram"
+        }
+      },
+      "changes": [
+        {
+          "times": [
+            24,
+            48,
+            72,
+            96,
+            120,
+            144
+          ],
+          "values": {
+            "PODOSE_los": "PODOSE_los + 91.73774403470715"
+          }
+        },
+        {
+          "times": [
+            24,
+            48,
+            72,
+            96,
+            120,
+            144
+          ],
+          "values": {
+            "Aurine_los": {
+              "value": 0,
+              "unit": "millimole"
+            },
+            "Aurine_e3174": {
+              "value": 0,
+              "unit": "millimole"
+            }
+          }
+        }
+      ],
+      "presimulation": null,
+      "times": null,
+      "steps": null,
+      "time_shift": -144
+    },
+    "po_los100_group2": {
+      "type": "Simulation",
+      "time_unit": "hr",
+      "start": 0.0,
+      "end": 209,
+      "preinit_changes": {
+        "KI__f_renal_function": {
+          "value": 0.5821782178217821,
+          "unit": "dimensionless"
+        },
+        "BW": {
+          "value": 75.7,
+          "unit": "kilogram"
+        },
+        "PODOSE_los": {
+          "value": 91.73774403470715,
+          "unit": "milligram"
+        }
+      },
+      "changes": [
+        {
+          "times": [
+            24,
+            48,
+            72,
+            96,
+            120,
+            144
+          ],
+          "values": {
+            "PODOSE_los": "PODOSE_los + 91.73774403470715"
+          }
+        },
+        {
+          "times": [
+            24,
+            48,
+            72,
+            96,
+            120,
+            144
+          ],
+          "values": {
+            "Aurine_los": {
+              "value": 0,
+              "unit": "millimole"
+            },
+            "Aurine_e3174": {
+              "value": 0,
+              "unit": "millimole"
+            }
+          }
+        }
+      ],
+      "presimulation": null,
+      "times": null,
+      "steps": null,
+      "time_shift": -144
+    },
+    "po_los100_group3": {
+      "type": "Simulation",
+      "time_unit": "hr",
+      "start": 0.0,
+      "end": 209,
+      "preinit_changes": {
+        "KI__f_renal_function": {
+          "value": 0.16435643564356436,
+          "unit": "dimensionless"
+        },
+        "BW": {
+          "value": 75.4,
+          "unit": "kilogram"
+        },
+        "PODOSE_los": {
+          "value": 91.73774403470715,
+          "unit": "milligram"
+        }
+      },
+      "changes": [
+        {
+          "times": [
+            24,
+            48,
+            72,
+            96,
+            120,
+            144
+          ],
+          "values": {
+            "PODOSE_los": "PODOSE_los + 91.73774403470715"
+          }
+        },
+        {
+          "times": [
+            24,
+            48,
+            72,
+            96,
+            120,
+            144
+          ],
+          "values": {
+            "Aurine_los": {
+              "value": 0,
+              "unit": "millimole"
+            },
+            "Aurine_e3174": {
+              "value": 0,
+              "unit": "millimole"
+            }
+          }
+        }
+      ],
+      "presimulation": null,
+      "times": null,
+      "steps": null,
+      "time_shift": -144
+    }
+  },
+  "data": {
+    "task_po_los100_group1__time": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__time",
+      "index": "time",
+      "selection": "time",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__IVDOSE_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__IVDOSE_los",
+      "index": "IVDOSE_los",
+      "selection": "IVDOSE_los",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__PODOSE_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__PODOSE_los",
+      "index": "PODOSE_los",
+      "selection": "PODOSE_los",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__IVDOSE_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__IVDOSE_e3174",
+      "index": "IVDOSE_e3174",
+      "selection": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Ri_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Ri_los",
+      "index": "Ri_los",
+      "selection": "Ri_los",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Ri_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Ri_e3174",
+      "index": "Ri_e3174",
+      "selection": "Ri_e3174",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cveplasma_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cveplasma_los",
+      "index": "Cveplasma_los",
+      "selection": "[Cveplasma_los]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cveplasma_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cveplasma_e3174",
+      "index": "Cveplasma_e3174",
+      "selection": "[Cveplasma_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cveplasma_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cveplasma_l158",
+      "index": "Cveplasma_l158",
+      "selection": "[Cveplasma_l158]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cveplasma_los_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cveplasma_los_e3174",
+      "index": "Cveplasma_los_e3174",
+      "selection": "[Cveplasma_los_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cveplasma_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cveplasma_total",
+      "index": "Cveplasma_total",
+      "selection": "[Cveplasma_total]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__mr_e3174_los_plasma",
+      "index": "mr_e3174_los_plasma",
+      "selection": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cve_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cve_los",
+      "index": "Cve_los",
+      "selection": "[Cve_los]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__Cve_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__Cve_e3174",
+      "index": "Cve_e3174",
+      "selection": "[Cve_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Aurine_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Aurine_los",
+      "index": "Aurine_los",
+      "selection": "Aurine_los",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Aurine_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Aurine_e3174",
+      "index": "Aurine_e3174",
+      "selection": "Aurine_e3174",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Aurine_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Aurine_l158",
+      "index": "Aurine_l158",
+      "selection": "Aurine_l158",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Aurine_los_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Aurine_los_e3174",
+      "index": "Aurine_los_e3174",
+      "selection": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Aurine_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Aurine_total",
+      "index": "Aurine_total",
+      "selection": "Aurine_total",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__mr_e3174_los_urine": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__mr_e3174_los_urine",
+      "index": "mr_e3174_los_urine",
+      "selection": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Afeces_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Afeces_los",
+      "index": "Afeces_los",
+      "selection": "Afeces_los",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Afeces_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Afeces_e3174",
+      "index": "Afeces_e3174",
+      "selection": "Afeces_e3174",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Afeces_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Afeces_l158",
+      "index": "Afeces_l158",
+      "selection": "Afeces_l158",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__Afeces_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__Afeces_total",
+      "index": "Afeces_total",
+      "selection": "Afeces_total",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__mr_e3174_los_feces": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__mr_e3174_los_feces",
+      "index": "mr_e3174_los_feces",
+      "selection": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__BW": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__BW",
+      "index": "BW",
+      "selection": "BW",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__KI__f_renal_function": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__KI__f_renal_function",
+      "index": "KI__f_renal_function",
+      "selection": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__KI__GFR": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__KI__GFR",
+      "index": "KI__GFR",
+      "selection": "KI__GFR",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__f_cirrhosis": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__f_cirrhosis",
+      "index": "f_cirrhosis",
+      "selection": "f_cirrhosis",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__LI__f_cyp2c9": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__LI__f_cyp2c9",
+      "index": "LI__f_cyp2c9",
+      "selection": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__GU__f_abcb1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__GU__f_abcb1",
+      "index": "GU__f_abcb1",
+      "selection": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__e3174",
+      "index": "e3174",
+      "selection": "[e3174]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__anggen": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__anggen",
+      "index": "anggen",
+      "selection": "[anggen]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__ang1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__ang1",
+      "index": "ang1",
+      "selection": "[ang1]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ang1_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ang1_change",
+      "index": "ang1_change",
+      "selection": "ang1_change",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ang1_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ang1_ratio",
+      "index": "ang1_ratio",
+      "selection": "ang1_ratio",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__ang2": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__ang2",
+      "index": "ang2",
+      "selection": "[ang2]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ang2_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ang2_change",
+      "index": "ang2_change",
+      "selection": "ang2_change",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ang2_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ang2_ratio",
+      "index": "ang2_ratio",
+      "selection": "ang2_ratio",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__ren": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__ren",
+      "index": "ren",
+      "selection": "[ren]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ren_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ren_change",
+      "index": "ren_change",
+      "selection": "ren_change",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ren_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ren_ratio",
+      "index": "ren_ratio",
+      "selection": "ren_ratio",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__conc__ald": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__conc__ald",
+      "index": "ald",
+      "selection": "[ald]",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ald_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ald_change",
+      "index": "ald_change",
+      "selection": "ald_change",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ald_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ald_ratio",
+      "index": "ald_ratio",
+      "selection": "ald_ratio",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__fe_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__fe_e3174",
+      "index": "fe_e3174",
+      "selection": "fe_e3174",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__f_at1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__f_at1",
+      "index": "f_at1",
+      "selection": "f_at1",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ANGGEN2ANG1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ANGGEN2ANG1",
+      "index": "ANGGEN2ANG1",
+      "selection": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ANG1ANG2": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ANG1ANG2",
+      "index": "ANG1ANG2",
+      "selection": "ANG1ANG2",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ANG2DEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ANG2DEG",
+      "index": "ANG2DEG",
+      "selection": "ANG2DEG",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__RENSEC": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__RENSEC",
+      "index": "RENSEC",
+      "selection": "RENSEC",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__RENDEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__RENDEG",
+      "index": "RENDEG",
+      "selection": "RENDEG",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ALDSEC": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ALDSEC",
+      "index": "ALDSEC",
+      "selection": "ALDSEC",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__ALDDEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__ALDDEG",
+      "index": "ALDDEG",
+      "selection": "ALDDEG",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__SBP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__SBP",
+      "index": "SBP",
+      "selection": "SBP",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__SBP_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__SBP_change",
+      "index": "SBP_change",
+      "selection": "SBP_change",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__SBP_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__SBP_ratio",
+      "index": "SBP_ratio",
+      "selection": "SBP_ratio",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__DBP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__DBP",
+      "index": "DBP",
+      "selection": "DBP",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__DBP_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__DBP_change",
+      "index": "DBP_change",
+      "selection": "DBP_change",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__DBP_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__DBP_ratio",
+      "index": "DBP_ratio",
+      "selection": "DBP_ratio",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group1__MAP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group1__MAP",
+      "index": "MAP",
+      "selection": "MAP",
+      "unit": null,
+      "task": "task_po_los100_group1",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__time": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__time",
+      "index": "time",
+      "selection": "time",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__IVDOSE_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__IVDOSE_los",
+      "index": "IVDOSE_los",
+      "selection": "IVDOSE_los",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__PODOSE_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__PODOSE_los",
+      "index": "PODOSE_los",
+      "selection": "PODOSE_los",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__IVDOSE_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__IVDOSE_e3174",
+      "index": "IVDOSE_e3174",
+      "selection": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Ri_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Ri_los",
+      "index": "Ri_los",
+      "selection": "Ri_los",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Ri_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Ri_e3174",
+      "index": "Ri_e3174",
+      "selection": "Ri_e3174",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cveplasma_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cveplasma_los",
+      "index": "Cveplasma_los",
+      "selection": "[Cveplasma_los]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cveplasma_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cveplasma_e3174",
+      "index": "Cveplasma_e3174",
+      "selection": "[Cveplasma_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cveplasma_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cveplasma_l158",
+      "index": "Cveplasma_l158",
+      "selection": "[Cveplasma_l158]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cveplasma_los_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cveplasma_los_e3174",
+      "index": "Cveplasma_los_e3174",
+      "selection": "[Cveplasma_los_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cveplasma_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cveplasma_total",
+      "index": "Cveplasma_total",
+      "selection": "[Cveplasma_total]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__mr_e3174_los_plasma",
+      "index": "mr_e3174_los_plasma",
+      "selection": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cve_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cve_los",
+      "index": "Cve_los",
+      "selection": "[Cve_los]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__Cve_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__Cve_e3174",
+      "index": "Cve_e3174",
+      "selection": "[Cve_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Aurine_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Aurine_los",
+      "index": "Aurine_los",
+      "selection": "Aurine_los",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Aurine_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Aurine_e3174",
+      "index": "Aurine_e3174",
+      "selection": "Aurine_e3174",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Aurine_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Aurine_l158",
+      "index": "Aurine_l158",
+      "selection": "Aurine_l158",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Aurine_los_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Aurine_los_e3174",
+      "index": "Aurine_los_e3174",
+      "selection": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Aurine_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Aurine_total",
+      "index": "Aurine_total",
+      "selection": "Aurine_total",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__mr_e3174_los_urine": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__mr_e3174_los_urine",
+      "index": "mr_e3174_los_urine",
+      "selection": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Afeces_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Afeces_los",
+      "index": "Afeces_los",
+      "selection": "Afeces_los",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Afeces_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Afeces_e3174",
+      "index": "Afeces_e3174",
+      "selection": "Afeces_e3174",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Afeces_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Afeces_l158",
+      "index": "Afeces_l158",
+      "selection": "Afeces_l158",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__Afeces_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__Afeces_total",
+      "index": "Afeces_total",
+      "selection": "Afeces_total",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__mr_e3174_los_feces": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__mr_e3174_los_feces",
+      "index": "mr_e3174_los_feces",
+      "selection": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__BW": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__BW",
+      "index": "BW",
+      "selection": "BW",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__KI__f_renal_function": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__KI__f_renal_function",
+      "index": "KI__f_renal_function",
+      "selection": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__KI__GFR": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__KI__GFR",
+      "index": "KI__GFR",
+      "selection": "KI__GFR",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__f_cirrhosis": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__f_cirrhosis",
+      "index": "f_cirrhosis",
+      "selection": "f_cirrhosis",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__LI__f_cyp2c9": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__LI__f_cyp2c9",
+      "index": "LI__f_cyp2c9",
+      "selection": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__GU__f_abcb1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__GU__f_abcb1",
+      "index": "GU__f_abcb1",
+      "selection": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__e3174",
+      "index": "e3174",
+      "selection": "[e3174]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__anggen": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__anggen",
+      "index": "anggen",
+      "selection": "[anggen]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__ang1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__ang1",
+      "index": "ang1",
+      "selection": "[ang1]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ang1_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ang1_change",
+      "index": "ang1_change",
+      "selection": "ang1_change",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ang1_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ang1_ratio",
+      "index": "ang1_ratio",
+      "selection": "ang1_ratio",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__ang2": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__ang2",
+      "index": "ang2",
+      "selection": "[ang2]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ang2_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ang2_change",
+      "index": "ang2_change",
+      "selection": "ang2_change",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ang2_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ang2_ratio",
+      "index": "ang2_ratio",
+      "selection": "ang2_ratio",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__ren": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__ren",
+      "index": "ren",
+      "selection": "[ren]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ren_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ren_change",
+      "index": "ren_change",
+      "selection": "ren_change",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ren_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ren_ratio",
+      "index": "ren_ratio",
+      "selection": "ren_ratio",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__conc__ald": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__conc__ald",
+      "index": "ald",
+      "selection": "[ald]",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ald_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ald_change",
+      "index": "ald_change",
+      "selection": "ald_change",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ald_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ald_ratio",
+      "index": "ald_ratio",
+      "selection": "ald_ratio",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__fe_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__fe_e3174",
+      "index": "fe_e3174",
+      "selection": "fe_e3174",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__f_at1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__f_at1",
+      "index": "f_at1",
+      "selection": "f_at1",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ANGGEN2ANG1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ANGGEN2ANG1",
+      "index": "ANGGEN2ANG1",
+      "selection": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ANG1ANG2": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ANG1ANG2",
+      "index": "ANG1ANG2",
+      "selection": "ANG1ANG2",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ANG2DEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ANG2DEG",
+      "index": "ANG2DEG",
+      "selection": "ANG2DEG",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__RENSEC": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__RENSEC",
+      "index": "RENSEC",
+      "selection": "RENSEC",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__RENDEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__RENDEG",
+      "index": "RENDEG",
+      "selection": "RENDEG",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ALDSEC": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ALDSEC",
+      "index": "ALDSEC",
+      "selection": "ALDSEC",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__ALDDEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__ALDDEG",
+      "index": "ALDDEG",
+      "selection": "ALDDEG",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__SBP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__SBP",
+      "index": "SBP",
+      "selection": "SBP",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__SBP_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__SBP_change",
+      "index": "SBP_change",
+      "selection": "SBP_change",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__SBP_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__SBP_ratio",
+      "index": "SBP_ratio",
+      "selection": "SBP_ratio",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__DBP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__DBP",
+      "index": "DBP",
+      "selection": "DBP",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__DBP_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__DBP_change",
+      "index": "DBP_change",
+      "selection": "DBP_change",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__DBP_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__DBP_ratio",
+      "index": "DBP_ratio",
+      "selection": "DBP_ratio",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group2__MAP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group2__MAP",
+      "index": "MAP",
+      "selection": "MAP",
+      "unit": null,
+      "task": "task_po_los100_group2",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__time": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__time",
+      "index": "time",
+      "selection": "time",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__IVDOSE_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__IVDOSE_los",
+      "index": "IVDOSE_los",
+      "selection": "IVDOSE_los",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__PODOSE_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__PODOSE_los",
+      "index": "PODOSE_los",
+      "selection": "PODOSE_los",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__IVDOSE_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__IVDOSE_e3174",
+      "index": "IVDOSE_e3174",
+      "selection": "IVDOSE_e3174",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Ri_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Ri_los",
+      "index": "Ri_los",
+      "selection": "Ri_los",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Ri_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Ri_e3174",
+      "index": "Ri_e3174",
+      "selection": "Ri_e3174",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cveplasma_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cveplasma_los",
+      "index": "Cveplasma_los",
+      "selection": "[Cveplasma_los]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cveplasma_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cveplasma_e3174",
+      "index": "Cveplasma_e3174",
+      "selection": "[Cveplasma_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cveplasma_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cveplasma_l158",
+      "index": "Cveplasma_l158",
+      "selection": "[Cveplasma_l158]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cveplasma_los_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cveplasma_los_e3174",
+      "index": "Cveplasma_los_e3174",
+      "selection": "[Cveplasma_los_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cveplasma_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cveplasma_total",
+      "index": "Cveplasma_total",
+      "selection": "[Cveplasma_total]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__mr_e3174_los_plasma": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__mr_e3174_los_plasma",
+      "index": "mr_e3174_los_plasma",
+      "selection": "mr_e3174_los_plasma",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cve_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cve_los",
+      "index": "Cve_los",
+      "selection": "[Cve_los]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__Cve_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__Cve_e3174",
+      "index": "Cve_e3174",
+      "selection": "[Cve_e3174]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Aurine_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Aurine_los",
+      "index": "Aurine_los",
+      "selection": "Aurine_los",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Aurine_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Aurine_e3174",
+      "index": "Aurine_e3174",
+      "selection": "Aurine_e3174",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Aurine_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Aurine_l158",
+      "index": "Aurine_l158",
+      "selection": "Aurine_l158",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Aurine_los_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Aurine_los_e3174",
+      "index": "Aurine_los_e3174",
+      "selection": "Aurine_los_e3174",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Aurine_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Aurine_total",
+      "index": "Aurine_total",
+      "selection": "Aurine_total",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__mr_e3174_los_urine": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__mr_e3174_los_urine",
+      "index": "mr_e3174_los_urine",
+      "selection": "mr_e3174_los_urine",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Afeces_los": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Afeces_los",
+      "index": "Afeces_los",
+      "selection": "Afeces_los",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Afeces_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Afeces_e3174",
+      "index": "Afeces_e3174",
+      "selection": "Afeces_e3174",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Afeces_l158": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Afeces_l158",
+      "index": "Afeces_l158",
+      "selection": "Afeces_l158",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__Afeces_total": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__Afeces_total",
+      "index": "Afeces_total",
+      "selection": "Afeces_total",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__mr_e3174_los_feces": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__mr_e3174_los_feces",
+      "index": "mr_e3174_los_feces",
+      "selection": "mr_e3174_los_feces",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__BW": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__BW",
+      "index": "BW",
+      "selection": "BW",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__KI__f_renal_function": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__KI__f_renal_function",
+      "index": "KI__f_renal_function",
+      "selection": "KI__f_renal_function",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__KI__GFR": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__KI__GFR",
+      "index": "KI__GFR",
+      "selection": "KI__GFR",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__f_cirrhosis": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__f_cirrhosis",
+      "index": "f_cirrhosis",
+      "selection": "f_cirrhosis",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__LI__f_cyp2c9": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__LI__f_cyp2c9",
+      "index": "LI__f_cyp2c9",
+      "selection": "LI__f_cyp2c9",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__GU__f_abcb1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__GU__f_abcb1",
+      "index": "GU__f_abcb1",
+      "selection": "GU__f_abcb1",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__e3174",
+      "index": "e3174",
+      "selection": "[e3174]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__anggen": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__anggen",
+      "index": "anggen",
+      "selection": "[anggen]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__ang1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__ang1",
+      "index": "ang1",
+      "selection": "[ang1]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ang1_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ang1_change",
+      "index": "ang1_change",
+      "selection": "ang1_change",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ang1_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ang1_ratio",
+      "index": "ang1_ratio",
+      "selection": "ang1_ratio",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__ang2": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__ang2",
+      "index": "ang2",
+      "selection": "[ang2]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ang2_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ang2_change",
+      "index": "ang2_change",
+      "selection": "ang2_change",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ang2_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ang2_ratio",
+      "index": "ang2_ratio",
+      "selection": "ang2_ratio",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__ren": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__ren",
+      "index": "ren",
+      "selection": "[ren]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ren_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ren_change",
+      "index": "ren_change",
+      "selection": "ren_change",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ren_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ren_ratio",
+      "index": "ren_ratio",
+      "selection": "ren_ratio",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__conc__ald": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__conc__ald",
+      "index": "ald",
+      "selection": "[ald]",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ald_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ald_change",
+      "index": "ald_change",
+      "selection": "ald_change",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ald_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ald_ratio",
+      "index": "ald_ratio",
+      "selection": "ald_ratio",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__fe_e3174": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__fe_e3174",
+      "index": "fe_e3174",
+      "selection": "fe_e3174",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__f_at1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__f_at1",
+      "index": "f_at1",
+      "selection": "f_at1",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ANGGEN2ANG1": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ANGGEN2ANG1",
+      "index": "ANGGEN2ANG1",
+      "selection": "ANGGEN2ANG1",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ANG1ANG2": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ANG1ANG2",
+      "index": "ANG1ANG2",
+      "selection": "ANG1ANG2",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ANG2DEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ANG2DEG",
+      "index": "ANG2DEG",
+      "selection": "ANG2DEG",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__RENSEC": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__RENSEC",
+      "index": "RENSEC",
+      "selection": "RENSEC",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__RENDEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__RENDEG",
+      "index": "RENDEG",
+      "selection": "RENDEG",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ALDSEC": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ALDSEC",
+      "index": "ALDSEC",
+      "selection": "ALDSEC",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__ALDDEG": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__ALDDEG",
+      "index": "ALDDEG",
+      "selection": "ALDDEG",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__SBP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__SBP",
+      "index": "SBP",
+      "selection": "SBP",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__SBP_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__SBP_change",
+      "index": "SBP_change",
+      "selection": "SBP_change",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__SBP_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__SBP_ratio",
+      "index": "SBP_ratio",
+      "selection": "SBP_ratio",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__DBP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__DBP",
+      "index": "DBP",
+      "selection": "DBP",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__DBP_change": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__DBP_change",
+      "index": "DBP_change",
+      "selection": "DBP_change",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__DBP_ratio": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__DBP_ratio",
+      "index": "DBP_ratio",
+      "selection": "DBP_ratio",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    },
+    "task_po_los100_group3__MAP": {
+      "type": "TASK",
+      "sid": "task_po_los100_group3__MAP",
+      "index": "MAP",
+      "selection": "MAP",
+      "unit": null,
+      "task": "task_po_los100_group3",
+      "dataset": null,
+      "function": null,
+      "variables": null,
+      "parameters": {},
+      "sel": null
+    }
+  },
+  "figures": {
+    "Fig1_2": {
+      "sid": "Fig1_2",
+      "name": "Sica1995 (renal impairment)",
+      "num_rows": 2,
+      "num_cols": 1,
+      "width": null,
+      "height": null,
+      "settings": {},
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_2__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_2__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": -24,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_2__plot0_yaxis",
+              "name": "Losartan [nM]",
+              "label": "Losartan",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_2__plot0_curve0",
+                "name": "Sim group1",
+                "x": "task_po_los100_group1__time",
+                "y": "task_po_los100_group1__conc__Cveplasma_los",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_2__plot0_curve1",
+                "name": "group1 (n=6)",
+                "x": "losartan_group1__time",
+                "y": "losartan_group1__mean",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#000000ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_2__plot0_curve2",
+                "name": "Sim group2",
+                "x": "task_po_los100_group2__time",
+                "y": "task_po_los100_group2__conc__Cveplasma_los",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#66c2a4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              },
+              {
+                "sid": "Fig1_2__plot0_curve3",
+                "name": "group2 (n=6)",
+                "x": "losartan_group2__time",
+                "y": "losartan_group2__mean",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#66c2a4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 3
+              },
+              {
+                "sid": "Fig1_2__plot0_curve4",
+                "name": "Sim group3",
+                "x": "task_po_los100_group3__time",
+                "y": "task_po_los100_group3__conc__Cveplasma_los",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#006d2cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 4
+              },
+              {
+                "sid": "Fig1_2__plot0_curve5",
+                "name": "group3 (n=6)",
+                "x": "losartan_group3__time",
+                "y": "losartan_group3__mean",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#006d2cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 5
+              }
+            ],
+            "areas": [],
+            "bands": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Fig1_2__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Fig1_2__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": -24,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Fig1_2__plot1_yaxis",
+              "name": "E3174 [nM]",
+              "label": "E3174",
+              "unit": "nM",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Fig1_2__plot1_curve0",
+                "name": "Sim group1",
+                "x": "task_po_los100_group1__time",
+                "y": "task_po_los100_group1__conc__Cveplasma_e3174",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Fig1_2__plot1_curve1",
+                "name": "group1 (n=6)",
+                "x": "exp3174_group1__time",
+                "y": "exp3174_group1__mean",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#000000ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Fig1_2__plot1_curve2",
+                "name": "Sim group2",
+                "x": "task_po_los100_group2__time",
+                "y": "task_po_los100_group2__conc__Cveplasma_e3174",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#66c2a4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              },
+              {
+                "sid": "Fig1_2__plot1_curve3",
+                "name": "group2 (n=6)",
+                "x": "exp3174_group2__time",
+                "y": "exp3174_group2__mean",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#66c2a4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 3
+              },
+              {
+                "sid": "Fig1_2__plot1_curve4",
+                "name": "Sim group3",
+                "x": "task_po_los100_group3__time",
+                "y": "task_po_los100_group3__conc__Cveplasma_e3174",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#006d2cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 4
+              },
+              {
+                "sid": "Fig1_2__plot1_curve5",
+                "name": "group3 (n=6)",
+                "x": "exp3174_group3__time",
+                "y": "exp3174_group3__mean",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#006d2cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 5
+              }
+            ],
+            "areas": [],
+            "bands": []
+          },
+          "row": 2,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    },
+    "Tab2": {
+      "sid": "Tab2",
+      "name": "Sica1995 (renal impairment)",
+      "num_rows": 2,
+      "num_cols": 1,
+      "width": null,
+      "height": null,
+      "settings": {},
+      "subplots": [
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Tab2__plot0",
+            "name": null,
+            "xaxis": {
+              "sid": "Tab2__plot0_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": -24,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Tab2__plot0_yaxis",
+              "name": "Losartan urine [\u00b5mole]",
+              "label": "Losartan urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Tab2__plot0_curve0",
+                "name": "Sim group1",
+                "x": "task_po_los100_group1__time",
+                "y": "task_po_los100_group1__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Tab2__plot0_curve1",
+                "name": "group1\u00b1SD (n=6)",
+                "x": "losartan_urine_group1__time",
+                "y": "losartan_urine_group1__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_group1__mean_sd",
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#000000ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Tab2__plot0_curve2",
+                "name": "Sim group2",
+                "x": "task_po_los100_group2__time",
+                "y": "task_po_los100_group2__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#66c2a4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              },
+              {
+                "sid": "Tab2__plot0_curve3",
+                "name": "group2\u00b1SD (n=6)",
+                "x": "losartan_urine_group2__time",
+                "y": "losartan_urine_group2__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_group2__mean_sd",
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#66c2a4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 3
+              },
+              {
+                "sid": "Tab2__plot0_curve4",
+                "name": "Sim group3",
+                "x": "task_po_los100_group3__time",
+                "y": "task_po_los100_group3__Aurine_los",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#006d2cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 4
+              },
+              {
+                "sid": "Tab2__plot0_curve5",
+                "name": "group3\u00b1SD (n=6)",
+                "x": "losartan_urine_group3__time",
+                "y": "losartan_urine_group3__mean",
+                "xerr": null,
+                "yerr": "losartan_urine_group3__mean_sd",
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#006d2cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 5
+              }
+            ],
+            "areas": [],
+            "bands": []
+          },
+          "row": 1,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        },
+        {
+          "sid": null,
+          "name": null,
+          "plot": {
+            "sid": "Tab2__plot1",
+            "name": null,
+            "xaxis": {
+              "sid": "Tab2__plot1_xaxis",
+              "name": "Time [hr]",
+              "label": "Time",
+              "unit": "hr",
+              "scale": "LINEAR",
+              "min": -24,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis": {
+              "sid": "Tab2__plot1_yaxis",
+              "name": "E3174 urine [\u00b5mole]",
+              "label": "E3174 urine",
+              "unit": "\u00b5mole",
+              "scale": "LINEAR",
+              "min": null,
+              "max": null,
+              "grid": false,
+              "label_visible": true,
+              "ticks_visible": true
+            },
+            "yaxis_right": null,
+            "legend": true,
+            "facecolor": "#ffffffff",
+            "title_visible": true,
+            "curves": [
+              {
+                "sid": "Tab2__plot1_curve0",
+                "name": "Sim group1",
+                "x": "task_po_los100_group1__time",
+                "y": "task_po_los100_group1__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#000000ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 0
+              },
+              {
+                "sid": "Tab2__plot1_curve1",
+                "name": "group1\u00b1SD (n=6)",
+                "x": "exp3174_urine_group1__time",
+                "y": "exp3174_urine_group1__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_group1__mean_sd",
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#000000ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#000000ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#000000ff",
+                    "second_color": null
+                  }
+                },
+                "order": 1
+              },
+              {
+                "sid": "Tab2__plot1_curve2",
+                "name": "Sim group2",
+                "x": "task_po_los100_group2__time",
+                "y": "task_po_los100_group2__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#66c2a4ff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 2
+              },
+              {
+                "sid": "Tab2__plot1_curve3",
+                "name": "group2\u00b1SD (n=6)",
+                "x": "exp3174_urine_group2__time",
+                "y": "exp3174_urine_group2__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_group2__mean_sd",
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#66c2a4ff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#66c2a4ff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#66c2a4ff",
+                    "second_color": null
+                  }
+                },
+                "order": 3
+              },
+              {
+                "sid": "Tab2__plot1_curve4",
+                "name": "Sim group3",
+                "x": "task_po_los100_group3__time",
+                "y": "task_po_los100_group3__Aurine_e3174",
+                "xerr": null,
+                "yerr": null,
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "SOLID",
+                    "color": "#006d2cff",
+                    "thickness": 2.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "NONE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 4
+              },
+              {
+                "sid": "Tab2__plot1_curve5",
+                "name": "group3\u00b1SD (n=6)",
+                "x": "exp3174_urine_group3__time",
+                "y": "exp3174_urine_group3__mean",
+                "xerr": null,
+                "yerr": "exp3174_urine_group3__mean_sd",
+                "over": [],
+                "yaxis_position": null,
+                "style": {
+                  "sid": null,
+                  "name": null,
+                  "base_style": null,
+                  "line": {
+                    "type": "DASH",
+                    "color": "#006d2cff",
+                    "thickness": 1.0
+                  },
+                  "marker": {
+                    "size": null,
+                    "type": "SQUARE",
+                    "fill": "#006d2cff",
+                    "line_color": "#000000ff",
+                    "line_thickness": null
+                  },
+                  "fill": {
+                    "color": "#006d2cff",
+                    "second_color": null
+                  }
+                },
+                "order": 5
+              }
+            ],
+            "areas": [],
+            "bands": []
+          },
+          "row": 2,
+          "col": 1,
+          "row_span": 1,
+          "col_span": 1
+        }
+      ]
+    }
+  }
+}

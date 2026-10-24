@@ -1,117 +1,138 @@
-from tokenize import group
-from typing import Dict
+"""Simulation experiment of the study Sica1995."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    Dosing,
+    Fasting,
+    Genotype,
+    Health,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Change, Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Sica1995(LosartanSimulationExperiment):
-    """Simulation experiment of Sica1995."""
+    """Simulation experiment of Sica1995.
 
-    info = {
-        "[Cve_los]": "losartan",
-        "[Cve_e3174]": "exp3174",
+    Oral doses of 100 mg losartan (potassium) once daily for 7 days in
+    hypertensive patients with normal renal function (group I, creatinine
+    clearance >= 75 ml/min), mild to moderate (group II, 30-74 ml/min) and
+    severe renal insufficiency (group III, 10-29 ml/min), six per group:
+    losartan (Fig 1) and E3174 (Fig 2) in plasma and their urinary excretion
+    0-24 h (Tab 2) after the last dose.
+
+    The patients continued an ongoing diuretic therapy (Study design), the
+    dose was given at 08:00 without a statement on food. The plasma
+    concentrations are expressed as losartan potassium and E3174 free acid
+    (Sample analysis). The renal function is the creatinine clearance over
+    101 ml/min, the GFR of the model. The digitized curves have no error
+    bars; the first three E3174 points of group III (0-20 min) are a rough
+    guess of the curation and not used. The AUC0-24 (Fig 3) and the renal
+    clearances (Fig 4) are summaries of the same curves and urines and not
+    used.
+    """
+
+    info: ClassVar[dict[str, str]] = {
+        "[Cveplasma_los]": "losartan",
+        "[Cveplasma_e3174]": "exp3174",
         "Aurine_los": "losartan_urine",
         "Aurine_e3174": "exp3174_urine",
     }
-    groups = {
+    groups: ClassVar[dict[str, str]] = {
         "group1": "Normal renal function",
         "group2": "Mild renal impairment",
         "group3": "Severe renal impairment",
     }
-    bodyweights = {
+    bodyweights: ClassVar[dict[str, float]] = {
         "group1": 84.6,
         "group2": 75.7,
         "group3": 75.4,
     }
-    renal_functions = {
-        "group1": 112.2 * 0.85/100,  # creatinine clearance (GFR)
-        "group2": 58.8 * 0.85/100,  # creatinine clearance
-        "group3": 16.6 * 0.85/100,  # creatinine clearance
+    #: creatinine clearance [ml/min] (Table 1) relative to the GFR of 101 ml/min
+    renal_functions: ClassVar[dict[str, float]] = {
+        "group1": 112.2 / 101,
+        "group2": 58.8 / 101,
+        "group3": 16.6 / 101,
+    }
+    health: ClassVar[dict[str, Health]] = {
+        "group1": Health.HYPERTENSION,
+        "group2": Health.RENAL_IMPAIRMENT,  # and hypertension
+        "group3": Health.RENAL_IMPAIRMENT,  # and hypertension
     }
 
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1", "Fig2", "Tab2"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
+                label = str(label)
+                # points of the curation which are a rough guess
+                df_label = df_label[df_label.comments != "very rough guess"]
                 dset = DataSet.from_df(df_label, self.ureg)
 
-                # unit conversion to mole/l
+                # unit conversion to mole/l, losartan as potassium salt
                 if fig_id == "Fig1" and label.startswith("losartan_"):
-                    dset.unit_conversion("mean", 1 / self.Mr.los)
+                    dset.unit_conversion("mean", 1 / self.Mr.losp)
                 elif fig_id == "Fig2" and label.startswith("exp3174_"):
                     dset.unit_conversion("mean", 1 / self.Mr.e3174)
-                dsets[f"{label}"] = dset
+                dsets[label] = dset
 
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
+    @override
+    def simulations(self) -> dict[str, Simulation]:
         tcsims = {}
         for group in self.groups:
-
-            tc0 = Timecourse(
-                start=0,
-                end=24 * 60,  # [min]
-                steps=500,
-                changes={
+            dose = self.losartan_dose(Q(100, "mg"))
+            # a dose every 24 hr for 7 days, the urine is collected from dose
+            # to dose, the time is relative to the last dose
+            tcsims[f"po_los100_{group}"] = Simulation(
+                time_unit="hr",
+                end=6 * 24 + 65,
+                preinit_changes={
                     **self.default_changes(),
-                    "KI__f_renal_function": Q_(self.renal_functions[group], "dimensionless"),
-                    "BW": Q_(self.bodyweights[group], "kg"),
-                    "PODOSE_los": Q_(100, "mg") * self.Mr.los / self.Mr.losp,
+                    "KI__f_renal_function": Q(
+                        self.renal_functions[group], "dimensionless"
+                    ),
+                    "BW": Q(self.bodyweights[group], "kg"),
+                    "PODOSE_los": dose,
                 },
-            )
-            tc1 = Timecourse(
-                start=0,
-                end=24 * 60,  # [min]
-                steps=500,
-                changes={
-                    "PODOSE_los": Q_(100, "mg") * self.Mr.los / self.Mr.losp,
-                    "Aurine_los": Q_(0, "mmole"),  # reset
-                    "Aurine_e3174": Q_(0, "mmole"),  # reset
-                },
-            )
-            tc2 = Timecourse(
-                start=0,
-                end=65 * 60,  # [min]
-                steps=500,
-                changes={
-                    "PODOSE_los": Q_(100, "mg") * self.Mr.los / self.Mr.losp,
-                    "Aurine_los": Q_(0, "mmole"),  # reset
-                    "Aurine_e3174": Q_(0, "mmole"),  # reset
-                },
-            )
-            tcsims[f"po_los100_{group}"] = TimecourseSim(
-                [tc0] + [tc1 for _ in range(5)] + [tc2],
-                time_offset=-6*24*60,  # [min]
+                changes=[
+                    self.add_doses([24 * k for k in range(1, 7)], {"PODOSE_los": dose}),
+                    Change(
+                        [24 * k for k in range(1, 7)],
+                        {
+                            "Aurine_los": Q(0, "mmole"),  # reset
+                            "Aurine_e3174": Q(0, "mmole"),  # reset
+                        },
+                    ),
+                ],
+                time_shift=-6 * 24,
             )
 
         return tcsims
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for sid, name in self.info.items():
+            urine = sid.startswith("Aurine")
             for group in self.groups:
-                health = Health.HEALTHY if group == "group1" else Health.RENAL_IMPAIRMENT
                 mappings[f"fm_po_los100_{name}_{group}"] = FitMapping(
                     self,
                     reference=FitData(
@@ -119,33 +140,39 @@ class Sica1995(LosartanSimulationExperiment):
                         dataset=f"{name}_{group}",
                         xid="time",
                         yid="mean",
-                        yid_sd="mean_sd",
+                        # the digitized plasma curves have no error bars
+                        yid_sd="mean_sd" if urine else None,
                         count="count",
                     ),
                     observable=FitData(
-                        self, task=f"task_po_los100_{group}", xid="time", yid=sid,
+                        self,
+                        task=f"task_po_los100_{group}",
+                        xid="time",
+                        yid=sid,
                     ),
-                    metadata=LosartanMappingMetaData(
-                        tissue=Tissue.PLASMA,
+                    metadata=PKPDMappingMetaData(
+                        tissue=Tissue.URINE if urine else Tissue.PLASMA,
                         route=Route.PO,
                         application_form=ApplicationForm.TABLET,
                         dosing=Dosing.MULTIPLE,
-                        health=health,
-                        fasting=Fasting.FASTED,
-                        coadministration=Coadministration.NONE,
+                        health=self.health[group],
+                        fasting=Fasting.NR,
+                        # ongoing diuretic therapy
+                        coadministration=Coadministration.COMEDICATION,
                         genotype=Genotype.NR,
                     ),
                 )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         return {
             **self.fig1_2(),
             **self.tab2(),
         }
 
-    def fig1_2(self) -> Dict[str, Figure]:
+    def fig1_2(self) -> dict[str, Figure]:
+        """Losartan and E3174 in plasma after the last dose."""
         fig = Figure(
             experiment=self,
             sid="Fig1_2",
@@ -158,10 +185,9 @@ class Sica1995(LosartanSimulationExperiment):
         plots[0].set_yaxis(self.label_los, unit=self.unit_los)
         plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
 
-        for k, sid in enumerate(["[Cve_los]", "[Cve_e3174]"]):
+        for k, sid in enumerate(["[Cveplasma_los]", "[Cveplasma_e3174]"]):
             name = self.info[sid]
             for group, group_name in self.groups.items():
-
                 color = self.renal_colors[group_name]
 
                 # simulation
@@ -177,17 +203,16 @@ class Sica1995(LosartanSimulationExperiment):
                     dataset=f"{name}_{group}",
                     xid="time",
                     yid="mean",
-                    yid_sd="mean_sd",
+                    yid_sd=None,
                     count="count",
                     label=f"{group}",
                     color=color,
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
-    def tab2(self) -> Dict[str, Figure]:
+    def tab2(self) -> dict[str, Figure]:
+        """Urinary excretion of losartan and E3174 after the last dose."""
         fig = Figure(
             experiment=self,
             sid="Tab2",
@@ -218,18 +243,14 @@ class Sica1995(LosartanSimulationExperiment):
                     dataset=f"{name}_{group}",
                     xid="time",
                     yid="mean",
-                    yid_sd= None,
+                    yid_sd="mean_sd",
                     count="count",
                     label=f"{group}",
                     color=color,
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Sica1995.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Sica1995, output_dir=Sica1995.__name__)
+    MODEL.run_experiments(Sica1995, output_dir=Sica1995.__name__)

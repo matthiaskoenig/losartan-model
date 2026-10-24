@@ -1,38 +1,65 @@
-from typing import Dict
+"""Simulation experiment of the study Yasar2002a."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    Dosing,
+    Fasting,
+    Genotype,
+    Health,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Yasar2002a(LosartanSimulationExperiment):
     """Simulation experiment of Yasar2002a.
 
+    Single oral dose of 50 mg losartan potassium (Cozaar) after an overnight
+    fast (a standardized lunch 4 h after the dose) in 22 healthy Swedish
+    subjects with the CYP2C9 genotypes *1/*1 (n=6), *1/*2 (3), *1/*3 (5),
+    *2/*2 (3), *2/*3 (4) and *3/*3 (1): losartan and E3174 in plasma (Fig 1,
+    *1/*1, *2/*2, *3/*3), their 24 h urinary recovery and the urinary
+    losartan/E3174 ratio 0-8 and 0-24 h (Tab 2). Single oral dose of 25 mg
+    losartan potassium after 3-4 h of fasting in 17 healthy Spanish subjects
+    (*1/*1 n=8, *1/*2 2, *1/*3 5, *3/*3 2): the losartan/E3174 ratio in the
+    0-8 h urine (Tab 3).
+
+    The ratios are mapped as reported, losartan/E3174 (`mr_los_e3174_urine`),
+    the reciprocal ratios of the copy are not used; the ratios at time 0 are
+    0/0 and dropped. The urinary amounts are the recoveries of the molar dose
+    of losartan potassium. The pooled ratios of Table 4 count the same
+    subjects again and are not used. Body weights are reported as ranges only
+    (52-91 kg, 45-90 kg), the simulations have the reference weight.
     """
 
-    info = {
-        "[Cve_los]": "losartan",
-        "[Cve_e3174]": "e3174",
+    selections = (
+        *LosartanSimulationExperiment.selections,
+        "mr_los_e3174_urine",
+    )
+
+    info: ClassVar[dict[str, str]] = {
+        "[Cveplasma_los]": "losartan",
+        "[Cveplasma_e3174]": "e3174",
         "Aurine_los": "losartan_urine",
         "Aurine_e3174": "e3174_urine",
-        "mr_e3174_los_urine": "exp3174_losartan_urine"
+        "mr_los_e3174_urine": "losartan_exp3174_urine",
     }
 
-    genotypes = {
+    genotypes: ClassVar[dict[str, str]] = {
         "1_1": "*1/*1",
         "1_2": "*1/*2",
         "1_3": "*1/*3",
@@ -40,89 +67,80 @@ class Yasar2002a(LosartanSimulationExperiment):
         "2_3": "*2/*3",
         "3_3": "*3/*3",
     }
-    genotypes_fig1 = {
+    genotypes_fig1: ClassVar[dict[str, str]] = {
         "1_1": "*1/*1",
         "2_2": "*2/*2",
         "3_3": "*3/*3",
     }
 
-    genotypes_tab3 = {
+    genotypes_tab3: ClassVar[dict[str, str]] = {
         "1_1": "*1/*1",
         "1_2": "*1/*2",
         "1_3": "*1/*3",
         "3_3": "*3/*3",
     }
 
-    interventions = {
-        "LOS25": 25, "LOS50": 50
-    }
-
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1", "Tab2", "Tab2A", "Tab3"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
-                dset = DataSet.from_df(df_label, self.ureg)
+                label = str(label)
+                if label.startswith("exp3174_losartan"):
+                    # the reciprocal of the reported ratio
+                    continue
+                if label.startswith("losartan_exp3174"):
+                    # the ratio at time 0 is 0/0
+                    df_label = df_label[df_label.time > 0]
+                dsets[self.to_sid(label)] = DataSet.from_df(df_label, self.ureg)
 
-                if label.startswith("exp3174_losartan_urine"):
-                    # hack to remove units
-                    dset.unit_conversion("mean", 1 / self.Q_(1, "nmol/l"))
-
-                dsets[label] = dset
-
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
+    @override
+    def simulations(self) -> dict[str, Simulation]:
         tcsims = {}
-        for number, genotype in self.genotypes.items():
-            for intervention, dose in self.interventions.items():
-                tcsims[f"po_{intervention}_{number}"] = TimecourseSim(
-                    [Timecourse(
-                        start=0,
-                        end=25 * 60,  # [min]
-                        steps=500,
-                        changes={
-                            **self.default_changes(),
-                            # "BW": Q_(self.bodyweight, "kg"),  # no clear bodyweight information
-                            "LI__f_cyp2c9": Q_(self.cyp2c9_activity[genotype], "dimensionless"),
-                            "PODOSE_los": Q_(dose, "mg") * self.Mr.los/self.Mr.losp,
+        # Swedish 50 mg, Spanish 25 mg
+        for dose, genotypes in [(50, self.genotypes), (25, self.genotypes_tab3)]:
+            for number, genotype in genotypes.items():
+                tcsims[f"po_los{dose}_{number}"] = Simulation(
+                    time_unit="min",
+                    end=25 * 60,
+                    preinit_changes={
+                        **self.default_changes(),
+                        "LI__f_cyp2c9": Q(
+                            self.cyp2c9_activity[genotype], "dimensionless"
+                        ),
+                        "PODOSE_los": self.losartan_dose(Q(dose, "mg")),
                     },
-                )]
-            )
-        # console.print(tcsims)
+                )
         return tcsims
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
         # Swedish, 50 mg losartan
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-            if "urine" in sid:
-                gtypes = self.genotypes
-                linestyle = "dashdot"
-            else:
-                gtypes = self.genotypes_fig1
-                linestyle = "--"
+        for sid, name in self.info.items():
+            gtypes = self.genotypes if "urine" in sid else self.genotypes_fig1
 
             for number, genotype in gtypes.items():
-
-                mappings[f"fm_po_{name}_{number}"] = FitMapping(
+                mappings[self.to_sid(f"fm_po_los50_{name}_{number}")] = FitMapping(
                     self,
                     reference=FitData(
                         self,
-                        dataset=f"{name}_{number}",
+                        dataset=self.to_sid(f"{name}_{number}"),
                         xid="time",
                         yid="mean",
                         yid_sd="mean_sd",
                         count="count",
                     ),
                     observable=FitData(
-                        self, task=f"task_po_LOS50_{number}", xid="time", yid=sid,
+                        self,
+                        task=f"task_po_los50_{number}",
+                        xid="time",
+                        yid=sid,
                     ),
-                    metadata=LosartanMappingMetaData(
+                    metadata=PKPDMappingMetaData(
                         tissue=Tissue.URINE if "urine" in name else Tissue.PLASMA,
                         route=Route.PO,
                         application_form=ApplicationForm.TABLET,
@@ -130,28 +148,31 @@ class Yasar2002a(LosartanSimulationExperiment):
                         health=Health.HEALTHY,
                         fasting=Fasting.FASTED,
                         coadministration=Coadministration.NONE,
-                        genotype=Genotype(genotype),
+                        genotype=Genotype(f"CYP2C9 {genotype}"),
                     ),
                 )
 
         # Spanish
-        sid = "mr_e3174_los_urine"
-        name = "exp3174_losartan_urine"
+        sid = "mr_los_e3174_urine"
+        name = "losartan_exp3174_urine"
         for number, genotype in self.genotypes_tab3.items():
-            mappings[f"task_po_{name}_{number}_spanish"] = FitMapping(
+            mappings[self.to_sid(f"fm_po_los25_{name}_{number}_spanish")] = FitMapping(
                 self,
                 reference=FitData(
                     self,
-                    dataset=f"{name}_{number}_spanish",
+                    dataset=self.to_sid(f"{name}_{number}_spanish"),
                     xid="time",
                     yid="mean",
                     yid_sd="mean_sd",
                     count="count",
                 ),
                 observable=FitData(
-                    self, task=f"task_po_LOS25_{number}", xid="time", yid=sid,
+                    self,
+                    task=f"task_po_los25_{number}",
+                    xid="time",
+                    yid=sid,
                 ),
-                metadata=LosartanMappingMetaData(
+                metadata=PKPDMappingMetaData(
                     tissue=Tissue.URINE,
                     route=Route.PO,
                     application_form=ApplicationForm.TABLET,
@@ -159,19 +180,20 @@ class Yasar2002a(LosartanSimulationExperiment):
                     health=Health.HEALTHY,
                     fasting=Fasting.FASTED,
                     coadministration=Coadministration.NONE,
-                    genotype=Genotype(genotype),
+                    genotype=Genotype(f"CYP2C9 {genotype}"),
                 ),
             )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         return {
             **self.fig1_tab2(),
             **self.tab3(),
         }
 
-    def fig1_tab2(self) -> Dict[str, Figure]:
+    def fig1_tab2(self) -> dict[str, Figure]:
+        """Swedish subjects: losartan and E3174 in plasma and urine."""
         fig = Figure(
             experiment=self,
             sid="Fig1_Tab2",
@@ -186,21 +208,28 @@ class Yasar2002a(LosartanSimulationExperiment):
         plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
         plots[2].set_yaxis(self.label_los_urine, unit=self.unit_los_urine)
         plots[3].set_yaxis(self.label_e3174_urine, unit=self.unit_e3174_urine)
-        plots[4].set_yaxis(self.label_mr_los_e3174_urine, unit=self.unit_mr)
+        # the ratio of the cumulative amounts starts at 0/0, log scale
+        plots[4].set_yaxis(
+            self.label_mr_los_e3174_urine,
+            unit=self.unit_mr,
+            scale="log",
+            min=0.1,
+            max=200,
+        )
+        plots[5].xaxis = None  # empty panel
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for k, (sid, name) in enumerate(self.info.items()):
             if "urine" in sid:
                 gtypes = self.genotypes
                 linestyle = "dashdot"
             else:
                 gtypes = self.genotypes_fig1
                 linestyle = "--"
-            
+
             for number, genotype in gtypes.items():
                 # simulation
                 plots[k].add_data(
-                    task=f"task_po_LOS50_{number}",
+                    task=f"task_po_los50_{number}",
                     xid="time",
                     yid=sid,
                     label=None if "urine" in sid else f"Sim {genotype}",
@@ -208,7 +237,7 @@ class Yasar2002a(LosartanSimulationExperiment):
                 )
                 # data
                 plots[k].add_data(
-                    dataset=f"{name}_{number}",
+                    dataset=self.to_sid(f"{name}_{number}"),
                     xid="time",
                     yid="mean",
                     yid_sd="mean_sd",
@@ -218,11 +247,10 @@ class Yasar2002a(LosartanSimulationExperiment):
                     linestyle=linestyle,
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
-    def tab3(self) -> Dict[str, Figure]:
+    def tab3(self) -> dict[str, Figure]:
+        """Spanish subjects: urinary E3174/losartan ratio."""
         fig = Figure(
             experiment=self,
             sid="Tab3",
@@ -232,23 +260,30 @@ class Yasar2002a(LosartanSimulationExperiment):
         plots = fig.create_plots(
             xaxis=Axis(self.label_time, unit=self.unit_time), legend=True
         )
-        plots[0].set_yaxis(self.label_mr_e3174_los_urine, unit=self.unit_mr)
+        # the ratio of the cumulative amounts starts at 0/0, log scale
+        plots[0].set_yaxis(
+            self.label_mr_los_e3174_urine,
+            unit=self.unit_mr,
+            scale="log",
+            min=0.1,
+            max=200,
+        )
 
-        sid = "mr_e3174_los_urine"
-        name = "exp3174_losartan_urine"
+        sid = "mr_los_e3174_urine"
+        name = "losartan_exp3174_urine"
 
         for number, genotype in self.genotypes_tab3.items():
             # simulation
             plots[0].add_data(
-                task=f"task_po_LOS25_{number}",
+                task=f"task_po_los25_{number}",
                 xid="time",
                 yid=sid,
-                label=None,  # f"Sim {genotype} 25 mg",
+                label=None,
                 color=self.cyp2c9_colors[genotype],
             )
             # data
             plots[0].add_data(
-                dataset=f"{name}_{number}_spanish",
+                dataset=self.to_sid(f"{name}_{number}_spanish"),
                 xid="time",
                 yid="mean",
                 yid_sd="mean_sd",
@@ -256,11 +291,8 @@ class Yasar2002a(LosartanSimulationExperiment):
                 label=f"{genotype} 25 mg",
                 color=self.cyp2c9_colors[genotype],
             )
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
+
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Yasar2002a.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Yasar2002a, output_dir=Yasar2002a.__name__)
+    MODEL.run_experiments(Yasar2002a, output_dir=Yasar2002a.__name__)

@@ -1,42 +1,58 @@
-from typing import Dict
+"""Simulation experiment of the study Lee2003b."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    Dosing,
+    Fasting,
+    Genotype,
+    Health,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Lee2003b(LosartanSimulationExperiment):
-    """Simulation experiment of Lee2003b."""
+    """Simulation experiment of Lee2003b.
 
-    info = {
+    Single oral dose of losartan potassium 50 mg as tablet after an overnight
+    fast in 15 healthy men and women (79 kg) with the CYP2C9 genotypes *1/*1,
+    *1/*2 and *1/*3 (five each): losartan and E3174 in plasma (Fig 1, mean and
+    SD). The points on the floor of the log axis (0.1 ng/ml, below the limit of
+    quantification) are not data and are removed from the copy.
+    """
+
+    info: ClassVar[dict[str, str]] = {
         "los": "losartan",
         "e3174": "exp3174",
     }
-    genotypes = {
+    genotypes: ClassVar[dict[str, str]] = {
         "1": "*1/*1",
         "2": "*1/*2",
         "3": "*1/*3",
     }
+    bodyweight = 79.0  # kg
 
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
+                label = str(label)
                 dset = DataSet.from_df(df_label, self.ureg)
 
                 # unit conversion to mole/l
@@ -44,37 +60,30 @@ class Lee2003b(LosartanSimulationExperiment):
                     dset.unit_conversion("mean", 1 / self.Mr.los)
                 elif label.startswith("exp3174_"):
                     dset.unit_conversion("mean", 1 / self.Mr.e3174)
-                dsets[f"{label}"] = dset
+                dsets[label] = dset
 
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
-        tcsims = {}
-
+    @override
+    def simulations(self) -> dict[str, Simulation]:
+        simulations = {}
         for number, genotype in self.genotypes.items():
-            tcsims[f"po_los50_{number}"] = TimecourseSim(
-                [Timecourse(
-                    start=0,
-                    end=25 * 60,  # [min]
-                    steps=500,
-                    changes={
-                        **self.default_changes(),
-                        # "BW": Q_(self.bodyweight, "kg"),
-                        "LI__f_cyp2c9": Q_(self.cyp2c9_activity[genotype], "dimensionless"),
-                        "PODOSE_los": Q_(50, "mg") * self.Mr.los/self.Mr.losp,
-                    },
-                )]
+            simulations[f"po_los50_{number}"] = Simulation(
+                time_unit="min",
+                end=25 * 60,
+                preinit_changes={
+                    **self.default_changes(),
+                    "LI__f_cyp2c9": Q(self.cyp2c9_activity[genotype], "dimensionless"),
+                    "BW": Q(self.bodyweight, "kg"),
+                    "PODOSE_los": self.losartan_dose(Q(50, "mg")),
+                },
             )
-        # console.print(tcsims)
-        return tcsims
+        return simulations
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for sid, name in self.info.items():
             for number, genotype in self.genotypes.items():
                 mappings[f"fm_po_los50_{sid}_{number}"] = FitMapping(
                     self,
@@ -87,9 +96,12 @@ class Lee2003b(LosartanSimulationExperiment):
                         count="count",
                     ),
                     observable=FitData(
-                        self, task=f"task_po_los50_{number}", xid="time", yid=f"[Cve_{sid}]",
+                        self,
+                        task=f"task_po_los50_{number}",
+                        xid="time",
+                        yid=f"[Cveplasma_{sid}]",
                     ),
-                    metadata=LosartanMappingMetaData(
+                    metadata=PKPDMappingMetaData(
                         tissue=Tissue.PLASMA,
                         route=Route.PO,
                         application_form=ApplicationForm.TABLET,
@@ -97,13 +109,13 @@ class Lee2003b(LosartanSimulationExperiment):
                         health=Health.HEALTHY,
                         fasting=Fasting.FASTED,
                         coadministration=Coadministration.NONE,
-                        genotype=Genotype(genotype),
+                        genotype=Genotype(f"CYP2C9 {genotype}"),
                     ),
                 )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         fig = Figure(
             experiment=self,
             sid="Fig1",
@@ -116,17 +128,15 @@ class Lee2003b(LosartanSimulationExperiment):
         plots[0].set_yaxis(self.label_los, unit=self.unit_los)
         plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-
+        for k, (sid, name) in enumerate(self.info.items()):
             for number, genotype in self.genotypes.items():
                 # simulation
                 plots[k].add_data(
                     task=f"task_po_los50_{number}",
                     xid="time",
-                    yid=f"[Cve_{sid}]",
+                    yid=f"[Cveplasma_{sid}]",
                     label=f"Sim {genotype} 50 mg",
-                    color=self.cyp2c9_colors[genotype]
+                    color=self.cyp2c9_colors[genotype],
                 )
                 # data
                 plots[k].add_data(
@@ -139,12 +149,8 @@ class Lee2003b(LosartanSimulationExperiment):
                     color=self.cyp2c9_colors[genotype],
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Lee2003b.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Lee2003b, output_dir=Lee2003b.__name__)
+    MODEL.run_experiments(Lee2003b, output_dir=Lee2003b.__name__)

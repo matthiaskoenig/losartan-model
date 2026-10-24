@@ -1,42 +1,74 @@
-from typing import Dict
+"""Simulation experiment of the study Donzelli2014."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    DataType,
+    Dosing,
+    Fasting,
+    Health,
+    PKPDData,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Donzelli2014(LosartanSimulationExperiment):
-    """Simulation experiment of Donzelli2014."""
+    """Simulation experiment of Donzelli2014.
 
-    interventions = ["los_ome_mid", "basel_cocktail"]
-    colors = {
+    Single oral dose of losartan potassium 12.5 mg (Cosaar tablet) in 16 fasted
+    healthy male subjects as part of the Basel phenotyping cocktail, given
+    together with omeprazole 10 mg and midazolam 2 mg (A) or with the whole
+    cocktail (E, in addition caffeine 100 mg, metoprolol 12.5 mg and efavirenz
+    50 mg): losartan and E3174 in plasma (LC-MS/MS). The cocktail does not
+    change the losartan AUC (ratio E/A 0.99, 0.90-1.10), so both arms are one
+    simulation. The error bars are curated as SD (not stated in the paper).
+
+    The CYP2C9 genotypes of the group are 10 *1/*1, 2 *1/*2 and 4 *1/*3,
+    simulated with the mean activity of the subjects (`f_cyp2c9`).
+    """
+
+    #: the CYP2C9 genotypes of the subjects: the number of subjects
+    cyp2c9_genotypes: ClassVar[dict[str, int]] = {
+        "*1/*1": 10,
+        "*1/*2": 2,
+        "*1/*3": 4,
+    }
+
+    interventions: ClassVar[list[str]] = ["los_ome_mid", "basel_cocktail"]
+    colors: ClassVar[dict[str, str]] = {
         "los_ome_mid": "tab:blue",
         "basel_cocktail": "tab:orange",
     }
-    info = {
+    legend_labels: ClassVar[dict[str, str]] = {
+        "los_ome_mid": "12.5 mg, omeprazole, midazolam",
+        "basel_cocktail": "12.5 mg, Basel cocktail",
+    }
+    info: ClassVar[dict[str, str]] = {
         "los": "losartan",
         "e3174": "exp3174",
     }
 
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig1"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
+                label = str(label)
                 dset = DataSet.from_df(df_label, self.ureg)
 
                 # unit conversion to mole/l
@@ -44,62 +76,67 @@ class Donzelli2014(LosartanSimulationExperiment):
                     dset.unit_conversion("mean", 1 / self.Mr.los)
                 elif label.startswith("exp3174_"):
                     dset.unit_conversion("mean", 1 / self.Mr.e3174)
-                dsets[f"{label}"] = dset
+                dsets[self.to_sid(label)] = dset
 
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
+    @override
+    def simulations(self) -> dict[str, Simulation]:
+        f_cyp2c9 = sum(
+            self.cyp2c9_activity[genotype] * n
+            for genotype, n in self.cyp2c9_genotypes.items()
+        ) / sum(self.cyp2c9_genotypes.values())
         tcsims = {}
-        tcsims[f"po_los12.5"] = TimecourseSim(
-            [Timecourse(
-                start=0,
-                end=25 * 60,  # [min]
-                steps=500,
-                changes={
-                    **self.default_changes(),
-                    #"BW": Q_(self.bodyweight, "kg"),
-                    "PODOSE_los": Q_(12.5, "mg") * self.Mr.los/self.Mr.losp,
-                },
-            )]
+        tcsims["po_los12p5"] = Simulation(
+            time_unit="min",
+            end=25 * 60,
+            preinit_changes={
+                **self.default_changes(),
+                "PODOSE_los": self.losartan_dose(Q(12.5, "mg")),
+                "LI__f_cyp2c9": Q(f_cyp2c9, "dimensionless"),
+            },
         )
-        # console.print(tcsims)
         return tcsims
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
+        for sid, name in self.info.items():
             for intervention in self.interventions:
-                mappings[f"fm_po_los12.5_{sid}_{intervention}"] = FitMapping(
-                    self,
-                    reference=FitData(
+                mappings[self.to_sid(f"fm_po_los12.5_{sid}_{intervention}")] = (
+                    FitMapping(
                         self,
-                        dataset=f"{name}_{intervention}",
-                        xid="time",
-                        yid="mean",
-                        yid_sd="mean_sd",
-                        count="count",
-                    ),
-                    observable=FitData(
-                        self, task=f"task_po_los12.5", xid="time", yid=f"[Cve_{sid}]",
-                    ),
-                    metadata=LosartanMappingMetaData(
-                        tissue=Tissue.PLASMA,
-                        route=Route.PO,
-                        application_form=ApplicationForm.TABLET,
-                        dosing=Dosing.SINGLE,
-                        health=Health.HEALTHY,
-                        fasting=Fasting.FASTED,
-                        coadministration=Coadministration.COCKTAIL,
-                    ),
+                        reference=FitData(
+                            self,
+                            dataset=self.to_sid(f"{name}_{intervention}"),
+                            xid="time",
+                            yid="mean",
+                            yid_sd="mean_sd",
+                            count="count",
+                        ),
+                        observable=FitData(
+                            self,
+                            task="task_po_los12p5",
+                            xid="time",
+                            yid=f"[Cveplasma_{sid}]",
+                        ),
+                        metadata=PKPDMappingMetaData(
+                            tissue=Tissue.PLASMA,
+                            route=Route.PO,
+                            application_form=ApplicationForm.TABLET,
+                            dosing=Dosing.SINGLE,
+                            health=Health.HEALTHY,
+                            fasting=Fasting.FASTED,
+                            coadministration=Coadministration.COCKTAIL,
+                            data=PKPDData.PK,
+                            data_type=DataType.MEAN,
+                        ),
+                    )
                 )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         fig = Figure(
             experiment=self,
             sid="Fig1",
@@ -112,36 +149,30 @@ class Donzelli2014(LosartanSimulationExperiment):
         plots[0].set_yaxis(self.label_los, unit=self.unit_los)
         plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-
+        for k, (sid, name) in enumerate(self.info.items()):
             # simulation
             plots[k].add_data(
-                task=f"task_po_los12.5",
+                task="task_po_los12p5",
                 xid="time",
-                yid=f"[Cve_{sid}]",
-                label=f"Sim LOS 12.5 mg",
+                yid=f"[Cveplasma_{sid}]",
+                label="Sim 12.5 mg",
                 color="black",
             )
 
             for intervention in self.interventions:
                 # data
                 plots[k].add_data(
-                    dataset=f"{name}_{intervention}",
+                    dataset=self.to_sid(f"{name}_{intervention}"),
                     xid="time",
                     yid="mean",
                     yid_sd="mean_sd",
                     count="count",
-                    label=f"{intervention} LOS 12.5 mg",
+                    label=self.legend_labels[intervention],
                     color=self.colors[intervention],
                 )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Donzelli2014.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Donzelli2014, output_dir=Donzelli2014.__name__)
+    MODEL.run_experiments(Donzelli2014, output_dir=Donzelli2014.__name__)

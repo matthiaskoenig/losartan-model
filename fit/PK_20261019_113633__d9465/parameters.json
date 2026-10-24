@@ -1,0 +1,41 @@
+{
+  "sets": [
+    {
+      "sid": "PK_20261019_113633__d9465_0",
+      "values": {
+        "ftissue_los": 1.035254787494961,
+        "Kp_los": 1.1673565720393917,
+        "ftissue_e3174": 0.002173618547445827,
+        "Kp_e3174": 0.18566544693298864,
+        "GU__LOSABS_k": 0.04763852243875454,
+        "LI__LOS2E3174_k": 0.41280147483912893,
+        "LI__LOS2L158_k": 1.7863640667604352,
+        "LI__E3174EX_k": 0.004112797654630811,
+        "LI__E3174IM_k": 0.06141004734854772,
+        "LI__E3174BIEX_k": 0.0027433928182376225,
+        "LI__L158BIEX_k": 0.2573033437709667,
+        "KI__LOSEX_f": 59.63204047804123,
+        "KI__E3174EX_f": 124.91649781623596,
+        "KI__L158EX_f": 5.187119086593982
+      },
+      "units": {
+        "ftissue_los": "l/(min)",
+        "Kp_los": "dimensionless",
+        "ftissue_e3174": "l/(min)",
+        "Kp_e3174": "dimensionless",
+        "GU__LOSABS_k": "1/(min)",
+        "LI__LOS2E3174_k": "1/(min)",
+        "LI__LOS2L158_k": "1/(min)",
+        "LI__E3174EX_k": "1/(min)",
+        "LI__E3174IM_k": "1/(min)",
+        "LI__E3174BIEX_k": "1/(min)",
+        "LI__L158BIEX_k": "1/(min)",
+        "KI__LOSEX_f": "dimensionless",
+        "KI__E3174EX_f": "dimensionless",
+        "KI__L158EX_f": "dimensionless"
+      },
+      "cost": 141.01511240504715,
+      "provenance": "optimization 'PK_20261019_113633__d9465', run '1'"
+    }
+  ]
+}

@@ -1,38 +1,57 @@
-from typing import Dict
+"""Simulation experiment of the study Oh2012."""
 
-from sbmlsim.data import DataSet, load_pkdb_dataframe
-from sbmlsim.fit import FitMapping, FitData
-from sbmlutils.console import console
+from typing import ClassVar, override
 
-from pkdb_models.models import losartan
+from pkpdsim.metadata import (
+    ApplicationForm,
+    Coadministration,
+    Dosing,
+    Fasting,
+    Health,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.simulation import Simulation
+
+from pkdb_models.models.losartan import MODEL
 from pkdb_models.models.losartan.experiments.base_experiment import (
     LosartanSimulationExperiment,
 )
-from pkdb_models.models.losartan.experiments.metadata import (
-    Tissue, Route, Dosing, ApplicationForm, Health, \
-    Fasting, LosartanMappingMetaData, Coadministration, Genotype,
-)
-
-from sbmlsim.plot import Axis, Figure
-from sbmlsim.simulation import Timecourse, TimecourseSim
-
-from pkdb_models.models.losartan.helpers import run_experiments
 
 
 class Oh2012(LosartanSimulationExperiment):
-    """Simulation experiment of Oh2012."""
+    """Simulation experiment of Oh2012.
 
-    info = {
-        "[Cve_los]": "losartan",
-        "[Cve_e3174]": "exp3174",
+    Single oral microdose of 2 mg losartan (potassium) in a capsule with the
+    cocktail of caffeine, omeprazole, dextromethorphan and midazolam in 13
+    healthy volunteers (body weight not reported, fasting not reported):
+    losartan and E3174 in plasma (Fig 3, the error type is not stated). The
+    E3174/losartan ratio is not reported by the study: the curation derived it
+    from the two mean curves (mass ratio, converted here to the molar ratio),
+    it counts the same subjects again.
+    """
+
+    info: ClassVar[dict[str, str]] = {
+        "[Cveplasma_los]": "losartan",
+        "[Cveplasma_e3174]": "exp3174",
         "mr_e3174_los_plasma": "exp3174_losartan",
     }
 
-    def datasets(self) -> Dict[str, DataSet]:
+    @override
+    def datasets(self) -> dict[str, DataSet]:
         dsets = {}
         for fig_id in ["Fig3"]:
-            df = load_pkdb_dataframe(f"{self.sid}_{fig_id}", data_path=self.data_path)
+            df = self.load_dataframe(fig_id)
             for label, df_label in df.groupby("label"):
+                label = str(label)
+                if label not in self.info.values():
+                    # the other drugs of the cocktail
+                    continue
                 dset = DataSet.from_df(df_label, self.ureg)
 
                 # unit conversion to mole/l
@@ -41,50 +60,52 @@ class Oh2012(LosartanSimulationExperiment):
                 elif label == "exp3174":
                     dset.unit_conversion("mean", 1 / self.Mr.e3174)
                 elif label == "exp3174_losartan":
-                    # remove unit of ratio
-                    dset.unit_conversion("mean", 1 / self.Q_(1, "ng/ml"))
+                    # the ratio of the mass concentrations is curated in ng/ml,
+                    # the molar ratio is mass ratio * Mr(losartan)/Mr(E3174)
+                    dset.unit_conversion(
+                        "mean", self.Mr.los / self.Mr.e3174 / Q(1, "ng/ml")
+                    )
 
-                dsets[f"{label}"] = dset
+                dsets[label] = dset
 
-        # console.print(dsets)
-        # console.print(dsets.keys())
         return dsets
 
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        Q_ = self.Q_
+    @override
+    def simulations(self) -> dict[str, Simulation]:
         tcsims = {}
 
         # single dose
-        tcsims[f"po_los2"] = TimecourseSim(
-            Timecourse(
-                start=0,
-                end=15 * 60,  # [min]
-                steps=500,
-                changes={
-                    **self.default_changes(),
-                    "PODOSE_los": Q_(2, "mg") * self.Mr.los / self.Mr.losp,
-                    },
-                ),
+        tcsims["po_los2"] = Simulation(
+            time_unit="min",
+            end=15 * 60,
+            preinit_changes={
+                **self.default_changes(),
+                "PODOSE_los": Q(2, "mg") * self.Mr.los / self.Mr.losp,
+            },
         )
         return tcsims
 
-    def fit_mappings(self) -> Dict[str, FitMapping]:
+    @override
+    def fit_mappings(self) -> dict[str, FitMapping]:
         mappings = {}
         for sid, name in self.info.items():
-            mappings[f"task_po_{name}"] = FitMapping(
+            mappings[f"fm_po_los2_{name}"] = FitMapping(
                 self,
                 reference=FitData(
                     self,
-                    dataset=f"{name}",
+                    dataset=name,
                     xid="time",
                     yid="mean",
                     yid_sd="mean_sd",
                     count="count",
                 ),
                 observable=FitData(
-                    self, task=f"task_po_los2", xid="time", yid=sid,
+                    self,
+                    task="task_po_los2",
+                    xid="time",
+                    yid=sid,
                 ),
-                metadata=LosartanMappingMetaData(
+                metadata=PKPDMappingMetaData(
                     tissue=Tissue.PLASMA,
                     route=Route.PO,
                     application_form=ApplicationForm.CAPSULE,
@@ -94,15 +115,16 @@ class Oh2012(LosartanSimulationExperiment):
                     coadministration=Coadministration.COCKTAIL,
                 ),
             )
-        # console.print(mappings)
         return mappings
 
-    def figures(self) -> Dict[str, Figure]:
+    @override
+    def figures(self) -> dict[str, Figure]:
         return {
             **self.fig3(),
         }
 
-    def fig3(self) -> Dict[str, Figure]:
+    def fig3(self) -> dict[str, Figure]:
+        """Losartan, E3174 and their ratio in plasma."""
         fig = Figure(
             experiment=self,
             sid="Fig3",
@@ -116,34 +138,28 @@ class Oh2012(LosartanSimulationExperiment):
         plots[1].set_yaxis(self.label_e3174, unit=self.unit_e3174)
         plots[2].set_yaxis(self.label_mr_e3174_los, unit=self.unit_mr)
 
-        for k, sid in enumerate(self.info):
-            name = self.info[sid]
-
+        for k, (sid, name) in enumerate(self.info.items()):
             # simulation
             plots[k].add_data(
-                task=f"task_po_los2",
+                task="task_po_los2",
                 xid="time",
                 yid=sid,
-                label=f"Sim 2 mg",
+                label="Sim 2 mg",
                 color="black",
             )
             # data
             plots[k].add_data(
-                dataset=f"{name}",
+                dataset=name,
                 xid="time",
                 yid="mean",
                 yid_sd="mean_sd",
                 count="count",
-                label=f"2 mg",
+                label="2 mg",
                 color="black",
             )
 
-        return {
-            fig.sid: fig,
-        }
+        return self.figures_by_sid(fig)
 
 
 if __name__ == "__main__":
-    out = losartan.RESULTS_PATH_SIMULATION / Oh2012.__name__
-    out.mkdir(parents=True, exist_ok=True)
-    run_experiments(Oh2012, output_dir=Oh2012.__name__)
+    MODEL.run_experiments(Oh2012, output_dir=Oh2012.__name__)
